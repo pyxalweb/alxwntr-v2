@@ -1,0 +1,176 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  background-color: var(--c-black);
+}
+
+
+
+
+// ***********************************
+//  Text Style Guide
+// ***********************************
+
+@mixin text($family, $size, $weight, $lineHeight, $color, $textTransform, $fontStyle) {
+  font-family: $family;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $lineHeight;
+  color: $color;
+  text-transform: $textTransform;
+  font-style: $fontStyle;
+}
+
+// text - default
+%text-100 {
+  @include text(var(--ff-primary), var(--root-font-size), var(--fw-regular), var(--lh-400), var(--c-white), none, normal);
+}
+.text-100 { @extend %text-100; }
+
+//  Body
+// ***********************************
+
+body {
+  @extend %text-100;
+}
+
+//  Page Elements
+// ***********************************
+
+main {
+  @extend %text-100;
+}
+
+main p {
+  margin-bottom: 1em;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+h1 {
+  @extend %text-100;
+}
+
+h2 {
+  @extend %text-100;
+}
+
+h3 {
+  @extend %text-100;
+}
+
+strong {
+  font-weight: var(--fw-bold);
+}
+
+em {
+  font-style: italic;
+}
+
+ul, ol {
+  margin-left: 1em;
+}
+
+a {
+  color: var(--c-primary);
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: var(--c-white);
+    text-decoration: underline;
+  }
+}
+
+
+
+
+// ***********************************
+//  Buttons
+// ***********************************
+%text-button-1 {
+  font-size: var(--fs-400);
+  font-weight: var(--fw-semi-bold);
+  line-height: var(--lh-400);
+}
+
+%button-defaults {
+  @extend %text-button-1;
+  text-align: center;
+  display: block;
+  width: fit-content;
+  border-radius: 2em;
+  cursor: pointer;
+  transition: all var(--t-fast);
+}
+
+.button {
+  @extend %button-defaults;
+  color: var(--c-white);
+  background-color: var(--c-primary);
+  position: relative;
+  padding-block: 1em;
+  padding-inline: 2.15em;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    background-color: var(--c-white);
+    color: var(--c-primary);
+    text-decoration: none;
+  }
+}
+
+
+
+
+// ***********************************
+//  Icons
+// ***********************************
+.icon {
+  &:before {
+    content: '';
+    font-family: 'icons';
+    font-size: var(--fs-500);
+    color: var(--c-primary);
+  }
+}
+
+.icon--address {
+  &:before {
+    content: '\E814';
+  }
+}
+
+.icon--phone {
+  &:before {
+    content: '\E815';
+  }
+}
+
+
+
+
+// ***********************************
+//  Social Icons
+// ***********************************
+.social {
+  list-style: none;
+
+  a {
+    &:before {
+      content: '\e801';
+      font-family: 'icons';
+    }
+  }
+}
+
+.social__facebook a:before { content: '\f09a'; }
+.social__instagram a:before { content: '\f16d'; }
+.social__twitter a:before { content: '\f099'; }
+.social__linkedin a:before { content: '\e80a'; }
