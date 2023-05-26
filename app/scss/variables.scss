@@ -16,7 +16,7 @@
   --fs-700: 1.375rem; // 22
   --fs-800: 1.5rem; // 24
   --fs-900: 1.625rem; // 26
-  --fs-1000: 2.375rem; // 38
+  --fs-1000: 2.25rem; // 36
 
   --fw-regular: 400; // regular
   --fw-medium: 500; // medium
@@ -55,7 +55,7 @@
   --w-medium: 1680px;
   --w-default: 1440px;
   --w-small: 1240px;
-  --w-tiny: 680px;
+  --w-tiny: 800px;
 
   .width-lg {
     width: min(var(--w-large), 100%);

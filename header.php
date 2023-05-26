@@ -23,7 +23,13 @@
 
 <header id="site-header" class="header">
 	<div class="header__container">
-		<p>header logo</p>
+		<div class="header__logo">
+			<?php if (is_front_page()) { ?>
+			<h1>alx.wntr</h1>
+			<?php } else { ?>
+			<a href="/">alx.wntr</a>
+			<?php } ?>
+		</div>
 
         <?php get_template_part( 'template-parts/site', 'navigation' ); ?>
 	</div>

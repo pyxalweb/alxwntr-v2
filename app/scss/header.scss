@@ -2,7 +2,8 @@
 //  Header
 // ***********************************
 .header {
-  
+  width: min(var(--w-tiny), 100%);
+  margin-inline: auto;
 }
 
 
@@ -13,4 +14,23 @@
 // ***********************************
 .header__container {
 
+}
+
+
+
+
+// ***********************************
+//  Logo
+// ***********************************
+.header__logo {
+    a {
+        @extend %text-200;
+        transition: color var(--t-medium);
+
+        &:hover,
+        &:focus {
+            color: var(--c-primary);
+            text-decoration: none;
+        }
+    }
 }

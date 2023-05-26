@@ -14,21 +14,28 @@ body {
 //  Text Style Guide
 // ***********************************
 
-@mixin text($family, $size, $weight, $lineHeight, $color, $textTransform, $fontStyle) {
+@mixin text($family, $size, $weight, $lineHeight, $color, $textDecoration, $textTransform, $fontStyle) {
   font-family: $family;
   font-size: $size;
   font-weight: $weight;
   line-height: $lineHeight;
   color: $color;
+  text-decoration: $textDecoration;
   text-transform: $textTransform;
   font-style: $fontStyle;
 }
 
 // text - default
 %text-100 {
-  @include text(var(--ff-primary), var(--root-font-size), var(--fw-regular), var(--lh-400), var(--c-white), none, normal);
+  @include text(var(--ff-primary), var(--root-font-size), var(--fw-regular), var(--lh-400), var(--c-white), none, none, normal);
 }
 .text-100 { @extend %text-100; }
+
+// text - heading 1
+%text-200 {
+  @include text(var(--ff-primary), var(--fs-1000), var(--fw-bold), var(--lh-400), var(--c-white), none, none, normal);
+}
+.text-200 { @extend %text-200; }
 
 //  Body
 // ***********************************
@@ -53,7 +60,7 @@ main p {
 }
 
 h1 {
-  @extend %text-100;
+  @extend %text-200;
 }
 
 h2 {
