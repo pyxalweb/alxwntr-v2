@@ -4,6 +4,7 @@
 .header {
   width: min(var(--w-tiny), 100%);
   margin-inline: auto;
+  padding-block: 3em;
 }
 
 
@@ -13,7 +14,8 @@
 //  Container
 // ***********************************
 .header__container {
-
+  display: flex;
+  justify-content: space-between;
 }
 
 
@@ -24,7 +26,7 @@
 // ***********************************
 .header__logo {
     a {
-        @extend %text-200;
+        @extend %heading-100;
         transition: color var(--t-medium);
 
         &:hover,
@@ -33,4 +35,54 @@
             text-decoration: none;
         }
     }
+}
+
+
+
+
+// ***********************************
+//  Navigation
+// ***********************************
+
+// nav - default
+%nav-100 {
+  @include text(var(--ff-primary), var(--fs-500), var(--fw-medium), var(--lh-400), var(--c-white), none, lowercase, normal);
+
+  background-color: transparent;
+  border: 1px solid var(--c-grey-100);
+  border-radius: 0 1em 0 1em;
+  padding: 0.7em 1.25em;
+  transition: all var(--t-fast);
+
+  &:hover,
+  &:focus {
+    background-color: var(--c-grey-200);
+    color: var(--c-primary);
+  }
+}
+.nav-100 {
+  @extend %nav-100;
+}
+
+.header__navigation {
+  display: flex;
+  align-items: center;
+  
+  nav {
+
+  }
+
+  ul {
+      margin: 0;
+      list-style: none;
+      display: flex;
+  }
+
+  li {
+    margin-inline: 0.5em;
+  }
+
+  a {
+      @extend %nav-100;
+  }
 }

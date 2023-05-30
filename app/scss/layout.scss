@@ -31,11 +31,11 @@ body {
 }
 .text-100 { @extend %text-100; }
 
-// text - heading 1
-%text-200 {
+// heading - large
+%heading-100 {
   @include text(var(--ff-primary), var(--fs-1000), var(--fw-bold), var(--lh-400), var(--c-white), none, none, normal);
 }
-.text-200 { @extend %text-200; }
+.heading-100 { @extend %heading-100; }
 
 //  Body
 // ***********************************
@@ -60,7 +60,7 @@ main p {
 }
 
 h1 {
-  @extend %text-200;
+  @extend %heading-100;
 }
 
 h2 {
