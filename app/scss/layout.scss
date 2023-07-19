@@ -43,17 +43,29 @@ body {
 	font-style: $fontStyle;
 }
 
-// text - default
+// Montserrat - 16 - Regular - 1.5 - White - None - None - None (Default)
 %text-100 {
 	@include text(var(--ff-primary), var(--root-font-size), var(--fw-regular), var(--lh-400), var(--c-white), none, none, normal);
 }
 .text-100 { @extend %text-100; }
 
-// heading - large
-%heading-100 {
+// Montserrat - 22 / 26 - Regular - 1.5 - White - None - None - None (h3)
+%text-200 {
+	@include text(var(--ff-primary), clamp(var(--fs-700), 3vw, var(--fs-900)), var(--fw-regular), var(--lh-400), var(--c-white), none, none, normal);
+}
+.text-200 { @extend %text-200; }
+
+// Montserrat - 22 / 26 - Bold - 1.5 - White - None - None - None (h2)
+%text-300 {
+	@include text(var(--ff-primary), clamp(var(--fs-700), 3vw, var(--fs-900)), var(--fw-bold), var(--lh-400), var(--c-white), none, none, normal);
+}
+.text-300 { @extend %text-300; }
+
+// Montserrat - 36 - Bold - 1.5 - White - None - None - None (h1, h2, logo text)
+%text-400 {
 	@include text(var(--ff-primary), var(--fs-1000), var(--fw-bold), var(--lh-400), var(--c-white), none, none, normal);
 }
-.heading-100 { @extend %heading-100; }
+.text-400 { @extend %text-400; }
 
 //  Body
 // ***********************************
@@ -78,7 +90,7 @@ main p {
 }
 
 h1 {
-	@extend %heading-100;
+	@extend %text-400;
 }
 
 h2 {
@@ -186,16 +198,18 @@ a {
 // ***********************************
 .social {
 	list-style: none;
+	margin: 0;
 
 	a {
 		&:before {
-		content: '\e801';
-		font-family: 'icons';
+			content: '\E800';
+			font-family: 'icons';
 		}
 	}
 }
 
-.social__facebook a:before { content: '\f09a'; }
-.social__instagram a:before { content: '\f16d'; }
-.social__twitter a:before { content: '\f099'; }
-.social__linkedin a:before { content: '\e80a'; }
+.social__instagram a:before { content: '\F16D'; }
+.social__linkedin a:before { content: '\E809'; }
+.social__lastfm a:before { content: '\F202'; }
+.social__github a:before { content: '\F09B'; }
+.social__codepen a:before { content: '\F32C'; }

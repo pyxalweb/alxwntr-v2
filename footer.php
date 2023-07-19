@@ -9,8 +9,11 @@
 
 <footer id="site-footer" class="site-footer">
 	<div class="footer__container | content width-df">
-		<p>footer</p>
-		<?php get_template_part( 'template-parts/content', 'social' ); ?>
+		<p>© <?php echo date('Y'); ?> - Alex Winter</p>
+
+		<div class="footer__social">
+			<?php get_template_part( 'template-parts/content', 'social' ); ?>
+		</div>
 	</div>
 </footer>
 

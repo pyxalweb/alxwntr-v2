@@ -15,6 +15,7 @@ header.site-header {
     display: flex;
     justify-content: space-between;
     padding-block: 3em;
+	border-bottom: 1px solid var(--c-grey-100);
 }
 
 
@@ -25,7 +26,7 @@ header.site-header {
 // ***********************************
 .header__logo {
     a {
-        @extend %heading-100;
+        @extend %text-400;
         transition: color var(--t-medium);
 
         &:hover,
@@ -45,7 +46,7 @@ header.site-header {
 
 // nav - default
 %nav-100 {
-	@include text(var(--ff-primary), var(--fs-500), var(--fw-medium), var(--lh-400), var(--c-white), none, lowercase, normal);
+	@include text(var(--ff-primary), clamp(var(--fs-400), 3vw, var(--fs-500)), var(--fw-medium), var(--lh-400), var(--c-white), none, lowercase, normal);
 
 	background-color: transparent;
 	border: 1px solid var(--c-grey-100);

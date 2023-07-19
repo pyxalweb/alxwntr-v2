@@ -114,7 +114,7 @@
 // ***********************************
 //  margin-block
 // ***********************************
-.mbl-7 { margin-block: 7em; }
+// .mbl-7 { margin-block: 7em; }
 // .mbl-6 { margin-block: 6em; }
 // .mbl-5 { margin-block: 5em; }
 // .mbl-4 { margin-block: 4em; }
@@ -122,10 +122,6 @@
 // .mbl-2 { margin-block: 2em; }
 // .mbl-1 { margin-block: 1em; }
 // .mbl-0 { margin-block: 0em; }
-
-@media (max-width: $vw-400) {
-    .mbl-3-vw400 { margin-block: 3em; }
-}
 
 
 

@@ -30,15 +30,18 @@ get_header();
     }
     ?>
 
-    <section class="content width-df | mbl-7 mbl-3-vw400">
+    <section class="posts | content width-df">
+        <h2>2023</h2>
         <?php get_posts_by_year('2023'); ?>
     </section>
 
-    <section class="content width-df | mbl-7 mbl-3-vw400">
+    <section class="posts | content width-df">
+        <h2>2022</h2>
         <?php get_posts_by_year('2022'); ?>
     </section>
 
-    <section class="content width-df | mbl-7 mbl-3-vw400">
+    <section class="posts | content width-df">
+        <h2>2021</h2>
         <?php get_posts_by_year('2021'); ?>
     </section>
 </main>

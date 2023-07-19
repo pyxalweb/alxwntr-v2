@@ -4,3 +4,26 @@
 main.site-main {
 
 }
+
+
+
+
+.posts {
+	margin-block: 3em;
+
+	h2 {
+		@extend %text-300;
+	}
+}
+
+.post-item {
+	margin-bottom: 1em;
+
+	h3 {
+		@extend %text-200;
+	}
+}
+
+.post-meta {
+
+}

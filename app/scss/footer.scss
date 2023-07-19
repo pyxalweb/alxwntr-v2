@@ -14,4 +14,24 @@ footer.site-footer {
 .footer__container {
 	display: flex;
 	justify-content: space-between;
+	padding-block: 3em;
+	border-top: 1px solid var(--c-grey-100);
+}
+
+
+
+
+// ***********************************
+//  Social
+// ***********************************
+.footer__social {
+	ul {
+		display: flex;
+		gap: clamp(1rem, 2vw, 1.5rem);
+	}
+
+	a {
+		font-size: clamp(1.5rem, 2vw, 2rem);
+		color: var(--c-white)
+	}
 }

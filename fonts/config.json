@@ -143,6 +143,24 @@
       ]
     },
     {
+      "uid": "155970c9f52b23f31026bab7163caa63",
+      "css": "codepen",
+      "code": 62252,
+      "src": "brandico"
+    },
+    {
+      "uid": "0f6a2573a7b6df911ed199bb63717e27",
+      "css": "github-circled",
+      "code": 61595,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "5dcf6620378353c5b0089b12d961fedf",
+      "css": "lastfm",
+      "code": 61954,
+      "src": "fontawesome"
+    },
+    {
       "uid": "d0b02d9758e375048d063d63aecc8f76",
       "css": "icon-right-arrow",
       "code": 59393,
