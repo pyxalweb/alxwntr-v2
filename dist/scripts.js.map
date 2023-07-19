@@ -1,1 +1,1 @@
-{"version":3,"file":"scripts.js","names":["window","onload","event","document","querySelector","classList","remove"],"sources":["scripts.js"],"mappings":"AAgBAA,OAAOC,OAAUC,IACbC,SAASC,cAAc,QAAQC,UAAUC,OAAO,UAAS"}
+{"version":3,"file":"scripts.js","names":["window","onload","event","document","querySelector","classList","remove"],"sources":["scripts.js"],"mappings":"AAgBAA,OAAOC,OAAUC,IAChBC,SAASC,cAAc,QAAQC,UAAUC,OAAO,UAAS"}

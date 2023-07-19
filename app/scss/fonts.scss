@@ -11,16 +11,16 @@
 //  To add / remove / edit icons within this font, visit www.fontello.com and click the 'wrench' icon at the top-right. Then select "Import" and upload either the zip file or config.json file found within the 'fonts' directory within this website.
 // ***********************************
 @font-face {
-  font-family: 'icons';
-  src: url('../fonts/fontello.woff2');
-  src: url('../fonts/fontello.woff2') format('woff'), url('../fonts/fontello.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
+	font-family: 'icons';
+	src: url('../fonts/fontello.woff2');
+	src: url('../fonts/fontello.woff2') format('woff'), url('../fonts/fontello.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
 }
 
 .icons {
-  font-style: normal;
-  font-family: 'icons';
-  font-weight: normal;
+	font-style: normal;
+	font-family: 'icons';
+	font-weight: normal;
 }
