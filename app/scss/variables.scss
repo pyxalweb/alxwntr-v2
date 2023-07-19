@@ -38,9 +38,13 @@
 	// ***********************************
 	--c-primary: #2994ff;
 	--c-black: #17171a;
+	--c-black-alt: #0a0a0a;
 	--c-white: #fefefe;
 	--c-grey-100: #343434;
-	--c-grey-200: #0a0a0a;
+	--c-grey-200: #5e5e5e;
+	--c-grey-300: #7f7f7f;
+	--c-grey-400: #bebebe;
+	--c-grey-500: #dcdcdc;
 
 
 
@@ -55,23 +59,23 @@
 	--w-tiny: 800px;
 
 	.width-lg {
-		width: min(var(--w-large), 100%);
+		width: min(var(--w-large), calc(100% - 2em));
 	}
 
 	.width-md {
-		width: min(var(--w-medium), 100%);
+		width: min(var(--w-medium), calc(100% - 2em));
 	}
 
 	.width-df {
-		width: min(var(--w-default), 100%);
+		width: min(var(--w-default), calc(100% - 2em));
 	}
 
 	.width-sm {
-		width: min(var(--w-small), 100%);
+		width: min(var(--w-small), calc(100% - 2em));
 	}
 
 	.width-xs {
-		width: min(var(--w-tiny), 100%);
+		width: min(var(--w-tiny), calc(100% - 2em));
 	}
 
 

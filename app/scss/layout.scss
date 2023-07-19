@@ -19,9 +19,7 @@ body {
 // Typically used within <section> elements that are
 // children of the <main id="site-content"> element
 .content {
-	width: min(var(--w-default), 100%);
 	margin-inline: auto;
-	padding-inline: 1em;
 }
 
 
@@ -46,6 +44,12 @@ body {
 // Montserrat - 16 - Regular - 1.5 - White - None - None - None (Default)
 %text-100 {
 	@include text(var(--ff-primary), var(--root-font-size), var(--fw-regular), var(--lh-400), var(--c-white), none, none, normal);
+}
+.text-100 { @extend %text-100; }
+
+// Montserrat - 16 - Regular - 1.5 - Grey - None - None - None
+%text-125 {
+	@include text(var(--ff-primary), var(--root-font-size), var(--fw-regular), var(--lh-400), var(--c-grey-500), none, none, normal);
 }
 .text-100 { @extend %text-100; }
 

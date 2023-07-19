@@ -56,7 +56,7 @@ header.site-header {
 
 	&:hover,
 	&:focus {
-		background-color: var(--c-grey-200);
+		background-color: var(--c-black-alt);
 		color: var(--c-primary);
 	}
 }
@@ -80,6 +80,10 @@ header.site-header {
 
 	li {
 		margin-inline: 0.5em;
+
+		&:last-of-type {
+			margin-inline: 0;
+		}
 	}
 
 	a {
