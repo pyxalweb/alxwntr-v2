@@ -1,21 +1,10 @@
 // ***********************************
 //  Main: Site Content
 // ***********************************
-main.site-content {
-  position: relative;
-  overflow: hidden;
+main.site-main {
+
 }
 
 
 
 
-// ***********************************
-//  Content
-// ***********************************
-// Typically used within <section> elements that are
-// children of the <main id="site-content"> element
-.content {
-  width: min(var(--w-default), 100%);
-  margin-inline: auto;
-  padding-inline: 1em;
-}

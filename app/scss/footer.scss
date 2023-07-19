@@ -1,7 +1,7 @@
 // ***********************************
 //  Footer
 // ***********************************
-.footer {
+footer.site-footer {
   
 }
 
@@ -12,5 +12,6 @@
 //  Container
 // ***********************************
 .footer__container {
-
+    display: flex;
+    justify-content: space-between;
 }

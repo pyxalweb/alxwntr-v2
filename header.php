@@ -21,8 +21,8 @@
 
 <?php get_template_part( 'template-parts/site', 'skip-nav' ); ?>
 
-<header id="site-header" class="header">
-	<div class="header__container">
+<header id="site-header" class="site-header">
+	<div class="header__container | content width-df">
 		<?php get_template_part( 'template-parts/site', 'logo' ); ?>
 
         <?php get_template_part( 'template-parts/site', 'navigation' ); ?>

@@ -7,8 +7,8 @@
  */
 ?>
 
-<footer id="site-footer" class="footer">
-	<div class="footer__container">
+<footer id="site-footer" class="site-footer">
+	<div class="footer__container | content width-df">
 		<p>footer</p>
 		<?php get_template_part( 'template-parts/content', 'social' ); ?>
 	</div>
