@@ -35,7 +35,7 @@ get_header();
     ?>
 
     <section class="posts | content width-df">
-        <div class="post__heading">
+        <div class="post__title">
             <h2>2023</h2>
         </div>
         <div class="post__container">
@@ -44,7 +44,7 @@ get_header();
     </section>
 
     <section class="posts | content width-df">
-        <div class="post__heading">
+        <div class="post__title">
             <h2>2022</h2>
         </div>
         <div class="post__container">
@@ -53,7 +53,7 @@ get_header();
     </section>
 
     <section class="posts | content width-df">
-        <div class="post__heading">
+        <div class="post__title">
             <h2>2021</h2>
         </div>
         <div class="post__container">

@@ -9,7 +9,7 @@ main.site-main {
 	margin-block: 3em;
 }
 
-.post__heading {
+.post__title {
 	h2 {
 		@extend %text-300;
 		text-align: center;
@@ -43,6 +43,10 @@ main.site-main {
 	@extend %text-200;
 	order: 2;
 	margin-bottom: 0.25em;
+	
+	a {
+		display: inline-block;
+	}
 }
 
 .post__category {
