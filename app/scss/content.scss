@@ -5,27 +5,58 @@ main.site-main {
 
 }
 
-
-
-
 .posts {
 	margin-block: 3em;
 
 	h2 {
 		@extend %text-300;
-		margin-bottom: 0.25em;
 	}
 }
 
-.post-item {
-	margin-bottom: 1em;
-
-	h3 {
-		@extend %text-200;
-		margin-bottom: 0.25em;
-	}
+.post__container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 3em;
 }
 
-.post-meta {
+.post__item {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: relative;
+	padding: 5em 3em;
+	background-color: #1e1e23;
+	border-radius: 1em;
+}
+
+.post__heading {
+	@extend %text-200;
+	order: 2;
+	margin-bottom: 0.25em;
+}
+
+.post__category {
+	inset: 2em 50% auto auto;
+	order: 1;
 	@extend %text-125;
+	color: #adadad;
+}
+
+.post__date {
+	inset: auto 50% 2em auto;
+	order: 3;
+	@extend %text-125;
+	color: #868585;
+}
+
+.post__heading,
+.post__category,
+.post__date {
+	text-align: center;
+}
+
+.post__category,
+.post__date {
+	position: absolute;
+	transform: translate(50%, 0);
 }
