@@ -7,9 +7,12 @@ main.site-main {
 
 .posts {
 	margin-block: 3em;
+}
 
+.post__heading {
 	h2 {
 		@extend %text-300;
+		text-align: center;
 	}
 }
 
@@ -25,8 +28,15 @@ main.site-main {
 	justify-content: center;
 	position: relative;
 	padding: 5em 3em;
-	background-color: #1e1e23;
+	background-color: var(--c-secondary);
 	border-radius: 1em;
+
+	// if there is only one post
+	&:only-child {
+		grid-column: 1/-1;
+		width: 50%;
+		margin-inline: auto;
+	}
 }
 
 .post__heading {

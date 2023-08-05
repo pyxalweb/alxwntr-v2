@@ -61,7 +61,7 @@ body {
 
 // Montserrat - 22 / 26 - Bold - 1.5 - White - None - None - None (h2)
 %text-300 {
-	@include text(var(--ff-primary), clamp(var(--fs-700), 3vw, var(--fs-900)), var(--fw-bold), var(--lh-400), var(--c-white), none, none, normal);
+	@include text(var(--ff-primary), clamp(var(--fs-700), 3vw, var(--fs-1000)), var(--fw-bold), var(--lh-400), var(--c-grey-200), none, none, normal);
 }
 .text-300 { @extend %text-300; }
 

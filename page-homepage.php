@@ -35,21 +35,27 @@ get_header();
     ?>
 
     <section class="posts | content width-df">
-        <h2>2023</h2>
+        <div class="post__heading">
+            <h2>2023</h2>
+        </div>
         <div class="post__container">
             <?php get_posts_by_year('2023'); ?>
         </div>
     </section>
 
     <section class="posts | content width-df">
-        <h2>2022</h2>
+        <div class="post__heading">
+            <h2>2022</h2>
+        </div>
         <div class="post__container">
             <?php get_posts_by_year('2022'); ?>
         </div>
     </section>
 
     <section class="posts | content width-df">
-        <h2>2021</h2>
+        <div class="post__heading">
+            <h2>2021</h2>
+        </div>
         <div class="post__container">
             <?php get_posts_by_year('2021'); ?>
         </div>
