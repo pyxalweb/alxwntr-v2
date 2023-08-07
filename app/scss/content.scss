@@ -2,14 +2,16 @@
 //  Main: Site Content
 // ***********************************
 main.site-main {
-
+	@extend %text-100;
 }
 
 .posts {
 	margin-block: 3em;
 }
 
-.post__title {
+.post__year {
+	margin-bottom: 2em;
+
 	h2 {
 		@extend %text-300;
 		text-align: center;
@@ -20,10 +22,14 @@ main.site-main {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 3em;
+
+	@media (max-width: $vw-500) {
+		grid-template-columns: 1fr;
+	}
 }
 
 .post__item {
-	display: flex;
+	display: none;
 	flex-direction: column;
 	justify-content: center;
 	position: relative;
@@ -31,11 +37,19 @@ main.site-main {
 	background-color: var(--c-secondary);
 	border-radius: 1em;
 
+	&.active {
+		display: flex;
+	}
+
 	// if there is only one post
 	&:only-child {
 		grid-column: 1/-1;
-		width: 50%;
 		margin-inline: auto;
+		width: 50%;
+
+		@media (max-width: $vw-500) {
+			width: 100%;
+		}
 	}
 }
 
@@ -53,14 +67,12 @@ main.site-main {
 	inset: 2em 50% auto auto;
 	order: 1;
 	@extend %text-125;
-	color: #adadad;
 }
 
 .post__date {
 	inset: auto 50% 2em auto;
 	order: 3;
 	@extend %text-125;
-	color: #868585;
 }
 
 .post__heading,

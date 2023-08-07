@@ -1,2 +1,2 @@
-window.onload=o=>{document.querySelector("body").classList.remove("preload")};
+!function(){const e=document.querySelectorAll(".category__item"),t=document.querySelectorAll(".post__item");window.onload=e=>{document.querySelector("body").classList.remove("preload")};e.forEach((e=>{e.addEventListener("click",(()=>{const o=e.getAttribute("data-category");console.log(o),t.forEach((e=>{e.classList.remove("active"),e.getAttribute("data-category")===o&&e.classList.add("active")}))}))}))}();
 //# sourceMappingURL=scripts.js.map
