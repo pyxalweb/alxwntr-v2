@@ -6,20 +6,21 @@ get_header();
 
 <main id="site-main" class="site-main">
     <section class="categories | content width-df">
-    <?php
+        <?php
         function categoriesList() {
-        $categories = get_categories(array(
-            'orderby' => 'name',
-            'order' => 'ASC',
-            'exclude' => '7'
-        ));
+            $categories = get_categories(array(
+                'orderby' => 'name',
+                'order' => 'ASC',
+                'exclude' => '7'
+            ));
 
-        foreach($categories as $category) {
-            echo '<button type="button" class="category__item" data-category="' . $category->term_id . '">' . $category->name . '</button>';
+            foreach($categories as $category) {
+                echo '<button type="button" class="category__item" data-category="' . $category->term_id . '">' . $category->name . '</button>';
+            }
         }
-    }
-    categoriesList();
-    ?>
+        categoriesList();
+        ?>
+        <button type="button" class="category__item" data-category="all">View All</button>
     </section>
 
     <?php
@@ -39,7 +40,7 @@ get_header();
                 $category_id = $category->cat_ID;
                 $category_name = $category->cat_name;
                 ?>
-                <div class="post__item active" data-category="<?php echo $category_id; ?>">
+                <div class="post__item | active fade" data-category="<?php echo $category_id; ?>">
                     <h3 class="post__heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                     <div class="post__category">
                         <p><?php echo $category_name; ?></p>

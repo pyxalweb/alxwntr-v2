@@ -29,13 +29,20 @@ main.site-main {
 }
 
 .post__item {
+	opacity: 0;
+	transition: opacity 0.25s;
 	display: none;
+
 	flex-direction: column;
 	justify-content: center;
 	position: relative;
 	padding: 5em 3em;
 	background-color: var(--c-secondary);
 	border-radius: 1em;
+
+	&.fade {
+		opacity: 1;
+	}
 
 	&.active {
 		display: flex;
