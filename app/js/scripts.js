@@ -12,6 +12,9 @@
 // ***********************************
 //  Global Elements
 // ***********************************
+const header = document.querySelector('.site-header')
+const main = document.querySelector('.site-main')
+const footer = document.querySelector('.site-footer')
 const categoryItem = document.querySelectorAll('.category__item')
 const postItem = document.querySelectorAll('.post__item')
 const postContainer = document.querySelectorAll('.post__container')
@@ -27,6 +30,22 @@ const postContainer = document.querySelectorAll('.post__container')
 window.onload = (event) => {
 	document.querySelector('body').classList.remove('preload')
 }
+
+
+
+
+// ***********************************
+//  Main Element Min Height
+// ***********************************
+// When the page loads, set the min-height of the main element to the height of the viewport minus the height of the header and footer
+// But also add 1px so that the main element is always at least 1px taller than the viewport which ensures a vertical scrollbar is always present. This is important because changing blog post categories (on the homepage) will cause the main element to change height and without this +1px then if the main element is shorter than the viewport, the vertical scrollbar will disappear and the page will shift.
+mainElementMinHeight = () => {
+	const headerHeight = header.offsetHeight
+	const footerHeight = footer.offsetHeight
+
+	main.style.minHeight = `calc(100vh - ${headerHeight}px - ${footerHeight}px + 1px)`
+}
+mainElementMinHeight()
 
 
 

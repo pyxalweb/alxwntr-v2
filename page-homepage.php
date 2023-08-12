@@ -30,6 +30,7 @@ get_header();
         $posts = new WP_Query(array (
             'post_type' => 'post',
             'ignore_sticky_posts' => 1,
+            'posts_per_page' => -1,
             'year' => $year
         ));
 
@@ -56,29 +57,8 @@ get_header();
     ?>
 
     <section class="posts | content width-df">
-        <div class="post__year">
-            <h2>2023</h2>
-        </div>
         <div class="post__container">
             <?php get_posts_by_year('2023'); ?>
-        </div>
-    </section>
-
-    <section class="posts | content width-df">
-        <div class="post__year">
-            <h2>2022</h2>
-        </div>
-        <div class="post__container">
-            <?php get_posts_by_year('2022'); ?>
-        </div>
-    </section>
-
-    <section class="posts | content width-df">
-        <div class="post__year">
-            <h2>2021</h2>
-        </div>
-        <div class="post__container">
-            <?php get_posts_by_year('2021'); ?>
         </div>
     </section>
 </main>
