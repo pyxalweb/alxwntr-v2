@@ -5,14 +5,28 @@ main.site-main {
 	@extend %text-100;
 }
 
-.posts {
-	margin-block: 3em;
+
+
+
+// ***********************************
+//  Categories
+// ***********************************
+.categories {
+	display: flex;
+	justify-content: center;
 }
 
-.post__container {
+
+
+
+// ***********************************
+//  Posts
+// ***********************************
+.posts {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 3em;
+	margin-block: 3em;
 
 	@media (max-width: $vw-500) {
 		grid-template-columns: 1fr;

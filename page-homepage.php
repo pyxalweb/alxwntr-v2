@@ -57,9 +57,7 @@ get_header();
     ?>
 
     <section class="posts | content width-df">
-        <div class="post__container">
-            <?php get_posts_by_year('2023'); ?>
-        </div>
+        <?php get_posts_by_year('2023'); ?>
     </section>
 </main>
 

@@ -2,7 +2,7 @@
 //  alxwntr Layout Scripts
 // ***********************************
 // Created by Alex Winter on 2023-05-26
-// Last Modified: 2023-08-10
+// Last Modified: 2023-08-13
 
 
 
@@ -60,23 +60,31 @@ const showHidePostItems = () => {
 			const categoryID = category.getAttribute('data-category')
 
 			postItem.forEach((post) => {
+				const showPost = () => {
+					post.classList.add('active')
+					setTimeout(() => {
+						post.classList.add('fade')
+					}, 100)
+				}
+
 				// get the post ID
 				const postID = post.getAttribute('data-category')
 
 				// remove fade class from ALL posts
 				post.classList.remove('fade')
 
-				// remove active class from posts that do not match
-				// add active class to posts that do match
-				// add fade class to posts that do match
 				setTimeout(() => {
-					if (postID !== categoryID) {
+					// add active class to all posts if user clicks 'all' category
+					if (categoryID === 'all') {
+						showPost()
+					}
+					// remove active class from posts that do not match the category ID
+					else if (categoryID !== postID) {
 						post.classList.remove('active')
-					} else {
-						post.classList.add('active')
-						setTimeout(() => {
-							post.classList.add('fade')
-						}, 100)
+					}
+					// add 'active' and 'fade' class to posts that do match
+					else {
+						showPost()
 					}
 				}, 500)
 			})
