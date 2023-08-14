@@ -54,13 +54,27 @@ mainElementMinHeight()
 //  Show / Hide Post Items by Category ID
 // ***********************************
 const showHidePostItems = () => {
+	let selectedCategoryID = 'all'
+
 	categoryItem.forEach((category) => {
 		category.addEventListener('click', () => {
 			// get the category ID
 			const categoryID = category.getAttribute('data-category')
 
+			// remove active class from ALL category buttons
+			categoryItem.forEach((category) => {
+				category.classList.remove('active')
+			})
+
+			// add active class to the category button that was clicked
+			selectedCategoryID = categoryID
+			if (category.dataset.category === selectedCategoryID) {
+				category.classList.add('active')
+			}
+
 			postItem.forEach((post) => {
-				const showPost = () => {
+				// function that shows the post items
+				const showPosts = () => {
 					post.classList.add('active')
 					setTimeout(() => {
 						post.classList.add('fade')
@@ -76,7 +90,7 @@ const showHidePostItems = () => {
 				setTimeout(() => {
 					// add active class to all posts if user clicks 'all' category
 					if (categoryID === 'all') {
-						showPost()
+						showPosts()
 					}
 					// remove active class from posts that do not match the category ID
 					else if (categoryID !== postID) {
@@ -84,7 +98,7 @@ const showHidePostItems = () => {
 					}
 					// add 'active' and 'fade' class to posts that do match
 					else {
-						showPost()
+						showPosts()
 					}
 				}, 500)
 			})

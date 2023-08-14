@@ -43,27 +43,6 @@ header.site-header {
 // ***********************************
 //  Navigation
 // ***********************************
-
-// nav - default
-%nav-100 {
-	@include text(var(--ff-primary), clamp(var(--fs-400), 3vw, var(--fs-500)), var(--fw-medium), var(--lh-400), var(--c-white), none, lowercase, normal);
-
-	background-color: transparent;
-	border: 1px solid var(--c-grey-100);
-	border-radius: 0 1em 0 1em;
-	padding: 0.7em 1.25em;
-	transition: all var(--t-fast);
-
-	&:hover,
-	&:focus {
-		background-color: var(--c-black-alt);
-		color: var(--c-primary);
-	}
-}
-.nav-100 {
-	@extend %nav-100;
-}
-
 .header__navigation {
 	display: flex;
 	align-items: center;
@@ -87,6 +66,6 @@ header.site-header {
 	}
 
 	a {
-		@extend %nav-100;
+		@extend %button;
 	}
 }

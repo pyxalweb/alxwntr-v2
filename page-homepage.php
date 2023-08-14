@@ -15,12 +15,12 @@ get_header();
             ));
 
             foreach($categories as $category) {
-                echo '<button type="button" class="category__item" data-category="' . $category->term_id . '">' . $category->name . '</button>';
+                echo '<button type="button" class="category__item | button" data-category="' . $category->term_id . '">' . $category->name . '</button>';
             }
         }
         categoriesList();
         ?>
-        <button type="button" class="category__item" data-category="all">View All</button>
+        <button type="button" class="category__item | button | active" data-category="all">all</button>
     </section>
 
     <?php
