@@ -1,6 +1,7 @@
 <div class="header__navigation">
     <?php
     wp_nav_menu( array(
+        'exclude' => '345', // hide page-item-345 (homepage) from the menu
         'theme_location' => 'menu-1', // Replace with the location of your menu
         'container' => 'nav', // Remove the <div> wrapper
         'menu_class' => '', // Add a class to the parent <ul> wrapper
