@@ -120,6 +120,7 @@ ul, ol {
 a {
 	color: var(--c-primary);
 	text-decoration: none;
+	transition: all var(--t-medium);
 
 	&:hover,
 	&:focus {
