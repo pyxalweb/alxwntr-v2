@@ -16,10 +16,16 @@ main.site-main {
 	justify-content: center;
 	gap: 1em;
 	margin-block: 3em;
+	flex-wrap: wrap;
 }
 
 .category__item {
-	
+	@media (max-width: $vw-500) {
+		flex-grow: 1;
+		flex-shrink: 1;
+		flex-basis: 20vw;
+		max-width: 240px;
+	}
 }
 
 
