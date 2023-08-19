@@ -13,8 +13,8 @@
 //  Global Elements
 // ***********************************
 const header = document.querySelector('.site-header')
-const main = document.querySelector('.site-main')
 const footer = document.querySelector('.site-footer')
+const mainHomepage = document.querySelector('.site-main.homepage')
 const categoryItem = document.querySelectorAll('.category__item')
 const postItem = document.querySelectorAll('.post__item')
 const postContainer = document.querySelectorAll('.post__container')
@@ -43,7 +43,7 @@ mainElementMinHeight = () => {
 	const headerHeight = header.offsetHeight
 	const footerHeight = footer.offsetHeight
 
-	main.style.minHeight = `calc(100vh - ${headerHeight}px - ${footerHeight}px + 1px)`
+	mainHomepage.style.minHeight = `calc(100vh - ${headerHeight}px - ${footerHeight}px + 1px)`
 }
 mainElementMinHeight()
 

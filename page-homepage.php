@@ -4,7 +4,7 @@
 get_header();
 ?>
 
-<main id="site-main" class="site-main">
+<main id="site-main" class="site-main homepage">
     <section class="categories | content width-df">
         <?php
         function categoriesList() {
