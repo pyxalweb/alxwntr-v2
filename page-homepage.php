@@ -47,7 +47,7 @@ get_header();
                         <p><?php echo $category_name; ?></p>
                     </div>
                     <div class="post__date">
-                        <p><?php the_time('F jS, Y'); ?></p>
+                        <time datetime="<?php the_time('Y-m-d') ?>"><?php the_time('F jS, Y'); ?></time>
                     </div>
                 </div>
             <?php
