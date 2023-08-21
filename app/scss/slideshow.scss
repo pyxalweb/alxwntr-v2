@@ -1,0 +1,51 @@
+// ***********************************
+//  Slideshow - Fade In / Out
+// ***********************************
+.slideshow {
+    display: grid;
+    place-items: start;
+}
+
+// slides
+.slideshow__slide {
+    opacity: 0;
+    z-index: -1;
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    transition: all var(--t-medium);
+}
+
+.slideshow__slide[data-status='active'] {
+    opacity: 1;
+    z-index: 1;
+}
+
+// controls (prev / next)
+.slideshow__controls {
+
+}
+
+.slideshow__prev {
+
+}
+
+.slideshow__next {
+
+}
+
+// dots
+.slideshow__dots {
+
+}
+
+.slideshow__dot {
+    width: 1em;
+    height: 1em;
+}
+
+.slideshow__dot[data-status='active'] {
+    background-color: red;
+}
