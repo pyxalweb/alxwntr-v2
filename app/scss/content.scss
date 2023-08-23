@@ -114,26 +114,3 @@ main.site-main {
 	position: absolute;
 	transform: translate(50%, 0);
 }
-
-
-
-
-// ***********************************
-//  Text Photo
-// ***********************************
-.textphoto {
-	display: flex;
-	gap: 3em;
-}
-
-.textphoto__text {
-	flex-grow: 1;
-	flex-shrink: 1;
-	flex-basis: auto;
-}
-
-.textphoto__photo {
-	flex-grow: 0;
-	flex-shrink: 0;
-	flex-basis: 25%;
-}
