@@ -29,12 +29,13 @@ while ( have_posts() ) :
                         <img src="<?php echo get_template_directory_uri(); ?>/temp/alex-winter-old-coffee-mug@original.jpg" alt="Alex Winter drinking coffee from a very old mug">
                     </div>
 
+                    <!--
                     <div class="slideshow__controls">
                         <button class="slideshow__prev">Prev</button>
                         <button class="slideshow__next">Next</button>
                     </div>
-
                     <div class="slideshow__dots"></div>
+                    -->
                 </div>
             </div>
         </div>
