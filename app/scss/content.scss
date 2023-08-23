@@ -3,6 +3,10 @@
 // ***********************************
 main.site-main {
 	@extend %text-100;
+
+	h1 {
+		margin-bottom: 0.5em;
+	}
 }
 
 
