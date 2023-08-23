@@ -211,3 +211,76 @@ a {
 .social__lastfm a:before { content: '\F202'; }
 .social__github a:before { content: '\F09B'; }
 .social__codepen a:before { content: '\F32C'; }
+
+
+
+
+// ***********************************
+//  Grid Content
+// ***********************************
+.gridcontent {
+	display: grid;
+}
+
+.gridcontent--gap-3em {
+	gap: 3em;
+}
+
+.gridcontent--3fr-1fr {
+	grid-template-columns: 3fr 1fr;
+}
+
+.gridcontent__item {
+	
+}
+
+
+
+
+// ***********************************
+//  Flex Content
+// ***********************************
+.flexcontent {
+	display: flex;
+}
+
+.flexcontent--center-vertically {
+	flex-direction: column;
+	justify-content: center;
+}
+
+
+
+
+// ***********************************
+//  Fixed Width
+// ***********************************
+.fixedwidth {
+
+}
+
+.fixedwidth--348px {
+	width: 348px;
+}
+
+
+
+
+// ***********************************
+//  Rounded Image
+// ***********************************
+.roundimage {
+	
+}
+
+.roundimage--100 {
+	img {
+		border-radius: 100%;
+	}
+}
+
+.roundimage--border-grey-100 {
+	img {
+		border: 1em solid var(--c-grey-100);
+	}
+}
