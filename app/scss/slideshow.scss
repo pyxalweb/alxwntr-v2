@@ -14,12 +14,6 @@
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     transition: all var(--t-medium);
-
-    img {
-        border: 0.25em solid var(--c-primary);
-        border-radius: 0 7em 0 7em;
-        // filter: grayscale(100%);
-    }
 }
 
 .slideshow__slide[data-status='active'] {
