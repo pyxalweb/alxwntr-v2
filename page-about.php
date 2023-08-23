@@ -11,13 +11,13 @@ while ( have_posts() ) :
 
 <main id="site-main" <?php post_class($class = 'site-main interior'); ?>>
 	<section class="content width-df | text-100 | mbl-3">
-        <div class="textphoto">
-            <div class="textphoto__text">
+        <div class="gridcontent gridcontent--3fr-1fr gridcontent--gap-3em">
+            <div class="gridcontent__item">
                 <h1><?php the_title(); ?></h1>
                 <?php the_content(); ?>
             </div>
 
-            <div class="textphoto__photo">
+            <div class="gridcontent__item | flexcontent flexcontent--center-vertically | fixedwidth--348px | roundimage--100 | roundimage--border-grey-100">
                 <div class="slideshow" data-interval="4000">
                     <div class="slideshow__slide" data-status="active">
                         <img src="<?php echo get_template_directory_uri(); ?>/temp/alex-winter-egyptian-coffee@original.jpg" alt="Alex Winter drinking Egyptian coffee">
