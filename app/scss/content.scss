@@ -114,3 +114,31 @@ main.site-main {
 	position: absolute;
 	transform: translate(50%, 0);
 }
+
+
+
+
+// ***********************************
+//  About Page
+// ***********************************
+.about {
+	display: grid;
+	gap: 3em;
+	grid-template-columns: 3fr 1fr;
+}
+
+.about__item {
+
+}
+
+.about__item--image {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 348px;
+
+	img {
+		border-radius: 100%;
+		border: 1em solid var(--c-grey-100);
+	}
+}
