@@ -276,4 +276,37 @@ slideshow()
 
 
 
+// ***********************************
+//  Slideshow - About Page Responsiveness
+// ***********************************
+const slideshowAboutPage = () => {
+	const slideshowAbout = document.querySelector('.slideshow--about')
+
+	if (!slideshowAbout) return
+
+	const slideshowAboutSlides = slideshowAbout.querySelectorAll('.slideshow__slide')
+
+	if (window.innerWidth > 1120) {
+		slideshowAboutSlides.forEach((slide) => {
+			slide.classList.remove('slideshow__slide--vw600')
+		})
+	} else if (window.innerWidth <= 1120 && window.innerWidth > 480) {
+		slideshowAboutSlides.forEach((slide) => {
+			slide.classList.add('slideshow__slide--vw600')
+		})
+	} else if (window.innerWidth <= 480) {
+		slideshowAboutSlides.forEach((slide) => {
+			slide.classList.remove('slideshow__slide--vw600')
+		})
+	}
+}
+slideshowAboutPage()
+window.addEventListener('resize', () => {
+	slideshowAboutPage()
+})
+
+
+
+
+
 })() // end IIFE

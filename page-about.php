@@ -18,7 +18,7 @@ while ( have_posts() ) :
             </div>
 
             <div class="about__item about__item--image">
-                <div class="slideshow" data-interval="4000">
+                <div class="slideshow slideshow--about" data-interval="4000">
                     <div class="slideshow__slide" data-status="active">
                         <img src="<?php echo get_template_directory_uri(); ?>/temp/alex-winter-egyptian-coffee@original.jpg" alt="Alex Winter drinking Egyptian coffee">
                     </div>
@@ -28,7 +28,6 @@ while ( have_posts() ) :
                     <div class="slideshow__slide">
                         <img src="<?php echo get_template_directory_uri(); ?>/temp/alex-winter-old-coffee-mug@original.jpg" alt="Alex Winter drinking coffee from a very old mug">
                     </div>
-
                     <!--
                     <div class="slideshow__controls">
                         <button class="slideshow__prev">Prev</button>

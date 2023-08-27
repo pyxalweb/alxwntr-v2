@@ -125,6 +125,10 @@ main.site-main {
 	display: grid;
 	gap: 3em;
 	grid-template-columns: 3fr 1fr;
+
+	@media (max-width: $vw-600) {
+		grid-template-columns: 1fr;
+	}
 }
 
 .about__item {
@@ -135,10 +139,42 @@ main.site-main {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	width: 348px;
+
+	.slideshow {
+		width: 348px;
+
+		// show three slides in a row on medium-size viewports
+		@media (max-width: $vw-600) {
+			width: 100%;
+			grid-template-columns: repeat(3, 1fr);
+			gap: clamp(0.25em, 2vw, 1em);
+			
+			.slideshow__slide--vw600 {
+				opacity: 1;
+				z-index: 1;
+				grid-column: auto;
+				grid-row: auto;
+
+				// hide all but the first 3 slides
+				&:nth-of-type(n+4) {
+					display: none;
+				}
+			}
+
+			img {
+				width: 348px;
+			}
+		}
+
+		@media (max-width: $vw-100) {
+			max-width: 348px;
+			grid-template-columns: 1fr;
+			margin-inline: auto;
+		}
+	}
 
 	img {
 		border-radius: 100%;
-		border: 1em solid var(--c-grey-100);
+		border: clamp(0.25em, 2vw, 1em) solid var(--c-grey-100);
 	}
 }
