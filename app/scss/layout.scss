@@ -52,6 +52,7 @@ body {
 	@include text(var(--ff-primary), var(--root-font-size), var(--fw-regular), var(--lh-400), var(--c-grey-300), none, none, normal);
 }
 .text-125 { @extend %text-125; }
+.text-125--h2 h2 { @extend %text-125; }
 
 // Montserrat - 22 / 26 - Regular - 1.5 - White - None - None - None (h3)
 %text-200 {
@@ -93,15 +94,7 @@ main p {
 	}
 }
 
-h1 {
-	@extend %text-400;
-}
-
-h2 {
-	@extend %text-100;
-}
-
-h3 {
+h1, h2, h3 {
 	@extend %text-100;
 }
 

@@ -24,6 +24,9 @@ main.site-main {
 }
 
 .category__item {
+	flex-grow: 1;
+	flex-shrink: 1;
+
 	@media (max-width: $vw-500) {
 		flex-grow: 1;
 		flex-shrink: 1;
@@ -122,6 +125,12 @@ main.site-main {
 //  About Page
 // ***********************************
 .about {
+	margin-block: 3em;
+	padding-bottom: 3em;
+	border-bottom: 1px solid var(--c-grey-100);
+}
+
+.about__container {
 	display: grid;
 	gap: 3em;
 	grid-template-columns: 3fr 1fr;
@@ -132,7 +141,15 @@ main.site-main {
 }
 
 .about__item {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
 
+.about__text {
+	h2 {
+		margin-bottom: 1em;
+	}
 }
 
 .about__item--image {

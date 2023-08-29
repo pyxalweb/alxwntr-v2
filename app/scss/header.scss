@@ -25,6 +25,10 @@ header.site-header {
 //  Logo
 // ***********************************
 .header__logo {
+	h1 {
+		@extend %text-400;
+	}
+
     a {
         @extend %text-400;
         transition: color var(--t-medium);

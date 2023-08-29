@@ -5,22 +5,58 @@ get_header();
 ?>
 
 <main id="site-main" class="site-main homepage">
-    <section class="categories | content width-df">
-        <?php
-        function categoriesList() {
-            $categories = get_categories(array(
-                'orderby' => 'name',
-                'order' => 'ASC',
-                'exclude' => '7'
-            ));
+    <section class="content width-df | about | text-100 text-125--h2">
+        <div class="about__container">
+            <div class="about__item">
+                <div class="about__text">
+                    <h2>I'm Alex Winter, a front-end web developer in Portland, Oregon.</h2>
+                    <?php the_content(); ?>
+                </div>
+            </div>
 
-            foreach($categories as $category) {
-                echo '<button type="button" class="category__item | button" data-category="' . $category->term_id . '">' . $category->name . '</button>';
+            <div class="about__item about__item--image">
+                <div class="slideshow slideshow--about" data-interval="4000">
+                    <div class="slideshow__slide" data-status="active">
+                        <img src="<?php echo get_template_directory_uri(); ?>/temp/alex-winter-egyptian-coffee@original.jpg" alt="Alex Winter drinking Egyptian coffee">
+                    </div>
+                    <div class="slideshow__slide">
+                        <img src="<?php echo get_template_directory_uri(); ?>/temp/alex-winter-ipa-beer@original.jpg" alt="Alex Winter drinking an IPA">
+                    </div>
+                    <div class="slideshow__slide">
+                        <img src="<?php echo get_template_directory_uri(); ?>/temp/alex-winter-old-coffee-mug@original.jpg" alt="Alex Winter drinking coffee from a very old mug">
+                    </div>
+                    <!--
+                    <div class="slideshow__controls">
+                        <button class="slideshow__prev">Prev</button>
+                        <button class="slideshow__next">Next</button>
+                    </div>
+                    <div class="slideshow__dots"></div>
+                    -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content width-df | text-125--h2">
+        <h2>Recent Posts.</h2>
+
+        <div class="categories">
+            <?php
+            function categoriesList() {
+                $categories = get_categories(array(
+                    'orderby' => 'name',
+                    'order' => 'ASC',
+                    'exclude' => '7'
+                ));
+
+                foreach($categories as $category) {
+                    echo '<button type="button" class="category__item | button" data-category="' . $category->term_id . '">' . $category->name . '</button>';
+                }
             }
-        }
-        categoriesList();
-        ?>
-        <button type="button" class="category__item | button | active" data-category="all">all</button>
+            categoriesList();
+            ?>
+            <button type="button" class="category__item | button | active" data-category="all">all</button>
+        </div>
     </section>
 
     <?php
