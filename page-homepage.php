@@ -37,10 +37,8 @@ get_header();
         </div>
     </section>
 
-    <section class="content width-df | text-125--h2">
-        <h2>Recent Posts.</h2>
-
-        <div class="categories">
+    <div class="content width-df | categories" role="group" aria-label="Post category filters">
+        <div class="categories__container">
             <?php
             function categoriesList() {
                 $categories = get_categories(array(
@@ -57,7 +55,7 @@ get_header();
             ?>
             <button type="button" class="category__item | button | active" data-category="all">all</button>
         </div>
-    </section>
+    </div>
 
     <?php
     function get_posts_by_year($year) {
