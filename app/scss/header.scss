@@ -25,18 +25,15 @@ header.site-header {
 //  Logo
 // ***********************************
 .header__logo {
-	h1 {
+	h1,
+	a {
 		@extend %text-400;
 	}
 
     a {
-        @extend %text-400;
-        transition: color var(--t-medium);
-
         &:hover,
         &:focus {
             color: var(--c-primary);
-            text-decoration: none;
         }
     }
 }
@@ -56,17 +53,14 @@ header.site-header {
 	}
 
 	ul {
+		display: flex;
+		gap: 1.5em;
 		margin: 0;
 		list-style: none;
-		display: flex;
 	}
 
 	li {
-		margin-inline: 1.5em;
-
-		&:last-of-type {
-			margin-inline: 0;
-		}
+		
 	}
 
 	a {
