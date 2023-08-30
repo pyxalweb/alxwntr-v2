@@ -14,6 +14,8 @@ footer.site-footer {
 .footer__container {
 	display: flex;
 	justify-content: space-between;
+	@extend %pbl-c-1-5-3;
+	@extend %bt-1-grey-100;
 }
 
 

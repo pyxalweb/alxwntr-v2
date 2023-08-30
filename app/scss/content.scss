@@ -2,9 +2,7 @@
 //  Main: Site Content
 // ***********************************
 main.site-main {
-	h1 {
-		margin-bottom: 0.5em;
-	}
+
 }
 
 
@@ -14,7 +12,9 @@ main.site-main {
 //  About Page
 // ***********************************
 .about {
-	
+	@extend %mbl-c-3-5-5;
+	@extend %pb-c-3-5-5;
+	@extend %bb-1-grey-100;
 }
 
 .about__container {
@@ -90,7 +90,7 @@ main.site-main {
 //  Categories
 // ***********************************
 .categories {
-	
+	@extend %mbl-c-3-5-5;
 }
 
 .categories__container {
@@ -108,7 +108,7 @@ main.site-main {
 		flex-grow: 1;
 		flex-shrink: 1;
 		flex-basis: 20vw;
-		max-width: 240px;
+		max-width: 150px;
 	}
 }
 
@@ -122,6 +122,7 @@ main.site-main {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 3em;
+	@extend %mbl-c-3-5-5;
 
 	@media (max-width: $vw-500) {
 		grid-template-columns: 1fr;

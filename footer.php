@@ -8,7 +8,7 @@
 ?>
 
 <footer id="site-footer" class="site-footer">
-	<div class="footer__container | content width-df | pbl-c-1-5-3 bt-1-grey-100">
+	<div class="footer__container | content width-df | bt-1-grey-100">
 		<div class="footer__copyright">
 			<p>© <?php echo date('Y'); ?> - Alex Winter</p>
 		</div>
