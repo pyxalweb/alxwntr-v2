@@ -5,7 +5,7 @@ get_header();
 ?>
 
 <main id="site-main" class="site-main homepage">
-    <section class="content width-df | about | text-100 text-125--h2 | pbl-c-3-5-5">
+    <section class="content width-df | about | text-100 text-125--h2 | pbl-c-3-5-5 bb-1-grey-100">
         <div class="about__container">
             <div class="about__item">
                 <div class="about__text">
