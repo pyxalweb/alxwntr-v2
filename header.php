@@ -22,7 +22,7 @@
 <?php get_template_part( 'template-parts/site', 'skip-nav' ); ?>
 
 <header id="site-header" class="site-header">
-	<div class="content width-df | header__container | pbl-c-1-5-3 bb-1-grey-100">
+	<div class="header__container content width-df | pbl-c-1-5-3 bb-1-grey-100">
 		<?php get_template_part( 'template-parts/site', 'logo' ); ?>
 
         <?php get_template_part( 'template-parts/site', 'navigation' ); ?>
