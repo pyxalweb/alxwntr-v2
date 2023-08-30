@@ -110,6 +110,11 @@ main.site-main {
 		flex-basis: 20vw;
 		max-width: 150px;
 	}
+
+	&:hover,
+	&:focus {
+		box-shadow: 1px 1px 50px var(--c-primary-rgb-10);
+	}
 }
 
 
