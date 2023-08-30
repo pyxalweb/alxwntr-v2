@@ -5,7 +5,7 @@ get_header();
 ?>
 
 <main id="site-main" class="site-main homepage">
-    <section class="content width-df | about | text-100 text-125--h2">
+    <section class="content width-df | about | text-100 text-125--h2 | pbl-c-3-5-5">
         <div class="about__container">
             <div class="about__item">
                 <div class="about__text">
@@ -37,7 +37,7 @@ get_header();
         </div>
     </section>
 
-    <div class="content width-df | categories" role="group" aria-label="Post category filters">
+    <div class="content width-df | categories | mbl-c-3-5-5" role="group" aria-label="Post category filters">
         <div class="categories__container">
             <?php
             function categoriesList() {
@@ -90,7 +90,7 @@ get_header();
     }
     ?>
 
-    <section class="posts | content width-df">
+    <section class="posts | content width-df | mbl-c-3-5-5">
         <?php get_posts_by_year('2023'); ?>
     </section>
 </main>

@@ -2,8 +2,6 @@
 //  Main: Site Content
 // ***********************************
 main.site-main {
-	@extend %text-100;
-
 	h1 {
 		margin-bottom: 0.5em;
 	}
@@ -16,8 +14,6 @@ main.site-main {
 //  About Page
 // ***********************************
 .about {
-	margin-bottom: 5em;
-	padding-block: 5em;
 	border-bottom: 1px solid var(--c-grey-100);
 }
 
@@ -94,14 +90,13 @@ main.site-main {
 //  Categories
 // ***********************************
 .categories {
-
+	
 }
 
 .categories__container {
 	display: flex;
 	justify-content: center;
 	gap: 1em;
-	margin-block: 3em;
 	flex-wrap: wrap;
 }
 
@@ -127,7 +122,6 @@ main.site-main {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 3em;
-	margin-block: 3em;
 
 	@media (max-width: $vw-500) {
 		grid-template-columns: 1fr;

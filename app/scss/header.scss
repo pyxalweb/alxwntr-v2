@@ -14,7 +14,6 @@ header.site-header {
 .header__container {
     display: flex;
     justify-content: space-between;
-    padding-block: clamp(1em, 5vw, 3em);
 	border-bottom: 1px solid var(--c-grey-100);
 }
 
