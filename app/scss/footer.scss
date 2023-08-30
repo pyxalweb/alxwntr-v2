@@ -16,6 +16,11 @@ footer.site-footer {
 	justify-content: space-between;
 	@extend %pbl-c-1-5-3;
 	@extend %bt-1-grey-100;
+
+	@media (max-width: $vw-100) {
+		flex-direction: column;
+		align-items: center;
+	}
 }
 
 
