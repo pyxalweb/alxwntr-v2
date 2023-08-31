@@ -37,6 +37,13 @@ get_header();
         </div>
     </section>
 
+    <section class="content width-df">
+        <div class="posts">
+            <!-- Posts will be loaded here -->
+        </div>
+        <button class="posts__more | button" data-page="1">Load More</button>
+    </section>
+
     <div class="categories | content width-df" role="group" aria-label="Post category filters">
         <div class="categories__container">
             <?php

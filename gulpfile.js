@@ -19,6 +19,13 @@ function jsTask(){
     .pipe(dest('dist', { sourcemaps: '.' }));
 }
 
+// JavaScript Task
+function jsTask(){
+  return src('app/js/ajax-posts.js', { sourcemaps: true })
+    .pipe(terser())
+    .pipe(dest('dist', { sourcemaps: '.' }));
+}
+
 // Watch Task
 function watchTask(){
   watch(['app/scss/**/*.scss', 'app/js/**/*.js'], series(scssTask, jsTask));
