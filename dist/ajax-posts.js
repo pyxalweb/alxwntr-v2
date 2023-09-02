@@ -1,2 +1,0 @@
-document.addEventListener("DOMContentLoaded",(function(){let e=1,t=!1;function n(){if(t)return;t=!0;const n=new XMLHttpRequest;n.open("POST",ajax_object.ajax_url,!0),n.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),n.onload=function(){200===n.status&&(document.querySelector(".posts").insertAdjacentHTML("beforeend",n.responseText),t=!1,e++)},n.send("action=load_posts&page="+e)}document.querySelector(".posts__more").addEventListener("click",(function(){n()})),n()}));
-//# sourceMappingURL=ajax-posts.js.map

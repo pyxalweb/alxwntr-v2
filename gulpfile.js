@@ -13,15 +13,12 @@ function scssTask(){
 }
 
 // JavaScript Task
-function jsTask(){
-  return src('app/js/scripts.js', { sourcemaps: true })
-    .pipe(terser())
-    .pipe(dest('dist', { sourcemaps: '.' }));
-}
+function jsTask() {
+  const jsFiles = [
+    'app/js/scripts.js'
+  ];
 
-// JavaScript Task
-function jsTask(){
-  return src('app/js/ajax-posts.js', { sourcemaps: true })
+  return src(jsFiles, { sourcemaps: true })
     .pipe(terser())
     .pipe(dest('dist', { sourcemaps: '.' }));
 }

@@ -8,45 +8,8 @@ function theme_files() {
 
 	// main scripts
 	wp_enqueue_script('main-scripts', get_theme_file_uri('/dist/scripts.js'), NULL, '1.0', true);
-
-	// ajax for loading posts
-	wp_enqueue_script('ajax-scripts', get_theme_file_uri('/dist/ajax-posts.js'), NULL, '1.0', true);
-	wp_localize_script('ajax-scripts', 'ajax_object', array(
-        'ajax_url' => admin_url('admin-ajax.php'),
-        'posts_per_page' => get_option('posts_per_page')
-    ));
-
-	// wp_enqueue_script('gsap-scripts', get_theme_file_uri('/dist/gsap-scrolltrigger-3.6.0.js'), NULL, '1.0', true);
 }
 add_action('wp_enqueue_scripts', 'theme_files');
-
-
-
-
-// ***********************************
-//  AJAX for loading posts
-// ***********************************
-function load_posts() {
-    $paged = $_POST['page'];
-    $args = array(
-        'post_type' => 'post',
-        'post_status' => 'publish',
-        'paged' => $paged
-    );
-
-    $query = new WP_Query($args);
-
-    if($query->have_posts()):
-        while($query->have_posts()): $query->the_post();
-            // Display your post content here
-            get_template_part('template-parts/content', 'post');
-        endwhile;
-    endif;
-
-    wp_die();
-}
-add_action('wp_ajax_load_posts', 'load_posts');
-add_action('wp_ajax_nopriv_load_posts', 'load_posts');
 
 
 
