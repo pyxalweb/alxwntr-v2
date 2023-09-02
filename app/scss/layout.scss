@@ -47,22 +47,15 @@ body {
 }
 .text-100 { @extend %text-100; }
 
-// Montserrat - 16 - Regular - 1.5 - Grey - None - None - None
-%text-125 {
-	@include text(var(--ff-primary), var(--root-font-size), var(--fw-regular), var(--lh-400), var(--c-grey-300), none, none, normal);
-}
-.text-125 { @extend %text-125; }
-.text-125--h2 h2 { @extend %text-125; }
-
 // Montserrat - 22 / 26 - Regular - 1.5 - White - None - None - None (h3)
 %text-200 {
 	@include text(var(--ff-primary), clamp(var(--fs-700), 3vw, var(--fs-900)), var(--fw-regular), var(--lh-400), var(--c-white), none, none, normal);
 }
 .text-200 { @extend %text-200; }
 
-// Montserrat - 22 / 26 - Bold - 1.5 - White - None - None - None (h2)
+// Montserrat - 16 - Regular - 1.5 - Grey - None - None - None
 %text-300 {
-	@include text(var(--ff-primary), clamp(var(--fs-700), 3vw, var(--fs-1000)), var(--fw-bold), var(--lh-400), var(--c-grey-200), none, none, normal);
+	@include text(var(--ff-primary), var(--root-font-size), var(--fw-regular), var(--lh-400), var(--c-grey-300), none, none, normal);
 }
 .text-300 { @extend %text-300; }
 
@@ -71,6 +64,13 @@ body {
 	@include text(var(--ff-primary), var(--fs-1000), var(--fw-bold), var(--lh-400), var(--c-white), none, none, normal);
 }
 .text-400 { @extend %text-400; }
+
+// Montserrat - 16 - Regular - 1.5 - Grey - None - None - None
+%text-500 {
+	@include text(var(--ff-primary), var(--fs-600), var(--fw-bold), var(--lh-400), var(--c-white), none, none, normal);
+}
+.text-500 { @extend %text-500; }
+.text-500--h2 h2 { @extend %text-500; }
 
 //  Body
 // ***********************************
@@ -118,6 +118,7 @@ a {
 	&:hover,
 	&:focus {
 		color: var(--c-white);
+		text-shadow: 1px 1px 2px var(--c-black-alt), 0 0 1em var(--c-primary), 0 0 0.2em var(--c-primary);
 	}
 }
 
@@ -127,14 +128,12 @@ a {
 // ***********************************
 //  Buttons
 // ***********************************
-
-
 %button-defaults {
 	
 }
 
 %button {
-	@include text(var(--ff-primary), clamp(var(--fs-400), 3vw, var(--fs-500)), var(--fw-medium), var(--lh-400), var(--c-white), none, lowercase, normal);
+	@include text(var(--ff-primary), clamp(var(--fs-400), 3vw, var(--fs-500)), var(--fw-medium), var(--lh-400), var(--c-primary), none, lowercase, normal);
 	background-color: transparent;
 	border: 1px solid var(--c-grey-100);
 	border-radius: 0 1em 0 1em;
@@ -143,10 +142,11 @@ a {
 	cursor: pointer;
 
 	&:hover,
-	&:focus,
-	&.active {
+	&:focus {
 		background-color: var(--c-black-alt);
-		color: var(--c-primary);
+		color: var(--c-white);
+		box-shadow: 1px 1px 50px var(--c-primary-rgb-10);
+		text-shadow: none;
 	}
 }
 
@@ -204,3 +204,27 @@ a {
 .social__lastfm a:before { content: '\F202'; }
 .social__github a:before { content: '\F09B'; }
 .social__codepen a:before { content: '\F32C'; }
+
+
+
+
+// ***********************************
+//  Error
+// ***********************************
+.error {
+	position: fixed;
+	inset: 0 auto auto 0;
+	width: 100%;
+	padding-inline: 1em;
+	background-color: #9d0000;
+	color: var(--c-white);
+	text-align: center;
+	z-index: 99999;
+	transition: all var(--t-fast);
+
+	opacity: 0;
+
+	&.active {
+		opacity: 1;
+	}
+}

@@ -28,11 +28,29 @@ header.site-header {
 	h1,
 	a {
 		@extend %text-400;
+
+		span {
+			display: inline-block;
+			max-width: 0;
+			opacity: 0;
+			transition: all 1.75s;
+		}
+
+		&:hover,
+		&:focus {
+			cursor: default;
+
+			span {
+				max-width: 100%;
+				opacity: 1;
+			}
+		}
 	}
 
     a {
         &:hover,
         &:focus {
+			cursor: pointer;
             color: var(--c-primary);
         }
     }
@@ -64,11 +82,6 @@ header.site-header {
 	}
 
 	a {
-		color: var(--c-white);
-
-		&:hover,
-		&:focus {
-			color: var(--c-primary);
-		}
+		@extend %button;
 	}
 }

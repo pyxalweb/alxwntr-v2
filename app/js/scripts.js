@@ -4,9 +4,6 @@
 // Created by Alex Winter on 2023-05-26
 // Last Modified: 2023-08-20
 
-
-
-
 (function () {
 
 // ***********************************
@@ -54,6 +51,35 @@ mainElementMinHeight()
 
 
 
+
+
+const errorMessages = (message) => {
+	let errorMessageVisible = false;
+	document.querySelector('body').insertAdjacentHTML('beforeend', '<div class="error"><p></p></div>');
+	const error = document.querySelector('.error');
+	const errorText = document.querySelector('.error p');
+
+	if (!errorMessageVisible) {
+		errorMessageVisible = true;
+
+		errorText.textContent = message;
+		error.classList.add('active');
+
+		setTimeout(function() {
+			errorMessageVisible = false;
+			error.classList.remove('active');
+		}, 4000)
+	}
+}
+
+
+
+
+
+
+
+
+
 // ***********************************
 //  Show / Hide Post Items by Category ID
 // ***********************************
@@ -64,6 +90,11 @@ const showHidePostItems = () => {
 		category.addEventListener('click', () => {
 			// get the category ID
 			const categoryID = category.getAttribute('data-category')
+
+			if (categoryID === selectedCategoryID) {
+				errorMessages('You\'re already viewing this category.')
+				return
+			}
 
 			// remove active class from ALL category buttons
 			categoryItem.forEach((category) => {
@@ -305,8 +336,6 @@ window.addEventListener('resize', () => {
 	slideshowAboutPage()
 })
 
-
-
-
-
 })() // end IIFE
+
+console.log('scripts.js loaded')
