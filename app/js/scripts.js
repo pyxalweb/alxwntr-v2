@@ -51,10 +51,12 @@ mainElementMinHeight()
 
 
 
-
-
+// ***********************************
+//  Error Messages
+// ***********************************
 const errorMessages = (message) => {
 	let errorMessageVisible = false;
+
 	document.querySelector('body').insertAdjacentHTML('beforeend', '<div class="error"><p></p></div>');
 	const error = document.querySelector('.error');
 	const errorText = document.querySelector('.error p');
@@ -68,14 +70,13 @@ const errorMessages = (message) => {
 		setTimeout(function() {
 			errorMessageVisible = false;
 			error.classList.remove('active');
+			
+			setTimeout(function() {
+				error.remove();
+			}, 1000)
 		}, 4000)
 	}
 }
-
-
-
-
-
 
 
 
