@@ -28,6 +28,7 @@ header.site-header {
 	h1,
 	a {
 		@extend %text-400;
+		transition: all 1.75s;
 
 		span {
 			display: inline-block;

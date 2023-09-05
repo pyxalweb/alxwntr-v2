@@ -33,9 +33,9 @@ main.site-main {
 	justify-content: center;
 }
 
-.about__text {
+.about__item--text {
 	h2 {
-		margin-bottom: 1em;
+		margin-bottom: 0.5em;
 	}
 }
 
@@ -90,7 +90,13 @@ main.site-main {
 //  Blog
 // ***********************************
 .blog {
+	text-align: center;
+}
 
+.blog__intro {
+	h2 {
+		margin-bottom: 1em;
+	}
 }
 
 
@@ -100,7 +106,7 @@ main.site-main {
 //  Blog Categories
 // ***********************************
 .blog__categories {
-	@extend %mb-c-3-5-5;
+	@extend %mbl-c-3-5-5;
 }
 
 .categories__container {
@@ -110,7 +116,8 @@ main.site-main {
 	flex-wrap: wrap;
 }
 
-.category__item {
+.category__btn {
+	@extend %button;
 	flex-grow: 1;
 	flex-shrink: 1;
 
@@ -122,12 +129,24 @@ main.site-main {
 	}
 
 	&.active {
-		&:not(.category__item--all) {
-			background-color: var(--c-black-alt);
-			color: var(--c-white);
-			box-shadow: 1px 1px 50px var(--c-primary-rgb-10);
-			text-shadow: none;
-		}
+		background-color: var(--c-black-alt);
+		color: var(--c-white);
+		box-shadow: 1px 1px 50px var(--c-primary-rgb-10);
+		text-shadow: none;
+	}
+
+	@media (max-width: $vw-500) {
+		display: none;
+	}
+}
+
+.categories__select {
+	@extend %button;
+	box-shadow: 1px 1px 50px var(--c-primary-rgb-10);
+	display: none;
+
+	@media (max-width: $vw-500) {
+		display: block;
 	}
 }
 
@@ -181,7 +200,7 @@ main.site-main {
 }
 
 .post__heading {
-	@extend %text-200;
+	@extend %text-300;
 	order: 2;
 	margin-bottom: 0.25em;
 	
@@ -193,13 +212,13 @@ main.site-main {
 .post__category {
 	inset: 2em 50% auto auto;
 	order: 1;
-	@extend %text-300;
+	@extend %text-500;
 }
 
 .post__date {
 	inset: auto 50% 2em auto;
 	order: 3;
-	@extend %text-300;
+	@extend %text-500;
 }
 
 .post__heading,
@@ -225,12 +244,4 @@ main.site-main {
 	margin-inline: auto;
 	text-align: center;
 	@extend %mbl-c-3-5-5;
-
-	.button {
-		
-	}
-}
-
-.blog__more__text {
-	margin-bottom: 1.5em;
 }
