@@ -90,13 +90,21 @@ main.site-main {
 //  Blog
 // ***********************************
 .blog {
-	text-align: center;
+
 }
 
 .blog__intro {
 	h2 {
 		margin-bottom: 1em;
 	}
+}
+
+.blog--home {
+	text-align: center;
+}
+
+.blog--archive {
+	@extend %mbl-c-3-5-5;
 }
 
 

@@ -58,11 +58,12 @@ body {
 
 %text-200-orange-yellow {
 	@extend %text-200;
-	background: linear-gradient(to right, #ff5733, #FFC300);
+	background: linear-gradient(to right, var(--c-gradient));
 	-webkit-background-clip: text;
 	background-clip: text;
 	color: transparent;
 }
+.text-200--h1--orange-yellow h1 { @extend %text-200-orange-yellow; }
 .text-200--h2--orange-yellow h2 { @extend %text-200-orange-yellow; }
 
 // list of posts headings
@@ -75,7 +76,7 @@ body {
 
 %text-300-orange-yellow {
 	@extend %text-300;
-	background: linear-gradient(to right, #ff5733, #FFC300);
+	background: linear-gradient(to right, var(--c-gradient));
 	-webkit-background-clip: text;
 	background-clip: text;
 	color: transparent;

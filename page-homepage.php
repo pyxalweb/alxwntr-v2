@@ -37,9 +37,9 @@ get_header();
         </div>
     </section>
 
-    <section class="blog | content width-df | text-100 text-300--h2--orange-yellow" role="region" aria-label="Latest Blog Posts">
+    <section class="blog blog--home | content width-df | text-100 text-300--h2--orange-yellow" role="region" aria-label="Latest Blog Posts">
         <div class="blog__intro">
-            <h2 id="blog__heading">Things I've Learned and Observed</h2>
+            <h2>Things I've Learned and Observed</h2>
             <p>The following is a collection of recent blog posts.<br>Most of the posts are web development related to serve as a reference guide for myself and some posts are of varying topics.</p>
         </div>
 

@@ -9,6 +9,8 @@
 // ***********************************
 //  Global Elements
 // ***********************************
+const root = document.documentElement;
+const body = document.querySelector('body')
 const header = document.querySelector('.site-header')
 const footer = document.querySelector('.site-footer')
 const mainHomepage = document.querySelector('.site-main.homepage')
@@ -354,5 +356,8 @@ slideshowAboutPage()
 window.addEventListener('resize', () => {
 	slideshowAboutPage()
 })
+
+
+
 
 })() // end IIFE
