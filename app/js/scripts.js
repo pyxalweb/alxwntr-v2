@@ -2,7 +2,7 @@
 //  alxwntr Layout Scripts
 // ***********************************
 // Created by Alex Winter on 2023-05-26
-// Last Modified: 2023-08-20
+// Last Modified: 2023-09-04
 
 (function () {
 
@@ -12,9 +12,9 @@
 const header = document.querySelector('.site-header')
 const footer = document.querySelector('.site-footer')
 const mainHomepage = document.querySelector('.site-main.homepage')
-const categoryItem = document.querySelectorAll('.category__item')
+const categoryBtn = document.querySelectorAll('.category__btn')
+const categoriesSelect = document.querySelector('.categories__select')
 const postItem = document.querySelectorAll('.post__item')
-const postContainer = document.querySelectorAll('.post__container')
 
 
 
@@ -57,7 +57,7 @@ mainElementMinHeight()
 const errorMessages = (message) => {
 	let errorMessageVisible = false;
 
-	document.querySelector('body').insertAdjacentHTML('beforeend', '<div class="error"><p></p></div>');
+	document.querySelector('body').insertAdjacentHTML('beforeend', '<div class="error" role="alert" aria-label="Error message"><p></p></div>');
 	const error = document.querySelector('.error');
 	const errorText = document.querySelector('.error p');
 
@@ -85,20 +85,57 @@ const errorMessages = (message) => {
 //  Show / Hide Post Items by Category ID
 // ***********************************
 const showHidePostItems = () => {
-	let selectedCategoryID = 'all'
+	let selectedCategoryID = 'all' // default category ID
+	let categoryID = null // category ID that is clicked or selected
 
-	categoryItem.forEach((category) => {
+	// function that shows the post items when the user clicks a category button or selects a category from the dropdown
+	const showEachPost = () => {
+		postItem.forEach((post) => {
+			// function that shows the post items
+			const showPosts = () => {
+				post.classList.add('active')
+				setTimeout(() => {
+					post.classList.add('fade')
+				}, 100)
+			}
+
+			// get the post ID
+			const postID = post.getAttribute('data-category')
+
+			// remove fade class from ALL posts
+			post.classList.remove('fade')
+
+			setTimeout(() => {
+				// add active class to all posts if user clicks 'all' category
+				if (categoryID === 'all') {
+					showPosts()
+				}
+				// remove active class from posts that do not match the category ID
+				else if (categoryID !== postID) {
+					post.classList.remove('active')
+				}
+				// add 'active' and 'fade' class to posts that do match
+				else {
+					showPosts()
+				}
+			}, 500)
+		})
+	}
+
+	// user clicks a category button
+	categoryBtn.forEach((category) => {
 		category.addEventListener('click', () => {
 			// get the category ID
-			const categoryID = category.getAttribute('data-category')
+			categoryID = category.getAttribute('data-category')
 
+			// error message if user clicks the category button that is already selected
 			if (categoryID === selectedCategoryID) {
 				errorMessages('You\'re already viewing this category.')
 				return
 			}
 
 			// remove active class from ALL category buttons
-			categoryItem.forEach((category) => {
+			categoryBtn.forEach((category) => {
 				category.classList.remove('active')
 			})
 
@@ -108,37 +145,18 @@ const showHidePostItems = () => {
 				category.classList.add('active')
 			}
 
-			postItem.forEach((post) => {
-				// function that shows the post items
-				const showPosts = () => {
-					post.classList.add('active')
-					setTimeout(() => {
-						post.classList.add('fade')
-					}, 100)
-				}
-
-				// get the post ID
-				const postID = post.getAttribute('data-category')
-
-				// remove fade class from ALL posts
-				post.classList.remove('fade')
-
-				setTimeout(() => {
-					// add active class to all posts if user clicks 'all' category
-					if (categoryID === 'all') {
-						showPosts()
-					}
-					// remove active class from posts that do not match the category ID
-					else if (categoryID !== postID) {
-						post.classList.remove('active')
-					}
-					// add 'active' and 'fade' class to posts that do match
-					else {
-						showPosts()
-					}
-				}, 500)
-			})
+			// show the post items
+			showEachPost()
 		})
+	})
+
+	// user selects a category from the dropdown
+	categoriesSelect.addEventListener('change', () => {
+		// get the category ID
+		categoryID = categoriesSelect.value
+
+		// show the post items
+		showEachPost()
 	})
 }
 showHidePostItems()
@@ -338,5 +356,3 @@ window.addEventListener('resize', () => {
 })
 
 })() // end IIFE
-
-console.log('scripts.js loaded')
