@@ -38,96 +38,14 @@ get_header();
     </section>
 
     <section class="blog blog--home | content width-df | text-100 text-300--h2--orange-yellow" role="region" aria-label="Latest Blog Posts">
-        <div class="blog__intro">
-            <h2>Things I've Learned and Observed</h2>
-            <p>The following is a collection of recent blog posts.<br>Most of the posts are web development related to serve as a reference guide for myself and some posts are of varying topics.</p>
-        </div>
+        <?php
+            // refer to blog-dates.php
+            $past_year = true;
+            $year = null;
 
-        <div class="blog__categories" role="group" aria-label="Post category filters">
-            <div class="categories__container">
-                <button type="button" class="category__btn active" data-category="all">all categories</button>
-
-                <?php
-                // Get the categories from WordPress
-                $categories = get_categories(array(
-                    'exclude' => array(7),
-                    'orderby' => 'name',
-                    'order' => 'ASC'
-                ));
-
-                // Create an array of categories for the select dropdown
-                $categoryOptions = [];
-
-                foreach ($categories as $category) {
-                    // Check if there are posts in the last year for the current category
-                    $posts_in_category = get_posts(array(
-                        'category' => $category->cat_ID,
-                        'date_query' => array(
-                            array(
-                                'after' => '1 year ago',
-                            )
-                        ),
-                        'posts_per_page' => -1,
-                    ));
-
-                    // If there are posts in the last year for this category, display the category button
-                    if (!empty($posts_in_category)) { ?>
-                        <button type="button" class="category__btn" data-category="<?php echo $category->cat_ID ?>"><?php echo $category->name ?></button>
-                    <?php }
-
-                    // If there are posts in the last year for this category, add it to the array of categories for the select dropdown
-                    $categoryOptions[] = array(
-                        'cat_ID' => $category->cat_ID,
-                        'name' => $category->name
-                    );
-                }
-                ?>
-                <select class="categories__select">
-                    <option data-category="all" value="all">all categories</option>
-                    <?php
-                    // Populate the select dropdown with the categories from the categoryOptions array
-                    foreach ($categoryOptions as $categoryOption) { ?>
-                        <option data-category="<?php echo $categoryOption['cat_ID'] ?>" value="<?php echo $categoryOption['cat_ID'] ?>"><?php echo $categoryOption['name'] ?></option>
-                    <?php } ?>
-                </select>
-            </div>
-        </div>
-
-        <div class="blog__posts" role="group" aria-label="Articles from within the last year">
-            <?php
-            // Get the posts from WordPress
-            $posts = new WP_Query(array (
-                'post_type' => 'post',
-                'ignore_sticky_posts' => 1,
-                'posts_per_page' => -1,
-                'date_query' => array(
-                    array(
-                        'after' => '1 years ago'
-                    )
-                )
-            ));
-
-            // Loop through the posts
-            while($posts->have_posts()) {
-                $posts->the_post();
-
-                foreach((get_the_category()) as $category) {
-                    $category_id = $category->cat_ID;
-                    $category_name = $category->cat_name; ?>
-
-                    <div class="post__item | active fade" data-category="<?php echo $category_id; ?>">
-                        <h3 class="post__heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                        <div class="post__category" aria-label="Category">
-                            <p><?php echo $category_name; ?></p>
-                        </div>
-                        <div class="post__date" aria-label="Date">
-                            <time datetime="<?php the_time('Y-m-d') ?>"><?php the_time('F jS, Y'); ?></time>
-                        </div>
-                    </div>
-                <?php }
-            }
-            ?>
-        </div>
+            get_template_part( 'template-parts/blog', 'categories', array('date' => $past_year, 'year' => $year) );
+            get_template_part( 'template-parts/blog', 'posts', array('date' => $past_year, 'year' => $year) );
+        ?>
 
         <div class="blog__more" role="complementary" aria-label="View more blog posts in the archive">
             <a href="blog" class="button">Archive</a>

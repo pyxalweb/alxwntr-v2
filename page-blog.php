@@ -9,7 +9,14 @@ get_header();
         <h1>Blog</h1>
         <h2>2022</h2>
 
-        
+        <?php
+            // refer to blog-dates.php
+            $past_year = false;
+            $year = '2022';
+
+            get_template_part( 'template-parts/blog', 'categories', array('date' => $past_year, 'year' => $year) );
+            get_template_part( 'template-parts/blog', 'posts', array('date' => $past_year, 'year' => $year) );
+        ?>
     </section>
 </main>
 
