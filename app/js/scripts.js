@@ -178,6 +178,9 @@ const showHidePostItems = () => {
 
 		// show the post items
 		showEachPost()
+
+		// check for empty blog post containers
+		emptyBlogPosts()
 	})
 }
 showHidePostItems()
