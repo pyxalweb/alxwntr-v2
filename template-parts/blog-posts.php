@@ -33,6 +33,10 @@ if (!function_exists('the_loop')) {
                         </div>
                     </div>
                 <?php } else { ?>
+                    <!--
+                        TODO:
+                        Modify this markup so that the Blog Archive page displays the posts in a list style (think a table of rows) instead of the grid style used on the homepage.
+                    -->
                     <div class="post__item | active fade" data-category="<?php echo $category_id; ?>">
                         <h3 class="post__heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                         <div class="post__category" aria-label="Category">
