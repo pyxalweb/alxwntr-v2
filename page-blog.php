@@ -7,15 +7,37 @@ get_header();
 <main id="site-main" class="site-main homepage">
     <section class="blog blog--archive | content width-df | text-100 text-200--h1--orange-yellow" role="region" aria-label="Blog Posts">
         <h1>Blog</h1>
-        <h2>2022</h2>
 
         <?php
-            // refer to blog-dates.php
+            // we don't want the past year on this page
             $past_year = false;
-            $year = '2022';
 
-            get_template_part( 'template-parts/blog', 'categories', array('date' => $past_year, 'year' => $year) );
-            get_template_part( 'template-parts/blog', 'posts', array('date' => $past_year, 'year' => $year) );
+            // we want all years for the categories on this page
+            $all_years = true;
+            $year = '';
+            get_template_part('template-parts/blog', 'categories', array('past_year' => $past_year, 'all_years' => $all_years, 'year' => $year));
+            $all_years = false;
+        ?>
+
+        
+        <?php
+            $year = '2021';
+            get_template_part('template-parts/blog', 'posts', array('past_year' => $past_year, 'all_years' => $all_years, 'year' => $year));
+        ?>
+
+        <?php
+            $year = '2022';
+            get_template_part('template-parts/blog', 'posts', array('past_year' => $past_year, 'all_years' => $all_years, 'year' => $year));
+        ?>
+
+        <?php
+            $year = '2023';
+            get_template_part('template-parts/blog', 'posts', array('past_year' => $past_year, 'all_years' => $all_years, 'year' => $year));
+        ?>
+
+        <?php
+            $year = '2024';
+            get_template_part('template-parts/blog', 'posts', array('past_year' => $past_year, 'all_years' => $all_years, 'year' => $year));
         ?>
     </section>
 </main>

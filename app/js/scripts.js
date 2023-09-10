@@ -16,6 +16,7 @@ const footer = document.querySelector('.site-footer')
 const mainHomepage = document.querySelector('.site-main.homepage')
 const categoryBtn = document.querySelectorAll('.category__btn')
 const categoriesSelect = document.querySelector('.categories__select')
+const blogPosts = document.querySelectorAll('.blog__posts')
 const postItem = document.querySelectorAll('.post__item')
 
 
@@ -124,6 +125,21 @@ const showHidePostItems = () => {
 		})
 	}
 
+	// check for empty blog post containers
+	const emptyBlogPosts = () => {
+		// must wait for classes to be added/removed from '.post__item' elements before running
+		slideTimeout = setTimeout(() => {
+			blogPosts.forEach((blog) => {
+				if (blog.querySelectorAll('.post__item.active').length === 0) {
+					blog.classList.add('empty')
+					console.log('no posts')
+				} else {
+					blog.classList.remove('empty')
+				}
+			})
+		}, 1000)
+	}
+
 	// user clicks a category button
 	categoryBtn.forEach((category) => {
 		category.addEventListener('click', () => {
@@ -149,6 +165,9 @@ const showHidePostItems = () => {
 
 			// show the post items
 			showEachPost()
+
+			// check for empty blog post containers
+			emptyBlogPosts()
 		})
 	})
 

@@ -39,12 +39,12 @@ get_header();
 
     <section class="blog blog--home | content width-df | text-100 text-300--h2--orange-yellow" role="region" aria-label="Latest Blog Posts">
         <?php
-            // refer to blog-dates.php
             $past_year = true;
-            $year = null;
+            $all_years = false;
+            $year = '';
 
-            get_template_part( 'template-parts/blog', 'categories', array('date' => $past_year, 'year' => $year) );
-            get_template_part( 'template-parts/blog', 'posts', array('date' => $past_year, 'year' => $year) );
+            get_template_part('template-parts/blog', 'categories', array('past_year' => $past_year, 'all_years' => $all_years, 'year' => $year));
+            get_template_part('template-parts/blog', 'posts', array('past_year' => $past_year, 'all_years' => $all_years, 'year' => $year));
         ?>
 
         <div class="blog__more" role="complementary" aria-label="View more blog posts in the archive">

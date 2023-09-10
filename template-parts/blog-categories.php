@@ -21,8 +21,8 @@
             // Check if there are posts in the last year for the current category
             $posts_in_category = get_posts(array(
                 'category' => $category->cat_ID,
-                'date_query' => $posts_date,
                 'posts_per_page' => -1,
+                'date_query' => $date_query,
             ));
 
             // If there are posts, display the category button

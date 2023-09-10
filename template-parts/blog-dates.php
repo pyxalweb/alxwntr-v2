@@ -1,14 +1,17 @@
 <?php
-if ($args['date'] === true) {
-    // Get posts from the last year
-    $posts_date = array(
+if ($args['past_year'] === true) {
+    // Get posts from the past year
+    $date_query = array(
         array(
             'after' => '1 year ago',
         )
     );
+} elseif ($args['all_years'] === true) {
+    // Get posts from all years
+    $date_query = null;
 } else {
     // Get posts from the specified year
-    $posts_date = array(
+    $date_query = array(
         array(
             'year' => $year,
         )
