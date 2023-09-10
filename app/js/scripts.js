@@ -264,7 +264,7 @@ const slideshow = () => {
 		// ***********************************
 		//  Dots - Jump to Slide Buttons
 		// ***********************************
-		showDots = () => {
+		const showDots = () => {
 			if (!slideshowDots) return
 
 			// create dots for each slide
