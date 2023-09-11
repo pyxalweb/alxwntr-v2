@@ -16,15 +16,42 @@ get_header();
 
             <div class="about__item about__item--image">
                 <div class="slideshow slideshow--about" data-interval="4000">
-                    <div class="slideshow__slide" data-status="active">
-                        <img src="<?php echo get_template_directory_uri(); ?>/temp/alex-winter-egyptian-coffee@original.jpg" alt="Alex Winter drinking Egyptian coffee">
-                    </div>
-                    <div class="slideshow__slide">
-                        <img src="<?php echo get_template_directory_uri(); ?>/temp/alex-winter-ipa-beer@original.jpg" alt="Alex Winter drinking an IPA">
-                    </div>
-                    <div class="slideshow__slide">
-                        <img src="<?php echo get_template_directory_uri(); ?>/temp/alex-winter-old-coffee-mug@original.jpg" alt="Alex Winter drinking coffee from a very old mug">
-                    </div>
+<?php
+/*
+TODO:
+Figure out how to support larger images
+*/
+
+// Get the repeater field data
+$images = CFS()->get( 'slideshow' );
+
+if ($images) {
+    foreach ($images as $image) {
+        $jpg_url = $image['image']; // Replace 'image' with field name
+        $webp_url = str_replace('.jpg', '.webp', $jpg_url);
+
+        // Get image width using wp_get_attachment_image_src
+        // see https://developer.wordpress.org/reference/functions/wp_get_attachment_image_src/ for more details for more details about wp_get_attachment_image_src
+        $image_data = wp_get_attachment_image_src(attachment_url_to_postid($jpg_url), 'full');
+        // Check if image_data is not empty and has a width value
+        if ($image_data && isset($image_data[1])) {
+            $image_width = $image_data[1];
+        } else {
+            $image_width = 0; // Default width if data is not available
+        }
+
+        ?>
+        <div class="slideshow__slide" data-status="active">
+            <picture>
+                <source srcset="<?php echo esc_url($webp_url) ?> <?php echo esc_attr($image_width) ?>w" type="image/webp">
+                <source srcset="<?php echo esc_url($jpg_url) ?> <?php echo esc_attr($image_width) ?>w" type="image/jpeg">
+                <img src="<?php echo esc_url($jpg_url) ?>" alt="" width="<?php echo esc_attr($image_width) ?>" height="<?php echo esc_attr($image_width) ?>">
+            </picture>
+        </div>
+    <?php
+    }
+};
+?>
                     <!--
                     <div class="slideshow__controls">
                         <button class="slideshow__prev">Prev</button>
