@@ -9,6 +9,20 @@ get_header();
         <h1>Blog</h1>
 
         <?php
+        // Check if there are any blog posts from the past year
+        // if there are no blog posts then return
+        $date_query = null;
+
+        $posts = new WP_Query(array (
+            'date_query' => $date_query,
+        ));
+
+        if (!$posts->have_posts()) {
+            // do nothing
+        }
+        else {
+            // display posts
+
             // we don't want the past year on this page
             $past_year = false;
 
@@ -18,7 +32,6 @@ get_header();
             get_template_part('template-parts/blog', 'categories', array('past_year' => $past_year, 'all_years' => $all_years, 'year' => $year));
             $all_years = false;
         ?>
-
         
         <?php
             $year = '2021';
@@ -38,6 +51,9 @@ get_header();
         <?php
             $year = '2024';
             get_template_part('template-parts/blog', 'posts', array('past_year' => $past_year, 'all_years' => $all_years, 'year' => $year));
+        ?>
+        <?php
+        }
         ?>
     </section>
 </main>
