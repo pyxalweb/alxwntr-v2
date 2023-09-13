@@ -41,21 +41,23 @@ get_header();
     </section>
 
     <?php
-        // Check if there are any blog posts from the past year
-        $date_query = array(
-            array(
-                'after' => '1 year ago',
-            )
-        );
+    // Check if there are any blog posts from the past year
+    // if there are no blog posts then return
+    $date_query = array(
+        array(
+            'after' => '1 year ago',
+        )
+    );
 
-        $posts = new WP_Query(array (
-            'date_query' => $date_query,
-        ));
+    $posts = new WP_Query(array (
+        'date_query' => $date_query,
+    ));
 
-        // if there are no blog posts then return
-        if (!$posts->have_posts()) {
-            return;
-        }
+    if (!$posts->have_posts()) {
+        // do nothing
+    }
+    else {
+        // display posts
     ?>
     <section class="blog blog--home | content width-df | text-100 text-300--h2--orange-yellow" role="region" aria-label="Latest Blog Posts">
         <?php
@@ -71,6 +73,9 @@ get_header();
             <a href="blog" class="button">Archive</a>
         </div>
     </section>
+    <?php
+    }
+    ?>
 </main>
 
 <?php
