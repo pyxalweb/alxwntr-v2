@@ -6,10 +6,7 @@ get_header();
 
 <main id="site-main" class="site-main interior">
     <section class="content width-df">
-        
-    <!-- Call the function and pass in the ACF Field Name -->
-    <?php getImage('test_field', 'test-class'); ?>
-
+        <?php getImage('test_field', 'test-class'); ?>
     </section>
 </main>
 
