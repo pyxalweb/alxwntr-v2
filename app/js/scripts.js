@@ -197,7 +197,7 @@ const slideshow = () => {
     slideshows.forEach((slideshow) => {
 		// get all slide elements
         const slides = slideshow.querySelectorAll('.slideshow__slide')
-		const slideshowControls = slideshow.querySelector('.slideshow__controls')
+		const slideshowControls = slideshow.querySelectorAll('.slideshow__controls')
 		const slideshowDots = slideshow.querySelector('.slideshow__dots')
 
 		// set the interval between slides
@@ -250,33 +250,35 @@ const slideshow = () => {
 		const showControls = () => {
 			if (!slideshowControls) return
 
-			const controlsPrev = slideshowControls.querySelector('.slideshow__prev')
-			const controlsNext = slideshowControls.querySelector('.slideshow__next')
+            slideshowControls.forEach((controls) => {
+                const controlsPrev = controls.querySelector('.slideshow__prev')
+                const controlsNext = controls.querySelector('.slideshow__next')
 
-			// Prev button click event
-			controlsPrev.addEventListener('click', () => {
-				// if the current slide is the first slide, then we want to go to the very last slide
-				if (currentSlideIndex === 0) {
-					currentSlideIndex = slideCount
-				}
-				// otherwise we want to go to the previous slide
-				let newSlideIndex = (currentSlideIndex - 1) % slideCount
-				showSlide(newSlideIndex)
+                // Prev button click event
+                controlsPrev.addEventListener('click', () => {
+                    // if the current slide is the first slide, then we want to go to the very last slide
+                    if (currentSlideIndex === 0) {
+                        currentSlideIndex = slideCount
+                    }
+                    // otherwise we want to go to the previous slide
+                    let newSlideIndex = (currentSlideIndex - 1) % slideCount
+                    showSlide(newSlideIndex)
 
-				// set dot status
-				setDotStatus()
-			})
+                    // set dot status
+                    setDotStatus()
+                })
 
-			// Next button click event
-			controlsNext.addEventListener('click', () => {
-				// go to the next slide
-				// but if the current slide is the last slide, then we want to go to the very first slide
-				let newSlideIndex = (currentSlideIndex + 1) % slideCount
-				showSlide(newSlideIndex)
+                // Next button click event
+                controlsNext.addEventListener('click', () => {
+                    // go to the next slide
+                    // but if the current slide is the last slide, then we want to go to the very first slide
+                    let newSlideIndex = (currentSlideIndex + 1) % slideCount
+                    showSlide(newSlideIndex)
 
-				// set dot status
-				setDotStatus()
-			})
+                    // set dot status
+                    setDotStatus()
+                })
+            })
 		}
 		showControls()
 
