@@ -40,6 +40,23 @@ get_header();
         </div>
     </section>
 
+    <?php
+        // Check if there are any blog posts from the past year
+        $date_query = array(
+            array(
+                'after' => '1 year ago',
+            )
+        );
+
+        $posts = new WP_Query(array (
+            'date_query' => $date_query,
+        ));
+
+        // if there are no blog posts then return
+        if (!$posts->have_posts()) {
+            return;
+        }
+    ?>
     <section class="blog blog--home | content width-df | text-100 text-300--h2--orange-yellow" role="region" aria-label="Latest Blog Posts">
         <?php
             $past_year = true;
