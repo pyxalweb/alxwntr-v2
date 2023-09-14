@@ -175,6 +175,7 @@ const showHidePostItems = () => {
 	})
 
 	// user selects a category from the dropdown
+	if (!categoriesSelect) return
 	categoriesSelect.addEventListener('change', () => {
 		// get the category ID
 		categoryID = categoriesSelect.value
@@ -355,7 +356,7 @@ slideshow()
 
 
 // ***********************************
-//  Slideshow - About Page Responsiveness
+//  Slideshow - About Responsiveness
 // ***********************************
 const slideshowAboutPage = () => {
 	const slideshowAbout = document.querySelector('.slideshow--about')
@@ -382,6 +383,32 @@ slideshowAboutPage()
 window.addEventListener('resize', () => {
 	slideshowAboutPage()
 })
+
+
+
+
+// ***********************************
+//  Slideshow - WordPress
+// ***********************************
+const slideshowWordpress = () => {
+	const wpBlockGallery = document.querySelectorAll('.wp-block-gallery')
+
+	if (!wpBlockGallery) return
+
+	wpBlockGallery.forEach((gallery) => {
+		gallery.classList.add('slideshow')
+		gallery.setAttribute('data-interval', '5000')
+
+		const gallerySlides = gallery.querySelectorAll('.wp-block-image')
+
+		gallerySlides.forEach((slide) => {
+			slide.classList.add('slideshow__slide')
+		})
+	})
+
+	slideshow()
+}
+slideshowWordpress()
 
 
 
