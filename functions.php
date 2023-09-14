@@ -70,7 +70,7 @@ function getImage($fieldName, $classes) {
 	// Determine which image to display based on the image sizes available
 	if ($sizeMedium == $sizeFull && $sizeLarge == $sizeFull) {
 		// For testing purposes only
-		// echo ('Full is available only');
+		// echo ('Full is available only. <400w');
 	?>
 	<picture>
 		<source srcset="<?php echo $sizeFull ?>.webp <?php echo $width ?>w" type="image/webp">
@@ -80,22 +80,22 @@ function getImage($fieldName, $classes) {
 	<?php
 	} elseif ($sizeMedium != $sizeFull && $sizeLarge == $sizeFull) {
 		// For testing purposes only
-		// echo ('Full and Medium are available');
+		// echo ('Full and Medium are available. >400w and <1024w');
 	?>
 	<picture>
 		<source srcset="<?php echo $sizeMedium ?>.webp <?php echo $sizeMediumWidth ?>w, <?php echo $sizeFull ?>.webp <?php echo $width ?>w" type="image/webp">
 		<source srcset="<?php echo $sizeMedium ?> <?php echo $sizeMediumWidth ?>w, <?php echo $sizeFull ?> <?php echo $width ?>w" type="image/jpeg">
-		<img src="<?php echo $sizeFull ?>" loading="lazy" alt="<?php echo $alt ?>" width="<?php echo $width ?>" height="<?php echo $height ?>" class="<?php echo $classes; ?>">
+		<img src="<?php echo $sizeMedium ?>" loading="lazy" alt="<?php echo $alt ?>" width="<?php echo $width ?>" height="<?php echo $height ?>" class="<?php echo $classes; ?>">
 	</picture>
 	<?php
 	} elseif ($sizeMedium != $sizeFull && $sizeLarge != $sizeFull) {
 		// For testing purposes only
-		// echo ('Full, Large, and Medium are available');
+		// echo ('Full, Large, and Medium are available. >1024w');
 	?>
 	<picture>
 		<source srcset="<?php echo $sizeMedium ?>.webp <?php echo $sizeMediumWidth ?>w, <?php echo $sizeLarge ?>.webp <?php echo $sizeLargeWidth ?>w, <?php echo $sizeFull ?>.webp <?php echo $width ?>w" type="image/webp">
 		<source srcset="<?php echo $sizeMedium ?> <?php echo $sizeMediumWidth ?>w, <?php echo $sizeLarge ?> <?php echo $sizeLargeWidth ?>w, <?php echo $sizeFull ?> <?php echo $width ?>w" type="image/jpeg">
-		<img src="<?php echo $sizeFull ?>" loading="lazy" alt="<?php echo $alt ?>" width="<?php echo $width ?>" height="<?php echo $height ?>" class="<?php echo $classes; ?>">
+		<img src="<?php echo $sizeMedium ?>" loading="lazy" alt="<?php echo $alt ?>" width="<?php echo $width ?>" height="<?php echo $height ?>" class="<?php echo $classes; ?>">
 	</picture>
 	<?php
 	}
