@@ -6,6 +6,10 @@ get_header();
 
 <main id="site-main" class="site-main interior">
     <section class="content width-df">
+        <?php the_content(); ?>
+    </section>
+
+    <section class="content width-df">
         <?php getImage('test_field', 'test-class'); ?>
     </section>
 </main>
