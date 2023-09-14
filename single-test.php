@@ -1,8 +1,15 @@
 <?php
+/*
+ * Template Name: Post Test
+ * Template Post Type: post
+ */
+?>
+
+<?php
 get_header();
 ?>
 
-<main id="site-main" class="site-main interior">
+<main id="site-main" class="site-main homepage">
     <!--
         Todo:
         figure out webp and picture element support
