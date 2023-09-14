@@ -14,6 +14,7 @@ const body = document.querySelector('body')
 const header = document.querySelector('.site-header')
 const footer = document.querySelector('.site-footer')
 const mainHomepage = document.querySelector('.site-main.homepage')
+const blog = document.querySelector('.blog')
 const categoryBtn = document.querySelectorAll('.category__btn')
 const categoriesSelect = document.querySelector('.categories__select')
 const blogPosts = document.querySelectorAll('.blog__posts')
@@ -88,6 +89,8 @@ const errorMessages = (message) => {
 //  Show / Hide Post Items by Category ID
 // ***********************************
 const showHidePostItems = () => {
+	if (!blog) return
+
 	let selectedCategoryID = 'all' // default category ID
 	let categoryID = null // category ID that is clicked or selected
 
@@ -184,7 +187,6 @@ const showHidePostItems = () => {
 	})
 }
 showHidePostItems()
-
 
 
 
