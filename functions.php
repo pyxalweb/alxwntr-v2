@@ -8,6 +8,9 @@ function theme_files() {
 
 	// main scripts
 	wp_enqueue_script('main-scripts', get_theme_file_uri('/dist/scripts.js'), NULL, '1.0', true);
+	
+	// prism.js syntax highlighting
+	wp_enqueue_script('prism-scripts', get_theme_file_uri('/dist/prism.js'), NULL, '1.0', true);
 }
 add_action('wp_enqueue_scripts', 'theme_files');
 
