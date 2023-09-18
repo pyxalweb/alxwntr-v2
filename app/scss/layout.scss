@@ -154,10 +154,6 @@ a {
 // ***********************************
 //  Buttons
 // ***********************************
-%button-defaults {
-	
-}
-
 %button {
 	@include text(var(--ff-primary), clamp(var(--fs-400), 3vw, var(--fs-500)), var(--fw-medium), var(--lh-400), var(--c-primary), none, none, normal);
 	background-color: transparent;
