@@ -35,16 +35,13 @@ get_header();
             $all_years = true;
             $year = '';
             get_template_part('template-parts/blog', 'categories', array('past_year' => $past_year, 'all_years' => $all_years, 'year' => $year));
+
+            // set $all_years to false so that we can then get the posts for each year
             $all_years = false;
-        ?>
-        
-        <?php
-            $year = '2021';
-            get_template_part('template-parts/blog', 'posts', array('past_year' => $past_year, 'all_years' => $all_years, 'year' => $year));
         ?>
 
         <?php
-            $year = '2022';
+            $year = '2024';
             get_template_part('template-parts/blog', 'posts', array('past_year' => $past_year, 'all_years' => $all_years, 'year' => $year));
         ?>
 
@@ -54,9 +51,15 @@ get_header();
         ?>
 
         <?php
-            $year = '2024';
+            $year = '2022';
             get_template_part('template-parts/blog', 'posts', array('past_year' => $past_year, 'all_years' => $all_years, 'year' => $year));
         ?>
+
+        <?php
+            $year = '2021';
+            get_template_part('template-parts/blog', 'posts', array('past_year' => $past_year, 'all_years' => $all_years, 'year' => $year));
+        ?>
+
         <?php
         }
         ?>
