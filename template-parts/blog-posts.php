@@ -2,6 +2,7 @@
 <?php
 $year = $args['year'];
 
+// set the $date_query
 include ( get_template_directory() . "/template-parts/blog-dates.php");
 
 // Get the posts from WordPress
@@ -60,7 +61,13 @@ if ($posts->have_posts()) {
     }
     else { ?>
         <div class="blog__posts" role="group" aria-label="Articles from <?php echo $year; ?>">
-            <h2><?php echo $year; ?></h2>
+            <?php
+            if (date('Y') !== $year) {
+            ?>
+            <h2><span><?php echo $year; ?></span></h2>
+            <?php
+            }
+            ?>
             <div class="blog__posts__container">
                 <?php the_loop($posts, false);
     }
