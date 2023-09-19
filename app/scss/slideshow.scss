@@ -47,3 +47,22 @@
 .slideshow__dot[data-status='active'] {
     background-color: red;
 }
+
+
+
+
+// ***********************************
+//  Slideshow - Utilities
+// ***********************************
+.slideshow--round {
+    img {
+		border-radius: 100%;
+		border: clamp(0.25em, 2vw, 1em) solid var(--c-grey-100);
+	}
+}
+
+.slideshow--center {
+    .slideshow__slide {
+        margin-inline: auto;
+    }
+}

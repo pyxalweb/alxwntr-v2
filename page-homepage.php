@@ -21,7 +21,7 @@ get_header();
 
             <div class="about__item about__item--image">
                 <!-- TODO: Add slideshow functionality using ACF Pro's "Gallery" or "Repeater" functionalities -->
-                <div class="slideshow slideshow--about" data-interval="4000">
+                <div class="slideshow slideshow--round slideshow--about" data-interval="4000">
                     <div class="slideshow__slide" data-status="active">
                         <?php getImage('slideshow_1', 'test-class'); ?>
                     </div>
