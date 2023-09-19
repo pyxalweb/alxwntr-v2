@@ -66,11 +66,6 @@
 			margin-inline: auto;
 		}
 	}
-
-	img {
-		border-radius: 100%;
-		border: clamp(0.25em, 2vw, 1em) solid var(--c-grey-100);
-	}
 }
 
 
@@ -304,9 +299,19 @@
 
 
 // ***********************************
+//  Error Page
+// ***********************************
+.error-page {
+	@extend %mbl-c-3-5-5;
+	text-align: center;
+}
+
+
+
+
+// ***********************************
 //  WordPress Classes
 // ***********************************
-
 .has-text-align-center {
 	text-align: center;
 }
