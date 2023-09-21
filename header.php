@@ -24,6 +24,8 @@
     <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/logo-schema.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="680">
+
+    <?php get_template_part( 'template-parts/head', 'analytics' ); ?>
 </head>
 
 <body <?php body_class('preload'); ?>>
