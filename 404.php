@@ -23,7 +23,7 @@ get_header();
                 <picture>
                     <source srcset="<?php echo $upload_dir['baseurl']; ?>/nancy-01.jpg.webp 348w" type="image/webp">
                     <source srcset="<?php echo $upload_dir['baseurl']; ?>/nancy-01.jpg 348w" type="image/jpeg">
-                    <img src="<?php echo $upload_dir['baseurl']; ?>/nancy-01.jpg" loading="lazy" alt="" width="348" height="348" class="test-class">
+                    <img src="<?php echo $upload_dir['baseurl']; ?>/nancy-01.jpg" loading="lazy" alt="Nancy the cat" width="348" height="348" class="test-class">
                 </picture>
             </div>
 
@@ -31,7 +31,7 @@ get_header();
                 <picture>
                     <source srcset="<?php echo $upload_dir['baseurl']; ?>/clyde-01.jpg.webp 348w" type="image/webp">
                     <source srcset="<?php echo $upload_dir['baseurl']; ?>/clyde-01.jpg 348w" type="image/jpeg">
-                    <img src="<?php echo $upload_dir['baseurl']; ?>/clyde-01.jpg" loading="lazy" alt="" width="348" height="348" class="test-class">
+                    <img src="<?php echo $upload_dir['baseurl']; ?>/clyde-01.jpg" loading="lazy" alt="Clyde the corgi" width="348" height="348" class="test-class">
                 </picture>
             </div>
 
