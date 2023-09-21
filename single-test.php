@@ -9,18 +9,18 @@
 get_header();
 ?>
 
-<main id="site-main" class="site-main homepage">
-    <!--
-        Todo:
-        figure out webp and picture element support
-    -->
+<main id="site-main" class="site-main interior">
     <?php
     while(have_posts()) {
         the_post();
     ?>
-        <section class="blog blog--archive | content width-df | text-100 text-200--h1--orange-yellow" role="region" aria-label="Blog Posts">
+        <section class="article | content width-df | text-100 text-200--h1--orange-yellow text-300--h2">
             <h1><?php the_title(); ?></h1>
-            <?php the_content(); ?>
+
+            <div class="article__content">
+                <?php the_content(); ?>
+            </div>
+
             <time datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('F j, Y') ?></time>
         </section>
     <?php
