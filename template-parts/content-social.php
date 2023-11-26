@@ -9,7 +9,7 @@
         <a href="https://www.last.fm/user/aydoubleyou" target="_blank" rel="noopener" aria-label="Last.FM"></a>
     </li>
     <li class="social__github">
-        <a href="https://github.com/pyxalweb" target="_blank" rel="noopener nofollow" aria-label="GitHub"></a>
+        <a href="https://github.com/pyxalweb" target="_blank" rel="noopener nofollow me" aria-label="GitHub"></a>
     </li>
     <li class="social__codepen">
         <a href="https://codepen.io/pyxal" target="_blank" rel="noopener" aria-label="CodePen"></a>
