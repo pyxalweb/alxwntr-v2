@@ -1,0 +1,46 @@
+// ***********************************
+//  WordPress Generated Classes
+// ***********************************
+// Created by Alex Winter
+// Last Modified: 2023-11-26
+
+
+
+
+// ***********************************
+//  Columns
+// ***********************************
+.wp-block-columns {
+    display: flex;
+
+    @media (max-width: $vw-400) {
+        &.alx__wp-block-columns--vw400-stack {
+            flex-direction: column;
+        }
+
+        &.alx__wp-block-columns--vw400-stack-reverse {
+            flex-direction: column-reverse;
+        }
+    }
+}
+
+.wp-block-column {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 100%;
+}
+
+
+
+
+// ***********************************
+//  Images
+// ***********************************
+.wp-block-image {
+    &.size-full {
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
