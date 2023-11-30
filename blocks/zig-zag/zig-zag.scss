@@ -1,0 +1,32 @@
+.zig-zag {
+    display: flex;
+    gap: 2em;
+    justify-content: space-between;
+}
+
+.zig-zag__text {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    justify-content: center;
+}
+
+/*
+.zig-zag__text__inner {
+
+}
+*/
+
+.zig-zag__image {
+    flex-basis: 100%;
+    flex-grow: 1;
+    flex-shrink: 1;
+
+    /*
+    img {
+
+    }
+    */
+}

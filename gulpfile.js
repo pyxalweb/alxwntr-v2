@@ -20,6 +20,14 @@ function testimonialScssTask() {
     .pipe(dest('blocks/testimonial-example-1', { sourcemaps: '.' }));
 }
 
+// Sass Task: Zig Zag
+function zigZagScssTask() {
+  return src('blocks/zig-zag/zig-zag.scss', { sourcemaps: true })
+    .pipe(sass())
+    .pipe(postcss([cssnano()]))
+    .pipe(dest('blocks/zig-zag', { sourcemaps: '.' }));
+}
+
 // JavaScript Task
 function jsTask() {
   const jsFiles = [
@@ -39,10 +47,14 @@ function watchTask(){
 // Watch Task: Testimonial Example 1
 watch('blocks/testimonial-example-1/testimonial.scss', testimonialScssTask);
 
+// Watch Task: Zig Zag
+watch('blocks/zig-zag/zig-zag.scss', zigZagScssTask);
+
 // Default Gulp task
 exports.default = series(
   scssTask,
   jsTask,
   watchTask,
-  testimonialScssTask
+  testimonialScssTask,
+  zigZagScssTask
 );

@@ -1,0 +1,16 @@
+{
+    "name": "acf/zig-zag",
+    "title": "Zig Zag",
+    "description": "A section of content with text and an image side by side, alternating left and right.",
+    "style": [ "file:./zig-zag.css" ],
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": [ "zig", "zag", "zigzag" ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "zig-zag.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}
