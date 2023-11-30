@@ -12,6 +12,14 @@ function scssTask(){
     .pipe(dest('dist', { sourcemaps: '.' }));
 }
 
+// Sass Task: Testimonial Example 1
+function testimonialScssTask() {
+  return src('blocks/testimonial-example-1/testimonial.scss', { sourcemaps: true })
+    .pipe(sass())
+    .pipe(postcss([cssnano()]))
+    .pipe(dest('blocks/testimonial-example-1', { sourcemaps: '.' }));
+}
+
 // JavaScript Task
 function jsTask() {
   const jsFiles = [
@@ -28,9 +36,13 @@ function watchTask(){
   watch(['app/scss/**/*.scss', 'app/js/**/*.js'], series(scssTask, jsTask));
 }
 
+// Watch Task: Testimonial Example 1
+watch('blocks/testimonial-example-1/testimonial.scss', testimonialScssTask);
+
 // Default Gulp task
 exports.default = series(
   scssTask,
   jsTask,
-  watchTask
+  watchTask,
+  testimonialScssTask
 );
