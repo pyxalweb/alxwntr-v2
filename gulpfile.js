@@ -28,6 +28,14 @@ function zigZagScssTask() {
     .pipe(dest('blocks/zig-zag', { sourcemaps: '.' }));
 }
 
+// Sass Task: Highlighted Image
+function highlightedImageScssTask() {
+  return src('blocks/highlighted-image/highlighted-image.scss', { sourcemaps: true })
+    .pipe(sass())
+    .pipe(postcss([cssnano()]))
+    .pipe(dest('blocks/highlighted-image', { sourcemaps: '.' }));
+}
+
 // JavaScript Task
 function jsTask() {
   const jsFiles = [
@@ -50,11 +58,15 @@ watch('blocks/testimonial-example-1/testimonial.scss', testimonialScssTask);
 // Watch Task: Zig Zag
 watch('blocks/zig-zag/zig-zag.scss', zigZagScssTask);
 
+// Watch Task: Highlighted Image
+watch('blocks/highlighted-image/highlighted-image.scss', highlightedImageScssTask);
+
 // Default Gulp task
 exports.default = series(
   scssTask,
   jsTask,
   watchTask,
   testimonialScssTask,
-  zigZagScssTask
+  zigZagScssTask,
+  highlightedImageScssTask
 );
