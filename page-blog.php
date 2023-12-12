@@ -10,7 +10,7 @@ get_header();
 ?>
 
 <main id="site-main" class="site-main interior">
-    <section class="blog blog--archive | content width-df | text-100 text-200--h1--orange-yellow" role="region" aria-label="Blog Posts">
+    <section class="blog blog--archive | content width-700 | text-100 text-200--h1--orange-yellow" role="region" aria-label="Blog Posts">
         <h1>Blog</h1>
 
         <?php

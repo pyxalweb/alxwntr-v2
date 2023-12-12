@@ -14,7 +14,7 @@ get_header();
     while(have_posts()) {
         the_post();
     ?>
-        <section class="article | content width-df | text-100 text-200--h1--orange-yellow text-300--h2">
+        <section class="article | content width-700 | text-100 text-200--h1--orange-yellow text-300--h2">
             <h1><?php the_title(); ?></h1>
 
             <div class="article__content">

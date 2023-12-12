@@ -10,11 +10,11 @@ get_header();
 ?>
 
 <main id="site-main" class="site-main interior">
-    <section class="content width-df" style="border:4px solid green;">
+    <section class="content width-700" style="border:4px solid green;">
         <?php the_content(); ?>
     </section>
 
-    <section class="content width-df" style="border:4px solid red;">
+    <section class="content width-700" style="border:4px solid red;">
         <?php getImage('test_field', 'test-class'); ?>
     </section>
 </main>
