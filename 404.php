@@ -11,7 +11,7 @@ get_header();
 ?>
 
 <main id="site-main" class="site-main interior">
-    <section class="error-page | content width-df | text-100 text-200--h1--orange-yellow">
+    <section class="error-page | content width-400 | text-100 text-200--h1--orange-yellow">
         <h1>404</h1>
 
         <div class="mb-2">
