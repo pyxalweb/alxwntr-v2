@@ -82,6 +82,31 @@
             "default_value": "",
             "enable_opacity": 0,
             "return_format": "string"
+        },
+        {
+            "key": "field_6577e35d4a602",
+            "label": "Arrange",
+            "name": "arrange",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "arrange-default": "Default",
+                "arrange-alternate": "Alternate"
+            },
+            "default_value": "",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "vertical",
+            "save_other_choice": 0
         }
     ],
     "location": [
@@ -102,5 +127,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1701326189
+    "modified": 1702355921
 }
