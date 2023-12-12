@@ -57,31 +57,29 @@
 	// ***********************************
 	//  Element Widths
 	// ***********************************
-	--w-large: 1920px;
-	--w-medium: 1680px;
-	--w-default: 1440px;
-	--w-small: 1240px;
-	--w-tiny: 800px;
+	--w-1000: 1920px;
+	--w-900: 1760px;
+	--w-800: 1600px;
+	--w-700: 1440px;
+	--w-600: 1280px;
+	--w-500: 1120px;
+	--w-400: 960px;
+	--w-300: 800px;
+	--w-200: 640px;
+	--w-100: 480px;
+	--w-spacing: calc(100% - 2em);
 
-	.width-lg {
-		width: min(var(--w-large), calc(100% - 2em));
-	}
+	.width-1000 { width: min(var(--w-1000), var(--w-spacing)); }
+	.width-900 { width: min(var(--w-900), var(--w-spacing)); }
+	.width-800 { width: min(var(--w-800), var(--w-spacing)); }
+	.width-700 { width: min(var(--w-700), var(--w-spacing)); }
+	.width-600 { width: min(var(--w-600), var(--w-spacing)); }
+	.width-500 { width: min(var(--w-500), var(--w-spacing)); }
+	.width-400 { width: min(var(--w-400), var(--w-spacing)); }
+	.width-300 { width: min(var(--w-300), var(--w-spacing)); }
+	.width-200 { width: min(var(--w-200), var(--w-spacing)); }
+	.width-100 { width: min(var(--w-100), var(--w-spacing)); }
 
-	.width-md {
-		width: min(var(--w-medium), calc(100% - 2em));
-	}
-
-	.width-df {
-		width: min(var(--w-default), calc(100% - 2em));
-	}
-
-	.width-sm {
-		width: min(var(--w-small), calc(100% - 2em));
-	}
-
-	.width-xs {
-		width: min(var(--w-tiny), calc(100% - 2em));
-	}
 
 
 
