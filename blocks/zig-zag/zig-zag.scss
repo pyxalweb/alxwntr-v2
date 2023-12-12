@@ -2,6 +2,10 @@
     display: flex;
     gap: 2em;
     justify-content: space-between;
+
+    &.zig-zag--arrange-alternate {
+        flex-direction: row-reverse;
+    }
 }
 
 .zig-zag__text {

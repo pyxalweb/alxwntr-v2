@@ -6,10 +6,11 @@
  */
 
 // Load values and assign defaults.
-$zig_zag_text             = !empty(get_field( 'zig_zag_text' )) ? get_field( 'zig_zag_text' ) : 'Your text here...';
+$zig_zag_text      = !empty(get_field( 'zig_zag_text' )) ? get_field( 'zig_zag_text' ) : 'Your text here...';
 $image             = get_field( 'zig_zag_image' );
 $background_color  = get_field( 'background_color' ); // ACF's color picker.
 $text_color        = get_field( 'text_color' ); // ACF's color picker.
+$arrange           = get_field( 'arrange' ); // ACF's radio button.
 
 // Create class attribute allowing for custom "className" and "align" values.
 $class_name = 'zig-zag';
@@ -21,6 +22,9 @@ if ( ! empty( $block['align'] ) ) {
 }
 if ( $background_color || $text_color ) {
     $class_name .= ' has-custom-acf-color';
+}
+if ( $arrange ) {
+    $class_name .= ' zig-zag--' . $arrange;
 }
 
 // Build a valid style attribute for background and text colors.
