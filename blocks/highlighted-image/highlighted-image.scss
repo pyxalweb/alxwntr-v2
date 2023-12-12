@@ -1,0 +1,16 @@
+.highlighted-image {
+    --highlighted-image-spacing: clamp(2em, 3vw, 1em);
+    background-color: var(--c-grey-200);
+    padding: var(--highlighted-image-spacing);
+
+    img {
+        display: block;
+        margin-inline: auto;
+    }
+
+    figcaption {
+        font-size: var(--fs-300);
+        margin-top: var(--highlighted-image-spacing);
+        text-align: center;
+    }
+}
