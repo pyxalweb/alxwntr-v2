@@ -1,0 +1,2 @@
+.highlighted-image{--highlighted-image-spacing:clamp(2em,3vw,1em);background-color:var(--c-grey-200);padding:var(--highlighted-image-spacing)}.highlighted-image img{display:block;margin-inline:auto}.highlighted-image figcaption{font-size:var(--fs-300);margin-top:var(--highlighted-image-spacing);text-align:center}
+/*# sourceMappingURL=highlighted-image.css.map */

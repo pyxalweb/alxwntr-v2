@@ -1,0 +1,16 @@
+{
+    "name": "acf/highlighted-image",
+    "title": "Highlighted Image",
+    "description": "An image that is highlighted within the page content.",
+    "style": [ "file:./highlighted-image.css" ],
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": [ "image", "highlighted image" ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "highlighted-image.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}
