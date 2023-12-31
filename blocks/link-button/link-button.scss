@@ -1,0 +1,29 @@
+// Media queries can only use SCSS variables, not CSS variables.
+// This is because media queries are evaluated at runtime in the browser, while CSS variables are resolved at the time of style application.
+// So we must import the SCSS variables file and then we can use the SCSS variables in the media query by setting:
+// @media (max-width: variables.$vw-300) { ... }
+
+@use "app/scss/variables";
+
+.button-container {
+    display: flex;
+    gap: 1em;
+
+    &.button-container--vw300-mobile {
+        @media (max-width: variables.$vw-300) {
+            flex-direction: column;
+        }
+    }
+
+    &.button-container--vw200-mobile {
+        @media (max-width: variables.$vw-200) {
+            flex-direction: column;
+        }
+    }
+
+    &.button-container--vw100-mobile {
+        @media (max-width: variables.$vw-100) {
+            flex-direction: column;
+        }
+    }
+}
