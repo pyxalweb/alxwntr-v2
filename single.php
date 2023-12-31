@@ -7,15 +7,19 @@ get_header();
     while(have_posts()) {
         the_post();
     ?>
-        <section class="article | content width-400 | text-100 text-200--h1--orange-yellow text-300--h2">
-            <h1><?php the_title(); ?></h1>
+        <article class="article | content width-400 | text-100 text-800--h1 text-600--h2 text-700--h3">
+            <header>
+                <h1><?php the_title(); ?></h1>
+            </header>
 
-            <div class="article__content">
+            <section class="article__content">
                 <?php the_content(); ?>
-            </div>
+            </section>
 
-            <time datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('F j, Y') ?></time>
-        </section>
+            <footer>
+                <time datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('F j, Y') ?></time>
+            </footer>
+        </article>
     <?php
 	}
     ?>
