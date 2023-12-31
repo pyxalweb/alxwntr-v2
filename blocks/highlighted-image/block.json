@@ -4,7 +4,7 @@
     "description": "An image that is highlighted within the page content.",
     "style": [ "file:./highlighted-image.css" ],
     "category": "formatting",
-    "icon": "admin-comments",
+    "icon": "format-image",
     "keywords": [ "image", "highlighted image" ],
     "acf": {
         "mode": "preview",
