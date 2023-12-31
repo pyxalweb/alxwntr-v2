@@ -29,4 +29,3 @@ if ( ! empty( $block['align'] ) ) {
         <?php echo esc_html( $caption ); ?>
     </figcaption>
 </figure>
-</div>
