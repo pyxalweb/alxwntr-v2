@@ -12,10 +12,10 @@ footer.site-footer {
 //  Container
 // ***********************************
 .footer__container {
+	border-top: 1px solid var(--c-grey-100);
 	display: flex;
 	justify-content: space-between;
 	@extend %pbl-c-1-5-3;
-	@extend %bt-1-grey-100;
 
 	@media (max-width: $vw-100) {
 		flex-direction: column;
