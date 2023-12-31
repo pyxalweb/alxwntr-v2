@@ -10,7 +10,7 @@ get_header();
 ?>
 
 <main id="site-main" class="site-main homepage">
-    <section class="about | content width-700 | text-100 text-200--h2--orange-yellow" role="region" aria-label="Information about Alex Winter">
+    <section class="about | content width-700 | text-100 text-800--h2" role="region" aria-label="Information about Alex Winter">
         <div class="about__container">
             <div class="about__item about__item--text">
                 <div>
@@ -64,7 +64,7 @@ get_header();
     else {
         // display posts
     ?>
-    <section class="blog blog--home | content width-700 | text-100 text-300--h2--orange-yellow" role="region" aria-label="Latest Blog Posts">
+    <section class="blog blog--home | content width-700 | text-100 text-600--h2" role="region" aria-label="Latest Blog Posts">
         <?php
             $past_year = true;
             $all_years = false;
