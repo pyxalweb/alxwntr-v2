@@ -56,16 +56,6 @@ body {
 .text-200 { @extend %text-200; }
 .text-200--h2 h2 { @extend %text-200; }
 
-%text-200-orange-yellow {
-	@extend %text-200;
-	background: linear-gradient(to right, var(--c-gradient));
-	-webkit-background-clip: text;
-	background-clip: text;
-	color: transparent;
-}
-.text-200--h1--orange-yellow h1 { @extend %text-200-orange-yellow; }
-.text-200--h2--orange-yellow h2 { @extend %text-200-orange-yellow; }
-
 // list of posts headings
 // Montserrat - 22 / 26 - Regular - 1.5 - White - None - None - None
 %text-300 {
@@ -97,6 +87,43 @@ body {
 }
 .text-500 { @extend %text-500; }
 
+// orange headings
+// Montserrat - 22 / 26 - Regular - 1.5 - White - None - None - None
+%text-600 {
+	@include text(var(--ff-primary), clamp(var(--fs-700), 3vw, var(--fs-900)), var(--fw-regular), var(--lh-400), var(--c-white), none, none, normal);
+	background: linear-gradient(to right, var(--c-gradient));
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+.text-600 { @extend %text-600; }
+.text-600--h2 h2 { @extend %text-600; }
+
+// orange headings - small
+// Montserrat - 22 / 26 - Regular - 1.5 - White - None - None - None
+%text-700 {
+	@include text(var(--ff-primary), var(--fs-500), var(--fw-regular), var(--lh-400), var(--c-white), none, none, normal);
+	background: linear-gradient(to right, var(--c-gradient));
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+.text-700 { @extend %text-700; }
+.text-700--h2 h2 { @extend %text-700; }
+.text-700--h3 h3 { @extend %text-700; }
+
+// content headings
+// Montserrat - 32/52 - Thin - 1.5 - White - None - None - None
+%text-800 {
+	@include text(var(--ff-primary), clamp(var(--fs-1000), 5vw, var(--fs-1500)), var(--fw-thin), var(--lh-400), var(--c-white), none, none, normal);
+	background: linear-gradient(to right, var(--c-gradient));
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+.text-800 { @extend %text-800; }
+.text-800--h1 h1 { @extend %text-800; }
+.text-800--h2 h2 { @extend %text-800; }
 
 //  Body
 // ***********************************
@@ -177,11 +204,12 @@ hr {
 %button {
 	@include text(var(--ff-primary), clamp(var(--fs-400), 3vw, var(--fs-500)), var(--fw-medium), var(--lh-400), var(--c-primary), none, none, normal);
 	background-color: transparent;
+	cursor: pointer;
 	border: 1px solid var(--c-grey-100);
 	border-radius: 0 1em 0 1em;
 	padding: 0.7em 1.25em;
+	text-align: center;
 	transition: all var(--t-fast);
-	cursor: pointer;
 
 	&:hover,
 	&:focus {
