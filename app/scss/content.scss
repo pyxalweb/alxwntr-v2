@@ -2,9 +2,9 @@
 //  About
 // ***********************************
 .about {
+	border-bottom: 1px solid var(--c-grey-100);
 	@extend %mbl-c-3-5-5;
 	@extend %pb-c-3-5-5;
-	@extend %bb-1-grey-100;
 }
 
 .about__container {
