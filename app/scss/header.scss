@@ -12,10 +12,10 @@ header.site-header {
 //  Container
 // ***********************************
 .header__container {
+	border-bottom: 1px solid var(--c-grey-100);
     display: flex;
     justify-content: space-between;
 	@extend %pbl-c-1-5-3;
-	@extend %bb-1-grey-100;
 }
 
 
