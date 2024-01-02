@@ -280,10 +280,6 @@ function remove_svg() {
 }
 add_action('init', 'remove_svg', 30);
 ?>
-
-
-
-
 <?php
 // ***********************************
 //  Custom ACF Blocks
