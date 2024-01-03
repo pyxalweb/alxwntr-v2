@@ -20,7 +20,7 @@ get_header();
 
             <div class="about__item about__item--image">
                 <!-- TODO: Add slideshow functionality using ACF Pro's "Gallery" or "Repeater" functionalities -->
-                <div class="slideshow slideshow--round slideshow--about" data-interval="4000">
+                <div class="slideshow slideshow--circular" data-interval="4000">
                     <div class="slideshow__slide" data-status="active">
                         <?php getImage('slideshow_1', 'test-class'); ?>
                     </div>
@@ -37,8 +37,8 @@ get_header();
                         <button class="slideshow__prev">Prev</button>
                         <button class="slideshow__next">Next</button>
                     </div>
-                    <div class="slideshow__dots"></div>
                     -->
+                    <div class="slideshow__dots"></div>
                 </div>
             </div>
         </div>
