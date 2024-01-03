@@ -1,0 +1,16 @@
+{
+    "name": "acf/image-slideshow",
+    "title": "Image Slideshow",
+    "description": "A slideshow of images or photos.",
+    "style": [ "file:./image-slideshow.css" ],
+    "category": "formatting",
+    "icon": "format-image",
+    "keywords": [ "image", "photo", "slideshow", "gallery" ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "image-slideshow.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

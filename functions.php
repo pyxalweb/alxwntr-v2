@@ -289,6 +289,7 @@ function register_acf_blocks() {
     register_block_type( __DIR__ . '/blocks/testimonial-example-1' );
 	register_block_type( __DIR__ . '/blocks/zig-zag' );
 	register_block_type( __DIR__ . '/blocks/highlighted-image' );
+	register_block_type( __DIR__ . '/blocks/image-slideshow' );
 	register_block_type( __DIR__ . '/blocks/link-button' );
 }
 ?>

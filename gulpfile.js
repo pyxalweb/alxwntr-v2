@@ -36,6 +36,14 @@ function highlightedImageScssTask() {
     .pipe(dest('blocks/highlighted-image', { sourcemaps: '.' }));
 }
 
+// Sass Task: Image Slideshow
+function imageSlideshowScssTask() {
+  return src('blocks/image-slideshow/image-slideshow.scss', { sourcemaps: true })
+    .pipe(sass())
+    .pipe(postcss([cssnano()]))
+    .pipe(dest('blocks/image-slideshow', { sourcemaps: '.' }));
+}
+
 // Sass Task: Link Button
 function linkButtonScssTask() {
   return src('blocks/link-button/link-button.scss', { sourcemaps: true })
@@ -69,8 +77,11 @@ watch('blocks/zig-zag/zig-zag.scss', zigZagScssTask);
 // Watch Task: Highlighted Image
 watch('blocks/highlighted-image/highlighted-image.scss', highlightedImageScssTask);
 
+// Watch Task: Highlighted Image
+watch('blocks/highlighted-image/highlighted-image.scss', highlightedImageScssTask);
+
 // Watch Task: Link Button
-watch('blocks/link-button/link-button.scss', linkButtonScssTask);
+watch('blocks/image-slideshow/image-slideshow.scss', imageSlideshowScssTask);
 
 // Default Gulp task
 exports.default = series(
@@ -80,5 +91,6 @@ exports.default = series(
   testimonialScssTask,
   zigZagScssTask,
   highlightedImageScssTask,
-  linkButtonScssTask
+  linkButtonScssTask,
+  imageSlideshowScssTask
 );
