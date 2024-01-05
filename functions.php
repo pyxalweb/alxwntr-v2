@@ -283,13 +283,19 @@ add_action('init', 'remove_svg', 30);
 <?php
 // ***********************************
 //  Custom ACF Blocks
+//  Todo: Enqueue CSS and JS only if the page uses the block
 // ***********************************
 add_action( 'init', 'register_acf_blocks' );
 function register_acf_blocks() {
-    register_block_type( __DIR__ . '/blocks/testimonial-example-1' );
 	register_block_type( __DIR__ . '/blocks/zig-zag' );
 	register_block_type( __DIR__ . '/blocks/highlighted-image' );
 	register_block_type( __DIR__ . '/blocks/image-slideshow' );
 	register_block_type( __DIR__ . '/blocks/link-button' );
+	register_block_type( __DIR__ . '/blocks/sounds' );
+}
+// Enqueue scripts
+add_action('enqueue_block_assets', 'enqueue_acf_block_scripts');
+function enqueue_acf_block_scripts() {
+    wp_enqueue_script('sounds-script', get_template_directory_uri() . '/blocks/sounds/sounds.js', array(), null, true);
 }
 ?>
