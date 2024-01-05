@@ -1,0 +1,16 @@
+{
+    "name": "acf/sounds",
+    "title": "Sounds",
+    "description": "A list of sounds.",
+    "style": [ "file:./sounds.css" ],
+    "category": "formatting",
+    "icon": "format-image",
+    "keywords": [ "sounds", "audio", "music", "mp3", "wav" ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "sounds.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

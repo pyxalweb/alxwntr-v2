@@ -1,0 +1,57 @@
+.sounds {
+  background-color: #1e1e23;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: min(400px, 100%);
+}
+
+.sounds__item {
+  align-items: center;
+  display: flex;
+  gap: 10vw;
+  justify-content: space-between;
+  padding: 1em;
+  border-bottom: 0.25em solid #000;
+  
+  &:last-of-type {
+    border-bottom: none;
+  }
+}
+
+.sounds__name {
+  p {
+    margin: 0;
+  }
+}
+
+.sounds__btn {
+  button {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="50" width="50" viewBox="0 0 512 512"><path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM188.3 147.1c7.6-4.2 16.8-4.1 24.3 .5l144 88c7.1 4.4 11.5 12.1 11.5 20.5s-4.4 16.1-11.5 20.5l-144 88c-7.4 4.5-16.7 4.7-24.3 .5s-12.3-12.2-12.3-20.9V168c0-8.7 4.7-16.7 12.3-20.9z" fill="%23009ffe"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: all 0.25s;
+    
+    &:hover,
+    &:focus {
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="50" width="50" viewBox="0 0 512 512"><path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM188.3 147.1c7.6-4.2 16.8-4.1 24.3 .5l144 88c7.1 4.4 11.5 12.1 11.5 20.5s-4.4 16.1-11.5 20.5l-144 88c-7.4 4.5-16.7 4.7-24.3 .5s-12.3-12.2-12.3-20.9V168c0-8.7 4.7-16.7 12.3-20.9z" fill="%23ffffff"/></svg>');
+    }
+    
+    span {
+      display: none;
+    }
+  }
+
+  audio {
+    display: none;
+  }
+}
