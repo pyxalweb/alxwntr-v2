@@ -1,2 +1,15 @@
-const sounds=()=>{document.querySelector(".sounds").querySelectorAll(".sounds__item").forEach((e=>{const o=e.querySelector("button"),t=e.querySelector("audio");o.addEventListener("click",(()=>{t.play()}))})),console.log("ok")};document.querySelector(".sounds").querySelectorAll(".sounds__item").forEach((e=>{const o=e.querySelector("button"),t=e.querySelector("audio");o.addEventListener("click",(()=>{t.play()}))})),console.log("ok");
-//# sourceMappingURL=sounds.js.map
+const sounds = () => {
+  const soundsContainer = document.querySelector('.sounds');
+  const soundsItems = soundsContainer.querySelectorAll('.sounds__item');
+  
+  soundsItems.forEach((soundsItem) => {
+    const soundButton = soundsItem.querySelector('button');
+    const soundAudio = soundsItem.querySelector('audio');
+    
+    soundButton.addEventListener('click', () => {
+      soundAudio.play();
+    })
+  });
+}
+
+sounds();
