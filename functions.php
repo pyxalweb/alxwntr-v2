@@ -300,11 +300,11 @@ function register_acf_blocks() {
 // Check if the post has the relevant ACF block
 // Output the contents of the .css file within a <style> tag in the <head>
 function inline_sounds_block_styles() {
-	if (has_block('acf/highlighted-image')) { echo '<style>' . file_get_contents(get_template_directory() . '/blocks/highlighted-image/highlighted-image.css') . '</style>'; }
-	if (has_block('acf/image-slideshow')) { echo '<style>' . file_get_contents(get_template_directory() . '/blocks/image-slideshow/image-slideshow.css') . '</style>'; }
-	if (has_block('acf/link-button')) { echo '<style>' . file_get_contents(get_template_directory() . '/blocks/link-button/link-button.css') . '</style>'; }
-	if (has_block('acf/sounds')) { echo '<style>' . file_get_contents(get_template_directory() . '/blocks/sounds/sounds.css') . '</style>'; }
-	if (has_block('acf/zig-zag')) { echo '<style>' . file_get_contents(get_template_directory() . '/blocks/zig-zag/zig-zag.css') . '</style>'; }
+	if (has_block('acf/highlighted-image')) { echo "\n<style>" . file_get_contents(get_template_directory() . '/blocks/highlighted-image/highlighted-image.css') . "</style>\n"; }
+	if (has_block('acf/image-slideshow')) { echo "\n<style>" . file_get_contents(get_template_directory() . '/blocks/image-slideshow/image-slideshow.css') . "</style>\n"; }
+	if (has_block('acf/link-button')) { echo "\n<style>" . file_get_contents(get_template_directory() . '/blocks/link-button/link-button.css') . "</style>\n"; }
+	if (has_block('acf/sounds')) { echo "\n<style>" . file_get_contents(get_template_directory() . '/blocks/sounds/sounds.css') . "</style>\n"; }
+	if (has_block('acf/zig-zag')) { echo "\n<style>" . file_get_contents(get_template_directory() . '/blocks/zig-zag/zig-zag.css') . "</style>\n"; }
 }
 add_action('wp_head', 'inline_sounds_block_styles');
 // ***********************************
@@ -314,7 +314,7 @@ add_action('wp_head', 'inline_sounds_block_styles');
 // Check if the post has the relevant ACF block
 // Output the contents of the .js file within a <script> tag in the <head>
 function inline_sounds_block_assets() {
-    if (has_block('acf/sounds')) { echo '<script>' . file_get_contents(get_template_directory() . '/blocks/sounds/sounds.min.js') . '</script>'; }
+    if (has_block('acf/sounds')) { echo "\n<script>" . file_get_contents(get_template_directory() . '/blocks/sounds/sounds.min.js') . "</script>\n"; }
 }
 add_action('wp_head', 'inline_sounds_block_assets');
 ?>
