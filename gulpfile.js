@@ -3,6 +3,7 @@ const sass = require('gulp-sass')(require('sass'));
 const postcss = require('gulp-postcss');
 const cssnano = require('cssnano');
 const terser = require('gulp-terser');
+const rename = require('gulp-rename');
 
 
 
@@ -101,6 +102,18 @@ function soundsScssTask() {
     .pipe(postcss([cssnano()]))
     .pipe(dest('blocks/sounds', { sourcemaps: '.' }));
 }
+// Watch Task: Sounds
+watch(['blocks/sounds/sounds.scss'], soundsScssTask);
+
+// Js Task: Sounds
+function soundsJsTask() {
+  return src('blocks/sounds/sounds.js', { sourcemaps: true })
+    .pipe(terser())
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(dest('blocks/sounds', { sourcemaps: '.' }));
+}
+// Watch Task: Sounds
+watch(['blocks/sounds/sounds.js'], soundsJsTask);
 
 
 
@@ -118,5 +131,6 @@ exports.default = series(
   highlightedImageScssTask,
   imageSlideshowScssTask,
   linkButtonScssTask,
-  soundsScssTask
+  soundsScssTask,
+  soundsJsTask
 );
