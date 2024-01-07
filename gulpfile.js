@@ -3,6 +3,8 @@ const sass = require('gulp-sass')(require('sass'));
 const postcss = require('gulp-postcss');
 const cssnano = require('cssnano');
 const terser = require('gulp-terser');
+const concat = require('gulp-concat');
+const gulpIf = require('gulp-if');
 
 
 
@@ -22,17 +24,22 @@ function scssTask(){
 // JavaScript Task
 function jsTask() {
   const jsFiles = [
-    'app/js/scripts.js'
+    'app/js/scripts.js',
+    'blocks/sounds/sounds.js'
   ];
 
   return src(jsFiles, { sourcemaps: true })
+    .pipe(concat('scripts.js')) // Concatenate the files into a single file
     .pipe(terser())
-    .pipe(dest('dist', { sourcemaps: '.' }));
+    .pipe(dest('dist', { sourcemaps: '.' }))
+    .pipe(gulpIf('blocks/sounds/sounds.js', concat('sounds.js')))
+    .pipe(gulpIf('blocks/sounds/sounds.js', terser()))
+    .pipe(gulpIf('blocks/sounds/sounds.js', dest('dist', { sourcemaps: '.' })));
 }
 
 // Watch Task
-function watchTask(){
-  watch(['app/scss/**/*.scss', 'app/js/**/*.js'], series(scssTask, jsTask));
+function watchTask() {
+  watch(['app/scss/**/*.scss', 'app/js/**/*.js', 'blocks/sounds/sounds.js'], series(scssTask, jsTask));
 }
 
 
@@ -101,15 +108,8 @@ function soundsScssTask() {
     .pipe(postcss([cssnano()]))
     .pipe(dest('blocks/sounds', { sourcemaps: '.' }));
 }
-// JavaScript Task: Sounds
-function soundsJsTask() {
-  return src('blocks/sounds/sounds.js', { sourcemaps: true })
-    .pipe(terser())
-    .pipe(dest('blocks/sounds', { sourcemaps: '.' }));
-}
 // Watch Task: Sounds
 watch('blocks/sounds/sounds.scss', soundsScssTask);
-watch('blocks/sounds/sounds.js', soundsJsTask);
 
 
 
@@ -127,6 +127,5 @@ exports.default = series(
   highlightedImageScssTask,
   imageSlideshowScssTask,
   linkButtonScssTask,
-  soundsScssTask,
-  soundsJsTask
+  soundsScssTask
 );
