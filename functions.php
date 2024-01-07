@@ -295,16 +295,6 @@ function register_acf_blocks() {
 }
 // ***********************************
 //  Custom ACF Blocks
-//  Display inline scripts
-// ***********************************
-// Check if the post has the relevant ACF block
-// Output the contents of the .js file within a <script> tag in the <head>
-function inline_sounds_block_assets() {
-    if (has_block('acf/sounds')) { echo '<script>' . file_get_contents(get_template_directory() . '/blocks/sounds/sounds.js') . '</script>'; }
-}
-add_action('wp_head', 'inline_sounds_block_assets');
-// ***********************************
-//  Custom ACF Blocks
 //  Display inline styles
 // ***********************************
 // Check if the post has the relevant ACF block
@@ -317,4 +307,14 @@ function inline_sounds_block_styles() {
 	if (has_block('acf/zig-zag')) { echo '<style>' . file_get_contents(get_template_directory() . '/blocks/zig-zag/zig-zag.css') . '</style>'; }
 }
 add_action('wp_head', 'inline_sounds_block_styles');
+// ***********************************
+//  Custom ACF Blocks
+//  Display inline scripts
+// ***********************************
+// Check if the post has the relevant ACF block
+// Output the contents of the .js file within a <script> tag in the <head>
+function inline_sounds_block_assets() {
+    if (has_block('acf/sounds')) { echo '<script>' . file_get_contents(get_template_directory() . '/blocks/sounds/sounds.js') . '</script>'; }
+}
+add_action('wp_head', 'inline_sounds_block_assets');
 ?>
