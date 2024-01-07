@@ -283,7 +283,7 @@ add_action('init', 'remove_svg', 30);
 <?php
 // ***********************************
 //  Custom ACF Blocks
-//  Todo: Enqueue CSS and JS only if the page uses the block
+//  Register the blocks
 // ***********************************
 add_action( 'init', 'register_acf_blocks' );
 function register_acf_blocks() {
@@ -293,9 +293,28 @@ function register_acf_blocks() {
 	register_block_type( __DIR__ . '/blocks/link-button' );
 	register_block_type( __DIR__ . '/blocks/sounds' );
 }
-// Enqueue scripts
-add_action('enqueue_block_assets', 'enqueue_acf_block_scripts');
-function enqueue_acf_block_scripts() {
-    wp_enqueue_script('sounds-script', get_template_directory_uri() . '/blocks/sounds/sounds.js', array(), null, true);
+// ***********************************
+//  Custom ACF Blocks
+//  Display inline scripts
+// ***********************************
+// Check if the post has the relevant ACF block
+// Output the contents of the .js file within a <script> tag in the <head>
+function inline_sounds_block_assets() {
+    if (has_block('acf/sounds')) { echo '<script>' . file_get_contents(get_template_directory() . '/blocks/sounds/sounds.js') . '</script>'; }
 }
+add_action('wp_head', 'inline_sounds_block_assets');
+// ***********************************
+//  Custom ACF Blocks
+//  Display inline styles
+// ***********************************
+// Check if the post has the relevant ACF block
+// Output the contents of the .css file within a <style> tag in the <head>
+function inline_sounds_block_styles() {
+	if (has_block('acf/highlighted-image')) { echo '<style>' . file_get_contents(get_template_directory() . '/blocks/highlighted-image/highlighted-image.css') . '</style>'; }
+	if (has_block('acf/image-slideshow')) { echo '<style>' . file_get_contents(get_template_directory() . '/blocks/image-slideshow/image-slideshow.css') . '</style>'; }
+	if (has_block('acf/link-button')) { echo '<style>' . file_get_contents(get_template_directory() . '/blocks/link-button/link-button.css') . '</style>'; }
+	if (has_block('acf/sounds')) { echo '<style>' . file_get_contents(get_template_directory() . '/blocks/sounds/sounds.css') . '</style>'; }
+	if (has_block('acf/zig-zag')) { echo '<style>' . file_get_contents(get_template_directory() . '/blocks/zig-zag/zig-zag.css') . '</style>'; }
+}
+add_action('wp_head', 'inline_sounds_block_styles');
 ?>
