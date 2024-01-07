@@ -314,7 +314,7 @@ add_action('wp_head', 'inline_sounds_block_styles');
 // Check if the post has the relevant ACF block
 // Output the contents of the .js file within a <script> tag in the <head>
 function inline_sounds_block_assets() {
-    if (has_block('acf/sounds')) { echo '<script>' . file_get_contents(get_template_directory() . '/blocks/sounds/sounds.js') . '</script>'; }
+    if (has_block('acf/sounds')) { echo '<script>' . file_get_contents(get_template_directory() . '/blocks/sounds/sounds.min.js') . '</script>'; }
 }
 add_action('wp_head', 'inline_sounds_block_assets');
 ?>
