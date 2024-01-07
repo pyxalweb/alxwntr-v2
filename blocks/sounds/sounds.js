@@ -20,5 +20,4 @@ sounds(function() {
       soundAudio.play();
     })
   });
-  console.log('ok');
 });
