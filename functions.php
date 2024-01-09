@@ -299,22 +299,38 @@ function register_acf_blocks() {
 // ***********************************
 // Check if the post has the relevant ACF block
 // Output the contents of the .css file within a <style> tag in the <head>
-function inline_sounds_block_styles() {
-	if (has_block('acf/highlighted-image')) { echo "\n<style>" . file_get_contents(get_template_directory() . '/blocks/highlighted-image/highlighted-image.css') . "</style>\n"; }
-	if (has_block('acf/image-slideshow')) { echo "\n<style>" . file_get_contents(get_template_directory() . '/blocks/image-slideshow/image-slideshow.css') . "</style>\n"; }
-	if (has_block('acf/link-button')) { echo "\n<style>" . file_get_contents(get_template_directory() . '/blocks/link-button/link-button.css') . "</style>\n"; }
-	if (has_block('acf/sounds')) { echo "\n<style>" . file_get_contents(get_template_directory() . '/blocks/sounds/sounds.css') . "</style>\n"; }
-	if (has_block('acf/zig-zag')) { echo "\n<style>" . file_get_contents(get_template_directory() . '/blocks/zig-zag/zig-zag.css') . "</style>\n"; }
+function inline_block_styles() {
+	$blocks = array(
+		'acf/highlighted-image' => '/blocks/highlighted-image/highlighted-image.css',
+		'acf/image-slideshow'   => '/blocks/image-slideshow/image-slideshow.css',
+		'acf/link-button'       => '/blocks/link-button/link-button.css',
+		'acf/sounds'            => '/blocks/sounds/sounds.css',
+		'acf/zig-zag'           => '/blocks/zig-zag/zig-zag.css',
+	);
+
+	foreach ($blocks as $block => $css_path) {
+		if (has_block($block)) {
+			echo "\n<!-- style: $block -->\n<style>" . file_get_contents(get_template_directory() . $css_path) . "</style>\n";
+		}
+	}
 }
-add_action('wp_head', 'inline_sounds_block_styles');
+add_action('wp_head', 'inline_block_styles');
 // ***********************************
 //  Custom ACF Blocks
 //  Display inline scripts
 // ***********************************
 // Check if the post has the relevant ACF block
 // Output the contents of the .js file within a <script> tag in the <head>
-function inline_sounds_block_assets() {
-    if (has_block('acf/sounds')) { echo "\n<script>" . file_get_contents(get_template_directory() . '/blocks/sounds/sounds.min.js') . "</script>\n"; }
+function inline_block_scripts() {
+	$blocks = array(
+		'acf/sounds' => '/blocks/sounds/sounds.min.js',	
+	);
+
+	foreach ($blocks as $block => $js_path) {
+		if (has_block($block)) {
+			echo "\n<!-- script: $block -->\n<script>" . file_get_contents(get_template_directory() . $js_path) . "</script>\n";
+		}
+	}
 }
-add_action('wp_head', 'inline_sounds_block_assets');
+add_action('wp_head', 'inline_block_scripts');
 ?>
