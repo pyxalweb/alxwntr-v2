@@ -22,11 +22,7 @@ function scssTask(){
 
 // JavaScript Task
 function jsTask() {
-  const jsFiles = [
-    'app/js/scripts.js'
-  ];
-
-  return src(jsFiles, { sourcemaps: true })
+  return src('app/js/scripts.js', { sourcemaps: true })
     .pipe(terser())
     .pipe(dest('dist', { sourcemaps: '.' }));
 }
