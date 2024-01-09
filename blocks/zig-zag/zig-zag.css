@@ -1,0 +1,2 @@
+.zig-zag{display:flex;gap:2em;justify-content:space-between}.zig-zag.zig-zag--arrange-alternate{flex-direction:row-reverse}.zig-zag__text{display:flex;flex-direction:column;justify-content:center}.zig-zag__image,.zig-zag__text{flex-basis:100%;flex-grow:1;flex-shrink:1}
+/*# sourceMappingURL=zig-zag.css.map */
