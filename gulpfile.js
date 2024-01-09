@@ -1,3 +1,7 @@
+// ***********************************
+// Dependencies
+// ***********************************
+
 const { src, dest, watch, series } = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const postcss = require('gulp-postcss');
@@ -32,12 +36,23 @@ function watchTask(){
   watch(['app/scss/**/*.scss', 'app/js/**/*.js'], series(scssTask, jsTask));
 }
 
+// Default Gulp task
+exports.default = series(
+  scssTask,
+  jsTask,
+  watchTask
+);
+
 
 
 
 // ***********************************
 //  ACF Blocks
 // ***********************************
+
+// Note:
+// These will only run when saving the block's respective files.
+// Not when running the default Gulp task.
 
 function acfBlockTasks(blockName) {
   function acfBlockScssTask() {
@@ -62,17 +77,3 @@ acfBlockTasks('highlighted-image');
 acfBlockTasks('image-slideshow');
 acfBlockTasks('link-button');
 acfBlockTasks('sounds');
-
-
-
-
-// ***********************************
-//  Exports
-// ***********************************
-
-// Default Gulp task
-exports.default = series(
-  scssTask,
-  jsTask,
-  watchTask
-);
