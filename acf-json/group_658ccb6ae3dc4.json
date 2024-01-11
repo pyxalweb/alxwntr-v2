@@ -98,6 +98,198 @@
             "ui": 0,
             "ajax": 0,
             "placeholder": ""
+        },
+        {
+            "key": "field_659f88d5cf11c",
+            "label": "Margin (Block)",
+            "name": "margin_block",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "0": "Off",
+                "mbl-1": "1",
+                "mbl-2": "2",
+                "mbl-3": "3",
+                "mbl-4": "4",
+                "mbl-5": "5",
+                "mbl-6": "6",
+                "mbl-7": "7"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_659f8780ee77a",
+            "label": "Margin (Top)",
+            "name": "margin_top",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "0": "Off",
+                "mt-1": "1",
+                "mt-2": "2",
+                "mt-3": "3",
+                "mt-4": "4",
+                "mt-5": "5",
+                "mt-6": "6",
+                "mt-7": "7"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_659f84259261f",
+            "label": "Margin (Bottom)",
+            "name": "margin_bottom",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "0": "Off",
+                "mb-1": "1",
+                "mb-2": "2",
+                "mb-3": "3",
+                "mb-4": "4",
+                "mb-5": "5",
+                "mb-6": "6",
+                "mb-7": "7"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_659f898733d01",
+            "label": "Padding (Block)",
+            "name": "padding_block",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "0": "Off",
+                "pbl-1": "1",
+                "pbl-2": "2",
+                "pbl-3": "3",
+                "pbl-4": "4",
+                "pbl-5": "5",
+                "pbl-6": "6",
+                "pbl-7": "7"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_659f898d33d02",
+            "label": "Padding (Top)",
+            "name": "padding_top",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "0": "Off",
+                "pt-1": "1",
+                "pt-2": "2",
+                "pt-3": "3",
+                "pt-4": "4",
+                "pt-5": "5",
+                "pt-6": "6",
+                "pt-7": "7"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_659f899433d03",
+            "label": "Padding (Bottom)",
+            "name": "padding_bottom",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "0": "Off",
+                "pb-1": "1",
+                "pb-2": "2",
+                "pb-3": "3",
+                "pb-4": "4",
+                "pb-5": "5",
+                "pb-6": "6",
+                "pb-7": "7"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
         }
     ],
     "location": [
@@ -118,5 +310,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1704949425
+    "modified": 1704954366
 }
