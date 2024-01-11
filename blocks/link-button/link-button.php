@@ -13,8 +13,13 @@ $mobile_viewport_width = get_field('mobile_viewport_width');
 // Construct the conditional class name
 $mobile_class = ' button-container--vw' . $mobile_viewport_width . '-mobile';
 
+// Retrieve the alignment setting
+$alignment = get_field('alignment');
+// Construct the conditional class name
+$align_class = ' button-container--align-' . $alignment;
+
 if ($buttons) : ?>
-    <div class="button-container<?php if (!$mobile_viewport_width == 0) echo esc_attr($mobile_class); ?>">
+    <div class="button-container<?php if (!$mobile_viewport_width == 0) echo esc_attr($mobile_class); if (!$alignment == 0) echo esc_attr($align_class); ?>">
         <?php foreach ($buttons as $button) :
             if (!$button['link']) continue; // If no link, skip to next button (if any)
             $link = $button['link'];
