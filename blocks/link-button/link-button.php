@@ -10,13 +10,6 @@
 // Purpose: Contains the buttons
 $buttons = get_field('buttons');
 
-// Label: Mobile Stack Vertically
-// Type: Select
-// Purpose: Assigns class to 'button-container' element which determines which viewport to change the 'flex-direction' to 'column', which stacks the buttons vertically
-$mobile_stack_vertically = get_field('mobile_stack_vertically');
-$mobile_class = '';
-if ($mobile_stack_vertically) $mobile_class = ' button-container--vw' . $mobile_stack_vertically . '-mobile';
-
 // Label: Alignment
 // Type: Select
 // Purpose: Assigns class to 'button-container' element which determines what to set the 'justify-content' to, which aligns the buttons horizontally
@@ -30,14 +23,14 @@ if ($alignment) $align_class = ' button-container--align-' . $alignment;
 $margin = get_field('margin');
 $margin_classes = '';
 
-$mbl = $margin['block'];
-if ($mbl) $margin_classes .= ' ' . $mbl;
-
 $mt = $margin['top'];
 if ($mt) $margin_classes .= ' ' . $mt;
 
 $mb = $margin['bottom'];
 if ($mb) $margin_classes .= ' ' . $mb;
+
+$mbl = $margin['block'];
+if ($mbl) $margin_classes .= ' ' . $mbl;
 
 // Label: Padding
 // Type: Group
@@ -45,14 +38,21 @@ if ($mb) $margin_classes .= ' ' . $mb;
 $padding = get_field('padding');
 $padding_classes = '';
 
-$pbl = $padding['block'];
-if ($pbl) $padding_classes .= ' ' . $pbl;
-
 $pt = $padding['top'];
 if ($pt) $padding_classes .= ' ' . $pt;
 
 $pb = $padding['bottom'];
 if ($pb) $padding_classes .= ' ' . $pb;
+
+$pbl = $padding['block'];
+if ($pbl) $padding_classes .= ' ' . $pbl;
+
+// Label: Mobile Stack Vertically
+// Type: Select
+// Purpose: Assigns class to 'button-container' element which determines which viewport to change the 'flex-direction' to 'column', which stacks the buttons vertically
+$mobile_stack_vertically = get_field('mobile_stack_vertically');
+$mobile_class = '';
+if ($mobile_stack_vertically) $mobile_class = ' button-container--vw' . $mobile_stack_vertically . '-mobile';
 
 // build the markup
 if ($buttons) : ?>
