@@ -10,17 +10,19 @@
 // Purpose: Contains the buttons
 $buttons = get_field('buttons');
 
-// Label: Mobile Viewport Width
+// Label: Mobile Stack Vertically
 // Type: Select
 // Purpose: Assigns class to 'button-container' element which determines which viewport to change the 'flex-direction' to 'column', which stacks the buttons vertically
-$mobile_viewport_width = get_field('mobile_viewport_width');
-$mobile_class = ' button-container--vw' . $mobile_viewport_width . '-mobile';
+$mobile_stack_vertically = get_field('mobile_stack_vertically');
+$mobile_class = '';
+if ($mobile_stack_vertically) $mobile_class = ' button-container--vw' . $mobile_stack_vertically . '-mobile';
 
 // Label: Alignment
 // Type: Select
 // Purpose: Assigns class to 'button-container' element which determines what to set the 'justify-content' to, which aligns the buttons horizontally
 $alignment = get_field('alignment');
-$align_class = ' button-container--align-' . $alignment;
+$align_class = '';
+if ($alignment) $align_class = ' button-container--align-' . $alignment;
 
 // Label: Margin
 // Type: Group
@@ -54,7 +56,7 @@ if ($pb) $padding_classes .= ' ' . $pb;
 
 // build the markup
 if ($buttons) : ?>
-    <div class="button-container<?php if (!$mobile_viewport_width == 0) echo esc_attr($mobile_class); if (!$alignment == 0) echo esc_attr($align_class); if (!$margin_classes == '') echo esc_attr($margin_classes); if (!$padding_classes == '') echo esc_attr($padding_classes); ?>">
+    <div class="button-container<?php if (!$mobile_stack_vertically == '') echo esc_attr($mobile_class); if (!$alignment == '') echo esc_attr($align_class); if (!$margin_classes == '') echo esc_attr($margin_classes); if (!$padding_classes == '') echo esc_attr($padding_classes); ?>">
         <?php foreach ($buttons as $button) :
             if (!$button['link']) continue; // If no link, skip to next button (if any)
             $link = $button['link'];

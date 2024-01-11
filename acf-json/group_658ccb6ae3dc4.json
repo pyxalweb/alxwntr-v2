@@ -58,7 +58,6 @@
                 "id": ""
             },
             "choices": {
-                "0": "Off",
                 "left": "Left",
                 "center": "Center",
                 "right": "Right"
@@ -66,15 +65,15 @@
             "default_value": false,
             "return_format": "value",
             "multiple": 0,
-            "allow_null": 0,
+            "allow_null": 1,
             "ui": 0,
             "ajax": 0,
             "placeholder": ""
         },
         {
             "key": "field_658fa0e59e657",
-            "label": "Mobile Viewport Width",
-            "name": "mobile_viewport_width",
+            "label": "Mobile: Stack Vertically",
+            "name": "mobile_stack_vertically",
             "aria-label": "",
             "type": "select",
             "instructions": "",
@@ -340,5 +339,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1704955863
+    "modified": 1704959266
 }
