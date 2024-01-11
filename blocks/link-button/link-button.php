@@ -5,57 +5,54 @@
  * @param array $block The block settings and attributes.
  */
 
-// Retrieve the repeater field with all buttons
+// Label: Buttons
+// Type: Repeater
+// Purpose: Contains the buttons
 $buttons = get_field('buttons');
 
-// Retrieve the mobile viewport width setting
+// Label: Mobile Viewport Width
+// Type: Select
+// Purpose: Assigns class to 'button-container' element which determines which viewport to change the 'flex-direction' to 'column', which stacks the buttons vertically
 $mobile_viewport_width = get_field('mobile_viewport_width');
-// Construct the conditional class name
 $mobile_class = ' button-container--vw' . $mobile_viewport_width . '-mobile';
 
-// Retrieve the alignment setting
+// Label: Alignment
+// Type: Select
+// Purpose: Assigns class to 'button-container' element which determines what to set the 'justify-content' to, which aligns the buttons horizontally
 $alignment = get_field('alignment');
-// Construct the conditional class name
 $align_class = ' button-container--align-' . $alignment;
 
-// Retrieve the margin group
+// Label: Margin
+// Type: Group
+// Purpose: Contains the various margin settings fields which are assigned to the 'button-container' element
 $margin = get_field('margin');
+$margin_classes = '';
 
-if ($margin) :
-    $margin_classes = '';
+$mbl = $margin['block'];
+if ($mbl) $margin_classes .= ' ' . $mbl;
 
-    // Retrieve the margin block setting
-    $mbl = $margin['block'];
-    if ($mbl) $margin_classes .= ' ' . $mbl;
+$mt = $margin['top'];
+if ($mt) $margin_classes .= ' ' . $mt;
 
-    // Retrieve the margin top setting
-    $mt = $margin['top'];
-    if ($mt) $margin_classes .= ' ' . $mt;
+$mb = $margin['bottom'];
+if ($mb) $margin_classes .= ' ' . $mb;
 
-    // Retrieve the margin bottom setting
-    $mb = $margin['bottom'];
-    if ($mb) $margin_classes .= ' ' . $mb;
-endif;
-
-// Retrieve the padding group
+// Label: Padding
+// Type: Group
+// Purpose: Contains the various padding settings fields which are assigned to the 'button-container' element
 $padding = get_field('padding');
+$padding_classes = '';
 
-if ($padding) :
-    $padding_classes = '';
+$pbl = $padding['block'];
+if ($pbl) $padding_classes .= ' ' . $pbl;
 
-    // Retrieve the padding block setting
-    $pbl = $padding['block'];
-    if ($pbl) $padding_classes .= ' ' . $pbl;
+$pt = $padding['top'];
+if ($pt) $padding_classes .= ' ' . $pt;
 
-    // Retrieve the padding top setting
-    $pt = $padding['top'];
-    if ($pt) $padding_classes .= ' ' . $pt;
+$pb = $padding['bottom'];
+if ($pb) $padding_classes .= ' ' . $pb;
 
-    // Retrieve the padding bottom setting
-    $pb = $padding['bottom'];
-    if ($pb) $padding_classes .= ' ' . $pb;
-endif;
-
+// build the markup
 if ($buttons) : ?>
     <div class="button-container<?php if (!$mobile_viewport_width == 0) echo esc_attr($mobile_class); if (!$alignment == 0) echo esc_attr($align_class); if (!$margin_classes == '') echo esc_attr($margin_classes); if (!$padding_classes == '') echo esc_attr($padding_classes); ?>">
         <?php foreach ($buttons as $button) :
