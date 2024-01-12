@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  width: min(400px, 100%);
+  width: min(540px, 100%);
 }
 
 .sounds__item {
@@ -19,6 +19,11 @@
   &:last-of-type {
     border-bottom: none;
   }
+
+  @media (max-width: viewports.$vw-100) {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 .sounds__name {
@@ -29,7 +34,7 @@
 
 .sounds__btn {
   display: flex;
-  gap: 1em;
+  gap: 1.5em;
 
   a,
   button {
