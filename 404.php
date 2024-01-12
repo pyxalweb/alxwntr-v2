@@ -10,6 +10,48 @@ $upload_dir = wp_upload_dir();
 get_header();
 ?>
 
+<!-- TEMPORARY INLINE STYLES UNTIL ACF IMAGE SLIDESHOW BLOCK IS FINISHED -->
+<style>
+.slideshow {
+    display: grid;
+    place-items: start;
+}
+
+.slideshow__slide {
+    opacity: 0;
+    z-index: -1;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    transition: all var(--t-medium);
+}
+
+.slideshow__slide[data-status='active'] {
+    opacity: 1;
+    z-index: 1;
+}
+
+.slideshow__dot {
+    width: 1em;
+    height: 1em;
+}
+
+.slideshow__dot[data-status='active'] {
+    background-color: red;
+}
+
+.slideshow--round img {
+    border-radius: 100%;
+    border: clamp(0.25em, 2vw, 1em) solid var(--c-grey-100);
+}
+
+.slideshow--rounded img {
+	border-radius: 2em;
+	border: clamp(0.25em, 2vw, 1em) solid var(--c-grey-100);
+}
+
+.slideshow--center .slideshow__slide { margin-inline: auto; }
+</style>
+
 <main id="site-main" class="site-main interior">
     <section class="error-page | content width-400 | text-100 text-200--h1--orange-yellow">
         <h1>404</h1>
