@@ -307,7 +307,6 @@
                 "id": ""
             },
             "choices": {
-                "0": "Off",
                 "300": "800px",
                 "200": "640px",
                 "100": "480px"
@@ -315,7 +314,7 @@
             "default_value": false,
             "return_format": "value",
             "multiple": 0,
-            "allow_null": 0,
+            "allow_null": 1,
             "ui": 0,
             "ajax": 0,
             "placeholder": ""
@@ -339,5 +338,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1704959693
+    "modified": 1704959791
 }
