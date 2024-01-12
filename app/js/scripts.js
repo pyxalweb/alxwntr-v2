@@ -356,32 +356,32 @@ slideshow()
 
 
 // ***********************************
-//  Slideshow - About Responsiveness
+//  Slideshow - Homepage Responsiveness
 // ***********************************
-const slideshowAboutPage = () => {
-	const slideshowAbout = document.querySelector('.slideshow--about')
+const slideshowHomepage = () => {
+	const slideshowHome = document.querySelector('.homepage__intro .slideshow')
 
-	if (!slideshowAbout) return
+	if (!slideshowHome) return
 
-	const slideshowAboutSlides = slideshowAbout.querySelectorAll('.slideshow__slide')
+	const slideshowHomeSlides = slideshowHome.querySelectorAll('.slideshow__slide')
 
 	if (window.innerWidth > 1120) {
-		slideshowAboutSlides.forEach((slide) => {
+		slideshowHomeSlides.forEach((slide) => {
 			slide.classList.remove('slideshow__slide--vw600')
 		})
 	} else if (window.innerWidth <= 1120 && window.innerWidth > 480) {
-		slideshowAboutSlides.forEach((slide) => {
+		slideshowHomeSlides.forEach((slide) => {
 			slide.classList.add('slideshow__slide--vw600')
 		})
 	} else if (window.innerWidth <= 480) {
-		slideshowAboutSlides.forEach((slide) => {
+		slideshowHomeSlides.forEach((slide) => {
 			slide.classList.remove('slideshow__slide--vw600')
 		})
 	}
 }
-slideshowAboutPage()
+slideshowHomepage()
 window.addEventListener('resize', () => {
-	slideshowAboutPage()
+	slideshowHomepage()
 })
 
 

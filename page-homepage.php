@@ -9,39 +9,8 @@ get_header();
 ?>
 
 <main id="site-main" class="site-main homepage">
-    <section class="about | content width-700 | text-100 text-800--h2" role="region" aria-label="Information about Alex Winter">
-        <div class="about__container">
-            <div class="about__item about__item--text">
-                <div>
-                    <h2>I'm Alex Winter, a web developer in Portland, Oregon.</h2>
-                    <?php the_content(); ?>
-                </div>
-            </div>
-
-            <div class="about__item about__item--image">
-                <!-- TODO: Add slideshow functionality using ACF Pro's "Gallery" or "Repeater" functionalities -->
-                <div class="slideshow slideshow--circular" data-interval="4000">
-                    <div class="slideshow__slide" data-status="active">
-                        <?php getImage('slideshow_1', 'test-class'); ?>
-                    </div>
-
-                    <div class="slideshow__slide" data-status="active">
-                        <?php getImage('slideshow_2', 'test-class'); ?>
-                    </div>
-
-                    <div class="slideshow__slide" data-status="active">
-                        <?php getImage('slideshow_3', 'test-class'); ?>
-                    </div>
-                    <!--
-                    <div class="slideshow__controls">
-                        <button class="slideshow__prev">Prev</button>
-                        <button class="slideshow__next">Next</button>
-                    </div>
-                    -->
-                    <div class="slideshow__dots"></div>
-                </div>
-            </div>
-        </div>
+    <section class="homepage__intro | content width-700 | text-100 text-800--h2" role="region" aria-label="Information about Alex Winter">
+        <?php the_content(); ?>
     </section>
 
     <?php

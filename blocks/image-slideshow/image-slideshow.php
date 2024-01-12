@@ -41,6 +41,6 @@ if ($images) : ?>
         </div>
         <?php endif; ?>
 
-        <div class="slideshow__dots"></div>
+        <!--<div class="slideshow__dots"></div>-->
     </div>
 <?php endif; ?>
