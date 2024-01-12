@@ -13,7 +13,7 @@ sounds(function() {
   const soundsItems = soundsContainer.querySelectorAll('.sounds__item');
   
   soundsItems.forEach((soundsItem) => {
-    const soundButton = soundsItem.querySelector('button');
+    const soundButton = soundsItem.querySelector('.sounds__btn__play');
     const soundAudio = soundsItem.querySelector('audio');
     
     soundButton.addEventListener('click', () => {
