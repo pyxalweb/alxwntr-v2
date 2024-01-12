@@ -15,7 +15,7 @@ if ($sounds) : ?>
             $sound_name = $sound['sound_name'];
             $sound_url = $sound['sound_url'];
         ?>
-        <div class="sounds__item">
+        <div class="sounds__item <?php echo strtolower( preg_replace('/[^a-zA-Z0-9]/', '', $sound['sound_name']) ); ?>">
             <div class="sounds__name">
                 <p><?php echo esc_html( $sound['sound_name'] ); ?></p>
             </div>
