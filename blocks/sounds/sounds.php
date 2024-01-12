@@ -20,6 +20,7 @@ if ($sounds) : ?>
                 <p><?php echo esc_html( $sound['sound_name'] ); ?></p>
             </div>
             <div class="sounds__btn">
+                <button><span>Download</span></button>
                 <button><span>Play</span></button>
                 <audio>
                     <source src="<?php echo esc_url( $sound_url ); ?>" type="audio/wav">
