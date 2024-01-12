@@ -9,6 +9,7 @@ function sounds(fn) {
 }
 
 sounds(function() {
+  // play sound when clicking on sound button
   const soundsContainer = document.querySelector('.sounds');
   const soundsItems = soundsContainer.querySelectorAll('.sounds__item');
   
@@ -18,6 +19,24 @@ sounds(function() {
     
     soundButton.addEventListener('click', () => {
       soundAudio.play();
+      console.log('Eep!');
     })
   });
+
+  // play Sosumi sound when clicking on Sosumi link
+  const sosumi = document.querySelector('.sosumi');
+  const sosumiAudio = document.querySelector('.sounds__item.sosumi audio');
+  if (sosumi) {
+    const sosumiLinks = sosumi.querySelectorAll('a');
+
+    sosumiLinks.forEach((sosumiLink) => {
+      if (sosumiLink.textContent === 'Sosumi') {
+        sosumiLink.addEventListener('click', (e) => {
+          sosumiAudio.play();
+          console.log('Eep!');
+          e.preventDefault();
+        });
+      }
+    });
+  }
 });
