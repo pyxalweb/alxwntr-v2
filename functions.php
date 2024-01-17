@@ -323,6 +323,7 @@ add_action('wp_head', 'inline_block_styles');
 // Output the contents of the .js file within a <script> tag in the <head>
 function inline_block_scripts() {
 	$blocks = array(
+		'acf/image-slideshow' => '/blocks/image-slideshow/image-slideshow.min.js',
 		'acf/sounds' => '/blocks/sounds/sounds.min.js',	
 	);
 
