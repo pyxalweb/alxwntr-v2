@@ -29,4 +29,17 @@ if ($sounds) : ?>
         </div>
         <?php endforeach; ?>
     </div>
+
+    
+    <?php
+    // add JavaScript to Gutenberg Block Editor
+    if (is_admin()) : ?>
+        <script>
+            (function () {
+                var script = document.createElement('script');
+                script.src = '<?php echo esc_url(get_template_directory_uri() . '/blocks/sounds/sounds.min.js'); ?>';
+                document.head.appendChild(script);
+            })();
+        </script>
+    <?php endif; ?>
 <?php endif; ?>

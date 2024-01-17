@@ -48,4 +48,16 @@ if ($images) : ?>
 
         <!--<div class="slideshow__dots"></div>-->
     </div>
+
+    <?php
+    // add JavaScript to Gutenberg Block Editor
+    if (is_admin()) : ?>
+        <script>
+            (function () {
+                var script = document.createElement('script');
+                script.src = '<?php echo esc_url(get_template_directory_uri() . '/blocks/image-slideshow/image-slideshow.min.js'); ?>';
+                document.head.appendChild(script);
+            })();
+        </script>
+    <?php endif; ?>
 <?php endif; ?>
