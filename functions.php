@@ -287,11 +287,11 @@ add_action('init', 'remove_svg', 30);
 // ***********************************
 add_action( 'init', 'register_acf_blocks' );
 function register_acf_blocks() {
-	register_block_type( __DIR__ . '/blocks/zig-zag' );
 	register_block_type( __DIR__ . '/blocks/highlighted-image' );
 	register_block_type( __DIR__ . '/blocks/image-slideshow' );
 	register_block_type( __DIR__ . '/blocks/link-button' );
 	register_block_type( __DIR__ . '/blocks/sounds' );
+	register_block_type( __DIR__ . '/blocks/zig-zag' );
 }
 // ***********************************
 //  Custom ACF Blocks
