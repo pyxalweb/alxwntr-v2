@@ -340,4 +340,34 @@ function inline_block_scripts() {
     }
 }
 add_action('wp_enqueue_scripts', 'inline_block_scripts');
+// ***********************************
+//  404 Page
+//  Echo inline styles
+// ***********************************
+// Check if this the 404 page
+// Output the contents of the .css file within a <style> tag in the <head>
+function inline_404_styles() {
+	if (is_404()) {
+		echo "\n<!-- style: acf/image-slideshow -->\n<style>" . file_get_contents(get_template_directory() . '/blocks/image-slideshow/image-slideshow.css') . "</style>\n";
+	}
+}
+add_action('wp_head', 'inline_404_styles');
+// ***********************************
+//  404 Page
+//  Enqueue scripts
+// ***********************************
+// Check if this the 404 page
+// Reference the script within a <script> tag before the closing </body>
+function enqueue_404_scripts() {
+	if (is_404()) {
+		wp_enqueue_script(
+			'acf/image-slideshow', // Script handle (unique name for the script)
+			get_template_directory_uri() . '/blocks/image-slideshow/image-slideshow.min.js', // Script URL
+			array(), // Dependencies (optional)
+			filemtime(get_template_directory() . '/blocks/image-slideshow/image-slideshow.min.js'), // Version (using file modification time)
+			true // Enqueue in the footer
+		);
+	}
+}
+add_action('wp_enqueue_scripts', 'enqueue_404_scripts');
 ?>
