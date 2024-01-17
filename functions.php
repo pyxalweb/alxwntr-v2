@@ -295,7 +295,7 @@ function register_acf_blocks() {
 }
 // ***********************************
 //  Custom ACF Blocks
-//  Display inline styles
+//  Echo inline styles
 // ***********************************
 // Check if the post has the relevant ACF block
 // Output the contents of the .css file within a <style> tag in the <head>
@@ -317,21 +317,27 @@ function inline_block_styles() {
 add_action('wp_head', 'inline_block_styles');
 // ***********************************
 //  Custom ACF Blocks
-//  Display inline scripts
+//  Enqueue scripts
 // ***********************************
 // Check if the post has the relevant ACF block
-// Output the contents of the .js file within a <script> tag in the <head>
+// Reference the script within a <script> tag before the closing </body>
 function inline_block_scripts() {
-	$blocks = array(
-		'acf/image-slideshow' => '/blocks/image-slideshow/image-slideshow.min.js',
-		'acf/sounds' => '/blocks/sounds/sounds.min.js',	
-	);
+    $blocks = array(
+        'acf/image-slideshow' => '/blocks/image-slideshow/image-slideshow.min.js',
+        'acf/sounds' => '/blocks/sounds/sounds.min.js',
+    );
 
-	foreach ($blocks as $block => $js_path) {
-		if (has_block($block)) {
-			echo "\n<!-- script: $block -->\n<script>" . file_get_contents(get_template_directory() . $js_path) . "</script>\n";
-		}
-	}
+    foreach ($blocks as $block => $js_path) {
+        if (has_block($block)) {
+            wp_enqueue_script(
+                $block, // Script handle (unique name for the script)
+                get_template_directory_uri() . $js_path, // Script URL
+                array(), // Dependencies (optional)
+                filemtime(get_template_directory() . $js_path), // Version (using file modification time)
+                true // Enqueue in the footer
+            );
+        }
+    }
 }
-add_action('wp_head', 'inline_block_scripts');
+add_action('wp_enqueue_scripts', 'inline_block_scripts');
 ?>
