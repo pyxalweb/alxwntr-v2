@@ -21,6 +21,11 @@ $slide_interval = ($slide_interval >= 1 && $slide_interval <= 20) ? $slide_inter
 // Retrieve the Slideshow Controls setting
 $slideshow_controls = get_field('slideshow_controls');
 
+// Retrieve the slideshow controls setting (as an array)
+$slideshow_controls_style = get_field('slideshow_controls_style');
+// Construct the conditional class name using the selected value
+$slideshow_controls_style_class = ' slideshow__controls--' . $slideshow_controls_style;
+
 if ($images) : ?>
     <div class="slideshow<?php if (!$image_shape == 0) echo esc_attr($image_shape_class); ?>" data-interval="<?php echo esc_attr($slide_interval); ?>">
         <?php foreach ($images as $image) :
@@ -35,7 +40,7 @@ if ($images) : ?>
         <?php endforeach;
 
         if ($slideshow_controls == 1) : ?>
-        <div class="slideshow__controls">
+        <div class="slideshow__controls<?php if (!$slideshow_controls_style == 0) echo esc_attr($slideshow_controls_style_class); ?>">
             <button class="slideshow__prev">Prev</button>
             <button class="slideshow__next">Next</button>
         </div>

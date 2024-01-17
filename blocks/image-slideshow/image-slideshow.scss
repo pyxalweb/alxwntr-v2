@@ -60,6 +60,20 @@
     }
 }
 
+.slideshow__controls--rounded {
+    .slideshow__prev,
+    .slideshow__next {
+        border-radius: 12px;
+    }
+}
+
+.slideshow__controls--circular {
+    .slideshow__prev,
+    .slideshow__next {
+        border-radius: 100%;
+    }
+}
+
 // dots
 .slideshow__dots {
 
