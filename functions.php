@@ -321,7 +321,7 @@ add_action('wp_head', 'inline_block_styles');
 // ***********************************
 // Check if the post has the relevant ACF block
 // Reference the script within a <script> tag before the closing </body>
-function inline_block_scripts() {
+function enqueue_block_scripts() {
     $blocks = array(
         'acf/image-slideshow' => '/blocks/image-slideshow/image-slideshow.min.js',
         'acf/sounds' => '/blocks/sounds/sounds.min.js',
@@ -339,7 +339,7 @@ function inline_block_scripts() {
         }
     }
 }
-add_action('wp_enqueue_scripts', 'inline_block_scripts');
+add_action('wp_enqueue_scripts', 'enqueue_block_scripts');
 // ***********************************
 //  404 Page
 //  Echo inline styles
