@@ -18,13 +18,18 @@ $slide_interval = get_field('slide_interval');
 // Multiple the slide interval by 1000 to convert seconds to milliseconds
 $slide_interval = ($slide_interval >= 1 && $slide_interval <= 20) ? $slide_interval * 1000 : $slide_interval;
 
-// Retrieve the Slideshow Controls setting
-$slideshow_controls = get_field('slideshow_controls');
+$controls = get_field('controls');
 
-// Retrieve the slideshow controls setting (as an array)
-$slideshow_controls_style = get_field('slideshow_controls_style');
-// Construct the conditional class name using the selected value
-$slideshow_controls_style_class = ' slideshow__controls--' . $slideshow_controls_style;
+if ($controls) :
+    // Retrieve the Arrows setting
+    $arrows = $controls['arrows'];
+
+    // Retrieve the Arrows Style setting (as an array)
+    $arrows_style = $controls['arrows_style'];
+    // Construct the conditional class name using the selected value
+    $arrows_style_class = ' slideshow__controls--' . $arrows_style;
+endif;
+
 
 if ($images) : ?>
     <div class="slideshow<?php if (!$image_shape == 0) echo esc_attr($image_shape_class); ?>" data-interval="<?php echo esc_attr($slide_interval); ?>">
@@ -39,8 +44,8 @@ if ($images) : ?>
         </div>
         <?php endforeach;
 
-        if ($slideshow_controls == 1) : ?>
-        <div class="slideshow__controls<?php if (!$slideshow_controls_style == 0) echo esc_attr($slideshow_controls_style_class); ?>">
+        if ($arrows == 1) : ?>
+        <div class="slideshow__controls<?php if (!$arrows_style == 0) echo esc_attr($arrows_style_class); ?>">
             <button class="slideshow__prev">Prev</button>
             <button class="slideshow__next">Next</button>
         </div>
