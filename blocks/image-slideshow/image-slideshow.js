@@ -190,29 +190,3 @@ slideshowHomepage()
 window.addEventListener('resize', () => {
 	slideshowHomepage()
 })
-
-
-
-
-// ***********************************
-//  Slideshow - WordPress
-// ***********************************
-const slideshowWordpress = () => {
-	const wpBlockGallery = document.querySelectorAll('.wp-block-gallery')
-
-	if (!wpBlockGallery) return
-
-	wpBlockGallery.forEach((gallery) => {
-		gallery.classList.add('slideshow')
-		gallery.setAttribute('data-interval', '5000')
-
-		const gallerySlides = gallery.querySelectorAll('.wp-block-image')
-
-		gallerySlides.forEach((slide) => {
-			slide.classList.add('slideshow__slide')
-		})
-	})
-
-	slideshow()
-}
-slideshowWordpress()
