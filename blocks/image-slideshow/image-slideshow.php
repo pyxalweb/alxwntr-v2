@@ -28,6 +28,9 @@ if ($controls) :
     $arrows_style = $controls['arrows_style'];
     // Construct the conditional class name using the selected value
     $arrows_style_class = ' slideshow__controls--' . $arrows_style;
+
+    // Retrieve the Dots setting
+    $dots = $controls['dots'];
 endif;
 
 
@@ -49,9 +52,11 @@ if ($images) : ?>
             <button class="slideshow__prev">Prev</button>
             <button class="slideshow__next">Next</button>
         </div>
-        <?php endif; ?>
+        <?php endif;
 
-        <!--<div class="slideshow__dots"></div>-->
+        if ($dots == 1) : ?>
+            <div class="slideshow__dots"></div>
+        <?php endif; ?>
     </div>
 
     <?php
