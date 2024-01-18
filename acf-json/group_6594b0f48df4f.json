@@ -143,6 +143,26 @@
                     "ui": 0,
                     "ajax": 0,
                     "placeholder": ""
+                },
+                {
+                    "key": "field_65a8e1077d3e1",
+                    "label": "Dots",
+                    "name": "dots",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "Jump to Any Slide",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "Enabled",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
                 }
             ]
         },
@@ -192,5 +212,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1705565602
+    "modified": 1705566538
 }
