@@ -73,7 +73,7 @@ header.site-header {
 
 	ul {
 		display: flex;
-		gap: 1.5em;
+		gap: clamp(0.5em, 3vw, 1.5em);
 		margin: 0;
 		list-style: none;
 	}
