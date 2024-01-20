@@ -6,6 +6,11 @@
     place-items: start;
 }
 
+// slideshow alignment
+.slideshow--center {
+    justify-content: center;
+}
+
 // slides
 .slideshow__slide {
     grid-column: 1 / 2;
@@ -92,10 +97,9 @@
 
 
 // ***********************************
-//  Slideshow - Utilities
+//  Slideshow - Shape
 // ***********************************
-.slideshow--circular,
-.slideshow--round { // delete .slideshow--round once 404 page is updated to use ACF Block slideshow!
+.slideshow--circular {
     img {
 		border-radius: 100%;
 		border: clamp(0.25em, 2vw, 1em) solid var(--c-grey-100);
@@ -109,8 +113,16 @@
 	}
 }
 
+
+
+
+// ***********************************
+//  Slideshow - Alignment
+// ***********************************
 .slideshow--center {
-    .slideshow__slide {
-        margin-inline: auto;
-    }
+    justify-content: center;
+}
+
+.slideshow--right {
+    justify-content: flex-end;
 }

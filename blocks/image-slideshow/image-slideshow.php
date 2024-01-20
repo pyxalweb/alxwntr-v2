@@ -8,18 +8,12 @@
 // Retrieve the repeater field with all images
 $images = get_field('images');
 
-// Retrieve the image shape setting (as an array)
-$image_shape = get_field('image_shape');
-// Construct the conditional class name using the selected value
-$image_shape_class = ' slideshow--' . $image_shape;
-
 // Retrieve the slide interval setting
 $slide_interval = get_field('slide_interval');
 // Multiple the slide interval by 1000 to convert seconds to milliseconds
 $slide_interval = ($slide_interval >= 1 && $slide_interval <= 20) ? $slide_interval * 1000 : $slide_interval;
 
 $controls = get_field('controls');
-
 if ($controls) :
     // Retrieve the Arrows setting
     $arrows = $controls['arrows'];
@@ -33,9 +27,21 @@ if ($controls) :
     $dots = $controls['dots'];
 endif;
 
+$display = get_field('display');
+if ($display) :
+    // Retrieve the Image Shape setting
+    $image_shape = $display['image_shape'];
+    // Construct the conditional class name using the selected value
+    $image_shape_class = ' slideshow--' . $image_shape;
+
+    // Retrieve the Alignment setting
+    $alignment = $display['alignment'];
+    // Construct the conditional class name using the selected value
+    $alignment_class = ' slideshow--' . $alignment;
+endif;
 
 if ($images) : ?>
-    <div class="slideshow<?php if (!$image_shape == 0) echo esc_attr($image_shape_class); ?>" data-interval="<?php echo esc_attr($slide_interval); ?>">
+    <div class="slideshow<?php if (!$image_shape == 0) echo esc_attr($image_shape_class); if (!$alignment ==0) echo esc_attr($alignment_class); ?>" data-interval="<?php echo esc_attr($slide_interval); ?>">
         <?php foreach ($images as $image) :
             if (!$image['image']) continue; // If no image, skip to next image (if any)
             $image = $image['image'];
