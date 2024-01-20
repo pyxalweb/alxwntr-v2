@@ -3,10 +3,6 @@
  * 404 error page
  */
 
-$upload_dir = wp_upload_dir();
-?>
-
-<?php
 get_header();
 ?>
 
@@ -14,27 +10,11 @@ get_header();
     <section class="error-page | content width-400 | text-100 text-800--h1">
         <h1>404</h1>
 
-        <div class="mb-2">
-            <p>Sorry, the page you are looking for could not be found.</p>
-        </div>
-
-        <div class="slideshow slideshow--round slideshow--center" data-interval="4000">
-            <div class="slideshow__slide" data-status="active">
-                <picture>
-                    <source srcset="<?php echo $upload_dir['baseurl']; ?>/nancy-01.jpg.webp 348w" type="image/webp">
-                    <source srcset="<?php echo $upload_dir['baseurl']; ?>/nancy-01.jpg 348w" type="image/jpeg">
-                    <img src="<?php echo $upload_dir['baseurl']; ?>/nancy-01.jpg" loading="lazy" alt="Nancy the cat" width="348" height="348" class="test-class">
-                </picture>
-            </div>
-
-            <div class="slideshow__slide" data-status="active">
-                <picture>
-                    <source srcset="<?php echo $upload_dir['baseurl']; ?>/clyde-01.jpg.webp 348w" type="image/webp">
-                    <source srcset="<?php echo $upload_dir['baseurl']; ?>/clyde-01.jpg 348w" type="image/jpeg">
-                    <img src="<?php echo $upload_dir['baseurl']; ?>/clyde-01.jpg" loading="lazy" alt="Clyde the corgi" width="348" height="348" class="test-class">
-                </picture>
-            </div>
-        </div>
+        <?php
+            $post = get_post( 2014 );
+            $output = apply_filters( 'the_content', $post->post_content );
+            echo $output;
+        ?>
     </section>
 </main>
 
