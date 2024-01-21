@@ -69,17 +69,6 @@
 	--w-1000: 1920px;
 	--w-spacing: calc(100% - 2em);
 
-	.width-100 { width: min(var(--w-100), var(--w-spacing)); }
-	.width-200 { width: min(var(--w-200), var(--w-spacing)); }
-	.width-300 { width: min(var(--w-300), var(--w-spacing)); }
-	.width-400 { width: min(var(--w-400), var(--w-spacing)); }
-	.width-500 { width: min(var(--w-500), var(--w-spacing)); }
-	.width-600 { width: min(var(--w-600), var(--w-spacing)); }
-	.width-700 { width: min(var(--w-700), var(--w-spacing)); }
-	.width-800 { width: min(var(--w-800), var(--w-spacing)); }
-	.width-900 { width: min(var(--w-900), var(--w-spacing)); }
-	.width-1000 { width: min(var(--w-1000), var(--w-spacing)); }
-
 
 
 
