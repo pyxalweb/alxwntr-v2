@@ -278,7 +278,7 @@
 
 .article {
 	time {
-		color: var(--c-grey-300);
+		@extend %text-500;
 		font-style: italic;
 		display: block;
 		width: 100%;
