@@ -6,8 +6,9 @@ html {
 }
 
 body {
-	position: relative;
+	@extend %text-100;
 	background-color: var(--c-black);
+	position: relative;
 }
 
 
@@ -163,14 +164,6 @@ body {
 
 
 
-
-
-//  Body
-// ***********************************
-
-body {
-	@extend %text-100;
-}
 
 //  Page Elements
 // ***********************************
