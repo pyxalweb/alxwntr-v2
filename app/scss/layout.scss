@@ -178,13 +178,17 @@ main {
 }
 
 strong {
-	color: #d786d0;
+	color: #d780d0;
 	font-weight: var(--fw-bold);
 }
 
 em {
-	color: #fefdce;
+	color: #fefecc;
 	font-style: italic;
+}
+
+code {
+	color: #91d780;
 }
 
 ul, ol {
@@ -201,10 +205,6 @@ a {
 		color: var(--c-white);
 		text-shadow: 1px 1px 2px var(--c-black-alt), 0 0 1em var(--c-primary), 0 0 0.2em var(--c-primary);
 	}
-}
-
-code {
-	color: #cc99cd;
 }
 
 hr {
