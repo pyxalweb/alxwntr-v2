@@ -3,7 +3,7 @@ get_header();
 ?>
 
 <main id="site-main" class="site-main homepage">
-    <section class="homepage__intro | content width-700 | text-100 text-800--h2" role="region" aria-label="Information about Alex Winter">
+    <section class="homepage__intro | content width-700 | text-100 text-800--h2">
         <?php the_content(); ?>
     </section>
 
