@@ -1,11 +1,4 @@
 <?php
-/*
- * Template Name: Default template
- * Template Post Type: page
- */
-?>
-
-<?php
 get_header();
 ?>
 
