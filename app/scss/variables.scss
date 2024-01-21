@@ -40,7 +40,8 @@
 	// ***********************************
 	--c-primary: #009ffe;
 	--c-primary-rgb-10: rgb(41 148 255 / 20%);
-	--c-secondary: #bdd2e7;
+	--c-secondary: #ff5733;
+	--c-tertiary: #ffc300;
 	--c-black: #17171a;
 	--c-black-alt: #0a0a0a;
 	--c-white: #fefefe;
@@ -49,7 +50,7 @@
 	--c-grey-300: #878787; // in use
 	--c-grey-400: #bebebe;
 	--c-grey-500: #dcdcdc;
-	--c-gradient: #ff5733 0%, #ffc300 100%;
+	--c-gradient: var(--c-secondary) 0%, var(--c-tertiary) 100%;
 
 
 
