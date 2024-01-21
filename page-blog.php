@@ -1,6 +1,4 @@
-<?php
-get_header();
-?>
+<?php get_header(); ?>
 
 <main id="site-main" class="site-main interior">
     <section class="blog blog--archive | content width-700 | text-100 text-400--h1" role="region" aria-label="Blog Posts">
@@ -53,11 +51,8 @@ get_header();
             get_template_part('template-parts/blog', 'posts', array('past_year' => $past_year, 'all_years' => $all_years, 'year' => $year));
         ?>
 
-        <?php
-        }
-        ?>
+        <?php } ?>
     </section>
 </main>
 
-<?php
-get_footer();
+<?php get_footer();

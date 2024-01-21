@@ -1,6 +1,4 @@
-<?php
-get_header();
-?>
+<?php get_header(); ?>
 
 <main id="site-main" class="site-main homepage">
     <section class="homepage__intro | content width-700 | text-100 text-400--h2">
@@ -40,10 +38,7 @@ get_header();
             <a href="blog" class="button">Archive</a>
         </div>
     </section>
-    <?php
-    }
-    ?>
+    <?php } ?>
 </main>
 
-<?php
-get_footer();
+<?php get_footer();

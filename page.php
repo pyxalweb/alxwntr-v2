@@ -1,6 +1,4 @@
-<?php
-get_header();
-?>
+<?php get_header(); ?>
 
 <main id="site-main" class="site-main interior">
     <article class="article | content width-400 | text-100 text-400--h1 text-300--h2 text-200--h3">
@@ -14,5 +12,4 @@ get_header();
     </article>
 </main>
 
-<?php
-get_footer();
+<?php get_footer();
