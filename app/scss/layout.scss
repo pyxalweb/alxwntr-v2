@@ -178,17 +178,17 @@ main {
 }
 
 strong {
-	color: #d780d0;
+	color: var(--c-color-100);
 	font-weight: var(--fw-bold);
 }
 
 em {
-	color: #fefecc;
+	color: var(--c-color-200);
 	font-style: italic;
 }
 
 code {
-	color: #91d780;
+	color: var(--c-color-300);
 }
 
 ul, ol {
