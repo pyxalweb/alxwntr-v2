@@ -43,7 +43,6 @@ body {
 
 
 
-
 // ***********************************
 //  Text Style Guide
 // ***********************************
@@ -165,19 +164,17 @@ body {
 
 
 
-//  Page Elements
 // ***********************************
+//  Text Elements
+// ***********************************
+main {
+	p {
+		margin-bottom: 1em;
 
-main p {
-	margin-bottom: 1em;
-
-	&:last-of-type {
-		margin-bottom: 0;
+		&:last-of-type {
+			margin-bottom: 0;
+		}
 	}
-}
-
-h1, h2, h3 {
-	@extend %text-100;
 }
 
 strong {
