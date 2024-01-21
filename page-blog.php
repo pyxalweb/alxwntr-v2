@@ -3,7 +3,7 @@ get_header();
 ?>
 
 <main id="site-main" class="site-main interior">
-    <section class="blog blog--archive | content width-700 | text-100 text-800--h1" role="region" aria-label="Blog Posts">
+    <section class="blog blog--archive | content width-700 | text-100 text-400--h1" role="region" aria-label="Blog Posts">
         <h1>Blog</h1>
 
         <?php
