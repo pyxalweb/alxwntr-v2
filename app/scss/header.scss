@@ -27,7 +27,10 @@ header.site-header {
 .header__logo {
 	h1,
 	a {
-		@extend %text-400;
+		color: var(--c-white);
+		font-size: var(--fs-1000);
+		font-weight: var(--fw-thin);
+		line-height: var(--lh-400);
 		transition: all 1.75s;
 
 		span {
