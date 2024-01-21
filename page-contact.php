@@ -1,11 +1,4 @@
 <?php
-/*
- * Template Name: Contact
- * Template Post Type: page
- */
-?>
-
-<?php
 get_header();
 ?>
 
