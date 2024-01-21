@@ -170,46 +170,51 @@ body {
 main {
 	p {
 		margin-bottom: 1em;
-
-		&:last-of-type {
+	
+		&:last-child {
 			margin-bottom: 0;
 		}
 	}
-}
 
-strong {
-	color: var(--c-color-100);
-	font-weight: var(--fw-bold);
-}
+	strong {
+		color: var(--c-color-100);
+		font-weight: var(--fw-bold);
+	}
 
-em {
-	color: var(--c-color-200);
-	font-style: italic;
-}
+	em {
+		color: var(--c-color-200);
+		font-style: italic;
+	}
 
-code {
-	color: var(--c-color-300);
-}
+	code {
+		color: var(--c-color-300);
+	}
 
-ul, ol {
-	margin-left: 1em;
-}
+	ul, ol {
+		margin: 0 0 1em 1em;
 
-a {
-	color: var(--c-primary);
-	text-decoration: none;
-	transition: all var(--t-medium);
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
 
-	&:hover,
-	&:focus {
-		color: var(--c-white);
-		text-shadow: 1px 1px 2px var(--c-black-alt), 0 0 1em var(--c-primary), 0 0 0.2em var(--c-primary);
+	a {
+		color: var(--c-primary);
+		text-decoration: none;
+		transition: all var(--t-medium);
+
+		&:hover,
+		&:focus {
+			color: var(--c-white);
+			text-shadow: 1px 1px 2px var(--c-black-alt), 0 0 1em var(--c-primary), 0 0 0.2em var(--c-primary);
+		}
+	}
+
+	hr {
+		margin-block: 1em;
 	}
 }
 
-hr {
-	margin-block: 1em;
-}
 
 
 
