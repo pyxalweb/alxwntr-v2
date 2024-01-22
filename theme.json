@@ -9,7 +9,81 @@
 			"style": true,
 			"width": true
 		},
-		"color": {},
+		"color": {
+            "defaultPalette": false,
+			"palette": [
+				{
+					"color": "#009ffe",
+					"name": "Primary",
+					"slug": "primary"
+				},
+                {
+					"color": "#ff5733",
+					"name": "Secondary",
+					"slug": "secondary"
+				},
+                {
+					"color": "#ffc300",
+					"name": "Tertiary",
+					"slug": "tertiary"
+				},
+                {
+					"color": "#d780d0",
+					"name": "Color 100",
+					"slug": "color-100"
+				},
+                {
+					"color": "#fefecc",
+					"name": "Color 200",
+					"slug": "color-200"
+				},
+                {
+					"color": "#91d780",
+					"name": "Color 300",
+					"slug": "color-300"
+				},
+                {
+					"color": "#17171a",
+					"name": "Black",
+					"slug": "black"
+				},
+                {
+					"color": "#0a0a0a",
+					"name": "Black Alt",
+					"slug": "black-alt"
+				},
+                {
+					"color": "#fefefe",
+					"name": "White",
+					"slug": "white"
+				},
+                {
+					"color": "#343434",
+					"name": "Grey 100",
+					"slug": "grey-100"
+				},
+                {
+					"color": "#1e1e23",
+					"name": "Grey 200",
+					"slug": "grey-200"
+				},
+                {
+					"color": "#878787",
+					"name": "Grey 300",
+					"slug": "grey-300"
+				},
+                {
+					"color": "#bebebe",
+					"name": "Grey 400",
+					"slug": "grey-400"
+				},
+                {
+					"color": "#dcdcdc",
+					"name": "Grey 500",
+					"slug": "grey-100"
+				}
+			]
+		},
 		"custom": {},
 		"dimensions": {},
 		"layout": {},
