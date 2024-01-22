@@ -223,11 +223,20 @@ main {
 //  Buttons
 // ***********************************
 %button {
-	@include text(var(--ff-primary), clamp(var(--fs-400), 3vw, var(--fs-500)), var(--fw-medium), var(--lh-400), var(--c-primary), none, none, normal);
+	@include text(
+		var(--ff-primary),                        // Font Family: Montserrat
+		clamp(var(--fs-400), 3vw, var(--fs-500)), // Font Size:   16px/18px (1rem/1.125rem)
+		var(--fw-medium),                         // Font Weight: Medium
+		var(--lh-400),                            // Line Height: 1.5
+		var(--c-primary),                         // Color: Blue
+		none,                                     // Text Decoration: none
+		none,                                     // Text Transform: none
+		normal                                    // Font Style: normal
+	);
 	background-color: transparent;
-	cursor: pointer;
 	border: 1px solid var(--c-grey-100);
-	border-radius: 0 1em 0 1em;
+	border-radius: 0 1em;
+	cursor: pointer;
 	padding: 0.7em 1.25em;
 	text-align: center;
 	transition: all var(--t-fast);
@@ -235,8 +244,8 @@ main {
 	&:hover,
 	&:focus {
 		background-color: var(--c-black-alt);
-		color: var(--c-white);
 		box-shadow: 1px 1px 50px var(--c-primary-rgb-10);
+		color: var(--c-white);
 		text-shadow: none;
 	}
 }
