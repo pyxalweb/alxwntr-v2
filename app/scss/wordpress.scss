@@ -30,3 +30,14 @@
     flex-shrink: 1;
     flex-basis: 100%;
 }
+
+
+
+
+// ***********************************
+//  Typography - Font Sizes
+// ***********************************
+.has-small-font-size   { font-size: var(--fs-400); }
+.has-medium-font-size  { font-size: var(--fs-600); }
+.has-large-font-size   { font-size: var(--fs-700); }
+.has-x-large-font-size { font-size: var(--fs-800); }
