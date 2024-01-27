@@ -11,16 +11,6 @@
 // consider deleting / redoing this
 .wp-block-columns {
     display: flex;
-
-    @media (max-width: $vw-400) {
-        &.alx__wp-block-columns--vw400-stack {
-            flex-direction: column;
-        }
-
-        &.alx__wp-block-columns--vw400-stack-reverse {
-            flex-direction: column-reverse;
-        }
-    }
 }
 
 .wp-block-column {
