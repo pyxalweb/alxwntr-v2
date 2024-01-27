@@ -78,6 +78,17 @@
 
 
 	// ***********************************
+	//  Layout Margin & Padding
+	// ***********************************
+	%mbl-c-3-5-5 { margin-block: clamp(3em, 5vw, 5em); }
+	%pbl-c-1-5-3 { padding-block: clamp(1em, 5vw, 3em); }
+	 %mb-c-3-5-5 { margin-bottom: clamp(3em, 5vw, 5em); }
+	 %pb-c-3-5-5 { padding-bottom: clamp(3em, 5vw, 5em); }
+
+
+
+
+	// ***********************************
 	//  Transitions
 	// ***********************************
 	--t-fast: 0.3s;
