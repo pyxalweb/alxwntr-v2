@@ -307,6 +307,8 @@ function inline_block_styles() {
 		'acf/link-button'       => '/blocks/link-button/link-button.css',
 		'acf/sounds'            => '/blocks/sounds/sounds.css',
 		'acf/zig-zag'           => '/blocks/zig-zag/zig-zag.css',
+		'core/code'           	=> '/blocks/code/code.css',
+		'core/html'           	=> '/blocks/code/code.css',
 	);
 
 	foreach ($blocks as $block => $css_path) {
@@ -327,8 +329,8 @@ function enqueue_block_scripts() {
     $blocks = array(
         'acf/image-slideshow' => '/blocks/image-slideshow/image-slideshow.min.js',
         'acf/sounds' => '/blocks/sounds/sounds.min.js',
-		'core/code' => '/blocks/code/prism.js',
-		'core/html' => '/blocks/code/prism.js',
+		'core/code' => '/blocks/code/code.min.js',
+		'core/html' => '/blocks/code/code.min.js',
     );
 
     foreach ($blocks as $block => $js_path) {

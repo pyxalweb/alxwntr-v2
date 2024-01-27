@@ -77,3 +77,4 @@ acfBlockTasks('highlighted-image');
 acfBlockTasks('image-slideshow');
 acfBlockTasks('link-button');
 acfBlockTasks('sounds');
+acfBlockTasks('code');
