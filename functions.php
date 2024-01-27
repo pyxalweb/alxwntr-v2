@@ -314,15 +314,17 @@ function inline_block_styles() {
 }
 add_action('wp_head', 'inline_block_styles');
 // ***********************************
-//  Custom ACF Blocks
-//  Enqueue scripts
+//  has_block
+//  enqueue scripts
 // ***********************************
-// Check if the post has the relevant ACF block
+// Check if the post has the relevant block (ACF or core)
 // Reference the script within a <script> tag before the closing </body>
 function enqueue_block_scripts() {
     $blocks = array(
         'acf/image-slideshow' => '/blocks/image-slideshow/image-slideshow.min.js',
         'acf/sounds' => '/blocks/sounds/sounds.min.js',
+		'core/code' => '/dist/prism.js',
+		'core/html' => '/dist/prism.js',
     );
 
     foreach ($blocks as $block => $js_path) {
@@ -338,32 +340,6 @@ function enqueue_block_scripts() {
     }
 }
 add_action('wp_enqueue_scripts', 'enqueue_block_scripts');
-// ***********************************
-//  Core Blocks
-//  Enqueue scripts
-// ***********************************
-// Check if the post has the relevant core block
-// Reference the script within a <script> tag before the closing </body>
-function enqueue_core_block_scripts() {
-    $blocks = array(
-        'core/code' => '/dist/prism.js',
-		'core/html' => '/dist/prism.js',
-    );
-
-    foreach ($blocks as $block => $js_path) {
-        if (has_block($block)) {
-            wp_enqueue_script(
-                $block, // Script handle (unique name for the script)
-                get_template_directory_uri() . $js_path, // Script URL
-                array(), // Dependencies (optional)
-                filemtime(get_template_directory() . $js_path), // Version (using file modification time)
-                true // Enqueue in the footer
-            );
-        }
-		error_log('Enqueuing script for block: ' . $block);
-    }
-}
-add_action('wp_enqueue_scripts', 'enqueue_core_block_scripts');
 // ***********************************
 //  404 Page
 //  Echo inline styles
