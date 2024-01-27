@@ -277,8 +277,10 @@ function remove_svg() {
 	remove_action('wp_body_open', 'wp_global_styles_render_svg_filters');
 }
 add_action('init', 'remove_svg', 30);
-?>
-<?php
+
+
+
+
 // ***********************************
 //  Custom ACF Blocks
 //  Register the blocks
@@ -291,11 +293,12 @@ function register_acf_blocks() {
 	register_block_type( __DIR__ . '/blocks/sounds' );
 	register_block_type( __DIR__ . '/blocks/zig-zag' );
 }
+
 // ***********************************
-//  Custom ACF Blocks
+//  has_block
 //  Echo inline styles
 // ***********************************
-// Check if the post has the relevant ACF block
+// Check if the post has the relevant block (ACF or core)
 // Output the contents of the .css file within a <style> tag in the <head>
 function inline_block_styles() {
 	$blocks = array(
@@ -313,6 +316,7 @@ function inline_block_styles() {
 	}
 }
 add_action('wp_head', 'inline_block_styles');
+
 // ***********************************
 //  has_block
 //  enqueue scripts
@@ -323,8 +327,8 @@ function enqueue_block_scripts() {
     $blocks = array(
         'acf/image-slideshow' => '/blocks/image-slideshow/image-slideshow.min.js',
         'acf/sounds' => '/blocks/sounds/sounds.min.js',
-		'core/code' => '/dist/prism.js',
-		'core/html' => '/dist/prism.js',
+		'core/code' => '/blocks/code/prism.js',
+		'core/html' => '/blocks/code/prism.js',
     );
 
     foreach ($blocks as $block => $js_path) {
@@ -340,6 +344,10 @@ function enqueue_block_scripts() {
     }
 }
 add_action('wp_enqueue_scripts', 'enqueue_block_scripts');
+
+
+
+
 // ***********************************
 //  404 Page
 //  Echo inline styles
@@ -352,6 +360,7 @@ function inline_404_styles() {
 	}
 }
 add_action('wp_head', 'inline_404_styles');
+
 // ***********************************
 //  404 Page
 //  Enqueue scripts
