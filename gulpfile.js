@@ -47,34 +47,37 @@ exports.default = series(
 
 
 // ***********************************
-//  ACF Blocks
+//  Blocks
 // ***********************************
 
 // Note:
 // These will only run when saving the block's respective files.
 // Not when running the default Gulp task.
 
-function acfBlockTasks(blockName) {
-  function acfBlockScssTask() {
+function blockTasks(blockName) {
+  function blockScssTask() {
     return src(`blocks/${blockName}/${blockName}.scss`, { sourcemaps: true })
       .pipe(sass())
       .pipe(postcss([cssnano()]))
       .pipe(dest(`blocks/${blockName}`, { sourcemaps: '.' }));
   }
-  watch([`blocks/${blockName}/${blockName}.scss`], acfBlockScssTask);
+  watch([`blocks/${blockName}/${blockName}.scss`], blockScssTask);
 
-  function acfBlockJsTask() {
+  function blockJsTask() {
     return src(`blocks/${blockName}/${blockName}.js`, { sourcemaps: true })
       .pipe(terser())
       .pipe(rename({ suffix: '.min' }))
       .pipe(dest(`blocks/${blockName}`, { sourcemaps: '.' }));
   }
-  watch([`blocks/${blockName}/${blockName}.js`], acfBlockJsTask);
+  watch([`blocks/${blockName}/${blockName}.js`], blockJsTask);
 }
 
-acfBlockTasks('zig-zag');
-acfBlockTasks('highlighted-image');
-acfBlockTasks('image-slideshow');
-acfBlockTasks('link-button');
-acfBlockTasks('sounds');
-acfBlockTasks('code');
+// Core Blocks
+blockTasks('code');
+
+// ACF Blocks
+blockTasks('highlighted-image');
+blockTasks('image-slideshow');
+blockTasks('link-button');
+blockTasks('sounds');
+blockTasks('zig-zag');
