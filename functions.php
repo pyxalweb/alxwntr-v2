@@ -8,9 +8,7 @@ function theme_files() {
 
 	// main scripts
 	wp_enqueue_script('main-scripts', get_theme_file_uri('/dist/scripts.js'), NULL, '1.0', true);
-	
-	// prism.js syntax highlighting
-	wp_enqueue_script('prism-scripts', get_theme_file_uri('/dist/prism.js'), NULL, '1.0', true);
+
 }
 add_action('wp_enqueue_scripts', 'theme_files');
 
@@ -340,6 +338,32 @@ function enqueue_block_scripts() {
     }
 }
 add_action('wp_enqueue_scripts', 'enqueue_block_scripts');
+// ***********************************
+//  Core Blocks
+//  Enqueue scripts
+// ***********************************
+// Check if the post has the relevant core block
+// Reference the script within a <script> tag before the closing </body>
+function enqueue_core_block_scripts() {
+    $blocks = array(
+        'core/code' => '/dist/prism.js',
+		'core/html' => '/dist/prism.js',
+    );
+
+    foreach ($blocks as $block => $js_path) {
+        if (has_block($block)) {
+            wp_enqueue_script(
+                $block, // Script handle (unique name for the script)
+                get_template_directory_uri() . $js_path, // Script URL
+                array(), // Dependencies (optional)
+                filemtime(get_template_directory() . $js_path), // Version (using file modification time)
+                true // Enqueue in the footer
+            );
+        }
+		error_log('Enqueuing script for block: ' . $block);
+    }
+}
+add_action('wp_enqueue_scripts', 'enqueue_core_block_scripts');
 // ***********************************
 //  404 Page
 //  Echo inline styles
