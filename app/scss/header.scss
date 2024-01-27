@@ -20,6 +20,7 @@ header.site-header {
 	@media (max-width: $vw-25) {
 		align-items: center;
 		flex-direction: column;
+		gap: 1em;
 	}
 }
 
