@@ -7,9 +7,9 @@
                 <h1><?php the_title(); ?></h1>
             </header>
 
-            <section class="article__content">
+            <div class="article__content">
                 <?php the_content(); ?>
-            </section>
+            </div>
 
             <footer>
                 <time datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('F j, Y') ?></time>

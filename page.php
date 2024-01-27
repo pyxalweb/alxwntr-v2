@@ -6,9 +6,9 @@
             <h1><?php the_title(); ?></h1>
         </header>
 
-        <section class="article__content">
+        <div class="article__content">
             <?php the_content(); ?>
-        </section>
+        </div>
     </article>
 </main>
 
