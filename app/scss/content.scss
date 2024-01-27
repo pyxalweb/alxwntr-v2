@@ -3,8 +3,8 @@
 // ***********************************
 .homepage__intro {
 	border-bottom: 1px solid var(--c-grey-100);
-	@extend %mbl-c-3-5-5;
-	@extend %pb-c-3-5-5;
+	margin-bottom: var(--spacing-400);
+	padding-bottom: var(--spacing-400);
 
 	h2 {
 		margin-bottom: 0.5em;
@@ -141,6 +141,8 @@
 //  Blog Posts
 // ***********************************
 .blog__posts {
+	margin-bottom: var(--spacing-400);
+
 	&.empty {
 		display: none;
 	}
@@ -253,9 +255,9 @@
 // ***********************************
 .blog__more {
 	width: min(300px, 100%);
+	margin-bottom: var(--spacing-400);
 	margin-inline: auto;
 	text-align: center;
-	@extend %mbl-c-3-5-5;
 }
 
 
