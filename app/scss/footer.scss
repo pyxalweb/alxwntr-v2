@@ -46,8 +46,9 @@ footer.site-footer {
 	}
 
 	a {
-		font-size: clamp(1.5rem, 2vw, 2rem);
 		color: var(--c-white);
+		font-size: clamp(1.5rem, 2vw, 2rem);
+		text-decoration: none;
 
 		&:hover,
 		&:focus {
