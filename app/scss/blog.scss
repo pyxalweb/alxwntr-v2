@@ -1,69 +1,5 @@
 // ***********************************
-//  Homepage Intro
-// ***********************************
-.homepage__intro {
-	border-bottom: 1px solid var(--c-grey-100);
-	margin-bottom: var(--spacing-400);
-	padding-bottom: var(--spacing-400);
-
-	h2 {
-		margin-bottom: 0.5em;
-	}
-
-	.wp-block-columns {
-		@media (max-width: $vw-600) {
-			flex-direction: column;
-		}
-	}
-
-	.wp-block-column {
-		&:last-of-type {
-			display: flex;
-			justify-content: end;
-			align-items: center;
-		}
-	}
-
-	.slideshow {
-		width: 348px;
-
-		// show three slides in a row on medium-size viewports
-		@media (max-width: $vw-600) {
-			margin-top: 3em;
-			width: 100%;
-			grid-template-columns: repeat(3, 1fr);
-			gap: clamp(0.25em, 2vw, 1em);
-			
-			.slideshow__slide--vw600 {
-				opacity: 1;
-				z-index: 1;
-				grid-column: auto;
-				grid-row: auto;
-
-				// hide all but the first 3 slides
-				&:nth-of-type(n+4) {
-					display: none;
-				}
-			}
-
-			img {
-				width: 348px;
-			}
-		}
-
-		@media (max-width: $vw-100) {
-			max-width: 348px;
-			grid-template-columns: 1fr;
-			margin-inline: auto;
-		}
-	}
-}
-
-
-
-
-// ***********************************
-//  Blog
+//  Blog Posts Container
 // ***********************************
 .blog--home {
 	text-align: center;
@@ -258,80 +194,21 @@
 
 
 // ***********************************
-//  Article
+//  Blog Category Error
 // ***********************************
-.article {
-	margin-block: var(--spacing-400);
-
-	h1 {
-		text-align: center;
-	}
-}
-
-.article__content {
-	margin-block: var(--spacing-400);
-}
-
-.article {
-	time {
-		@extend %text-500;
-		font-style: italic;
-		display: block;
-		width: 100%;
-		text-align: center;
-	}
-}
-
-
-
-
-// ***********************************
-//  Error Page
-// ***********************************
-.error-page {
-	margin-block: var(--spacing-400);
+.error {
+	background-color: #9d0000;
+	color: var(--c-white);
+	inset: 0 auto auto 0;
+	opacity: 0;
+	padding-inline: 1em;
+	position: fixed;
 	text-align: center;
-}
+	transition: all var(--t-fast);
+	width: 100%;
+	z-index: 99999;
 
-
-
-
-// ***********************************
-//  Ordered List
-// ***********************************
-.ordered-list--1 {
-	background-color: var(--c-grey-200);
-	counter-reset: item;
-	list-style: none;
-	margin-left: 0;
-	padding: clamp(1em, 3vw, 2em);
-	
-	li {
-		border-bottom: 1px dashed var(--c-grey-100);
-		counter-increment: item;
-		margin-bottom: 1em;
-		padding-bottom: 1em;
-		padding-left: 3em;
-		position: relative;
-
-		&:last-of-type {
-			border-bottom: none;
-			margin-bottom: 0;
-			padding-bottom: 0;
-		}
-	}
-
-	li:before {
-		margin-right: 10px;
-		content: counter(item);
-		background: var(--c-grey-100);
-		border-radius: 100%;
-		color: white;
-		width: 2em;
-		height: 2em;
-		text-align: center;
-		display: inline-block;
-		position: absolute;
-		left: 0;
+	&.active {
+		opacity: 1;
 	}
 }
