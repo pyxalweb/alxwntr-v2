@@ -15,7 +15,7 @@ header.site-header {
 	border-bottom: 1px solid var(--c-grey-100);
     display: flex;
     justify-content: space-between;
-	@extend %pbl-c-1-5-3;
+	padding-block: var(--spacing-200);
 }
 
 

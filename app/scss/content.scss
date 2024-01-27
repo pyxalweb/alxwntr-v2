@@ -76,7 +76,7 @@
 }
 
 .blog--archive {
-	@extend %mbl-c-3-5-5;
+	margin-block: var(--spacing-400);
 
 	h1 {
 		text-align: center;
@@ -90,7 +90,7 @@
 //  Blog Categories
 // ***********************************
 .blog__categories {
-	@extend %mbl-c-3-5-5;
+	margin-block: var(--spacing-400);
 }
 
 .categories__container {
@@ -174,7 +174,7 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 3em;
-	@extend %mbl-c-3-5-5;
+	margin-block: var(--spacing-400);
 
 	@media (max-width: $vw-500) {
 		grid-template-columns: 1fr;
@@ -267,7 +267,7 @@
 //  Article
 // ***********************************
 .article {
-	@extend %mbl-c-3-5-5;
+	margin-block: var(--spacing-400);
 
 	h1 {
 		text-align: center;
@@ -275,7 +275,7 @@
 }
 
 .article__content {
-	@extend %mbl-c-3-5-5;
+	margin-block: var(--spacing-400);
 }
 
 .article {
@@ -295,7 +295,7 @@
 //  Error Page
 // ***********************************
 .error-page {
-	@extend %mbl-c-3-5-5;
+	margin-block: var(--spacing-400);
 	text-align: center;
 }
 
@@ -310,7 +310,7 @@
 }
 
 .wp-block-gallery {
-	@extend %mbl-c-3-5-5;
+	margin-block: var(--spacing-400);
 }
 
 pre.wp-block-code {
