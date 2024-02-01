@@ -37,7 +37,7 @@
             );
         }
         ?>
-        <select class="categories__select">
+        <select class="categories__select" aria-label="Select Category">
             <option data-category="all" value="all">all categories</option>
             <?php
             // Populate the select dropdown with the categories from the categoryOptions array
