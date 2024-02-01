@@ -3,6 +3,23 @@
 //  Styles & Scripts
 // ***********************************
 function theme_files() {
+	// dns-prefetch (treated as a style)
+    $prefetch_urls = array(
+        '//fonts.googleapis.com',
+        '//www.googletagmanager.com',
+        // Add more URLs as needed
+    );
+    // Enqueue prefetch links using a loop
+	// md5 is used to generate a unique handle for each URL
+    foreach ($prefetch_urls as $url) {
+        wp_enqueue_style('dns-prefetch-' . md5($url), $url, array(
+            'rel' => 'dns-prefetch',
+            'id' => '',
+            'type' => '',
+            'media' => '',
+        ));
+    }
+
 	// main styles
 	wp_enqueue_style('main-styles', get_theme_file_uri('/dist/styles.css'));
 
