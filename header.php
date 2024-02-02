@@ -16,8 +16,6 @@
 	<?php wp_head(); ?>
 
 	<?php get_template_part( 'template-parts/head', 'icons' ); ?>
-
-    <?php get_template_part( 'template-parts/head', 'analytics' ); ?>
 </head>
 
 <body <?php body_class('preload'); ?>>
