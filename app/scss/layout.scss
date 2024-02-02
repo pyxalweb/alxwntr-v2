@@ -233,6 +233,7 @@ main {
 		none,                                     // Text Transform: none
 		normal                                    // Font Style: normal
 	);
+	
 	background-color: transparent;
 	border: 1px solid var(--c-grey-100);
 	border-radius: 0 1em;
@@ -254,6 +255,22 @@ main {
 	@extend %button;
 }
 
+%button--fill {
+	@extend %button;
+	background-color: var(--c-primary);
+	color: var(--c-white);
+}
+
+%button--outline {
+	@extend %button;
+	background-color: transparent;
+	color: var(--c-primary);
+
+	&:hover,
+	&:focus {
+		color: var(--c-white);
+	}
+}
 
 
 
