@@ -36,13 +36,6 @@ add_action('wp_enqueue_scripts', 'theme_files');
 //  Block Editor CSS
 // ***********************************
 function enqueue_block_editor_assets() {
-    wp_enqueue_style(
-        'block-editor-styles-front-end',
-        get_template_directory_uri() . '/dist/styles.css',
-        array(),  // Dependencies (if any)
-        filemtime(get_template_directory() . '/dist/styles.css')  // Cache busting with file modification time
-    );
-
 	wp_enqueue_style(
         'block-editor-styles-back-end',
         get_template_directory_uri() . '/dist/block-editor.css',
