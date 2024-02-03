@@ -2,3 +2,7 @@
 node_modules/
 dist/styles.css
 dist/styles.css.map
+dist/block-editor.css
+dist/block-editor.css.map
+dist/scripts.js
+dist/scripts.js.map

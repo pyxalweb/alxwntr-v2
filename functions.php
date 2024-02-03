@@ -32,16 +32,24 @@ add_action('wp_enqueue_scripts', 'theme_files');
 
 
 
+// ***********************************
+//  Block Editor CSS
+// ***********************************
 function enqueue_block_editor_assets() {
-    // Enqueue your theme's stylesheet for the block editor
     wp_enqueue_style(
-        'your-theme-editor-styles',  // Handle for the stylesheet
-        get_template_directory_uri() . '/dist/styles.css',  // Path to your stylesheet
+        'block-editor-styles-front-end',
+        get_template_directory_uri() . '/dist/styles.css',
         array(),  // Dependencies (if any)
         filemtime(get_template_directory() . '/dist/styles.css')  // Cache busting with file modification time
     );
-}
 
+	wp_enqueue_style(
+        'block-editor-styles-back-end',
+        get_template_directory_uri() . '/dist/block-editor.css',
+        array(),  // Dependencies (if any)
+        filemtime(get_template_directory() . '/dist/block-editor.css')  // Cache busting with file modification time
+    );
+}
 add_action('enqueue_block_editor_assets', 'enqueue_block_editor_assets');
 
 

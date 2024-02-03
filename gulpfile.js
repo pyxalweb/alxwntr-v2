@@ -16,9 +16,17 @@ const rename = require('gulp-rename');
 //  Main Tasks
 // ***********************************
 
-// Sass Task
+// Sass Task - Front End
 function scssTask(){
   return src('app/scss/styles.scss', { sourcemaps: true })
+    .pipe(sass())
+    .pipe(postcss([cssnano()]))
+    .pipe(dest('dist', { sourcemaps: '.' }));
+}
+
+// Sass Task - Block Editor
+function scssTaskBlockEditor(){
+  return src('app/scss/block-editor.scss', { sourcemaps: true })
     .pipe(sass())
     .pipe(postcss([cssnano()]))
     .pipe(dest('dist', { sourcemaps: '.' }));
@@ -33,12 +41,13 @@ function jsTask() {
 
 // Watch Task
 function watchTask(){
-  watch(['app/scss/**/*.scss', 'app/js/**/*.js'], series(scssTask, jsTask));
+  watch(['app/scss/**/*.scss', 'app/js/**/*.js'], series(scssTask, scssTaskBlockEditor, jsTask));
 }
 
 // Default Gulp task
 exports.default = series(
   scssTask,
+  scssTaskBlockEditor,
   jsTask,
   watchTask
 );

@@ -1,0 +1,48 @@
+@import 'variables';
+@import 'typography';
+@import 'buttons';
+
+.editor-styles-wrapper {
+    background-color: var(--c-black);
+    color: var(--c-white);
+
+    h1 {
+        @extend %text-400;
+        text-align: center;
+    }
+
+    strong {
+        color: var(--c-color-100);
+    }
+
+    em {
+		color: var(--c-color-200);
+	}
+
+    code {
+		color: var(--c-color-300);
+		font-family: 'Courier New', monospace;
+	}
+
+    a {
+		color: var(--c-primary);
+		text-decoration: none;
+		transition: all var(--t-medium);
+
+		&:hover,
+		&:focus {
+			color: var(--c-white);
+			text-shadow: 1px 1px 2px var(--c-black-alt), 0 0 1em var(--c-primary), 0 0 0.2em var(--c-primary);
+		}
+	}
+
+    .wp-block-button {
+        .wp-block-button__link {
+            @extend %button;
+        }
+        
+        &.is-style-outline {
+            color: var(--c-primary);
+        }
+    }
+}
