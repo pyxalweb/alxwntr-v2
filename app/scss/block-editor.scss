@@ -1,8 +1,14 @@
+// these imports must strictly apply to the entire WordPress page, not just the editor
+@import 'reset';
+@import 'fonts';
 @import 'variables';
-@import 'typography';
-@import 'buttons';
 
 .editor-styles-wrapper {
+    // these imports must strictly apply to the editor, not the entire WordPress page
+    @import 'typography';
+    @import 'text-elements';
+    @import 'buttons';
+
     background-color: var(--c-black);
     color: var(--c-white);
 
@@ -11,30 +17,9 @@
         text-align: center;
     }
 
-    strong {
-        color: var(--c-color-100);
+    a.components-button {
+        color: #ff0000;
     }
-
-    em {
-		color: var(--c-color-200);
-	}
-
-    code {
-		color: var(--c-color-300);
-		font-family: 'Courier New', monospace;
-	}
-
-    a {
-		color: var(--c-primary);
-		text-decoration: none;
-		transition: all var(--t-medium);
-
-		&:hover,
-		&:focus {
-			color: var(--c-white);
-			text-shadow: 1px 1px 2px var(--c-black-alt), 0 0 1em var(--c-primary), 0 0 0.2em var(--c-primary);
-		}
-	}
 
     .wp-block-button {
         .wp-block-button__link {
