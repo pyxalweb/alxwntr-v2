@@ -2,16 +2,23 @@
 @import 'reset';
 @import 'fonts';
 @import 'variables';
+@import 'viewports';
 
 .editor-styles-wrapper {
     // these imports must strictly apply to the editor, not the entire WordPress page
     @import 'typography';
     @import 'text-elements';
     @import 'buttons';
+    @import 'intro';
     @import 'ordered-list';
 
     background-color: var(--c-black);
     color: var(--c-white);
+
+    // h1 placeholder for the editor, when no heading has been entered yet
+    h1.rich-text [data-rich-text-placeholder] {
+        color: var(--c-white);
+    }
 
     h1 {
         @extend %text-400;
