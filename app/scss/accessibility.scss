@@ -35,31 +35,3 @@
 		color: #fff;
   }
 }
-
-
-
-
-// ***********************************
-//  Site Map
-// ***********************************
-.site-map {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-
-  li {
-    margin: 0 0 0.5em 0;
-
-    a {
-      &.not-a-link {
-        display: none;
-      }
-    }
-
-    ul {
-      list-style: none;
-      margin: 0.5em 0 0 0;
-      padding: 0;
-    }
-  }
-}
