@@ -19,72 +19,72 @@
 			"defaultPalette": false,
 			"palette": [
 				{
-					"color": "#009ffe",
+					"color": "var(--c-primary)",
 					"name": "Primary",
 					"slug": "primary"
 				},
 				{
-					"color": "#ff5733",
+					"color": "var(--c-secondary)",
 					"name": "Secondary",
 					"slug": "secondary"
 				},
 				{
-					"color": "#ffc300",
+					"color": "var(--c-tertiary)",
 					"name": "Tertiary",
 					"slug": "tertiary"
 				},
 				{
-					"color": "#d780d0",
+					"color": "var(--c-color-100)",
 					"name": "Color 100",
 					"slug": "color-100"
 				},
 				{
-					"color": "#fefecc",
+					"color": "var(--c-color-200)",
 					"name": "Color 200",
 					"slug": "color-200"
 				},
 				{
-					"color": "#91d780",
+					"color": "var(--c-color-300)",
 					"name": "Color 300",
 					"slug": "color-300"
 				},
 				{
-					"color": "#17171a",
+					"color": "var(--c-black)",
 					"name": "Black",
 					"slug": "black"
 				},
 				{
-					"color": "#0a0a0a",
+					"color": "var(--c-black-alt)",
 					"name": "Black Alt",
 					"slug": "black-alt"
 				},
 				{
-					"color": "#fefefe",
+					"color": "var(--c-white)",
 					"name": "White",
 					"slug": "white"
 				},
 				{
-					"color": "#343434",
+					"color": "var(--c-grey-100)",
 					"name": "Grey 100",
 					"slug": "grey-100"
 				},
 				{
-					"color": "#1e1e23",
+					"color": "var(--c-grey-200)",
 					"name": "Grey 200",
 					"slug": "grey-200"
 				},
 				{
-					"color": "#878787",
+					"color": "var(--c-grey-300)",
 					"name": "Grey 300",
 					"slug": "grey-300"
 				},
 				{
-					"color": "#bebebe",
+					"color": "var(--c-grey-400)",
 					"name": "Grey 400",
 					"slug": "grey-400"
 				},
 				{
-					"color": "#dcdcdc",
+					"color": "var(--c-grey-500)",
 					"name": "Grey 500",
 					"slug": "grey-100"
 				}
