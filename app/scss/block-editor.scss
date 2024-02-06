@@ -12,8 +12,15 @@
     @import 'intro';
     @import 'ordered-list';
 
+    // editor styles
     background-color: var(--c-black);
     color: var(--c-white);
+    line-height: 2;
+
+    // paragraphs
+    p {
+        @extend %text-100;
+    }
 
     // h1 placeholder for the editor, when no heading has been entered yet
     h1.rich-text [data-rich-text-placeholder] {
@@ -25,10 +32,20 @@
         text-align: center;
     }
 
-    a.components-button {
-        color: #ff0000;
+    h2 {
+        @extend %text-300;
     }
 
+    h3 {
+        @extend %text-400;
+    }
+
+    // h1 container
+    .edit-post-visual-editor__post-title-wrapper {
+        margin-block: var(--spacing-400) !important;
+    }
+
+    // buttons
     .wp-block-button {
         .wp-block-button__link {
             @extend %button;
