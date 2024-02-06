@@ -10,10 +10,10 @@
 	"settings": {
 		"appearanceTools": false,
 		"border": {
-			"color": true,
-			"radius": true,
-			"style": true,
-			"width": true
+			"color": false,
+			"radius": false,
+			"style": false,
+			"width": false
 		},
 		"color": {
 			"defaultPalette": false,
@@ -150,10 +150,91 @@
 			"lineHeight": false,
 			"textColumns": false,
 			"textDecoration": false,
-			"textTransform": true,
+			"textTransform": false,
 			"writingMode": false
 		},
-		"useRootPaddingAwareAlignments": false,
-		"blocks": {}
+		"blocks": {
+			"core/paragraph": {
+				"color": {
+					"text": false,
+					"background": false
+				},
+                "custom": {},
+                "layout": {},
+                "spacing": {
+					"margin": true,
+					"padding": false
+				},
+                "typography": {
+					"customFontSize": false,
+					"lineHeight": false,
+					"dropCap": false,
+					"fluid": false,
+					"fontStyle": false,
+					"fontWeight": false,
+					"letterSpacing": false,
+					"textDecoration": false,
+					"textTransform": false,
+					"fontSizes": [],
+					"fontFamilies": []
+				}
+			},
+			"core/heading": {
+				"color": {
+					"text": false,
+					"background": false
+				},
+                "custom": {},
+                "layout": {},
+                "spacing": {
+					"margin": true,
+					"padding": false
+				},
+                "typography": {
+					"customFontSize": false,
+					"lineHeight": false,
+					"dropCap": false,
+					"fluid": false,
+					"fontStyle": false,
+					"fontWeight": false,
+					"letterSpacing": false,
+					"textDecoration": false,
+					"textTransform": false,
+					"fontSizes": [],
+					"fontFamilies": []
+				}
+			},
+			"core/group": {
+				"border": {
+					"color": false,
+					"radius": false,
+					"style": false,
+					"width": false
+				},
+				"color": {
+					"text": false,
+					"background": false
+				},
+                "custom": {},
+                "layout": {},
+                "spacing": {
+					"margin": true,
+					"padding": false
+				},
+                "typography": {
+					"customFontSize": false,
+					"lineHeight": false,
+					"dropCap": false,
+					"fluid": false,
+					"fontStyle": false,
+					"fontWeight": false,
+					"letterSpacing": false,
+					"textDecoration": false,
+					"textTransform": false,
+					"fontSizes": [],
+					"fontFamilies": []
+				}
+			}
+		}
 	}
 }
