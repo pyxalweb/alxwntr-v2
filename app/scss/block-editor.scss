@@ -1,16 +1,16 @@
 // these imports must strictly apply to the entire WordPress page, not just the editor
-@import 'reset';
-@import 'fonts';
-@import 'variables';
-@import 'viewports';
+@import 'base/reset';
+@import 'base/fonts';
+@import 'base/variables';
+@import 'base/viewports';
 
 .editor-styles-wrapper {
     // these imports must strictly apply to the editor, not the entire WordPress page
-    @import 'typography';
-    @import 'text-elements';
-    @import 'buttons';
-    @import 'intro';
-    @import 'ordered-list';
+    @import 'base/typography';
+    @import 'base/text-elements';
+    @import 'components/buttons';
+    @import 'components/intro';
+    @import 'components/ordered-list';
 
     // editor styles
     background-color: var(--c-black);

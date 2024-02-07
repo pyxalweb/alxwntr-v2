@@ -3,20 +3,20 @@
 //  Created by Alex Winter
 // ***********************************
 
-@use 'reset';
-@use 'fonts';
-@use 'variables';
-@use 'viewports';
-@use 'typography';
-@use 'buttons';
-@use 'wordpress';
-@use 'layout';
-@use 'header';
-@use 'footer';
-@use 'text-elements';
-@use 'icons';
-@use 'intro';
-@use 'ordered-list';
-@use 'blog';
-@use 'accessibility';
-@use 'utilities';
+@use 'base/reset';
+@use 'base/fonts';
+@use 'base/variables';
+@use 'base/viewports';
+@use 'base/typography';
+@use 'components/buttons';
+@use 'wordpress/wordpress';
+@use 'layout/layout';
+@use 'layout/header';
+@use 'layout/footer';
+@use 'base/text-elements';
+@use 'components/icons';
+@use 'components/intro';
+@use 'components/ordered-list';
+@use 'layout/blog';
+@use 'components/accessibility';
+@use 'base/utilities';
