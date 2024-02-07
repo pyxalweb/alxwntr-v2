@@ -2,18 +2,18 @@
 //  Skip Nav
 // ***********************************
 #skip-nav {
-  inset: 0 auto auto auto;
+	inset: 0 auto auto auto;
 	position: absolute;
-  width: 100%;
+	width: 100%;
 
 	a {
 		background-color: #fff;
 		color: #000;
 		font-size: var(--fs-500);
 		font-weight: var(--fw-regular);
-    height: 1px;
-    inset: auto auto auto -9999px;
-    overflow: hidden;
+		height: 1px;
+		inset: auto auto auto -9999px;
+		overflow: hidden;
 		padding: 0.625em;
 		position: absolute;
 		text-decoration: none;
@@ -23,15 +23,15 @@
 	a:focus {
 		height: auto;
 		inset: auto auto auto 0;
-    outline: 1px solid #000;
+		outline: 1px solid #000;
 		overflow: visible;
 		text-decoration: none;
 		width: auto;
 		z-index: 20000;
 	}
 
-  a:hover {
-    background-color: #000;
+	a:hover {
+		background-color: #000;
 		color: #fff;
-  }
+	}
 }
