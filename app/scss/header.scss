@@ -1,4 +1,13 @@
 // ***********************************
+//  Required Modules
+// ***********************************
+@use 'viewports';
+@use 'buttons';
+
+
+
+
+// ***********************************
 //  Header
 // ***********************************
 header.site-header {
@@ -17,7 +26,7 @@ header.site-header {
     justify-content: space-between;
 	padding-block: var(--spacing-200);
 
-	@media (max-width: $vw-25) {
+	@media (max-width: viewports.$vw-25) {
 		align-items: center;
 		flex-direction: column;
 		gap: 1em;

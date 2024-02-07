@@ -1,8 +1,16 @@
 // ***********************************
+//  Required Modules
+// ***********************************
+@use 'typography';
+
+
+
+
+// ***********************************
 //  Buttons
 // ***********************************
 %button {
-	@include text(
+	@include typography.text(
 		var(--ff-primary),                        // Font Family: Montserrat
 		clamp(var(--fs-400), 3vw, var(--fs-500)), // Font Size:   16px/18px (1rem/1.125rem)
 		var(--fw-medium),                         // Font Weight: Medium
