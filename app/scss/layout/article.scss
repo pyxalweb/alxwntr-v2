@@ -1,0 +1,32 @@
+// ***********************************
+//  Required Modules
+// ***********************************
+@use 'base/typography';
+
+
+
+
+// ***********************************
+//  Article
+// ***********************************
+.article {
+	margin-block: var(--spacing-400);
+
+	h1 {
+		text-align: center;
+	}
+}
+
+.article__content {
+	margin-block: var(--spacing-400);
+}
+
+.article {
+	time {
+		@extend %text-500;
+		font-style: italic;
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+}

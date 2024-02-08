@@ -1,22 +1,24 @@
-// ***********************************
-//  alxwntr Layout Stylesheet
-//  Created by Alex Winter
-// ***********************************
-
 @use 'base/reset';
 @use 'base/fonts';
 @use 'base/variables';
 @use 'base/viewports';
 @use 'base/typography';
-@use 'components/buttons';
-@use 'wordpress/wordpress';
-@use 'layout/layout';
+@use 'base/html-body';
+@use 'base/text-elements';
+
 @use 'layout/header';
 @use 'layout/footer';
-@use 'base/text-elements';
-@use 'components/icons';
+@use 'layout/content';
+@use 'layout/article';
+@use 'layout/blog';
+@use 'layout/error-page';
+
+@use 'components/buttons';
+@use 'components/social-icons';
 @use 'components/intro';
 @use 'components/ordered-list';
-@use 'layout/blog';
 @use 'components/skip-nav';
+
+@use 'wordpress/wordpress';
+
 @use 'base/utilities';

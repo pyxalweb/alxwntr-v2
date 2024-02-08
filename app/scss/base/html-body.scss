@@ -1,0 +1,20 @@
+// ***********************************
+//  Required Modules
+// ***********************************
+@use 'base/typography';
+
+
+
+
+// ***********************************
+//  HTML & BODY
+// ***********************************
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	@extend %text-100;
+	background-color: var(--c-black);
+	position: relative;
+}
