@@ -1,0 +1,74 @@
+// ***********************************
+//  Required Modules
+// ***********************************
+@use 'components/buttons';
+
+
+
+
+// ***********************************
+//  Buttons
+// ***********************************
+.wp-block-buttons {
+    flex-wrap: wrap;
+    gap: 1em;
+    margin-bottom: 1rem;
+
+    &.is-layout-flex {
+        display: flex;
+    }
+
+    &.is-nowrap {
+        flex-wrap: nowrap;
+    }
+}
+
+.wp-block-button {
+    .wp-block-button__link,
+    a {
+        @extend %button--fill;
+        display: block;   
+    }
+
+    &.is-style-outline {
+        a {
+            @extend %button--outline;
+        }
+    }
+
+    &.wp-block-button__width-100 {
+        flex-basis: 100%;
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+
+    &.wp-block-button__width-75 {
+        flex-basis: 75%;
+    }
+
+    &.wp-block-button__width-50 {
+        flex-basis: 50%;
+    }
+
+    &.wp-block-button__width-25 {
+        flex-basis: 25%;
+    }
+
+    &.wp-block-button__width-75,
+    &.wp-block-button__width-50,
+    &.wp-block-button__width-25 {
+        flex-grow: 0;
+        flex-shrink: 1;
+    }
+}
+
+.wp-block-buttons {
+    &.is-vertical {
+        .wp-block-button {
+            &.wp-block-button__width-100 { width: 100%; }
+            &.wp-block-button__width-75 { width: 75%; }
+            &.wp-block-button__width-50 { width: 50%; }
+            &.wp-block-button__width-25 { width: 25%; }
+        }
+    }
+}
