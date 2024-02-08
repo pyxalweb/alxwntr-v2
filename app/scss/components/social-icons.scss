@@ -1,31 +1,4 @@
 // ***********************************
-//  Icons
-// ***********************************
-.icon {
-	&:before {
-		content: '';
-		font-family: 'icons';
-		font-size: var(--fs-500);
-		color: var(--c-primary);
-	}
-}
-
-.icon--address {
-	&:before {
-		content: '\E814';
-	}
-}
-
-.icon--phone {
-	&:before {
-		content: '\E815';
-	}
-}
-
-
-
-
-// ***********************************
 //  Social Icons
 // ***********************************
 .social {
