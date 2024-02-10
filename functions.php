@@ -31,6 +31,16 @@ add_action('wp_enqueue_scripts', 'theme_files');
 
 
 
+// ***********************************
+//  Enable Featured Images (Post Thumbnails)
+// ***********************************
+add_theme_support('post-thumbnails', array(
+	'post',
+	'page'
+));
+
+
+
 
 // ***********************************
 //  Block Editor CSS
