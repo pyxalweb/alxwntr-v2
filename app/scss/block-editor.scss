@@ -1,3 +1,6 @@
+// ***********************************
+//  Required Modules
+// ***********************************
 // these imports must strictly apply to the entire WordPress page, not just the editor
 @import 'base/reset';
 @import 'base/fonts';
@@ -11,7 +14,24 @@
     @import 'components/buttons';
     @import 'components/intro';
     @import 'components/ordered-list';
+    @import 'wordpress/wp-block-image.scss';
+}
 
+
+
+
+// ***********************************
+//  Todo
+// ***********************************
+// - ( ) Change 'import' rules to 'use' rules
+
+
+
+
+// ***********************************
+//  Default Styles
+// ***********************************
+.editor-styles-wrapper {
     // editor styles
     background-color: var(--c-black);
     color: var(--c-white);
@@ -44,13 +64,62 @@
     .edit-post-visual-editor__post-title-wrapper {
         margin-block: var(--spacing-400) !important;
     }
+}
 
-    // buttons
+
+
+
+// ***********************************
+//  Blocks > Media > Image
+// ***********************************
+.editor-styles-wrapper {
+    // *******************************
+    //  Top Toolbar > Align
+    // *******************************
+    .is-layout-flow > .alignleft,
+    .is-layout-flow > .aligncenter,
+    .is-layout-flow > .alignright {
+        float: none !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        max-width: 960px;
+        width: 100%;
+    }
+
+    .is-layout-flow > .alignleft {
+        >div {
+            margin-inline: 0 auto;
+        }
+    }
+    
+    .is-layout-flow > .aligncenter {
+        >div {
+            margin-inline: auto;
+        }
+    }
+
+    .is-layout-flow > .alignright {
+        >div {
+            margin-inline: auto 0;
+        }
+    }
+}
+
+
+
+
+// ***********************************
+//  Blocks > Design > Buttons
+// ***********************************
+.editor-styles-wrapper {
     .wp-block-button {
         .wp-block-button__link {
             @extend %button;
         }
         
+        // *******************************
+        //  Styles
+        // *******************************
         &.is-style-outline {
             color: var(--c-primary);
         }
