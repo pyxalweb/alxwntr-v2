@@ -1,0 +1,79 @@
+// ***********************************
+//  Required Modules
+// ***********************************
+// None
+
+
+
+
+// ***********************************
+//  Todo
+// ***********************************
+// - ( ) Top Toolbar > Apply duotone filter
+// - (X) Top Toolbar > Align
+// - ( ) Top Toolbar > Add caption
+// - ( ) Top Toolbar > Inser link
+// - ( ) Top Toolbar > Crop
+// - ( ) Top Toolbar > Add text over image
+// - ( ) Settings > Expand on click
+
+
+
+
+// ***********************************
+//  Blocks > Media > Image
+// ***********************************
+.wp-block-image {
+    // *******************************
+    //  Styles
+    // *******************************
+    /*
+    &.is-style-default {
+
+    }
+    */
+
+    &.is-style-rounded {
+        img {
+            border-radius: 1rem;
+        }
+    }
+
+    // *******************************
+    //  Settings > Resolution
+    // *******************************
+    /*
+    &.size-thumbnail {
+        
+    }
+
+    &.size-medium {
+
+    }
+
+    &.size-full {
+
+    }
+    */
+
+    // *******************************
+    //  Top Toolbar > Align
+    // *******************************
+    &.alignleft {
+        img {
+            margin-inline: 0 auto;
+        }
+    }
+
+    &.aligncenter {
+        img {
+            margin-inline: auto;
+        }
+    }
+
+    &.alignright {
+        img {
+            margin-inline: auto 0;
+        }
+    }
+}
