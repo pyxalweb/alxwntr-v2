@@ -7,7 +7,19 @@
 
 
 // ***********************************
-//  Buttons
+//  Todo
+// ***********************************
+// - ( ) Top Toolbar > Change items justification
+// - ( ) Top Toolbar > Change vertical alignment
+// - ( ) Top Toolbar > Align
+// - ( ) Layout > Justification
+// - ( ) Typography > Size
+
+
+
+
+// ***********************************
+//  Blocks > Design > Buttons
 // ***********************************
 .wp-block-buttons {
     flex-wrap: wrap;
@@ -18,8 +30,23 @@
         display: flex;
     }
 
+    // *******************************
+    //  Layout > Allow to wrap to multiple lines
+    // *******************************
     &.is-nowrap {
         flex-wrap: nowrap;
+    }
+
+    // *******************************
+    //  Orientation
+    // *******************************
+    &.is-vertical {
+        .wp-block-button {
+            &.wp-block-button__width-100 { width: 100%; }
+            &.wp-block-button__width-75 { width: 75%; }
+            &.wp-block-button__width-50 { width: 50%; }
+            &.wp-block-button__width-25 { width: 25%; }
+        }
     }
 }
 
@@ -30,12 +57,18 @@
         display: block;   
     }
 
+    // *******************************
+    //  Styles
+    // *******************************
     &.is-style-outline {
         a {
             @extend %button--outline;
         }
     }
 
+    // *******************************
+    //  Width settings
+    // *******************************
     &.wp-block-button__width-100 {
         flex-basis: 100%;
         flex-grow: 1;
@@ -59,16 +92,5 @@
     &.wp-block-button__width-25 {
         flex-grow: 0;
         flex-shrink: 1;
-    }
-}
-
-.wp-block-buttons {
-    &.is-vertical {
-        .wp-block-button {
-            &.wp-block-button__width-100 { width: 100%; }
-            &.wp-block-button__width-75 { width: 75%; }
-            &.wp-block-button__width-50 { width: 50%; }
-            &.wp-block-button__width-25 { width: 25%; }
-        }
     }
 }
