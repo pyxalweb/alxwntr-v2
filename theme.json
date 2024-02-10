@@ -234,6 +234,10 @@
 					"fontSizes": [],
 					"fontFamilies": []
 				}
+			},
+			"core/image": {
+			},
+			"core/buttons": {
 			}
 		}
 	}
