@@ -17,6 +17,9 @@
 		},
 		"color": {
 			"defaultPalette": false,
+			"duotone": [],
+			"customDuotone": false,
+			"defaultDuotone": false,
 			"palette": [
 				{
 					"color": "var(--c-primary)",
@@ -175,7 +178,6 @@
 					"letterSpacing": false,
 					"textDecoration": false,
 					"textTransform": false,
-					"fontSizes": [],
 					"fontFamilies": []
 				}
 			},
@@ -233,6 +235,21 @@
 					"textTransform": false,
 					"fontSizes": [],
 					"fontFamilies": []
+				}
+			},
+			"core/cover": {
+				"color": {
+					"heading": false
+				},
+				"custom": {},
+				"layout": {},
+				"spacing": {
+					"margin": true,
+					"padding": true,
+					"blockGap": false
+				},
+				"typography": {
+					"fontSizes": []
 				}
 			},
 			"core/image": {

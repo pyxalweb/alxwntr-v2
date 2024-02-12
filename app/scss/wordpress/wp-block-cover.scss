@@ -1,0 +1,97 @@
+// ***********************************
+//  Required Modules
+// ***********************************
+// None
+
+
+
+
+// ***********************************
+//  Todo
+// ***********************************
+// - ( ) 
+
+
+
+
+// ***********************************
+//  Blocks > Media > Cover
+// ***********************************
+.wp-block-cover {
+    min-height: 33vh;
+    position: relative;
+
+    >span {
+        inset: 0;
+        position: absolute;
+    }
+
+    .wp-block-cover__inner-container {
+        inset: 50% auto auto 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+    }
+
+    // *******************************
+    //  Styles > Color
+    // *******************************
+    .has-background-dim-90 { opacity: 0.9;}
+    .has-background-dim-80 { opacity: 0.8;}
+    .has-background-dim-70 { opacity: 0.7;}
+    .has-background-dim-60 { opacity: 0.6;}
+    .has-background-dim-50 { opacity: 0.5;}
+    .has-background-dim-40 { opacity: 0.4;}
+    .has-background-dim-30 { opacity: 0.3;}
+    .has-background-dim-20 { opacity: 0.2;}
+    .has-background-dim-10 { opacity: 0.1;}
+    .has-background-dim-0 { opacity: 0;}
+
+    // *******************************
+    //  Toolbar > Change content position
+    // *******************************
+    // top-left
+    &.is-position-top-left .wp-block-cover__inner-container {
+        inset: 0 auto auto 0;
+        transform: translate(50%,50%);
+    }
+
+    // top-center
+    &.is-position-top-center .wp-block-cover__inner-container {
+        inset: 0 auto auto 50%;
+        transform: translate(-50%, 50%);
+    }
+
+    // top-right
+    &.is-position-top-right .wp-block-cover__inner-container {
+        inset: 0 0 auto auto;
+        transform: translate(-50%, 50%);
+    }
+
+    // center-left
+    &.is-position-center-left .wp-block-cover__inner-container   {
+        inset: auto auto 50% 0;
+        transform: translate(50%, 50%);
+    }
+
+    // center-right
+    &.is-position-center-right .wp-block-cover__inner-container  {
+        inset: auto 0 50% auto;
+        transform: translate(-50%, 50%);
+    }
+    
+    // bottom-left
+    &.is-position-bottom-left .wp-block-cover__inner-container {
+        inset: auto auto 0 0;
+        transform: translate(50%, -50%);
+    }
+
+    // bottom-center
+    &.is-position-bottom-center .wp-block-cover__inner-container {
+        inset: auto auto 0 50%;
+    }
+
+    //bottom-right
+    &.is-position-bottom-right .wp-block-cover__inner-container  {
+        inset: auto 0 0 auto;
+    }
+}
