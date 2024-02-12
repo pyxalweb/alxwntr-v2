@@ -76,9 +76,9 @@
     // *******************************
     //  Top Toolbar > Align
     // *******************************
-    .is-layout-flow > .alignleft,
-    .is-layout-flow > .aligncenter,
-    .is-layout-flow > .alignright {
+    .alignleft,
+    .aligncenter,
+    .alignright {
         float: none !important;
         margin-left: auto !important;
         margin-right: auto !important;
@@ -86,19 +86,19 @@
         width: 100%;
     }
 
-    .is-layout-flow > .alignleft {
+    .alignleft {
         >div {
             margin-inline: 0 auto;
         }
     }
     
-    .is-layout-flow > .aligncenter {
+    .aligncenter {
         >div {
             margin-inline: auto;
         }
     }
 
-    .is-layout-flow > .alignright {
+    .alignright {
         >div {
             margin-inline: auto 0;
         }
