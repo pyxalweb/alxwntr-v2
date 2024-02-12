@@ -18,18 +18,30 @@
 //  Blocks > Media > Cover
 // ***********************************
 .wp-block-cover {
-    min-height: 33vh;
+    align-items: center;
+    background-position: 50%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    min-height: 430px;
+    overflow: hidden;
+    overflow: clip;
+    padding: 1em;
     position: relative;
 
     >span {
-        inset: 0;
+        bottom: 0;
+        left: 0;
         position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1;
     }
 
     .wp-block-cover__inner-container {
-        inset: 50% auto auto 50%;
-        position: absolute;
-        transform: translate(-50%, -50%);
+        color: inherit;
+        width: 100%;
+        z-index: 1;
     }
 
     // *******************************
@@ -49,49 +61,54 @@
     // *******************************
     //  Toolbar > Change content position
     // *******************************
-    // top-left
-    &.is-position-top-left .wp-block-cover__inner-container {
-        inset: 0 auto auto 0;
-        transform: translate(50%,50%);
+    &.has-custom-content-position {
+        .wp-block-cover__inner-container {
+            width: auto;
+        }
     }
 
-    // top-center
-    &.is-position-top-center .wp-block-cover__inner-container {
-        inset: 0 auto auto 50%;
-        transform: translate(-50%, 50%);
+    &.is-position-top-left {
+        align-items: flex-start;
+        justify-content: flex-start;
     }
 
-    // top-right
-    &.is-position-top-right .wp-block-cover__inner-container {
-        inset: 0 0 auto auto;
-        transform: translate(-50%, 50%);
+    &.is-position-top-center {
+        align-items: flex-start;
+        justify-content: center;
     }
 
-    // center-left
-    &.is-position-center-left .wp-block-cover__inner-container   {
-        inset: auto auto 50% 0;
-        transform: translate(50%, 50%);
+    &.is-position-top-right {
+        align-items: flex-start;
+        justify-content: flex-end;
     }
 
-    // center-right
-    &.is-position-center-right .wp-block-cover__inner-container  {
-        inset: auto 0 50% auto;
-        transform: translate(-50%, 50%);
-    }
-    
-    // bottom-left
-    &.is-position-bottom-left .wp-block-cover__inner-container {
-        inset: auto auto 0 0;
-        transform: translate(50%, -50%);
+    &.is-position-center-left {
+        align-items: center;
+        justify-content: flex-start;
     }
 
-    // bottom-center
-    &.is-position-bottom-center .wp-block-cover__inner-container {
-        inset: auto auto 0 50%;
+    &.is-position-center-center {
+        align-items: center;
+        justify-content: center;
     }
 
-    //bottom-right
-    &.is-position-bottom-right .wp-block-cover__inner-container  {
-        inset: auto 0 0 auto;
+    &.is-position-center-right {
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    &.is-position-bottom-left {
+        align-items: flex-end;
+        justify-content: flex-start;
+    }
+
+    &.is-position-bottom-center {
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+    &.is-position-bottom-right {
+        align-items: flex-end;
+        justify-content: flex-end;
     }
 }

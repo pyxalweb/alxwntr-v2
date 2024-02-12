@@ -73,34 +73,36 @@
 //  Blocks > Media > Image
 // ***********************************
 .editor-styles-wrapper {
-    // *******************************
-    //  Toolbar > Align
-    // *******************************
-    .alignleft,
-    .aligncenter,
-    .alignright {
-        float: none !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-        max-width: 960px;
-        width: 100%;
-    }
-
-    .alignleft {
-        >div {
-            margin-inline: 0 auto;
+    .wp-block-image {
+        // *******************************
+        //  Toolbar > Align
+        // *******************************
+        &.alignleft,
+        &.aligncenter,
+        &.alignright {
+            float: none !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            max-width: 960px;
+            width: 100%;
         }
-    }
-    
-    .aligncenter {
-        >div {
-            margin-inline: auto;
-        }
-    }
 
-    .alignright {
-        >div {
-            margin-inline: auto 0;
+        &.alignleft {
+            >div {
+                margin-inline: 0 auto;
+            }
+        }
+        
+        &.aligncenter {
+            >div {
+                margin-inline: auto;
+            }
+        }
+
+        &.alignright {
+            >div {
+                margin-inline: auto 0;
+            }
         }
     }
 }
@@ -134,9 +136,6 @@
 // ***********************************
 .editor-styles-wrapper {
     .wp-block-cover {
-        min-height: 33vh;
-        position: relative;
-
         // *******************************
         //  Styles > Color
         // *******************************
