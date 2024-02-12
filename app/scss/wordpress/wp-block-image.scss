@@ -11,9 +11,9 @@
 // ***********************************
 // - ( ) Toolbar > Apply duotone filter
 // - (X) Toolbar > Align
-// - ( ) Toolbar > Add caption
-// - ( ) Toolbar > Inser link
-// - ( ) Toolbar > Crop
+// - (X) Toolbar > Add caption
+// - (X) Toolbar > Insert link
+// - (X) Toolbar > Crop
 // - ( ) Toolbar > Add text over image
 // - ( ) Settings > Expand on click
 
@@ -59,6 +59,18 @@
     // *******************************
     //  Toolbar > Align
     // *******************************
+    &.alignwide {
+        img {
+            width: min(1200px, 100%);
+        }
+    }
+
+    &.alignfull {
+        img {
+            width: 100%;
+        }
+    }
+
     &.alignleft {
         img {
             margin-inline: 0 auto;
