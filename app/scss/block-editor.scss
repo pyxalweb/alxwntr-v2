@@ -153,5 +153,12 @@
         &.has-grey-300-color p  { color: var(--c-grey-300); }
         &.has-grey-400-color p  { color: var(--c-grey-400); }
         &.has-grey-500-color p  { color: var(--c-grey-500); }
+
+        // ***********************************
+        //  Child Elements
+        // ***********************************
+        h1, h2, h3, h4, h5, h6 {
+            color: inherit;
+        }
     }
 }
