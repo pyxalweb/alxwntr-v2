@@ -29,9 +29,14 @@
     padding: 1em;
     position: relative;
 
+    .has-background-dim:not([class*=-background-color]) {
+        background: #000;
+    }
+
     >span {
         bottom: 0;
         left: 0;
+        opacity: 0.5;
         position: absolute;
         right: 0;
         top: 0;
@@ -47,6 +52,7 @@
     // *******************************
     //  Styles > Color
     // *******************************
+    .has-background-dim-100 { opacity: 1;}
     .has-background-dim-90 { opacity: 0.9;}
     .has-background-dim-80 { opacity: 0.8;}
     .has-background-dim-70 { opacity: 0.7;}
@@ -110,5 +116,33 @@
     &.is-position-bottom-right {
         align-items: flex-end;
         justify-content: flex-end;
+    }
+
+    // ***********************************
+    //  Image Background
+    // ***********************************
+    .wp-block-cover__image-background {
+        border: none;
+        bottom: 0;
+        box-shadow: none;
+        height: 100%;
+        left: 0;
+        margin: 0;
+        max-height: none;
+        max-width: none;
+        object-fit: cover;
+        outline: none;
+        padding: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
+    }
+
+    // ***********************************
+    //  Child Elements
+    // ***********************************
+    h1, h2, h3, h4, h5, h6 {
+        color: inherit;
     }
 }
