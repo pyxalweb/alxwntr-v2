@@ -9,12 +9,12 @@
 // ***********************************
 //  Todo
 // ***********************************
-// - ( ) Top Toolbar > Apply duotone filter
-// - (X) Top Toolbar > Align
-// - ( ) Top Toolbar > Add caption
-// - ( ) Top Toolbar > Inser link
-// - ( ) Top Toolbar > Crop
-// - ( ) Top Toolbar > Add text over image
+// - ( ) Toolbar > Apply duotone filter
+// - (X) Toolbar > Align
+// - ( ) Toolbar > Add caption
+// - ( ) Toolbar > Inser link
+// - ( ) Toolbar > Crop
+// - ( ) Toolbar > Add text over image
 // - ( ) Settings > Expand on click
 
 
@@ -57,7 +57,7 @@
     */
 
     // *******************************
-    //  Top Toolbar > Align
+    //  Toolbar > Align
     // *******************************
     &.alignleft {
         img {
@@ -75,5 +75,31 @@
         img {
             margin-inline: auto 0;
         }
+    }
+
+    // *******************************
+    //  Toolbar > Add caption
+    // *******************************
+    &.alignleft {
+        figcaption {
+            text-align: left;
+        }
+    }
+
+    &.aligncenter {
+        figcaption {
+            text-align: center;
+        }
+    }
+
+    &.alignright {
+        figcaption {
+            text-align: right;
+        }
+    }
+
+    figcaption {
+        font-size: var(--fs-300);
+        margin-top: 1.5rem;
     }
 }
