@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <main id="site-main" class="site-main homepage">
-    <section class="intro | content width-700 | text-100 text-400--h2">
+    <section class="intro | content width-700">
         <?php the_content(); ?>
     </section>
 
@@ -24,7 +24,7 @@
     else {
         // display posts
     ?>
-    <section class="blog blog--home | content width-700 | text-100 text-600--h2" role="region" aria-label="Latest Blog Posts">
+    <section class="blog blog--home | content width-700" role="region" aria-label="Latest Blog Posts">
         <?php
             $past_year = true;
             $all_years = false;

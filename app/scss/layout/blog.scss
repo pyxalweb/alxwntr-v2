@@ -18,6 +18,7 @@
 	margin-block: var(--spacing-400);
 
 	h1 {
+		@extend %text-400;
 		text-align: center;
 	}
 }
