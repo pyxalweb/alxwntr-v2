@@ -30,6 +30,11 @@ ul, ol {
     &:last-child {
         margin-bottom: 0;
     }
+
+    &.has-background {
+        margin-left: 0;
+        padding: clamp(0.5rem, 3vw, 1rem) clamp(0.5rem, 3vw, 1rem) clamp(0.5rem, 3vw, 1rem) clamp(2rem, 3vw, 2.5rem);
+    }
 }
 
 a {
