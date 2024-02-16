@@ -62,6 +62,21 @@
         margin-top: 0;
     }
 
+    h4 {
+        @extend %text-200;
+        margin-top: 0;
+    }
+
+    h5 {
+        @extend %text-200;
+        margin-top: 0;
+    }
+
+    h6 {
+        @extend %text-200;
+        margin-top: 0;
+    }
+
     // h1 container
     .edit-post-visual-editor__post-title-wrapper {
         margin-block: var(--spacing-400) !important;

@@ -35,4 +35,22 @@
             @extend %text-200;
         }
     }
+
+    h4 {
+        &.wp-block-heading {
+            @extend %text-200;
+        }
+    }
+
+    h5 {
+        &.wp-block-heading {
+            @extend %text-200;
+        }
+    }
+
+    h6 {
+        &.wp-block-heading {
+            @extend %text-200;
+        }
+    }
 }
