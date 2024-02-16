@@ -158,35 +158,3 @@ const slideshow = () => {
     })
 }
 slideshow()
-
-
-
-
-// ***********************************
-//  Slideshow - Homepage Responsiveness
-// ***********************************
-const slideshowHomepage = () => {
-	const slideshowHome = document.querySelector('.homepage__intro .slideshow')
-
-	if (!slideshowHome) return
-
-	const slideshowHomeSlides = slideshowHome.querySelectorAll('.slideshow__slide')
-
-	if (window.innerWidth > 1120) {
-		slideshowHomeSlides.forEach((slide) => {
-			slide.classList.remove('slideshow__slide--vw600')
-		})
-	} else if (window.innerWidth <= 1120 && window.innerWidth > 480) {
-		slideshowHomeSlides.forEach((slide) => {
-			slide.classList.add('slideshow__slide--vw600')
-		})
-	} else if (window.innerWidth <= 480) {
-		slideshowHomeSlides.forEach((slide) => {
-			slide.classList.remove('slideshow__slide--vw600')
-		})
-	}
-}
-slideshowHomepage()
-window.addEventListener('resize', () => {
-	slideshowHomepage()
-})
