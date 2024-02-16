@@ -3,8 +3,18 @@
 // ***********************************
 .wp-block-columns {
     display: flex;
+
+    &.is-not-stacked-on-mobile {
+        flex-wrap: nowrap;
+    }
 }
 
+
+
+
+// ***********************************
+//  Column
+// ***********************************
 .wp-block-column {
     flex-grow: 1;
     flex-shrink: 1;
