@@ -159,7 +159,7 @@
 		"blocks": {
 			"core/paragraph": {
 				"color": {
-					"text": false,
+					"text": true,
 					"background": false
 				},
                 "custom": {},
