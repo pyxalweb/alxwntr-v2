@@ -54,10 +54,12 @@
 
     h2 {
         @extend %text-300;
+        margin-top: 0;
     }
 
     h3 {
         @extend %text-200;
+        margin-top: 0;
     }
 
     // h1 container
