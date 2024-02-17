@@ -8,8 +8,9 @@
 
 @use 'layout/header';
 @use 'layout/footer';
-@use 'layout/content';
 @use 'layout/article';
+@use 'layout/content';
+@use 'layout/breakout';
 @use 'layout/blog';
 @use 'layout/error-page';
 
