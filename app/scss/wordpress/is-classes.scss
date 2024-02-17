@@ -27,21 +27,21 @@
 // ***********************************
 //  Content Justification Classes:
 // ***********************************
-// .is-content-justification-left {
+.is-content-justification-left {
+    justify-content: flex-start;
+}
 
-// }
+.is-content-justification-center {
+    justify-content: center;
+}
 
-// .is-content-justification-center {
+.is-content-justification-right {
+    justify-content: flex-end;
+}
 
-// }
-
-// .is-content-justification-right {
-
-// }
-
-// .is-content-justification-space-between {
-
-// }
+.is-content-justification-space-between {
+    justify-content: space-between;
+}
 
 // ***********************************
 //  Flex Wrap Classes
