@@ -11,6 +11,7 @@
     // these imports must strictly apply to the editor, not the entire WordPress page
     @import 'base/typography';
     @import 'base/text-elements';
+    @import 'wordpress/wp-block-heading';
     @import 'components/buttons';
     @import 'components/intro';
     @import 'components/ordered-list';
