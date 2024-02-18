@@ -5,12 +5,12 @@
  * @param array $block The block settings and attributes.
  */
 
- /***********************************
+ /*********************************** 
     NOTE: THIS IS READY FOR DELETION
     This block is no longer used. It has been replaced by the core 'group' and 'image' blocks.
     This block is only here for reference.
     Delete it when you feel like it's no longer needed.
- ***********************************/
+ ***********************************/ 
 
 // Load values and assign defaults.
 $image             = get_field( 'image' );
