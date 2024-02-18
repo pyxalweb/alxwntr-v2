@@ -1,6 +1,6 @@
 <?php
 /**
- * Title: Image: Highlighted
+ * Title: Image - Highlighted
  * Slug: image-highlighted
  * Description: An image with a background color, padding, and caption.
  * Categories: alxwntr/image
@@ -14,6 +14,14 @@
 ?>
 <!--
 wp:group {
+    "backgroundColor":"grey-200",
+    "className":"image--highlighted",
+    "layout":{
+        "type":"constrained"
+    },
+    "metadata":{
+        "name":"Image - Highlighted"
+    },
     "style":{
         "spacing":{
             "margin":{
@@ -28,14 +36,10 @@ wp:group {
                 "right":"var:preset|spacing|2"
             }
         }
-    },
-    "backgroundColor":"grey-200",
-    "layout":{
-        "type":"constrained"
     }
 }
 -->
-<div class="wp-block-group has-grey-200-background-color has-background" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--2);padding-top:var(--wp--preset--spacing--2);padding-right:var(--wp--preset--spacing--2);padding-bottom:var(--wp--preset--spacing--2);padding-left:var(--wp--preset--spacing--2)">
+<div class="wp-block-group has-grey-200-background-color has-background image--highlighted" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--2);padding-top:var(--wp--preset--spacing--2);padding-right:var(--wp--preset--spacing--2);padding-bottom:var(--wp--preset--spacing--2);padding-left:var(--wp--preset--spacing--2)">
     <!--
     wp:image {
         "align":"center",
