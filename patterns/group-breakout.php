@@ -37,8 +37,6 @@ wp:group {
     }
     -->
     <div class="wp-block-group content width-400">
-        <!-- wp:paragraph -->
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil veritatis rerum distinctio alias blanditiis quae corrupti? Magnam, iste. Velit, sunt distinctio. Dolorum, laborum saepe. Animi beatae quo consequatur repellendus ipsam?</p>
-        <!-- /wp:paragraph -->
+        <!-- wp:paragraph --><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil veritatis rerum distinctio alias blanditiis quae corrupti? Magnam, iste. Velit, sunt distinctio. Dolorum, laborum saepe. Animi beatae quo consequatur repellendus ipsam?</p><!-- /wp:paragraph -->
     </div><!-- /wp:group -->
 </div><!-- /wp:group -->
