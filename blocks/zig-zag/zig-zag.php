@@ -5,6 +5,13 @@
  * @param array $block The block settings and attributes.
  */
 
+ /***********************************
+    NOTE: THIS IS READY FOR DELETION
+    This block is no longer used. It has not yet been replaced by any core blocks but I imagine it can be done with them.
+    This block is only here for reference.
+    Delete it when you feel like it's no longer needed.
+ ***********************************/
+
 // Load values and assign defaults.
 $zig_zag_text      = !empty(get_field( 'zig_zag_text' )) ? get_field( 'zig_zag_text' ) : 'Your text here...';
 $image             = get_field( 'zig_zag_image' );
