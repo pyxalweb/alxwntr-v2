@@ -1,0 +1,28 @@
+// ***********************************
+//  Required Modules
+// ***********************************
+// None
+
+
+
+
+// ***********************************
+//  Blocks > Text > Details
+// ***********************************
+.wp-block-details {
+    margin-bottom: 0.25rem;
+
+    &[open] {
+        margin-bottom: 0;
+    }
+
+    summary {
+        background-color: var(--c-grey-100);
+        padding: 1.25rem;
+    }
+
+    p {
+        border: 1px solid var(--c-grey-100);
+        padding: 1.25rem;
+    }
+}
