@@ -1,0 +1,25 @@
+// ***********************************
+//  Required Modules
+// ***********************************
+// None
+
+
+
+
+// ***********************************
+//  Blocks > Text > Quote
+// ***********************************
+.wp-block-quote {
+    border-left: 0.25rem solid var(--c-color-300);
+    padding-left: clamp(1rem, 4vw, 3rem);
+
+    p {
+        font-size: clamp(var(--fs-400), 4vw, var(--fs-800));
+        font-style: italic;
+    }
+
+    cite {
+        color: var(--c-grey-500);
+        font-style: italic;
+    }
+}
