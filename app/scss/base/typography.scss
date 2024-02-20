@@ -17,7 +17,7 @@
 %text-100 {
 	@include text(
 		var(--ff-primary), // Font Family:     Montserrat
-		var(--fs-500),     // Font Size:       18px (1.125rem)
+		var(--fs--base),     // Font Size:       18px (1.125rem)
 		var(--fw-regular), // Font Weight:     Regular
 		var(--lh-500),     // Line Height:     2
 		var(--c-white),    // Color:           White
@@ -33,7 +33,7 @@
 %text-200 {
 	@include text(
 		var(--ff-primary), // Font Family:     Montserrat
-		var(--fs-500),     // Font Size:       18px (1.125rem)
+		var(--fs--base),     // Font Size:       18px (1.125rem)
 		var(--fw-regular), // Font Weight:     Regular
 		var(--lh-400),     // Line Height:     1.5
 		var(--c-white),    // Color:           See 'background' property
@@ -56,7 +56,7 @@
 %text-300 {
 	@include text(
 		var(--ff-primary),                        // Font Family:     Montserrat
-		clamp(var(--fs-700), 3vw, var(--fs-900)), // Font Size:       22px/26px (1.375rem/1.625rem)
+		clamp(var(--fs--large), 3vw, var(--fs--xx-large)), // Font Size:       22px/26px (1.375rem/1.625rem)
 		var(--fw-regular),                        // Font Weight:     Regular
 		var(--lh-400),                            // Line Height:     1.5
 		var(--c-white),                           // Color:           See 'background' property
@@ -79,7 +79,7 @@
 %text-400 {
 	@include text(
 		var(--ff-primary),                          // Font Family:       Montserrat
-		clamp(var(--fs-1000), 5vw, var(--fs-1500)), // Font Size:         32px/52px (3rem/3.25rem)
+		clamp(var(--fs--huge), 5vw, var(--fs--gigantic)), // Font Size:         32px/52px (3rem/3.25rem)
 		var(--fw-thin),                             // Font Weight:       Thin
 		var(--lh-400),                              // Line Height:       1.5
 		var(--c-white),                             // Color:             See 'background' property
@@ -102,7 +102,7 @@
 %text-500 {
 	@include text(
 		var(--ff-primary), // Font Family:     Montserrat
-		var(--fs-400),     // Font Size:       16px (1rem)
+		var(--fs--xsmall),     // Font Size:       16px (1rem)
 		var(--fw-regular), // Font Weight:     Regular
 		var(--lh-400),     // Line Height:     1.5
 		var(--c-grey-300), // Color:           Grey - Medium

@@ -12,7 +12,7 @@
 %button {
 	@include typography.text(
 		var(--ff-primary),                        // Font Family: Montserrat
-		clamp(var(--fs-400), 3vw, var(--fs-500)), // Font Size:   16px/18px (1rem/1.125rem)
+		clamp(var(--fs--xsmall), 3vw, var(--fs--base)), // Font Size:   16px/18px (1rem/1.125rem)
 		var(--fw-medium),                         // Font Weight: Medium
 		var(--lh-400),                            // Line Height: 1.5
 		var(--c-primary),                         // Color: Blue

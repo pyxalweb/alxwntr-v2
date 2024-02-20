@@ -18,10 +18,10 @@
     }
 
     p {
-        font-size: clamp(var(--fs-400), 4vw, var(--fs-800));
+        font-size: clamp(var(--fs--xsmall), 4vw, var(--fs--x-large));
     }
 
     cite {
-        font-size: clamp(var(--fs-400), 4vw, var(--fs-800));
+        font-size: clamp(var(--fs--xsmall), 4vw, var(--fs--x-large));
     }
 }
