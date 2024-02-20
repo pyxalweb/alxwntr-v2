@@ -22,10 +22,16 @@
 // ***********************************
 //  Typography - Font Sizes
 // ***********************************
-.has-small-font-size   { font-size: var(--fs--xsmall); }
-.has-medium-font-size  { font-size: var(--fs--medium); }
-.has-large-font-size   { font-size: var(--fs--large); }
-.has-x-large-font-size { font-size: var(--fs--huge); }
+.has-xx-small-font-size { font-size: var(--fs--xx-small); }
+.has-x-small-font-size  { font-size: var(--fs--x-small); }
+.has-small-font-size    { font-size: var(--fs--small); }
+.has-base-font-size     { font-size: var(--fs--base); }
+.has-medium-font-size   { font-size: var(--fs--medium); }
+.has-large-font-size    { font-size: var(--fs--large); }
+.has-x-large-font-size  { font-size: var(--fs--x-large); }
+.has-xx-large-font-size { font-size: var(--fs--xx-large); }
+.has-huge-font-size     { font-size: var(--fs--huge); }
+.has-gigantic-font-size { font-size: var(--fs--gigantic); }
 
 
 

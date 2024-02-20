@@ -4,17 +4,16 @@
 	// ***********************************
 	--ff--primary: 'Montserrat', serif;
 
-	--fs--xxx-small: 0.8125rem; // 13
-	--fs--xx-small: 0.875rem; // 14
-	--fs--x-small: 0.9375rem; // 15
-	--fs--xsmall: 1rem; // 16
-	--fs--base: 1.125rem; // 18
-	--fs--medium: 1.25rem; // 20
-	--fs--large: 1.375rem; // 22
-	--fs--x-large: 1.5rem; // 24
-	--fs--xx-large: 1.625rem; // 26
-	--fs--huge: 2rem; // 32
-	--fs--gigantic: 3.25rem; // 52
+	--fs--xx-small: clamp(0.8125rem, 0.813rem + ((1vw - 0.2rem) * 0.106), 0.875rem); // 14
+	--fs--x-small: clamp(0.875rem, 0.875rem + ((1vw - 0.2rem) * 0.107), 0.9375rem); // 15
+	--fs--small: clamp(0.9375rem, 0.938rem + ((1vw - 0.2rem) * 0.106), 1rem); // 16
+	--fs--base: clamp(1rem, 1rem + ((1vw - 0.2rem) * 0.213), 1.125rem); // 18
+	--fs--medium: clamp(1.125rem, 1.125rem + ((1vw - 0.2rem) * 0.213), 1.25rem); // 20
+	--fs--large: clamp(1.25rem, 1.25rem + ((1vw - 0.2rem) * 0.213), 1.375rem); // 22
+	--fs--x-large: clamp(1.375rem, 1.375rem + ((1vw - 0.2rem) * 0.213), 1.5rem); // 24
+	--fs--xx-large: clamp(1.5rem, 1.5rem + ((1vw - 0.2rem) * 0.213), 1.625rem); // 26
+	--fs--huge: clamp(1.625rem, 1.625rem + ((1vw - 0.2rem) * 0.638), 2rem); // 32
+	--fs--gigantic: clamp(2rem, 2rem + ((1vw - 0.2rem) * 2.128), 3.25rem); // 52
 
 	--fw--thin: 100;
 	--fw--extra-light: 200;
