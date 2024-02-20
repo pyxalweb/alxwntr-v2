@@ -1,267 +1,193 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 2,
-	"styles": {
-		"typography": {
-			"fontFamily": "'Montserrat', Arial, sans-serif"
-		},
-		"blocks": {}
-	},
 	"settings": {
-		"appearanceTools": false,
-		"border": {
-			"color": false,
-			"radius": false,
-			"style": false,
-			"width": false
-		},
+		"appearanceTools": true,
 		"color": {
-			"defaultPalette": false,
-			"duotone": [],
-			"customDuotone": false,
 			"defaultDuotone": false,
+			"defaultGradients": false,
+			"defaultPalette": false,
+			"duotone": [
+		         {
+					"colors": [ "#1d1f35", "#6cace4" ],
+					"slug": "dark-blue-and-light-blue",
+					"name": "Dark blue and light blue"
+				},
+				{
+					"colors": [ "#1d1f35", "#c7c0af" ],
+					"slug": "dark-blue-and-beige",
+					"name": "Dark blue and beige"
+				}
+			],
+			"gradients": [
+				{
+					"slug": "primary-to-secondary",
+					"gradient": "linear-gradient(160deg, var(--wp--preset--color--primary), var(--wp--preset--color--secondary))",
+					"name": "Primary to Secondary"
+				}
+			],
 			"palette": [
 				{
-					"color": "var(--c-primary)",
+					"color": "--c-primary",
 					"name": "Primary",
 					"slug": "primary"
 				},
 				{
-					"color": "var(--c-secondary)",
+					"color": "--c-secondary",
 					"name": "Secondary",
 					"slug": "secondary"
-				},
-				{
-					"color": "var(--c-tertiary)",
-					"name": "Tertiary",
-					"slug": "tertiary"
-				},
-				{
-					"color": "var(--c-color-100)",
-					"name": "Color 100",
-					"slug": "color-100"
-				},
-				{
-					"color": "var(--c-color-200)",
-					"name": "Color 200",
-					"slug": "color-200"
-				},
-				{
-					"color": "var(--c-color-300)",
-					"name": "Color 300",
-					"slug": "color-300"
-				},
-				{
-					"color": "var(--c-black)",
-					"name": "Black",
-					"slug": "black"
-				},
-				{
-					"color": "var(--c-black-alt)",
-					"name": "Black Alt",
-					"slug": "black-alt"
-				},
-				{
-					"color": "var(--c-white)",
-					"name": "White",
-					"slug": "white"
-				},
-				{
-					"color": "var(--c-grey-100)",
-					"name": "Grey 100",
-					"slug": "grey-100"
-				},
-				{
-					"color": "var(--c-grey-200)",
-					"name": "Grey 200",
-					"slug": "grey-200"
-				},
-				{
-					"color": "var(--c-grey-300)",
-					"name": "Grey 300",
-					"slug": "grey-300"
-				},
-				{
-					"color": "var(--c-grey-400)",
-					"name": "Grey 400",
-					"slug": "grey-400"
-				},
-				{
-					"color": "var(--c-grey-500)",
-					"name": "Grey 500",
-					"slug": "grey-500"
 				}
-			]
+			],
+			"link": true
 		},
-		"custom": {},
-		"dimensions": {},
+		"custom": {
+
+		},
 		"layout": {
-		   "contentSize": "960px",
-		   "wideSize": "1200px"
+			"contentSize": "960px",
+			"wideSize": "1260px"
 		},
-		"position": {},
-		"shadow": {},
 		"spacing": {
-			"blockGap": true,
-			"margin": true,
-			"padding": true,
-			"customSpacingSize": false,
-			"spacingSizes": [
-				{
-					"name": "1",
-					"size": "1rem",
-					"slug": "1"
-				},
-				{
-					"name": "2",
-					"size": "2rem",
-					"slug": "2"
-				},
-				{
-					"name": "3",
-					"size": "3rem",
-					"slug": "3"
-				},
-				{
-					"name": "4",
-					"size": "4rem",
-					"slug": "4"
-				},
-				{
-					"name": "5",
-					"size": "5rem",
-					"slug": "5"
-				},
-				{
-					"name": "6",
-					"size": "6rem",
-					"slug": "6"
-				},
-				{
-					"name": "7",
-					"size": "7rem",
-					"slug": "7"
-				}
-			]
+
 		},
 		"typography": {
-			"customFontSize": false,
 			"dropCap": false,
-			"fontStyle": false,
-			"fontWeight": false,
-			"letterSpacing": false,
-			"lineHeight": false,
-			"textColumns": false,
-			"textDecoration": false,
-			"textTransform": false,
-			"writingMode": false
-		},
+			"fluid": true,
+			"fontFamilies": [
+				{
+					"fontFamily": "'Montserrat', Arial, sans-serif",
+					"name": "Montserrat",
+					"slug": "primary",
+					"fontFace": [
+						{
+							"fontDisplay": "block",
+							"fontFamily": "Montserrat",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": "400 700",
+							"src": [
+								"file:.\/fonts\/Montserrat-VariableFont_wght.woff2"
+							]
+						}
+					]
+				},
+				{
+					"fontFamily": "monospace",
+					"name": "Monospace",
+					"slug": "monospace"
+				}
+			],
+			"fontSizes": [
+				{
+					"fluid": {
+						"min": "0.8125rem",
+						"max": "0.875rem"
+					},
+					"size": "0.875rem",
+					"slug": "xx-small",
+					"name": "2-XS"
+				},
+				{
+					"fluid": {
+						"min": "0.875rem",
+						"max": "0.9375rem"
+					},
+					"size": "0.9375rem",
+					"slug": "x-small",
+					"name": "1-XS"
+				},
+				{
+					"fluid": {
+						"min": "0.9375rem",
+						"max": "1rem"
+					},
+					"size": "1rem",
+					"slug": "small",
+					"name": "Small"
+				},
+				{
+					"fluid": {
+						"min": "1rem",
+						"max": "1.125rem"
+					},
+					"size": "1.125rem",
+					"slug": "base",
+					"name": "Base"
+				},
+				{
+					"fluid": {
+						"min": "1.125rem",
+						"max": "1.25rem"
+					},
+					"size": "1.25rem",
+					"slug": "medium",
+					"name": "Medium"
+				},
+				{
+					"fluid": {
+						"min": "1.25rem",
+						"max": "1.375rem"
+					},
+					"size": "1.375rem",
+					"slug": "large",
+					"name": "Large"
+				},
+				{
+					"fluid": {
+						"min": "1.375rem",
+						"max": "1.5rem"
+					},
+					"size": "1.5rem",
+					"slug": "x-large",
+					"name": "1-XL"
+				},
+				{
+					"fluid": {
+						"min": "1.5rem",
+						"max": "1.625rem"
+					},
+					"size": "1.625rem",
+					"slug": "xx-large",
+					"name": "2-XL"
+				},
+				{
+					"fluid": {
+						"min": "1.625rem",
+						"max": "2rem"
+					},
+					"size": "2rem",
+					"slug": "huge",
+					"name": "Huge"
+				},
+				{
+					"fluid": {
+						"min": "2rem",
+						"max": "3.25rem"
+					},
+					"size": "3.25rem",
+					"slug": "gigantic",
+					"name": "Gigantic"
+				}
+			]
+		}
+	},
+	"styles": {
 		"blocks": {
-			"core/paragraph": {
-				"color": {
-					"text": true,
-					"background": false
-				},
-                "custom": {},
-                "layout": {},
-                "spacing": {
-					"margin": true,
-					"padding": false
-				},
-                "typography": {
-					"customFontSize": false,
-					"lineHeight": false,
-					"dropCap": false,
-					"fluid": false,
-					"fontStyle": false,
-					"fontWeight": false,
-					"letterSpacing": false,
-					"textDecoration": false,
-					"textTransform": false,
-					"fontFamilies": []
-				}
-			},
-			"core/heading": {
-				"color": {
-					"text": false,
-					"background": false
-				},
-                "custom": {},
-                "layout": {},
-                "spacing": {
-					"margin": true,
-					"padding": false
-				},
-                "typography": {
-					"customFontSize": false,
-					"lineHeight": false,
-					"dropCap": false,
-					"fluid": false,
-					"fontStyle": false,
-					"fontWeight": false,
-					"letterSpacing": false,
-					"textDecoration": false,
-					"textTransform": false,
-					"fontSizes": [],
-					"fontFamilies": []
-				}
-			},
-			"core/group": {
-				"border": {
-					"color": false,
-					"radius": false,
-					"style": false,
-					"width": false
-				},
-				"color": {
-					"text": true,
-					"background": true
-				},
-                "custom": {},
-                "layout": {},
-                "spacing": {
-					"margin": true,
-					"padding": true,
-					"blockGap": false
-				},
-                "typography": {
-					"customFontSize": false,
-					"lineHeight": false,
-					"dropCap": false,
-					"fluid": false,
-					"fontStyle": false,
-					"fontWeight": false,
-					"letterSpacing": false,
-					"textDecoration": false,
-					"textTransform": false,
-					"fontSizes": [],
-					"fontFamilies": []
-				}
-			},
-			"core/cover": {
-				"color": {
-					"heading": false
-				},
-				"custom": {},
-				"layout": {},
-				"spacing": {
-					"margin": true,
-					"padding": true,
-					"blockGap": false
-				},
-				"typography": {
-					"fontSizes": []
-				}
-			},
-			"core/pullquote": {
-				"typography": {
-					"fontSizes": []
-				}
-			},
-			"core/image": {
-			},
-			"core/buttons": {
-			}
+			
+		},
+		"color": {
+			"background": "#000",
+			"text": "#fff"
+		},
+		"elements": {
+
+		},
+		"spacing": {
+
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--primary)",
+			"fontSize": "var(--wp--preset--font-size--base)"
 		}
 	}
 }
