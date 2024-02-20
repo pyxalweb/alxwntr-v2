@@ -28,14 +28,59 @@
 			],
 			"palette": [
 				{
-					"color": "--c--primary",
+					"color": "#009ffe",
 					"name": "Primary",
 					"slug": "primary"
 				},
 				{
-					"color": "--c--secondary",
+					"color": "#ff5733",
 					"name": "Secondary",
 					"slug": "secondary"
+				},
+				{
+					"color": "#ffc300",
+					"name": "Tertiary",
+					"slug": "tertiary"
+				},
+				{
+					"color": "#d780d0",
+					"name": "Color 100",
+					"slug": "color-100"
+				},
+				{
+					"color": "#fefecc",
+					"name": "Color 200",
+					"slug": "color-200"
+				},
+				{
+					"color": "#91d780",
+					"name": "Color 300",
+					"slug": "color-300"
+				},
+				{
+					"color": "#343434",
+					"name": "Grey 100",
+					"slug": "grey-100"
+				},
+				{
+					"color": "#1e1e23",
+					"name": "Grey 200",
+					"slug": "grey-200"
+				},
+				{
+					"color": "#878787",
+					"name": "Grey 300",
+					"slug": "grey-300"
+				},
+				{
+					"color": "#bebebe",
+					"name": "Grey 400",
+					"slug": "grey-400"
+				},
+				{
+					"color": "#dcdcdc",
+					"name": "Grey 500",
+					"slug": "grey-500"
 				}
 			],
 			"link": true
