@@ -10,8 +10,8 @@
 //  Blocks > Text > Pullquote
 // ***********************************
 .wp-block-pullquote {
-    background-color: var(--c-grey-200);
-    border: 0px solid var(--c-color-300);
+    background-color: var(--c--grey-200);
+    border: 0px solid var(--c-color--300);
 
     blockquote {
         padding-block: clamp(1rem, 4vw, 3rem);

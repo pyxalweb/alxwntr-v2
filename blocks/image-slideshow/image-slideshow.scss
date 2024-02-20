@@ -16,7 +16,7 @@
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     opacity: 0;
-    transition: all var(--t-medium);
+    transition: all var(--t--medium);
     z-index: -1;
 }
 
@@ -102,14 +102,14 @@
 .slideshow--circular {
     img {
 		border-radius: 100%;
-		border: clamp(0.25em, 2vw, 1em) solid var(--c-grey-100);
+		border: clamp(0.25em, 2vw, 1em) solid var(--c--grey-100);
 	}
 }
 
 .slideshow--rounded {
     img {
 		border-radius: 2em;
-		border: clamp(0.25em, 2vw, 1em) solid var(--c-grey-100);
+		border: clamp(0.25em, 2vw, 1em) solid var(--c--grey-100);
 	}
 }
 

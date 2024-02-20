@@ -10,7 +10,7 @@ p {
 }
 
 strong {
-    font-weight: var(--fw-bold);
+    font-weight: var(--fw--bold);
 }
 
 em {
@@ -18,7 +18,7 @@ em {
 }
 
 code {
-    color: var(--c-color-300);
+    color: var(--c-color--300);
     font-family: 'Courier New', monospace;
 }
 
@@ -36,14 +36,14 @@ ul, ol {
 }
 
 a {
-    color: var(--c-primary);
+    color: var(--c--primary);
     text-decoration: none;
-    transition: all var(--t-medium);
+    transition: all var(--t--medium);
 
     &:hover,
     &:focus {
-        color: var(--c-white);
-        text-shadow: 1px 1px 2px var(--c-black-alt), 0 0 1em var(--c-primary), 0 0 0.2em var(--c-primary);
+        color: var(--c--white);
+        text-shadow: 1px 1px 2px var(--c--black-alt), 0 0 1em var(--c--primary), 0 0 0.2em var(--c--primary);
     }
 }
 

@@ -28,12 +28,12 @@
 			],
 			"palette": [
 				{
-					"color": "--c-primary",
+					"color": "--c--primary",
 					"name": "Primary",
 					"slug": "primary"
 				},
 				{
-					"color": "--c-secondary",
+					"color": "--c--secondary",
 					"name": "Secondary",
 					"slug": "secondary"
 				}

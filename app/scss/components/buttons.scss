@@ -11,29 +11,29 @@
 // ***********************************
 %button {
 	@include typography.text(
-		var(--ff-primary),                        // Font Family: Montserrat
+		var(--ff--primary),                        // Font Family: Montserrat
 		clamp(var(--fs--xsmall), 3vw, var(--fs--base)), // Font Size:   16px/18px (1rem/1.125rem)
-		var(--fw-medium),                         // Font Weight: Medium
-		var(--lh-400),                            // Line Height: 1.5
-		var(--c-primary),                         // Color: Blue
+		var(--fw--medium),                         // Font Weight: Medium
+		var(--lh--400),                            // Line Height: 1.5
+		var(--c--primary),                         // Color: Blue
 		none,                                     // Text Decoration: none
 		none,                                     // Text Transform: none
 		normal                                    // Font Style: normal
 	);
 	
 	background-color: transparent;
-	border: 1px solid var(--c-grey-100);
+	border: 1px solid var(--c--grey-100);
 	border-radius: 0 1em;
 	cursor: pointer;
 	padding: 0.7em 1.25em;
 	text-align: center;
-	transition: all var(--t-fast);
+	transition: all var(--t--fast);
 
 	&:hover,
 	&:focus {
-		background-color: var(--c-black-alt);
-		box-shadow: 1px 1px 50px var(--c-primary-rgb-10);
-		color: var(--c-white);
+		background-color: var(--c--black-alt);
+		box-shadow: 1px 1px 50px var(--c--primary-rgb-10);
+		color: var(--c--white);
 		text-shadow: none;
 	}
 }
@@ -44,17 +44,17 @@
 
 %button--fill {
 	@extend %button;
-	background-color: var(--c-primary);
-	color: var(--c-white);
+	background-color: var(--c--primary);
+	color: var(--c--white);
 }
 
 %button--outline {
 	@extend %button;
 	background-color: transparent;
-	color: var(--c-primary);
+	color: var(--c--primary);
 
 	&:hover,
 	&:focus {
-		color: var(--c-white);
+		color: var(--c--white);
 	}
 }

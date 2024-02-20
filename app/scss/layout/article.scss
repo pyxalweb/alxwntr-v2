@@ -10,7 +10,7 @@
 //  Article
 // ***********************************
 .article {
-	margin-block: var(--spacing-400);
+	margin-block: var(--spacing--400);
 
 	h1 {
 		@extend %text-400;
@@ -19,7 +19,7 @@
 }
 
 .article__content {
-	margin-block: var(--spacing-400);
+	margin-block: var(--spacing--400);
 }
 
 .article {
