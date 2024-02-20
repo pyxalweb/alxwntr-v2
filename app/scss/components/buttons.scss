@@ -31,9 +31,9 @@
 
 	&:hover,
 	&:focus {
-		background-color: var(--c--black-alt);
+		background-color: var(--c--main-alt);
 		box-shadow: 1px 1px 50px var(--c--primary-rgb-10);
-		color: var(--c--white);
+		color: var(--c--base);
 		text-shadow: none;
 	}
 }
@@ -45,7 +45,7 @@
 %button--fill {
 	@extend %button;
 	background-color: var(--c--primary);
-	color: var(--c--white);
+	color: var(--c--base);
 }
 
 %button--outline {
@@ -55,6 +55,6 @@
 
 	&:hover,
 	&:focus {
-		color: var(--c--white);
+		color: var(--c--base);
 	}
 }

@@ -18,7 +18,7 @@ em {
 }
 
 code {
-    color: var(--c-color--300);
+    color: var(--c--color--300);
     font-family: 'Courier New', monospace;
 }
 
@@ -42,8 +42,8 @@ a {
 
     &:hover,
     &:focus {
-        color: var(--c--white);
-        text-shadow: 1px 1px 2px var(--c--black-alt), 0 0 1em var(--c--primary), 0 0 0.2em var(--c--primary);
+        color: var(--c--base);
+        text-shadow: 1px 1px 2px var(--c--main-alt), 0 0 1em var(--c--primary), 0 0 0.2em var(--c--primary);
     }
 }
 
