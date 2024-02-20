@@ -17,17 +17,22 @@
 	--fs--gigantic: 3.25rem; // 52
 
 	--fw--thin: 100;
+	--fw--extra-light: 200;
+	--fw--light: 300;
 	--fw--regular: 400;
 	--fw--medium: 500;
 	--fw--semi-bold: 600;
 	--fw--bold: 700;
 	--fw--extra-bold: 800;
+	--fw--extra-black: 900;
 
-	--lh--100: 0.75;
-	--lh--200: 1;
-	--lh--300: 1.25;
-	--lh--400: 1.5;
-	--lh--500: 2;
+	--lh--none: 1;
+	--lh--tight: 1.1;
+	--lh--snug: 1.2;
+	--lh--normal: 1.5;
+	--lh--relaxed: 1.625;
+	--lh--loose: 2;
+	--lh--body: "calc(1px + 2ex + 7px)";
 
 
 

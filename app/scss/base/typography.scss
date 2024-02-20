@@ -19,7 +19,7 @@
 		var(--ff--primary), // Font Family:     Montserrat
 		var(--fs--base),     // Font Size:       18px (1.125rem)
 		var(--fw--regular), // Font Weight:     Regular
-		var(--lh--500),     // Line Height:     2
+		var(--lh--loose),     // Line Height:     2
 		var(--c--white),    // Color:           White
 		none,              // Text Decoration: none
 		none, 			   // Text Transform:  none
@@ -35,7 +35,7 @@
 		var(--ff--primary), // Font Family:     Montserrat
 		var(--fs--base),     // Font Size:       18px (1.125rem)
 		var(--fw--regular), // Font Weight:     Regular
-		var(--lh--400),     // Line Height:     1.5
+		var(--lh--body),     // Line Height:     1.5
 		var(--c--white),    // Color:           See 'background' property
 		none,              // Text Decoration: none
 		none, 			   // Text Transform:  none
@@ -58,7 +58,7 @@
 		var(--ff--primary),                        // Font Family:     Montserrat
 		clamp(var(--fs--large), 3vw, var(--fs--xx-large)), // Font Size:       22px/26px (1.375rem/1.625rem)
 		var(--fw--regular),                        // Font Weight:     Regular
-		var(--lh--400),                            // Line Height:     1.5
+		var(--lh--body),                            // Line Height:     1.5
 		var(--c--white),                           // Color:           See 'background' property
 		none,                                     // Text Decoration: none
 		none, 			                          // Text Transform:  none
@@ -81,7 +81,7 @@
 		var(--ff--primary),                          // Font Family:       Montserrat
 		clamp(var(--fs--huge), 5vw, var(--fs--gigantic)), // Font Size:         32px/52px (3rem/3.25rem)
 		var(--fw--thin),                             // Font Weight:       Thin
-		var(--lh--400),                              // Line Height:       1.5
+		var(--lh--body),                              // Line Height:       1.5
 		var(--c--white),                             // Color:             See 'background' property
 		none,                                       // Text Decoration:   none
 		none, 			                            // Text Transform:    none
@@ -104,7 +104,7 @@
 		var(--ff--primary), // Font Family:     Montserrat
 		var(--fs--xsmall),     // Font Size:       16px (1rem)
 		var(--fw--regular), // Font Weight:     Regular
-		var(--lh--400),     // Line Height:     1.5
+		var(--lh--body),     // Line Height:     1.5
 		var(--c--grey-300), // Color:           Grey - Medium
 		none,              // Text Decoration: none
 		none, 			   // Text Transform:  none
