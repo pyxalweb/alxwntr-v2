@@ -7,11 +7,15 @@
 
 
 // ***********************************
-//  Blocks > Text > Quote
+//  Blocks > Text > Pullquote
 // ***********************************
-.wp-block-quote {
-    border-left: 0.25rem solid var(--c-color-300);
-    padding-left: clamp(1rem, 4vw, 3rem);
+.wp-block-pullquote {
+    background-color: var(--c-grey-200);
+    border: 0px solid var(--c-color-300);
+
+    blockquote {
+        padding-block: clamp(1rem, 4vw, 3rem);
+    }
 
     p {
         font-size: clamp(var(--fs-400), 4vw, var(--fs-800));

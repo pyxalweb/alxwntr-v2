@@ -253,6 +253,11 @@
 					"fontSizes": []
 				}
 			},
+			"core/pullquote": {
+				"typography": {
+					"fontSizes": []
+				}
+			},
 			"core/image": {
 			},
 			"core/buttons": {

@@ -10,12 +10,16 @@
 .editor-styles-wrapper {
     // these imports must strictly apply to the editor, not the entire WordPress page
     @import 'base/typography';
+    @import 'base/html-body';
     @import 'base/text-elements';
     @import 'wordpress/wp-block-heading';
     @import 'components/buttons';
     @import 'components/intro';
     @import 'components/ordered-list';
     @import 'wordpress/wp-block-image.scss';
+    @import 'wordpress/wp-block-quote';
+    @import 'wordpress/wp-block-pullquote';
+    @import 'wordpress/has-classes';
 }
 
 
@@ -38,8 +42,7 @@
     color: var(--c-white);
     line-height: 2;
 
-    // paragraphs
-    p {
+    .is-root-container {
         @extend %text-100;
     }
 
@@ -197,5 +200,24 @@
         margin-top: 0;
         margin-left: calc(-50vw + 50.8%) !important;
         width: 100vw !important;
+    }
+}
+
+.editor-styles-wrapper {
+    @import 'wordpress/has-classes';
+}
+
+
+
+
+// ***********************************
+//  Blocks > Text > Pullquote
+// ***********************************
+.editor-styles-wrapper {
+    .wp-block-pullquote {
+        blockquote {
+            line-height: 2;
+            padding-block: 0;
+        }
     }
 }
