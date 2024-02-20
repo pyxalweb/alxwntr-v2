@@ -79,8 +79,15 @@
 
 
 	// ***********************************
-	//  Layout Margin & Padding
+	//  Spacing
 	// ***********************************
+	--wp--preset--spacing--small: clamp(.5rem, 2.5vw, 1rem);
+	--wp--preset--spacing--medium: clamp(1.5rem, 4vw, 2rem);
+	--wp--preset--spacing--large: clamp(2rem, 5vw, 3rem);
+	--wp--preset--spacing--x-large: clamp(3rem, 7vw, 5rem);
+	--wp--preset--spacing--xx-large: clamp(4rem, 9vw, 7rem);
+	--wp--preset--spacing--xxx-large: clamp(5rem, 12vw, 9rem);
+	--wp--preset--spacing--xxxx-large: clamp(6rem, 14vw, 13rem);
 	--spacing--200: clamp(1em, 5vw, 3em);
 	--spacing--400: clamp(3em, 5vw, 5em);
 
@@ -93,18 +100,5 @@
 	--t--fast: 0.3s;
 	--t--medium: 0.5s;
 	--t--slow: 1s;
-
-
-
-	// ***********************************
-	//  WordPress Presets
-	// ***********************************
-	--wp--preset--spacing--1: 1rem;
-	--wp--preset--spacing--2: 2rem;
-	--wp--preset--spacing--3: 3rem;
-	--wp--preset--spacing--4: 4rem;
-	--wp--preset--spacing--5: 5rem;
-	--wp--preset--spacing--6: 6rem;
-	--wp--preset--spacing--7: 7rem;
 }
 // end :root
