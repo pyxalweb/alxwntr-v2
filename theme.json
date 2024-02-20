@@ -58,6 +58,21 @@
 					"slug": "color-300"
 				},
 				{
+					"color": "#17171a",
+					"name": "Main",
+					"slug": "main"
+				},
+				{
+					"color": "#0a0a0a",
+					"name": "Main Alt",
+					"slug": "main-alt"
+				},
+				{
+					"color": "#fefefe",
+					"name": "Base",
+					"slug": "base"
+				},
+				{
 					"color": "#343434",
 					"name": "Grey 100",
 					"slug": "grey-100"
@@ -276,8 +291,8 @@
 			
 		},
 		"color": {
-			"background": "#000",
-			"text": "#fff"
+			"background": "var(--wp--preset--color--main)",
+			"text": "var(--wp--preset--color--base)"
 		},
 		"elements": {
 
