@@ -1,7 +1,14 @@
 // ***********************************
 //  Import Fonts
 // ***********************************
-@import url('//fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,400&display=swap');
+@font-face {
+	font-family: 'Montserrat';
+	src: url('../fonts/Montserrat-VariableFont_wght.woff2');
+	src: url('../fonts/Montserrat-VariableFont_wght.woff2') format('woff'), url('../fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
 
 
 
