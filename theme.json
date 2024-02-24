@@ -295,13 +295,24 @@
 			"text": "var(--wp--preset--color--base)"
 		},
 		"elements": {
-			"h1": {
+			"heading": {
 				"color": {
 					"text": "var(--wp--preset--color--secondary)"
 				},
 				"typography": {
+					"fontSize": "var(--wp--preset--font-size--base)",
+					"fontWeight": "var(--wp--custom--font-weight--regular)"
+				}
+			},
+			"h1": {
+				"typography": {
 					"fontSize": "var(--wp--preset--font-size--gigantic)",
 					"fontWeight": "var(--wp--custom--font-weight--thin)"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--xx-large)"
 				}
 			}
 		},
@@ -312,7 +323,7 @@
 			"fontFamily": "var(--wp--preset--font-family--primary)",
 			"fontSize": "var(--wp--preset--font-size--base)",
 			"fontWeight": "var(--wp--custom--font-weight--regular)",
-			"lineHeight": "var(--wp--custom--line-height--body)",
+			"lineHeight": "var(--wp--custom--line-height--loose)",
 			"letterSpacing": "normal",
 			"textTransform": "none",
 			"fontStyle": "normal"
