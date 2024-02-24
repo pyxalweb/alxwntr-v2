@@ -1,14 +1,6 @@
 // ***********************************
 //  Text Elements
 // ***********************************
-p {
-    margin-bottom: 1em;
-
-    &:last-child {
-        margin-bottom: 0;
-    }
-}
-
 strong {
     font-weight: var(--fw--bold);
 }
