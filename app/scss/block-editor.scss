@@ -15,8 +15,23 @@
 
 
 // ***********************************
-//  styles: elements: h1
+//  app > scss
 // ***********************************
+@use 'components/ordered-list';
+@use 'wordpress/wp-block-details';
+@use 'wordpress/wp-block-image';
+@use 'wordpress/wp-block-pullquote';
+@use 'wordpress/wp-block-quote';
+
+
+
+
+// ***********************************
+//  theme.json
+// ***********************************
+// ***************************
+//  styles: elements: h1
+// ***************************
 :where(.editor-styles-wrapper) h1 {
     @extend %text-400;
     margin-block: var(--wp--preset--spacing--x-large);
