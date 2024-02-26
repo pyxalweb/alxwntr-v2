@@ -19,7 +19,7 @@
 	}
 
 	.wp-block-columns {
-		@media (max-width: viewports.$vw-600) {
+		@media (max-width: viewports.$viewport--breakpoint--large) {
 			flex-direction: column;
 		}
 	}
@@ -36,7 +36,7 @@
 		width: 348px;
 
 		// show three slides in a row on medium-size viewports
-		@media (max-width: viewports.$vw-600) {
+		@media (max-width: viewports.$viewport--breakpoint--large) {
 			margin-top: 3em;
 			width: 100%;
 			grid-template-columns: repeat(3, 1fr);
@@ -60,7 +60,7 @@
 		}
 
 		// show one slide again on small-size viewports
-		@media (max-width: viewports.$vw-100) {
+		@media (max-width: viewports.$viewport--breakpoint--xxx-small) {
 			max-width: 348px;
 			grid-template-columns: 1fr;
 			margin-inline: auto;

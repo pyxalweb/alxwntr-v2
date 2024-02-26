@@ -19,19 +19,19 @@
 
     // Mobile Viewport Width
     &.button-container--vw300-mobile {
-        @media (max-width: viewports.$vw-300) {
+        @media (max-width: viewports.$viewport--breakpoint--x-small) {
             flex-direction: column;
         }
     }
 
     &.button-container--vw200-mobile {
-        @media (max-width: viewports.$vw-200) {
+        @media (max-width: viewports.$viewport--breakpoint--xx-small) {
             flex-direction: column;
         }
     }
 
     &.button-container--vw100-mobile {
-        @media (max-width: viewports.$vw-100) {
+        @media (max-width: viewports.$viewport--breakpoint--xxx-small) {
             flex-direction: column;
         }
     }

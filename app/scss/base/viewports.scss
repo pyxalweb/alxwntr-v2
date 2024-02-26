@@ -1,14 +1,14 @@
 // ***********************************
 //  Viewport Width Breakpoints (-160px)
 // ***********************************
-$vw-25: 400px;
-$vw-100: 480px;
-$vw-200: 640px;
-$vw-300: 800px;
-$vw-400: 960px;
-$vw-500: 1024px;
-$vw-600: 1120px;
-$vw-700: 1440px;
-$vw-800: 1600px;
-$vw-900: 1760px;
-$vw-1000: 1920px;
+$viewport--breakpoint--xxxx-small: 25rem; // 400px
+$viewport--breakpoint--xxx-small: 30rem; // 480px
+$viewport--breakpoint--xx-small: 40rem; // 640px
+$viewport--breakpoint--x-small: 50rem; // 800px
+$viewport--breakpoint--small: 60rem; // 960px
+$viewport--breakpoint--medium: 64rem; // 1024px
+$viewport--breakpoint--large: 70rem; // 1120px
+$viewport--breakpoint--x-large: 90rem; // 1440px
+$viewport--breakpoint--xx-large: 100rem; // 1600px
+$viewport--breakpoint--xxx-large: 110rem; // 1760px
+$viewport--breakpoint--xxxx-large: 120rem; // 1920px

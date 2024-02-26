@@ -45,7 +45,7 @@
 	flex-grow: 1;
 	flex-shrink: 1;
 
-	@media (max-width: viewports.$vw-500) {
+	@media (max-width: viewports.$viewport--breakpoint--medium) {
 		flex-grow: 1;
 		flex-shrink: 1;
 		flex-basis: 20vw;
@@ -59,7 +59,7 @@
 		text-shadow: none;
 	}
 
-	@media (max-width: viewports.$vw-500) {
+	@media (max-width: viewports.$viewport--breakpoint--medium) {
 		display: none;
 	}
 }
@@ -69,7 +69,7 @@
 	box-shadow: 1px 1px 50px var(--wp--preset--color--primary-rgb-10);
 	display: none;
 
-	@media (max-width: viewports.$vw-500) {
+	@media (max-width: viewports.$viewport--breakpoint--medium) {
 		display: block;
 	}
 }
@@ -116,7 +116,7 @@
 	gap: 3em;
 	margin-block: var(--wp--preset--spacing--x-large);
 
-	@media (max-width: viewports.$vw-500) {
+	@media (max-width: viewports.$viewport--breakpoint--medium) {
 		grid-template-columns: 1fr;
 	}
 }
@@ -147,7 +147,7 @@
 		margin-inline: auto;
 		width: 50%;
 
-		@media (max-width: viewports.$vw-500) {
+		@media (max-width: viewports.$viewport--breakpoint--medium) {
 			width: 100%;
 		}
 	}

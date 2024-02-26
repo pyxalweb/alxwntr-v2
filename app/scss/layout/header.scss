@@ -26,7 +26,7 @@ header.site-header {
     justify-content: space-between;
 	padding-block: var(--wp--preset--spacing--large);
 
-	@media (max-width: viewports.$vw-25) {
+	@media (max-width: viewports.$viewport--breakpoint--xxxx-small) {
 		align-items: center;
 		flex-direction: column;
 		gap: 1em;

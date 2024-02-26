@@ -60,17 +60,18 @@
 	// ***********************************
 	//  Element Widths
 	// ***********************************
-	--w--100: 480px;
-	--w--200: 640px;
-	--w--300: 800px;
-	--w--400: 960px;
-	--w--500: 1024px;
-	--w--600: 1120px;
-	--w--700: 1440px;
-	--w--800: 1600px;
-	--w--900: 1760px;
-	--w--1000: 1920px;
-	--w--spacing: calc(100% - 2em);
+	--width--xxxx-small: 25rem; // 400px
+	--width--xxx-small: 30rem; // 480px
+	--width--xx-small: 40rem; // 640px
+	--width--x-small: 50rem; // 800px
+	--width--small: 60rem; // 960px
+	--width--medium: 64rem; // 1024px
+	--width--large: 70rem; // 1120px
+	--width--x-large: 90rem; // 1440px
+	--width--xx-large: 100rem; // 1600px
+	--width--xxx-large: 110rem; // 1760px
+	--width--xxxx-large: 120rem; // 1920px
+	--width--spacing: calc(100% - 2em); // 
 
 
 
