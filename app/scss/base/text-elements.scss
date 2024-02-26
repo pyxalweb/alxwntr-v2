@@ -2,7 +2,7 @@
 //  Text Elements
 // ***********************************
 strong {
-    font-weight: var(--fw--bold);
+    font-weight: var(--wp--custom--font-weight--bold);
 }
 
 em {
@@ -10,7 +10,7 @@ em {
 }
 
 code {
-    color: var(--c--color--300);
+    color: var(--wp--preset--color--300);
     font-family: 'Courier New', monospace;
 }
 
@@ -28,14 +28,14 @@ ul, ol {
 }
 
 a {
-    color: var(--c--primary);
+    color: var(--wp--preset--color--primary);
     text-decoration: none;
     transition: all var(--t--medium);
 
     &:hover,
     &:focus {
-        color: var(--c--base);
-        text-shadow: 1px 1px 2px var(--c--main-alt), 0 0 1em var(--c--primary), 0 0 0.2em var(--c--primary);
+        color: var(--wp--preset--color--base);
+        text-shadow: 1px 1px 2px var(--wp--preset--color--main-alt), 0 0 1em var(--wp--preset--color--primary), 0 0 0.2em var(--wp--preset--color--primary);
     }
 }
 

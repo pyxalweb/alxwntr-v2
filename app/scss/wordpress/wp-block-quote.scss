@@ -10,14 +10,14 @@
 //  Blocks > Text > Quote
 // ***********************************
 .wp-block-quote {
-    border-left: 0.25rem solid var(--c--color--300);
+    border-left: 0.25rem solid var(--wp--preset--color--300);
     padding-left: clamp(1rem, 4vw, 3rem);
 
     p {
-        font-size: clamp(var(--fs--xsmall), 4vw, var(--fs--x-large));
+        font-size: clamp(var(--fs--xsmall), 4vw, var(--wp--preset--font-size--x-large));
     }
 
     cite {
-        font-size: clamp(var(--fs--xsmall), 4vw, var(--fs--x-large));
+        font-size: clamp(var(--fs--xsmall), 4vw, var(--wp--preset--font-size--x-large));
     }
 }

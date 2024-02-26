@@ -2,36 +2,36 @@
 	// ***********************************
 	//  Fonts and Text
 	// ***********************************
-	--ff--primary: 'Montserrat', serif;
+	--wp--preset--font-family--primary: 'Montserrat', serif;
 
-	--fs--xx-small: clamp(0.8125rem, 0.813rem + ((1vw - 0.2rem) * 0.106), 0.875rem); // 14
-	--fs--x-small: clamp(0.875rem, 0.875rem + ((1vw - 0.2rem) * 0.107), 0.9375rem); // 15
-	--fs--small: clamp(0.9375rem, 0.938rem + ((1vw - 0.2rem) * 0.106), 1rem); // 16
-	--fs--base: clamp(1rem, 1rem + ((1vw - 0.2rem) * 0.213), 1.125rem); // 18
-	--fs--medium: clamp(1.125rem, 1.125rem + ((1vw - 0.2rem) * 0.213), 1.25rem); // 20
-	--fs--large: clamp(1.25rem, 1.25rem + ((1vw - 0.2rem) * 0.213), 1.375rem); // 22
-	--fs--x-large: clamp(1.375rem, 1.375rem + ((1vw - 0.2rem) * 0.213), 1.5rem); // 24
-	--fs--xx-large: clamp(1.5rem, 1.5rem + ((1vw - 0.2rem) * 0.213), 1.625rem); // 26
-	--fs--huge: clamp(1.625rem, 1.625rem + ((1vw - 0.2rem) * 0.638), 2rem); // 32
-	--fs--gigantic: clamp(2rem, 2rem + ((1vw - 0.2rem) * 2.128), 3.25rem); // 52
+	--wp--preset--font-size--xx-small: clamp(0.8125rem, 0.813rem + ((1vw - 0.2rem) * 0.106), 0.875rem); // 14
+	--wp--preset--font-size--x-small: clamp(0.875rem, 0.875rem + ((1vw - 0.2rem) * 0.107), 0.9375rem); // 15
+	--wp--preset--font-size--small: clamp(0.9375rem, 0.938rem + ((1vw - 0.2rem) * 0.106), 1rem); // 16
+	--wp--preset--font-size--base: clamp(1rem, 1rem + ((1vw - 0.2rem) * 0.213), 1.125rem); // 18
+	--wp--preset--font-size--medium: clamp(1.125rem, 1.125rem + ((1vw - 0.2rem) * 0.213), 1.25rem); // 20
+	--wp--preset--font-size--large: clamp(1.25rem, 1.25rem + ((1vw - 0.2rem) * 0.213), 1.375rem); // 22
+	--wp--preset--font-size--x-large: clamp(1.375rem, 1.375rem + ((1vw - 0.2rem) * 0.213), 1.5rem); // 24
+	--wp--preset--font-size--xx-large: clamp(1.5rem, 1.5rem + ((1vw - 0.2rem) * 0.213), 1.625rem); // 26
+	--wp--preset--font-size--huge: clamp(1.625rem, 1.625rem + ((1vw - 0.2rem) * 0.638), 2rem); // 32
+	--wp--preset--font-size--gigantic: clamp(2rem, 2rem + ((1vw - 0.2rem) * 2.128), 3.25rem); // 52
 
-	--fw--thin: 100;
-	--fw--extra-light: 200;
-	--fw--light: 300;
-	--fw--regular: 400;
-	--fw--medium: 500;
-	--fw--semi-bold: 600;
-	--fw--bold: 700;
-	--fw--extra-bold: 800;
-	--fw--extra-black: 900;
+	--wp--custom--font-weight--thin: 100;
+	--wp--custom--font-weight--extra-light: 200;
+	--wp--custom--font-weight--light: 300;
+	--wp--custom--font-weight--regular: 400;
+	--wp--custom--font-weight--medium: 500;
+	--wp--custom--font-weight--semi-bold: 600;
+	--wp--custom--font-weight--bold: 700;
+	--wp--custom--font-weight--extra-bold: 800;
+	--wp--custom--font-weight--extra-black: 900;
 
-	--lh--none: 1;
-	--lh--tight: 1.1;
-	--lh--snug: 1.2;
-	--lh--normal: 1.5;
-	--lh--relaxed: 1.625;
-	--lh--loose: 2;
-	--lh--body: "calc(1px + 2ex + 7px)";
+	--wp--custom--line-height--none: 1;
+	--wp--custom--line-height--tight: 1.1;
+	--wp--custom--line-height--snug: 1.2;
+	--wp--custom--line-height--normal: 1.5;
+	--wp--custom--line-height--relaxed: 1.625;
+	--wp--custom--line-height--loose: 2;
+	--wp--custom--line-height--body: "calc(1px + 2ex + 7px)";
 
 
 
@@ -39,22 +39,20 @@
 	// ***********************************
 	//  colors
 	// ***********************************
-	--c--primary: #009ffe;
-	--c--primary-rgb-10: rgb(41 148 255 / 20%);
-	--c--secondary: #ff5733;
-	--c--tertiary: #ffc300;
-	--c--color--100: #d780d0;
-	--c--color--200: #fefecc;
-	--c--color--300: #91d780;
-	--c--main: #17171a;
-	--c--main-alt: #0a0a0a;
-	--c--base: #fefefe;
-	--c--grey-100: #343434; // in use
-	--c--grey-200: #1e1e23; // in use
-	--c--grey-300: #878787; // in use
-	--c--grey-400: #bebebe;
-	--c--grey-500: #dcdcdc;
-	--c--gradient: var(--c--secondary) 0%, var(--c--tertiary) 100%;
+	--wp--preset--color--primary: #009ffe;
+	--wp--preset--color--primary-rgb-10: rgb(41 148 255 / 20%);
+	--wp--preset--color--secondary: #ff5733;
+	--wp--preset--color--tertiary: #ffc300;
+	--wp--preset--color--100: #d780d0;
+	--wp--preset--color--200: #fefecc;
+	--wp--preset--color--300: #91d780;
+	--wp--preset--color--main: #17171a;
+	--wp--preset--color--main-alt: #0a0a0a;
+	--wp--preset--color--base: #fefefe;
+	--wp--preset--color--grey-100: #343434; // in use
+	--wp--preset--color--grey-200: #1e1e23; // in use
+	--wp--preset--color--grey-300: #878787; // in use
+	--wp--preset--gradient--secondary-to-tertiary: var(--wp--preset--color--secondary) 0%, var(--wp--preset--color--tertiary) 100%;
 
 
 
@@ -87,8 +85,6 @@
 	--wp--preset--spacing--xx-large: clamp(4rem, 9vw, 7rem);
 	--wp--preset--spacing--xxx-large: clamp(5rem, 12vw, 9rem);
 	--wp--preset--spacing--xxxx-large: clamp(6rem, 14vw, 13rem);
-	--spacing--200: clamp(1em, 5vw, 3em);
-	--spacing--400: clamp(3em, 5vw, 5em);
 
 
 

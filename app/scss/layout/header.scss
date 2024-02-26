@@ -11,7 +11,7 @@
 //  Header
 // ***********************************
 header.site-header {
-	margin-bottom: var(--spacing--400);
+	margin-bottom: var(--wp--preset--spacing--x-large);
 }
 
 
@@ -21,10 +21,10 @@ header.site-header {
 //  Container
 // ***********************************
 .header__container {
-	border-bottom: 1px solid var(--c--grey-100);
+	border-bottom: 1px solid var(--wp--preset--color--grey-100);
     display: flex;
     justify-content: space-between;
-	padding-block: var(--spacing--200);
+	padding-block: var(--wp--preset--spacing--large);
 
 	@media (max-width: viewports.$vw-25) {
 		align-items: center;
@@ -42,10 +42,10 @@ header.site-header {
 .header__logo {
 	h1,
 	a {
-		color: var(--c--base);
-		font-size: var(--fs--huge);
-		font-weight: var(--fw--thin);
-		line-height: var(--lh--body);
+		color: var(--wp--preset--color--base);
+		font-size: var(--wp--preset--font-size--huge);
+		font-weight: var(--wp--custom--font-weight--thin);
+		line-height: var(--wp--custom--line-height--body);
 		text-decoration: none;
 		transition: all 1.75s;
 
@@ -70,7 +70,7 @@ header.site-header {
     a {
         &:hover,
         &:focus {
-            color: var(--c--primary);
+            color: var(--wp--preset--color--primary);
 			cursor: pointer;
         }
     }

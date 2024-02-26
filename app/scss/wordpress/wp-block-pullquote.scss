@@ -10,18 +10,18 @@
 //  Blocks > Text > Pullquote
 // ***********************************
 .wp-block-pullquote {
-    background-color: var(--c--grey-200);
-    border: 0px solid var(--c--color--300);
+    background-color: var(--wp--preset--color--grey-200);
+    border: 0px solid var(--wp--preset--color--300);
 
     blockquote {
         padding-block: clamp(1rem, 4vw, 3rem);
     }
 
     p {
-        font-size: clamp(var(--fs--xsmall), 4vw, var(--fs--x-large));
+        font-size: clamp(var(--fs--xsmall), 4vw, var(--wp--preset--font-size--x-large));
     }
 
     cite {
-        font-size: clamp(var(--fs--xsmall), 4vw, var(--fs--x-large));
+        font-size: clamp(var(--fs--xsmall), 4vw, var(--wp--preset--font-size--x-large));
     }
 }

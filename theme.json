@@ -8,21 +8,12 @@
 			"defaultGradients": false,
 			"defaultPalette": false,
 			"duotone": [
-		         {
-					"colors": [ "#1d1f35", "#6cace4" ],
-					"slug": "dark-blue-and-light-blue",
-					"name": "Dark blue and light blue"
-				},
-				{
-					"colors": [ "#1d1f35", "#c7c0af" ],
-					"slug": "dark-blue-and-beige",
-					"name": "Dark blue and beige"
-				}
+
 			],
 			"gradients": [
 				{
-					"slug": "primary-to-secondary",
-					"gradient": "linear-gradient(160deg, var(--wp--preset--color--primary), var(--wp--preset--color--secondary))",
+					"slug": "secondary-to-tertiary",
+					"gradient": "linear-gradient(160deg, var(--wp--preset--color--secondary), var(--wp--preset--color--tertiary))",
 					"name": "Primary to Secondary"
 				}
 			],
@@ -288,7 +279,12 @@
 	},
 	"styles": {
 		"blocks": {
-			
+			"core/code": {
+				"color": {
+					"text": "#ffffff",
+					"background": "var(--wp--preset--color--grey-200)"
+				}
+			}
 		},
 		"color": {
 			"background": "var(--wp--preset--color--main)",

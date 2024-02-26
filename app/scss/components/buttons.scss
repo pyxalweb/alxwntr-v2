@@ -11,18 +11,18 @@
 // ***********************************
 %button {
 	@include typography.text(
-		var(--ff--primary),                        // Font Family: Montserrat
-		clamp(var(--fs--xsmall), 3vw, var(--fs--base)), // Font Size:   16px/18px (1rem/1.125rem)
-		var(--fw--medium),                         // Font Weight: Medium
-		var(--lh--body),                            // Line Height: 1.5
-		var(--c--primary),                         // Color: Blue
+		var(--wp--preset--font-family--primary),                        // Font Family: Montserrat
+		clamp(var(--fs--xsmall), 3vw, var(--wp--preset--font-size--base)), // Font Size:   16px/18px (1rem/1.125rem)
+		var(--wp--custom--font-weight--medium),                         // Font Weight: Medium
+		var(--wp--custom--line-height--body),                            // Line Height: 1.5
+		var(--wp--preset--color--primary),                         // Color: Blue
 		none,                                     // Text Decoration: none
 		none,                                     // Text Transform: none
 		normal                                    // Font Style: normal
 	);
 	
 	background-color: transparent;
-	border: 1px solid var(--c--grey-100);
+	border: 1px solid var(--wp--preset--color--grey-100);
 	border-radius: 0 1em;
 	cursor: pointer;
 	padding: 0.7em 1.25em;
@@ -31,9 +31,9 @@
 
 	&:hover,
 	&:focus {
-		background-color: var(--c--main-alt);
-		box-shadow: 1px 1px 50px var(--c--primary-rgb-10);
-		color: var(--c--base);
+		background-color: var(--wp--preset--color--main-alt);
+		box-shadow: 1px 1px 50px var(--wp--preset--color--primary-rgb-10);
+		color: var(--wp--preset--color--base);
 		text-shadow: none;
 	}
 }
@@ -44,17 +44,17 @@
 
 %button--fill {
 	@extend %button;
-	background-color: var(--c--primary);
-	color: var(--c--base);
+	background-color: var(--wp--preset--color--primary);
+	color: var(--wp--preset--color--base);
 }
 
 %button--outline {
 	@extend %button;
 	background-color: transparent;
-	color: var(--c--primary);
+	color: var(--wp--preset--color--primary);
 
 	&:hover,
 	&:focus {
-		color: var(--c--base);
+		color: var(--wp--preset--color--base);
 	}
 }

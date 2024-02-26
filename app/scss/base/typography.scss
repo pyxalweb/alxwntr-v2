@@ -16,11 +16,11 @@
 // Description: Small font size and white color
 %text-100 {
 	@include text(
-		var(--ff--primary), // Font Family:     Montserrat
-		var(--fs--base),     // Font Size:       18px (1.125rem)
-		var(--fw--regular), // Font Weight:     Regular
-		var(--lh--loose),     // Line Height:     2
-		var(--c--base),    // Color:           White
+		var(--wp--preset--font-family--primary), // Font Family:     Montserrat
+		var(--wp--preset--font-size--base),     // Font Size:       18px (1.125rem)
+		var(--wp--custom--font-weight--regular), // Font Weight:     Regular
+		var(--wp--custom--line-height--loose),     // Line Height:     2
+		var(--wp--preset--color--base),    // Color:           White
 		none,              // Text Decoration: none
 		none, 			   // Text Transform:  none
 		normal 		       // Font Style:      normal
@@ -32,16 +32,16 @@
 // Description: Small font size and orange gradient color
 %text-200 {
 	@include text(
-		var(--ff--primary), // Font Family:     Montserrat
-		var(--fs--base),     // Font Size:       18px (1.125rem)
-		var(--fw--regular), // Font Weight:     Regular
-		var(--lh--body),     // Line Height:     1.5
-		var(--c--base),    // Color:           See 'background' property
+		var(--wp--preset--font-family--primary), // Font Family:     Montserrat
+		var(--wp--preset--font-size--base),     // Font Size:       18px (1.125rem)
+		var(--wp--custom--font-weight--regular), // Font Weight:     Regular
+		var(--wp--custom--line-height--body),     // Line Height:     1.5
+		var(--wp--preset--color--base),    // Color:           See 'background' property
 		none,              // Text Decoration: none
 		none, 			   // Text Transform:  none
 		normal 		       // Font Style:      normal
 	);
-	background: linear-gradient(to right, var(--c--gradient));
+	background: linear-gradient(to right, var(--wp--preset--gradient--secondary-to-tertiary));
 	-webkit-background-clip: text;
 	background-clip: text;
 	color: transparent;
@@ -55,16 +55,16 @@
 // Description: Medium font size and orange gradient color
 %text-300 {
 	@include text(
-		var(--ff--primary),                        // Font Family:     Montserrat
-		clamp(var(--fs--large), 3vw, var(--fs--xx-large)), // Font Size:       22px/26px (1.375rem/1.625rem)
-		var(--fw--regular),                        // Font Weight:     Regular
-		var(--lh--body),                            // Line Height:     1.5
+		var(--wp--preset--font-family--primary),                        // Font Family:     Montserrat
+		clamp(var(--wp--preset--font-size--large), 3vw, var(--wp--preset--font-size--xx-large)), // Font Size:       22px/26px (1.375rem/1.625rem)
+		var(--wp--custom--font-weight--regular),                        // Font Weight:     Regular
+		var(--wp--custom--line-height--body),                            // Line Height:     1.5
 		var(--c--base),                           // Color:           See 'background' property
 		none,                                     // Text Decoration: none
 		none, 			                          // Text Transform:  none
 		normal 		                              // Font Style:      normal
 	);
-	background: linear-gradient(to right, var(--c--gradient));
+	background: linear-gradient(to right, var(--wp--preset--gradient--secondary-to-tertiary));
 	-webkit-background-clip: text;
 	background-clip: text;
 	color: transparent;
@@ -78,16 +78,16 @@
 // Description: Large font size and orange gradient color
 %text-400 {
 	@include text(
-		var(--ff--primary),                          // Font Family:       Montserrat
-		clamp(var(--fs--huge), 5vw, var(--fs--gigantic)), // Font Size:         32px/52px (3rem/3.25rem)
-		var(--fw--thin),                             // Font Weight:       Thin
-		var(--lh--body),                              // Line Height:       1.5
+		var(--wp--preset--font-family--primary),                          // Font Family:       Montserrat
+		clamp(var(--wp--preset--font-size--huge), 5vw, var(--wp--preset--font-size--gigantic)), // Font Size:         32px/52px (3rem/3.25rem)
+		var(--wp--custom--font-weight--thin),                             // Font Weight:       Thin
+		var(--wp--custom--line-height--body),                              // Line Height:       1.5
 		var(--c--base),                             // Color:             See 'background' property
 		none,                                       // Text Decoration:   none
 		none, 			                            // Text Transform:    none
 		normal 		                                // Font Style:        normal
 	);
-	background: linear-gradient(to right, var(--c--gradient));
+	background: linear-gradient(to right, var(--wp--preset--gradient--secondary-to-tertiary));
 	-webkit-background-clip: text;
 	background-clip: text;
 	color: transparent;
@@ -101,11 +101,11 @@
 // Description: Small font size and grey color
 %text-500 {
 	@include text(
-		var(--ff--primary), // Font Family:     Montserrat
+		var(--wp--preset--font-family--primary), // Font Family:     Montserrat
 		var(--fs--xsmall),     // Font Size:       16px (1rem)
-		var(--fw--regular), // Font Weight:     Regular
-		var(--lh--body),     // Line Height:     1.5
-		var(--c--grey-300), // Color:           Grey - Medium
+		var(--wp--custom--font-weight--regular), // Font Weight:     Regular
+		var(--wp--custom--line-height--body),     // Line Height:     1.5
+		var(--wp--preset--color--grey-300), // Color:           Grey - Medium
 		none,              // Text Decoration: none
 		none, 			   // Text Transform:  none
 		normal 		       // Font Style:      normal

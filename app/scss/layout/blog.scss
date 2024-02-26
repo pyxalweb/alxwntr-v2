@@ -15,7 +15,7 @@
 }
 
 .blog--archive {
-	margin-block: var(--spacing--400);
+	margin-block: var(--wp--preset--spacing--x-large);
 
 	h1 {
 		@extend %text-400;
@@ -30,7 +30,7 @@
 //  Blog Categories
 // ***********************************
 .blog__categories {
-	margin-block: var(--spacing--400);
+	margin-block: var(--wp--preset--spacing--x-large);
 }
 
 .categories__container {
@@ -53,9 +53,9 @@
 	}
 
 	&.active {
-		background-color: var(--c--main-alt);
-		color: var(--c--base);
-		box-shadow: 1px 1px 50px var(--c--primary-rgb-10);
+		background-color: var(--wp--preset--color--main-alt);
+		color: var(--wp--preset--color--base);
+		box-shadow: 1px 1px 50px var(--wp--preset--color--primary-rgb-10);
 		text-shadow: none;
 	}
 
@@ -66,7 +66,7 @@
 
 .categories__select {
 	@extend %button;
-	box-shadow: 1px 1px 50px var(--c--primary-rgb-10);
+	box-shadow: 1px 1px 50px var(--wp--preset--color--primary-rgb-10);
 	display: none;
 
 	@media (max-width: viewports.$vw-500) {
@@ -81,7 +81,7 @@
 //  Blog Posts
 // ***********************************
 .blog__posts {
-	margin-bottom: var(--spacing--400);
+	margin-bottom: var(--wp--preset--spacing--x-large);
 
 	&.empty {
 		display: none;
@@ -96,14 +96,14 @@
 			display: block;
 			width: 100%;
 			height: 2px;
-			background-color: var(--c--grey-100);
+			background-color: var(--wp--preset--color--grey-100);
 			position: absolute;
 			inset: 50% auto auto auto;
 			z-index: -1;
 		}
 
 		span {
-			background-color: var(--c--main);
+			background-color: var(--wp--preset--color--main);
 			padding-inline: 1em;
 		}
 	}
@@ -114,7 +114,7 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 3em;
-	margin-block: var(--spacing--400);
+	margin-block: var(--wp--preset--spacing--x-large);
 
 	@media (max-width: viewports.$vw-500) {
 		grid-template-columns: 1fr;
@@ -130,7 +130,7 @@
 	justify-content: center;
 	position: relative;
 	padding: 5em 3em;
-	background-color: var(--c--grey-200);
+	background-color: var(--wp--preset--color--grey-200);
 	border-radius: 1em;
 
 	&.fade {
@@ -195,7 +195,7 @@
 // ***********************************
 .blog__more {
 	width: min(300px, 100%);
-	margin-bottom: var(--spacing--400);
+	margin-bottom: var(--wp--preset--spacing--x-large);
 	margin-inline: auto;
 	text-align: center;
 }
@@ -208,7 +208,7 @@
 // ***********************************
 .error {
 	background-color: #9d0000;
-	color: var(--c--base);
+	color: var(--wp--preset--color--base);
 	inset: 0 auto auto 0;
 	opacity: 0;
 	padding-inline: 1em;

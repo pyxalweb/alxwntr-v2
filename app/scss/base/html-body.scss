@@ -16,6 +16,6 @@ html {
 
 body {
 	@extend %text-100;
-	background-color: var(--c--main);
+	background-color: var(--wp--preset--color--main);
 	position: relative;
 }

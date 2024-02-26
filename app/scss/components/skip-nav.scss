@@ -9,8 +9,8 @@
 	a {
 		background-color: #fff;
 		color: #000;
-		font-size: var(--fs--base);
-		font-weight: var(--fw--regular);
+		font-size: var(--wp--preset--font-size--base);
+		font-weight: var(--wp--custom--font-weight--regular);
 		height: 1px;
 		inset: auto auto auto -9999px;
 		overflow: hidden;
