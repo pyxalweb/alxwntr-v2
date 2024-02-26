@@ -1,9 +1,15 @@
 :root {
 	// ***********************************
-	//  Fonts and Text
+	//  Font Families
 	// ***********************************
 	--wp--preset--font-family--primary: 'Montserrat', serif;
 
+
+
+
+	// ***********************************
+	//  Font Sizes
+	// ***********************************
 	--wp--preset--font-size--xx-small: clamp(0.8125rem, 0.813rem + ((1vw - 0.2rem) * 0.106), 0.875rem); // 14
 	--wp--preset--font-size--x-small: clamp(0.875rem, 0.875rem + ((1vw - 0.2rem) * 0.107), 0.9375rem); // 15
 	--wp--preset--font-size--small: clamp(0.9375rem, 0.938rem + ((1vw - 0.2rem) * 0.106), 1rem); // 16
@@ -15,6 +21,12 @@
 	--wp--preset--font-size--huge: clamp(1.625rem, 1.625rem + ((1vw - 0.2rem) * 0.638), 2rem); // 32
 	--wp--preset--font-size--gigantic: clamp(2rem, 2rem + ((1vw - 0.2rem) * 2.128), 3.25rem); // 52
 
+
+
+
+	// ***********************************
+	//  Font Weights
+	// ***********************************
 	--wp--custom--font-weight--thin: 100;
 	--wp--custom--font-weight--extra-light: 200;
 	--wp--custom--font-weight--light: 300;
@@ -25,6 +37,12 @@
 	--wp--custom--font-weight--extra-bold: 800;
 	--wp--custom--font-weight--extra-black: 900;
 
+
+
+
+	// ***********************************
+	//  Line Heights
+	// ***********************************
 	--wp--custom--line-height--none: 1;
 	--wp--custom--line-height--tight: 1.1;
 	--wp--custom--line-height--snug: 1.2;
