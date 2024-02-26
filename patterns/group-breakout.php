@@ -27,7 +27,7 @@ wp:group {
 <div class="wp-block-group has-grey-200-background-color has-background group--breakout">
     <!--
     wp:group {
-        "className":"content width-400",
+        "className":"content width-small",
         "layout":{
             "type":"constrained"
         },
@@ -36,7 +36,7 @@ wp:group {
         }
     }
     -->
-    <div class="wp-block-group content width-400">
+    <div class="wp-block-group content width-small">
         <!-- wp:paragraph --><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil veritatis rerum distinctio alias blanditiis quae corrupti? Magnam, iste. Velit, sunt distinctio. Dolorum, laborum saepe. Animi beatae quo consequatur repellendus ipsam?</p><!-- /wp:paragraph -->
     </div><!-- /wp:group -->
 </div><!-- /wp:group -->

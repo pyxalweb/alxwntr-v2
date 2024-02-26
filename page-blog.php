@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <main id="site-main" class="site-main interior">
-    <section class="blog blog--archive | content width-700" role="region" aria-label="Blog Posts">
+    <section class="blog blog--archive | content width--x-large" role="region" aria-label="Blog Posts">
         <h1>Blog</h1>
 
         <?php

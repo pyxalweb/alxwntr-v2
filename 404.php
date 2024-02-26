@@ -7,7 +7,7 @@ get_header();
 ?>
 
 <main id="site-main" class="site-main interior">
-    <section class="error-page | content width-400 | text-100 text-400--h1">
+    <section class="error-page | content width-small | text-100 text-400--h1">
         <h1>404</h1>
 
         <?php

@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <main id="site-main" class="site-main interior">
-    <article class="article | content width-400">
+    <article class="article | content width-small">
         <header>
             <h1><?php the_title(); ?></h1>
         </header>

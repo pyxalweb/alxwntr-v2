@@ -24,7 +24,7 @@
 <?php get_template_part( 'template-parts/site', 'skip-nav' ); ?>
 
 <header id="site-header" class="site-header">
-	<div class="header__container content width-700">
+	<div class="header__container content width--x-large">
 		<?php get_template_part( 'template-parts/site', 'logo' ); ?>
 
         <?php get_template_part( 'template-parts/site', 'navigation' ); ?>

@@ -2,7 +2,7 @@
 
 <main id="site-main" class="site-main interior">
     <?php while(have_posts()) { the_post(); ?>
-        <article class="article | content width-400">
+        <article class="article | content width-small">
             <header>
                 <h1><?php the_title(); ?></h1>
             </header>

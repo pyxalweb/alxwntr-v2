@@ -27,7 +27,7 @@
 	cursor: pointer;
 	padding: 0.7em 1.25em;
 	text-align: center;
-	transition: all var(--t--fast);
+	transition: all var(--transition--fast);
 
 	&:hover,
 	&:focus {

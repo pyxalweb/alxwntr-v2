@@ -13,5 +13,5 @@
 // ***********************************
 //  Element Widths
 // ***********************************
-.width-400 { width: min(var(--width--small), var(--gutter--normal)); }
-.width-700 { width: min(var(--width--x-large), var(--gutter--normal)); }
+.width-small { width: min(var(--width--small), var(--gutter--normal)); }
+.width--x-large { width: min(var(--width--x-large), var(--gutter--normal)); }
