@@ -59,7 +59,7 @@
 		clamp(var(--wp--preset--font-size--large), 3vw, var(--wp--preset--font-size--xx-large)),
 		var(--wp--custom--font-weight--regular),
 		var(--wp--custom--line-height--body),
-		var(--c--base),
+		var(--wp--preset--color--base),
 		none,
 		none,
 		normal
@@ -82,7 +82,7 @@
 		clamp(var(--wp--preset--font-size--huge), 5vw, var(--wp--preset--font-size--gigantic)),
 		var(--wp--custom--font-weight--thin),
 		var(--wp--custom--line-height--body),
-		var(--c--base),
+		var(--wp--preset--color--base),
 		none,
 		none,
 		normal
