@@ -9,7 +9,25 @@
 // ***********************************
 //  Blocks > Text > Quote
 // ***********************************
-.wp-block-quote {
+// Variation: Default
+.wp-block-quote:not(.is-style-plain) {
+    background-color: var(--wp--preset--color--grey-200);
+    border: 0.25rem solid var(--wp--preset--color--grey-200);
+    color: var(--wp--preset--color--base);
+    padding: var(--wp--preset--spacing--large);
+
+    p {
+        font-size: var(--wp--preset--font-size--medium);
+        margin-bottom: var(--wp--preset--spacing--small)
+    }
+
+    cite {
+        font-size: var(--wp--preset--font-size--medium);
+    }
+}
+
+// Variation: Plain
+.wp-block-quote.is-style-plain {
     border-left: 0.25rem solid var(--wp--preset--color--base);
     padding-left: var(--wp--preset--spacing--large);
 
