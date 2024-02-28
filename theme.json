@@ -94,16 +94,6 @@
 					"color": "#878787",
 					"name": "Grey 300",
 					"slug": "grey-300"
-				},
-				{
-					"color": "#bebebe",
-					"name": "Grey 400",
-					"slug": "grey-400"
-				},
-				{
-					"color": "#dcdcdc",
-					"name": "Grey 500",
-					"slug": "grey-500"
 				}
 			],
 			"link": true
