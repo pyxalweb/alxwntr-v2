@@ -300,7 +300,13 @@
 			"core/code": {
 				"color": {
 					"background": "var(--wp--preset--color--grey-200)",
-					"text": "#ffffff"
+					"text": "var(--wp--preset--color--base)"
+				}
+			},
+			"core/details": {
+				"color": {
+					"background": "var(--wp--preset--color--grey-100)",
+					"text": "var(--wp--preset--color--base)"
 				}
 			},
 			"core/pullquote": {
