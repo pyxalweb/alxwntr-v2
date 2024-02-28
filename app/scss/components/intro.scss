@@ -2,6 +2,7 @@
 //  Required Modules
 // ***********************************
 @use 'base/viewports';
+@use 'base/typography';
 
 
 
@@ -15,10 +16,16 @@
 	padding-bottom: var(--wp--preset--spacing--x-large);
 
 	h2 {
-		margin-bottom: 0.5em;
+		margin-bottom: 1.5rem;
+
+		&.wp-block-heading {
+			@extend %text-400;
+		}
 	}
 
 	.wp-block-columns {
+		margin-bottom: 0;
+
 		@media (max-width: viewports.$viewport--breakpoint--large) {
 			flex-direction: column;
 		}
@@ -37,7 +44,7 @@
 
 		// show three slides in a row on medium-size viewports
 		@media (max-width: viewports.$viewport--breakpoint--large) {
-			margin-top: 3em;
+			margin-top: 3rem;
 			width: 100%;
 			grid-template-columns: repeat(3, 1fr);
 			gap: clamp(0.25em, 2vw, 1em);
