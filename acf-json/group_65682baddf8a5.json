@@ -1,6 +1,6 @@
 {
     "key": "group_65682baddf8a5",
-    "title": "Block: Zig Zag",
+    "title": "Block: Zig Zag  (Deprecated)",
     "fields": [
         {
             "key": "field_65682baeb22f7",
@@ -127,5 +127,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1702355921
+    "modified": 1709191202
 }

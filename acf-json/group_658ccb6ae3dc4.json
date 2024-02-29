@@ -1,6 +1,6 @@
 {
     "key": "group_658ccb6ae3dc4",
-    "title": "Block: Link Button",
+    "title": "Block: Link Button (Deprecated)",
     "fields": [
         {
             "key": "field_658f99fc4eac3",
@@ -338,5 +338,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1704959791
+    "modified": 1709191190
 }

@@ -1,6 +1,6 @@
 {
     "key": "group_6577f25103178",
-    "title": "Block: Highlighted Image",
+    "title": "Block: Highlighted Image (Deprecated)",
     "fields": [
         {
             "key": "field_6577f251e15a4",
@@ -84,5 +84,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1702360206
+    "modified": 1709183350
 }
