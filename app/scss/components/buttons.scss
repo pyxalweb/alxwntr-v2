@@ -11,21 +11,21 @@
 // ***********************************
 %button {
 	@include typography.text(
-		var(--wp--preset--font-family--primary),                        // Font Family: Montserrat
-		clamp(var(--fs--xsmall), 3vw, var(--wp--preset--font-size--base)), // Font Size:   16px/18px (1rem/1.125rem)
-		var(--wp--custom--font-weight--medium),                         // Font Weight: Medium
-		var(--wp--custom--line-height--body),                            // Line Height: 1.5
-		var(--wp--preset--color--primary),                         // Color: Blue
-		none,                                     // Text Decoration: none
-		none,                                     // Text Transform: none
-		normal                                    // Font Style: normal
+		var(--wp--preset--font-family--primary),
+		clamp(var(--fs--xsmall), 3vw, var(--wp--preset--font-size--base)),
+		var(--wp--custom--font-weight--medium),
+		var(--wp--custom--line-height--body),
+		var(--wp--preset--color--primary),
+		none,
+		none,
+		normal
 	);
 	
 	background-color: transparent;
 	border: 1px solid var(--wp--preset--color--grey-100);
-	border-radius: 0 1em;
+	border-radius: 0 1rem;
 	cursor: pointer;
-	padding: 0.7em 1.25em;
+	padding: 0.7em 1.25rem;
 	text-align: center;
 	transition: all var(--transition--fast);
 
