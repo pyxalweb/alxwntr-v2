@@ -1,0 +1,74 @@
+// ***********************************
+//  Required Modules
+// ***********************************
+// None
+
+
+
+
+// ***********************************
+//  Blocks > Text > Table
+//  Note: The 'wp-block-table' element already has some style properties set by default
+//        so we have to be extra specific when targeting it
+//        hence the use of the 'is-root-container' class and the 'main' element
+// ***********************************
+main,
+.is-root-container {
+    // all stlyes
+    .wp-block-table {
+        table {
+            background-color: var(--wp--preset--color--grey-200);
+        }
+
+        thead {
+            border-bottom: 2px solid var(--wp--preset--color--grey-100);
+        }
+
+        tfoot {
+            border-top: 2px solid var(--wp--preset--color--base);
+        }
+
+        figcaption {
+            margin-top: 0.75rem;
+            font-size: var(--wp--preset--font-size--small);
+            text-align: center;
+        }
+
+        th,
+        td {
+            border-right: 1px solid var(--wp--preset--color--grey-100);
+            padding-inline: 1rem;
+
+            &:last-of-type {
+                border-right: 0;
+            }
+        }
+    }
+
+    // Variation: Default
+    .wp-block-table:not(.is-style-stripes) {
+        
+    }
+
+    // Variation: Stripes
+    .wp-block-table.is-style-stripes {
+        border-bottom: 0;
+
+        tbody {
+            tr {
+                &:nth-child(odd) {
+                    background-color: var(--wp--preset--color--main);
+                }
+            }
+        }
+
+        th,
+        td {
+            border-right: 1px solid var(--wp--preset--color--grey-100);
+
+            &:last-of-type {
+                border-right: 0;
+            }
+        }
+    }
+}
