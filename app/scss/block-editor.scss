@@ -21,6 +21,7 @@
 @use 'components/intro';
 @use 'wordpress/wp-block-details';
 @use 'wordpress/wp-block-image';
+@use 'wordpress/wp-block-table';
 
 
 
@@ -28,11 +29,25 @@
 // ***********************************
 //  theme.json
 // ***********************************
-// ***************************
-//  styles: elements: h1
-// ***************************
-:where(.editor-styles-wrapper) h1 {
-    @extend %text-400;
-    margin-block: var(--wp--preset--spacing--x-large);
-    text-align: center;
+#editor .editor-styles-wrapper {
+    // *******************************
+    //  styles: elements: h1
+    // *******************************
+    h1 {
+        @extend %text-400;
+        margin-block: var(--wp--preset--spacing--x-large);
+        text-align: center;
+    }
+
+
+
+
+    // *******************************
+    //  styles: blocks: core/button
+    // *******************************
+    .wp-block-button {
+        .wp-block-button__link {
+            border-radius: 0 1rem;
+        }
+    }
 }
