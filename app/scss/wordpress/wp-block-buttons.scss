@@ -7,18 +7,6 @@
 
 
 // ***********************************
-//  Todo
-// ***********************************
-// - ( ) Top Toolbar > Change items justification
-// - ( ) Top Toolbar > Change vertical alignment
-// - ( ) Top Toolbar > Align
-// - ( ) Layout > Justification
-// - ( ) Typography > Size
-
-
-
-
-// ***********************************
 //  Blocks > Design > Buttons
 // ***********************************
 .wp-block-buttons {
@@ -50,25 +38,46 @@
     }
 }
 
-.wp-block-button {
-    .wp-block-button__link,
-    a {
-        @extend %button--fill;
-        display: block;   
+// ***********************************
+//  Blocks > Design > Buttons > Button
+// ***********************************
+main,
+.is-root-container {
+    // all styles
+    .wp-block-button {
+
     }
 
-    // *******************************
-    //  Styles
-    // *******************************
-    &.is-style-outline {
-        a {
-            @extend %button--outline;
+    // Variation: Default
+    .wp-block-button:not(.is-style-outline) {
+        .wp-block-button__link {
+            @extend %button--fill;
+            display: block;   
         }
     }
 
-    // *******************************
-    //  Width settings
-    // *******************************
+    // Variation: Outline
+    .wp-block-button.is-style-outline {
+        .wp-block-button__link {
+            @extend %button--outline;
+
+            &:not(.has-text-color) {
+                color: var(--wp--preset--color--primary);
+            }
+
+            &:hover,
+            &:focus {
+                color: var(--wp--preset--color--base);
+            }
+        }
+    }
+}
+
+
+// *******************************
+//  Width settings
+// *******************************
+.wp-block-button {
     &.wp-block-button__width-100 {
         flex-basis: 100%;
         flex-grow: 1;
