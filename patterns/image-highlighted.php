@@ -26,20 +26,20 @@ wp:group {
         "spacing":{
             "margin":{
                 "top":"0",
-                "bottom":"var:preset|spacing|2"
+                "bottom":"var:preset|spacing|medium"
             },
             "blockGap":"0",
             "padding":{
-                "top":"var:preset|spacing|2",
-                "bottom":"var:preset|spacing|2",
-                "left":"var:preset|spacing|2",
-                "right":"var:preset|spacing|2"
+                "top":"var:preset|spacing|medium",
+                "bottom":"var:preset|spacing|medium",
+                "left":"var:preset|spacing|medium",
+                "right":"var:preset|spacing|medium"
             }
         }
     }
 }
 -->
-<div class="wp-block-group has-grey-200-background-color has-background image--highlighted" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--2);padding-top:var(--wp--preset--spacing--2);padding-right:var(--wp--preset--spacing--2);padding-bottom:var(--wp--preset--spacing--2);padding-left:var(--wp--preset--spacing--2)">
+<div class="wp-block-group has-grey-200-background-color has-background image--highlighted" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--medium);padding-top:var(--wp--preset--spacing--medium);padding-right:var(--wp--preset--spacing--medium);padding-bottom:var(--wp--preset--spacing--medium);padding-left:var(--wp--preset--spacing--medium)">
     <!--
     wp:image {
         "align":"center",
