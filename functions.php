@@ -468,4 +468,19 @@ function enqueue_404_scripts() {
 	}
 }
 add_action('wp_enqueue_scripts', 'enqueue_404_scripts');
+
+
+
+
+// ***********************************
+//  wp-block-gallery
+//  Do not enqueue WordPress' default gallery block styles
+// ***********************************
+// Function to dequeue the gallery block styles
+function remove_gallery_block_styles() {
+    wp_dequeue_style('wp-block-gallery'); // Handle for the gallery block stylesheet
+    wp_deregister_style('wp-block-gallery'); // Deregister the stylesheet to be extra sure
+}
+// Hook into the appropriate action
+add_action('wp_enqueue_scripts', 'remove_gallery_block_styles', 100);
 ?>
