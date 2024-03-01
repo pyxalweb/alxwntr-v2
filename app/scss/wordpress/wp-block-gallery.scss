@@ -1,0 +1,23 @@
+// ***********************************
+//  Required Modules
+// ***********************************
+// None
+
+
+
+
+// ***********************************
+//  Blocks > Media > Gallery
+// ***********************************
+.wp-block-gallery {
+    display: grid;
+    gap: var(--wp--preset--spacing--small);
+
+    &.columns-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .wp-block-image {
+        width: 100%;
+    }
+}
