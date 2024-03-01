@@ -11,11 +11,6 @@
 // ***********************************
 .article {
 	margin-block: var(--wp--preset--spacing--x-large);
-
-	h1 {
-		@extend %text-400;
-		text-align: center;
-	}
 }
 
 .article__content {

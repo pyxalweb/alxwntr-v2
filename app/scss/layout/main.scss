@@ -1,0 +1,37 @@
+// ***********************************
+//  Required Modules
+// ***********************************
+@use 'base/typography';
+
+
+
+
+// ***********************************
+//  Main
+// ***********************************
+main.site-main {
+    h1 {
+		@extend %text-400;
+		text-align: center;
+	}
+
+    h2 {
+        @extend %text-300;
+    }
+
+    h3 {
+        @extend %text-200;
+    }
+
+    h4 {
+        @extend %text-200;
+    }
+
+    h5 {
+        @extend %text-200;
+    }
+
+    h6 {
+        @extend %text-200;
+    }
+}
