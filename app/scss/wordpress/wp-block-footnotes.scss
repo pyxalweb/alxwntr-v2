@@ -1,0 +1,28 @@
+// ***********************************
+//  Required Modules
+// ***********************************
+// None
+
+
+
+
+// ***********************************
+//  Blocks > Text > Footnotes
+// ***********************************
+// footnote block
+.wp-block-footnotes {
+    background-color: var(--wp--preset--color--grey-200);
+    margin-left: 0;
+    padding: var(--wp--preset--spacing--small);
+    padding-left: var(--wp--preset--spacing--medium);
+}
+
+// individual footnote
+// the following CSS prevents the footnote from messing up the parent text's line height
+.fn {
+    bottom: 0.625rem;
+    font-size: 1rem;
+    margin-left: 0.25rem;
+    position: relative;
+    vertical-align: baseline;
+}
