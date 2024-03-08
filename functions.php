@@ -331,11 +331,8 @@ add_action('init', 'remove_svg', 30);
 // ***********************************
 add_action( 'init', 'register_acf_blocks' );
 function register_acf_blocks() {
-	register_block_type( __DIR__ . '/blocks/highlighted-image' );
 	register_block_type( __DIR__ . '/blocks/image-slideshow' );
-	register_block_type( __DIR__ . '/blocks/link-button' );
 	register_block_type( __DIR__ . '/blocks/sounds' );
-	register_block_type( __DIR__ . '/blocks/zig-zag' );
 }
 
 // ***********************************
@@ -346,11 +343,8 @@ function register_acf_blocks() {
 // Output the contents of the .css file within a <style> tag in the <head>
 function inline_block_styles() {
 	$blocks = array(
-		'acf/highlighted-image' => '/blocks/highlighted-image/highlighted-image.css',
 		'acf/image-slideshow'   => '/blocks/image-slideshow/image-slideshow.css',
-		'acf/link-button'       => '/blocks/link-button/link-button.css',
 		'acf/sounds'            => '/blocks/sounds/sounds.css',
-		'acf/zig-zag'           => '/blocks/zig-zag/zig-zag.css',
 	);
 
 	foreach ($blocks as $block => $css_path) {
