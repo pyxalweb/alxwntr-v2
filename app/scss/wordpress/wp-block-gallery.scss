@@ -10,9 +10,11 @@
 //  Blocks > Media > Gallery
 // ***********************************
 .wp-block-gallery {
+    background-color: rebeccapurple;
     display: grid;
     margin-inline: auto;
     gap: var(--wp--preset--spacing--small);
+    grid-template-columns: repeat(3, 1fr);
     width: fit-content;
 
     &.columns-1 {
