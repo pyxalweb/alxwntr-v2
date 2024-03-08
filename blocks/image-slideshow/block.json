@@ -1,4 +1,5 @@
 {
+    "$schema": "https://advancedcustomfields.com/schemas/json/main/block.json",
     "name": "acf/image-slideshow",
     "title": "Image Slideshow",
     "description": "A slideshow of images or photos.",
