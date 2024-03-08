@@ -6,7 +6,7 @@
     "editorStyle": [ "file:./highlighted-image.css" ],
     "script": "",
     "editorScript": "",
-    "category": "formatting",
+    "category": "media",
     "icon": "format-image",
     "keywords": [ "image", "highlighted image" ],
     "acf": {
