@@ -6,8 +6,8 @@
     "editorStyle": [ "file:./image-slideshow.css" ],
     "script": "",
     "editorScript": "",
-    "category": "formatting",
-    "icon": "format-image",
+    "category": "media",
+    "icon": "format-gallery",
     "keywords": [ "image", "photo", "slideshow", "gallery" ],
     "acf": {
         "mode": "preview",

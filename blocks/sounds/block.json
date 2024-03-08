@@ -6,8 +6,8 @@
     "editorStyle": [ "file:./sounds.css" ],
     "script": "",
     "editorScript": "sounds",
-    "category": "formatting",
-    "icon": "format-image",
+    "category": "media",
+    "icon": "format-audio",
     "keywords": [ "sounds", "audio", "music", "mp3", "wav" ],
     "acf": {
         "mode": "preview",
