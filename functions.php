@@ -483,4 +483,30 @@ function remove_gallery_block_styles() {
 }
 // Hook into the appropriate action
 add_action('wp_enqueue_scripts', 'remove_gallery_block_styles', 100);
+
+
+
+
+add_action( 'init', 'alxwntr_register_pattern_categories' );
+function alxwntr_register_pattern_categories() {
+	register_block_pattern_category( 'alxwntr/code', array( 
+		'label'       => __( '*alxwntr: Code', 'alxwntr' ),
+		'description' => __( 'Display code.', 'alxwntr' )
+	) );
+
+	register_block_pattern_category( 'alxwntr/layouts', array( 
+		'label'       => __( '*alxwntr: Layouts', 'alxwntr' ),
+		'description' => __( 'Add various types of layouts.', 'alxwntr' )
+	) );
+
+	register_block_pattern_category( 'alxwntr/media', array( 
+		'label'       => __( '*alxwntr: Media', 'alxwntr' ),
+		'description' => __( 'Add various types of media.', 'alxwntr' )
+	) );
+
+	register_block_pattern_category( 'alxwntr/text', array( 
+		'label'       => __( '*alxwntr: Text', 'alxwntr' ),
+		'description' => __( 'Add various types of text.', 'alxwntr' )
+	) );
+}
 ?>

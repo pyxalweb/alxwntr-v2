@@ -3,7 +3,7 @@
  * Title: Group - Breakout
  * Slug: group-breakout
  * Description: A group container that breaks out of the parent container.
- * Categories: alxwntr/group
+ * Categories: alxwntr/layouts
  * Keywords: group, breakout, container
  * Viewport Width: 100vw
  * Block Types:
