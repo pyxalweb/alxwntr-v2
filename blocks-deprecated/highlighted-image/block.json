@@ -3,7 +3,7 @@
     "name": "acf/highlighted-image",
     "title": "Highlighted Image",
     "description": "An image that is highlighted within the page content.",
-    "style": [],
+    "style": [ ],
     "editorStyle": [ "file:./highlighted-image.css" ],
     "script": "",
     "editorScript": "",
