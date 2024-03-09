@@ -224,9 +224,12 @@ function register_acf_blocks() {
 	register_block_type( __DIR__ . '/blocks/sounds' );
 }
 
+
+
+
 // ***********************************
 //  has_block
-//  Echo inline styles
+//  echo inline styles
 // ***********************************
 // Check if the post has the relevant block (ACF or core)
 // Output the contents of the .css file within a <style> tag in the <head>
@@ -234,6 +237,7 @@ function inline_block_styles() {
 	$blocks = array(
 		'acf/image-slideshow'   => '/blocks/image-slideshow/image-slideshow.css',
 		'acf/sounds'            => '/blocks/sounds/sounds.css',
+		'core/code'             => '/patterns/code/code.css',
 	);
 
 	foreach ($blocks as $block => $css_path) {
@@ -254,55 +258,6 @@ function enqueue_block_scripts() {
     $blocks = array(
         'acf/image-slideshow' => '/blocks/image-slideshow/image-slideshow.min.js',
         'acf/sounds' => '/blocks/sounds/sounds.min.js',
-    );
-
-    foreach ($blocks as $block => $js_path) {
-        if (has_block($block)) {
-            wp_enqueue_script(
-                $block, // Script handle (unique name for the script)
-                get_template_directory_uri() . $js_path, // Script URL
-                array(), // Dependencies (optional)
-                filemtime(get_template_directory() . $js_path), // Version (using file modification time)
-                true // Enqueue in the footer
-            );
-        }
-    }
-}
-add_action('wp_enqueue_scripts', 'enqueue_block_scripts');
-
-
-
-
-// ***********************************
-//  has_block - Core
-//  Echo inline styles
-// ***********************************
-// Check if the post has the relevant block (ACF or core)
-// Output the contents of the .css file within a <style> tag in the <head>
-function inline_core_styles() {
-	$blocks = array(
-		'core/code' => '/patterns/code/code.css',
-	);
-
-	foreach ($blocks as $block => $css_path) {
-		if (has_block($block)) {
-			echo "\n<!-- style: $block -->\n<style>" . file_get_contents(get_template_directory() . $css_path) . "</style>\n";
-		}
-	}
-}
-add_action('wp_head', 'inline_core_styles');
-
-
-
-
-// ***********************************
-//  has_block - Core
-//  enqueue scripts
-// ***********************************
-// Check if the post has the relevant block (ACF or core)
-// Reference the script within a <script> tag before the closing </body>
-function enqueue_core_scripts() {
-    $blocks = array(
 		'core/code' => '/patterns/code/code.min.js',
     );
 
@@ -318,7 +273,7 @@ function enqueue_core_scripts() {
         }
     }
 }
-add_action('wp_enqueue_scripts', 'enqueue_core_scripts');
+add_action('wp_enqueue_scripts', 'enqueue_block_scripts');
 
 
 
@@ -360,7 +315,7 @@ add_action('wp_enqueue_scripts', 'enqueue_404_scripts');
 
 // ***********************************
 //  wp-block-gallery
-//  Do not enqueue WordPress' default gallery block styles
+//  Do not enqueue WordPress' default (core) gallery block styles
 // ***********************************
 // Function to dequeue the gallery block styles
 function remove_gallery_block_styles() {
