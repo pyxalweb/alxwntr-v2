@@ -385,12 +385,12 @@ add_action('wp_enqueue_scripts', 'enqueue_block_scripts');
 
 
 // ***********************************
-//  has_block - Patterns
+//  has_block - Core
 //  Echo inline styles
 // ***********************************
 // Check if the post has the relevant block (ACF or core)
 // Output the contents of the .css file within a <style> tag in the <head>
-function inline_pattern_styles() {
+function inline_core_styles() {
 	$blocks = array(
 		'core/code' => '/patterns/code/code.css',
 	);
@@ -401,15 +401,18 @@ function inline_pattern_styles() {
 		}
 	}
 }
-add_action('wp_head', 'inline_pattern_styles');
+add_action('wp_head', 'inline_core_styles');
+
+
+
 
 // ***********************************
-//  has_block - Patterns
+//  has_block - Core
 //  enqueue scripts
 // ***********************************
 // Check if the post has the relevant block (ACF or core)
 // Reference the script within a <script> tag before the closing </body>
-function enqueue_pattern_scripts() {
+function enqueue_core_scripts() {
     $blocks = array(
 		'core/code' => '/patterns/code/code.min.js',
     );
@@ -426,7 +429,7 @@ function enqueue_pattern_scripts() {
         }
     }
 }
-add_action('wp_enqueue_scripts', 'enqueue_pattern_scripts');
+add_action('wp_enqueue_scripts', 'enqueue_core_scripts');
 
 
 
