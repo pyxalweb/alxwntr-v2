@@ -24,6 +24,7 @@
 @use 'wordpress/wp-block-image';
 @use 'wordpress/wp-block-table';
 @use 'wordpress/wp-block-gallery';
+@use 'wordpress/wp-block-file';
 
 
 
@@ -77,5 +78,34 @@
                 width: 100%;
             }
         }
+    }
+
+
+
+
+    // ***********************************
+    //  Blocks > Media > File
+    // ***********************************
+    .wp-block-file {
+        border: 1px solid var(--wp--preset--color--grey-100);
+        border-radius: 0 1rem;
+        font-size: inherit;
+        padding: 1rem;
+        text-align: center;
+        width: min(300px, 100%);
+    }
+
+    .wp-block-file__content-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: var(--wp--preset--spacing--small);
+    }
+
+    .wp-block-file__button-richtext-wrapper {
+        margin-left: 0;
+    }
+    
+    .wp-block-file__button {
+        @extend %button--fill;
     }
 }

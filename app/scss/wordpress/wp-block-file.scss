@@ -7,13 +7,15 @@
 
 
 // ***********************************
-//  Blocks > Text > Quote
+//  Blocks > Media > File
 // ***********************************
+// frontend
 .wp-block-file {
     border: 1px solid var(--wp--preset--color--grey-100);
     border-radius: 0 1rem;
     display: flex;
     flex-direction: column;
+    gap: var(--wp--preset--spacing--small);
     font-size: inherit;
     padding: 1rem;
     text-align: center;
