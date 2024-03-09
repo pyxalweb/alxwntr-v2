@@ -21,18 +21,18 @@
 @use 'components/ordered-list';
 @use 'components/skip-nav';
 
-@use 'wordpress/wp-block-heading';
-@use 'wordpress/wp-block-columns';
 @use 'wordpress/wp-block-buttons';
-@use 'wordpress/wp-block-image';
+@use 'wordpress/wp-block-columns';
 @use 'wordpress/wp-block-cover';
-@use 'wordpress/wp-block-quote';
-@use 'wordpress/wp-block-pullquote';
 @use 'wordpress/wp-block-details';
-@use 'wordpress/wp-block-table';
+@use 'wordpress/wp-block-file';
 @use 'wordpress/wp-block-footnotes';
 @use 'wordpress/wp-block-gallery';
-@use 'wordpress/wp-block-file';
+@use 'wordpress/wp-block-heading';
+@use 'wordpress/wp-block-image';
+@use 'wordpress/wp-block-pullquote';
+@use 'wordpress/wp-block-quote';
+@use 'wordpress/wp-block-table';
 
 @use 'wordpress/wp-classes';
 
