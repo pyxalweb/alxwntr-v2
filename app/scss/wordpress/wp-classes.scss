@@ -57,3 +57,77 @@
 .has-grey-100-background-color  { background-color: var(--wp--preset--color--grey-100); }
 .has-grey-200-background-color  { background-color: var(--wp--preset--color--grey-200); }
 .has-grey-300-background-color  { background-color: var(--wp--preset--color--grey-300); }
+
+
+
+
+// ***********************************
+//  Layout Classes:
+// ***********************************
+// .is-layout-constrained {
+
+// }
+
+// .is-layout-flow {
+
+// }
+
+// .is-layout-flex {
+    
+// }
+
+
+
+
+// ***********************************
+//  Flex Orientation (Direction) Classes:
+// ***********************************
+// .is-vertical {
+
+// }
+
+// .is-horizontal {
+
+// }
+
+
+
+
+// ***********************************
+//  Content Justification Classes:
+// ***********************************
+.is-content-justification-left {
+    justify-content: flex-start;
+}
+
+.is-content-justification-center {
+    justify-content: center;
+}
+
+.is-content-justification-right {
+    justify-content: flex-end;
+}
+
+.is-content-justification-space-between {
+    justify-content: space-between;
+}
+
+
+
+
+// ***********************************
+//  Flex Wrap Classes
+// ***********************************
+// .is-nowrap {
+
+// }
+
+
+
+
+// ***********************************
+//  Container Classes:
+// ***********************************
+// .wp-container {
+
+// }

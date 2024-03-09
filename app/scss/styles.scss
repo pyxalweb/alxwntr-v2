@@ -33,7 +33,7 @@
 @use 'wordpress/wp-block-footnotes';
 @use 'wordpress/wp-block-gallery';
 @use 'wordpress/wp-block-file';
-@use 'wordpress/has-classes';
-@use 'wordpress/is-classes';
+
+@use 'wordpress/wp-classes';
 
 @use 'base/utilities';
