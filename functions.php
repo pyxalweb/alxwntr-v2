@@ -314,16 +314,21 @@ add_action('wp_enqueue_scripts', 'enqueue_404_scripts');
 
 
 // ***********************************
-//  wp-block-gallery
+//  Remove default block styles
 //  Do not enqueue WordPress' default (core) gallery block styles
+//  This is handy in preventing CSS specificity issues and writing cleaner CSS
 // ***********************************
 // Function to dequeue the gallery block styles
-function remove_gallery_block_styles() {
-    wp_dequeue_style('wp-block-gallery'); // Handle for the gallery block stylesheet
-    wp_deregister_style('wp-block-gallery'); // Deregister the stylesheet to be extra sure
+function remove_default_block_styles() {
+	// wp-block-gallery
+    wp_dequeue_style('wp-block-gallery');
+    wp_deregister_style('wp-block-gallery');
+
+	// wp-block-file
+	wp_dequeue_style('wp-block-file');
+	wp_deregister_style('wp-block-file');
 }
-// Hook into the appropriate action
-add_action('wp_enqueue_scripts', 'remove_gallery_block_styles', 100);
+add_action('wp_enqueue_scripts', 'remove_default_block_styles', 100);
 
 
 
