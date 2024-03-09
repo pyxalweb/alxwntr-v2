@@ -1,0 +1,83 @@
+// ***********************************
+//  Required Modules
+// ***********************************
+@import 'base/viewports';
+
+
+
+
+// ***********************************
+//  Blocks > Media > Media & Text
+// ***********************************
+.wp-block-media-text {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+// content spacing
+.wp-block-media-text {
+    .wp-block-media-text__content {
+        margin-left: 1rem;
+    }
+}
+
+.wp-block-media-text.has-media-on-the-right {
+    .wp-block-media-text__content {
+        margin-left: 0;
+        margin-right: 1rem;
+    }
+}
+
+// content vertical alignment
+.wp-block-media-text.is-vertically-aligned-center {
+    .wp-block-media-text__content {
+        align-self: center;
+    }
+}
+
+.wp-block-media-text.is-vertically-aligned-bottom {
+    .wp-block-media-text__content {
+        align-self: end;
+    }
+}
+
+// responsive
+@media (max-width: $viewport--breakpoint--medium) {
+    .wp-block-media-text.is-stacked-on-mobile {
+        // switch to flexbox instead of grid for more control
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 4rem;
+
+        // this would center text horizontally in this case and that is not desired
+        &.is-vertically-aligned-center {
+            .wp-block-media-text__content {
+                align-self: start;
+            }
+        }
+
+        // these margins are no longer desired
+        .wp-block-media-text__content {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        // display the text first, media second
+        .wp-block-media-text__content {
+            order: 1;
+        }
+
+        .wp-block-media-text__media {
+            order: 2;
+        }
+
+        // center the media horizontally
+        .wp-block-media-text__media {
+            picture,
+            img {
+                margin-inline: auto;
+            }
+        }
+    }
+}

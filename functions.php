@@ -327,6 +327,10 @@ function remove_default_block_styles() {
 	// wp-block-file
 	wp_dequeue_style('wp-block-file');
 	wp_deregister_style('wp-block-file');
+
+	// wp-block-media-text
+	wp_dequeue_style('wp-block-media-text');
+	wp_deregister_style('wp-block-media-text');
 }
 add_action('wp_enqueue_scripts', 'remove_default_block_styles', 100);
 
