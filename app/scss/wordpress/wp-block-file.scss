@@ -1,0 +1,25 @@
+// ***********************************
+//  Required Modules
+// ***********************************
+@use 'components/buttons';
+
+
+
+
+// ***********************************
+//  Blocks > Text > Quote
+// ***********************************
+.wp-block-file {
+    border: 1px solid var(--wp--preset--color--grey-100);
+    border-radius: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    font-size: inherit;
+    padding: 1rem;
+    text-align: center;
+    width: min(300px, 100%);
+}
+
+.wp-block-file__button {
+    @extend %button--fill;
+}
