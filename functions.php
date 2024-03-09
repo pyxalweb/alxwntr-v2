@@ -373,6 +373,9 @@ add_action('wp_enqueue_scripts', 'remove_gallery_block_styles', 100);
 
 
 
+// ***********************************
+//  Register pattern categories
+// ***********************************
 add_action( 'init', 'alxwntr_register_pattern_categories' );
 function alxwntr_register_pattern_categories() {
 	register_block_pattern_category( 'alxwntr/code', array( 
