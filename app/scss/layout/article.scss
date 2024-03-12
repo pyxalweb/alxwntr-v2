@@ -13,6 +13,15 @@
 	margin-block: var(--wp--preset--spacing--x-large);
 }
 
+.article__featured-image {
+	    margin-block: var(--wp--preset--spacing--x-large);
+
+	img {
+		border: 0.25rem solid var(--wp--preset--color--grey-300);
+		margin-inline: auto;
+	}
+}
+
 .article__content {
 	margin-block: var(--wp--preset--spacing--x-large);
 }

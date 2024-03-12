@@ -7,6 +7,10 @@
                 <h1><?php the_title(); ?></h1>
             </header>
 
+            <div class="article__featured-image">
+                <?php the_post_thumbnail(); ?>
+            </div>
+
             <div class="article__content">
                 <?php the_content(); ?>
             </div>
