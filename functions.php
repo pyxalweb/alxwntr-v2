@@ -171,16 +171,14 @@ function remove_bloat() {
 }
 add_action('init', 'remove_bloat', 30);
 
-// Remove Gutenberg block editor:
-// <link rel='stylesheet' id='classic-theme-styles-css' href='http://domain.com/wp-includes/css/classic-themes.min.css?ver=6.2.2' type='text/css' media='all' />
-// <link rel='stylesheet' id='wp-block-library-css' href='http://domain.com/wp-includes/css/dist/block-library/style.min.css?ver=6.2.2' type='text/css' media='all' />
-// <style id='global-styles-inline-css' type='text/css'> ... </style>
-function remove_gutenberg() {
-	wp_dequeue_style('classic-theme-styles');
+// Remove WP Block Library Inline CSS
+// <style id='wp-block-library-inline-css'> ... </style>
+function remove_wp_block_library_inline_css() {
+	// wp_dequeue_style('classic-theme-styles');
 	wp_dequeue_style('wp-block-library');
-	wp_dequeue_style('global-styles');
+	// wp_dequeue_style('global-styles');
 }
-add_action('wp_enqueue_scripts', 'remove_gutenberg', 30);
+add_action('wp_enqueue_scripts', 'remove_wp_block_library_inline_css', 30);
 
 // Remove default icons:
 // <link rel="icon" href="http://domain.com/wp-content/uploads/2023/03/cropped-favicon-32x32.png" sizes="32x32" />
@@ -318,7 +316,7 @@ add_action('wp_enqueue_scripts', 'enqueue_404_scripts');
 //  Do not enqueue WordPress' default (core) gallery block styles
 //  This is handy in preventing CSS specificity issues and writing cleaner CSS
 // ***********************************
-// Function to dequeue the gallery block styles
+// Function to dequeue the default block styles
 function remove_default_block_styles() {
 	// wp-block-gallery
     wp_dequeue_style('wp-block-gallery');
@@ -331,6 +329,10 @@ function remove_default_block_styles() {
 	// wp-block-media-text
 	wp_dequeue_style('wp-block-media-text');
 	wp_deregister_style('wp-block-media-text');
+
+	// wp-block-columns
+	// wp_dequeue_style('wp-block-columns');
+	// wp_deregister_style('wp-block-columns');
 }
 add_action('wp_enqueue_scripts', 'remove_default_block_styles', 100);
 
