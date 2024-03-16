@@ -3,7 +3,7 @@
  * Title: Code - HTML
  * Slug: code-html
  * Description: Display code with HTML syntax highlighting.
- * Categories: alxwntr/code
+ * Categories: 
  * Keywords: code, html
  * Viewport Width: 960
  * Block Types:

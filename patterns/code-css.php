@@ -3,7 +3,7 @@
  * Title: Code - CSS
  * Slug: code-css
  * Description: Display code with CSS syntax highlighting.
- * Categories: alxwntr/code
+ * Categories: 
  * Keywords: code, css
  * Viewport Width: 960
  * Block Types:

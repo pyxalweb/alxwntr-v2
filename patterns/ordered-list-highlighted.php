@@ -3,7 +3,7 @@
  * Title: Ordered List - Highlighted
  * Slug: ordered-list-highlighted
  * Description: An ordered list with more stylish features.
- * Categories: alxwntr/text
+ * Categories: 
  * Keywords: list, ordered list, numbered list
  * Viewport Width: 960
  * Block Types:

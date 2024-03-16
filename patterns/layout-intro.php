@@ -3,7 +3,7 @@
  * Title: Layout - Intro
  * Slug: layout-intro
  * Description: Two column layout with text and an image slideshow.
- * Categories: alxwntr/layouts
+ * Categories: 
  * Keywords: layout, columns, intro, image, photo, slideshow
  * Viewport Width: 960
  * Block Types:

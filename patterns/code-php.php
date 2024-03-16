@@ -3,7 +3,7 @@
  * Title: Code - PHP
  * Slug: code-php
  * Description: Display code with PHP syntax highlighting.
- * Categories: alxwntr/code
+ * Categories: 
  * Keywords: code, php
  * Viewport Width: 960
  * Block Types:

@@ -3,7 +3,7 @@
  * Title: Code - JS
  * Slug: code-js
  * Description: Display code with JavaScript syntax highlighting.
- * Categories: alxwntr/code
+ * Categories: 
  * Keywords: code, js, javascript
  * Viewport Width: 960
  * Block Types:

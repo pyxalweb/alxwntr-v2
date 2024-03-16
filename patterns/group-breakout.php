@@ -3,7 +3,7 @@
  * Title: Group - Breakout
  * Slug: group-breakout
  * Description: A group container that breaks out of the parent container.
- * Categories: alxwntr/layouts
+ * Categories: 
  * Keywords: group, breakout, container
  * Block Types:
  * Post Types:

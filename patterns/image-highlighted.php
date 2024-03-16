@@ -3,7 +3,7 @@
  * Title: Image - Highlighted
  * Slug: image-highlighted
  * Description: An image with a background color, padding, and caption.
- * Categories: alxwntr/media
+ * Categories: 
  * Keywords: image, picture, photo
  * Viewport Width: 960
  * Block Types:
