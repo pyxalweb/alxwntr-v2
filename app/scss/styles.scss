@@ -9,8 +9,9 @@
 @use 'layout/header';
 @use 'layout/footer';
 @use 'layout/main';
-@use 'layout/article';
+@use 'layout/wrap';
 @use 'layout/content';
+@use 'layout/article';
 @use 'layout/breakout';
 @use 'layout/blog';
 @use 'layout/error-page';

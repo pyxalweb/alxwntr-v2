@@ -17,5 +17,8 @@ html {
 body {
 	@extend %text-100;
 	background-color: var(--wp--preset--color--main);
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 	position: relative;
 }

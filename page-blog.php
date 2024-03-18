@@ -1,57 +1,59 @@
 <?php get_header(); ?>
 
 <main id="site-main" class="site-main interior">
-    <section class="blog blog--archive | content width--x-large" role="region" aria-label="Blog Posts">
-        <h1>Blog</h1>
+    <section class="blog | wrap" role="region" aria-label="Blog Posts">
+        <div class="blog__container | content width--x-large">
+            <h1>Blog</h1>
 
-        <?php
-        // Check if there are any blog posts from the past year
-        // if there are no blog posts then return
-        $date_query = null;
+            <?php
+            // Check if there are any blog posts from the past year
+            // if there are no blog posts then return
+            $date_query = null;
 
-        $posts = new WP_Query(array (
-            'date_query' => $date_query,
-        ));
+            $posts = new WP_Query(array (
+                'date_query' => $date_query,
+            ));
 
-        if (!$posts->have_posts()) {
-            // do nothing
-        }
-        else {
-            // display posts
+            if (!$posts->have_posts()) {
+                // do nothing
+            }
+            else {
+                // display posts
 
-            // we don't want the past year on this page
-            $past_year = false;
+                // we don't want the past year on this page
+                $past_year = false;
 
-            // we want all years for the categories on this page
-            $all_years = true;
-            $year = '';
-            get_template_part('template-parts/blog', 'categories', array('past_year' => $past_year, 'all_years' => $all_years, 'year' => $year));
+                // we want all years for the categories on this page
+                $all_years = true;
+                $year = '';
+                get_template_part('template-parts/blog', 'categories', array('past_year' => $past_year, 'all_years' => $all_years, 'year' => $year));
 
-            // set $all_years to false so that we can then get the posts for each year
-            $all_years = false;
-        ?>
+                // set $all_years to false so that we can then get the posts for each year
+                $all_years = false;
+            ?>
 
-        <?php
-            $year = '2024';
-            get_template_part('template-parts/blog', 'posts', array('past_year' => $past_year, 'all_years' => $all_years, 'year' => $year));
-        ?>
+            <?php
+                $year = '2024';
+                get_template_part('template-parts/blog', 'posts', array('past_year' => $past_year, 'all_years' => $all_years, 'year' => $year));
+            ?>
 
-        <?php
-            $year = '2023';
-            get_template_part('template-parts/blog', 'posts', array('past_year' => $past_year, 'all_years' => $all_years, 'year' => $year));
-        ?>
+            <?php
+                $year = '2023';
+                get_template_part('template-parts/blog', 'posts', array('past_year' => $past_year, 'all_years' => $all_years, 'year' => $year));
+            ?>
 
-        <?php
-            $year = '2022';
-            get_template_part('template-parts/blog', 'posts', array('past_year' => $past_year, 'all_years' => $all_years, 'year' => $year));
-        ?>
+            <?php
+                $year = '2022';
+                get_template_part('template-parts/blog', 'posts', array('past_year' => $past_year, 'all_years' => $all_years, 'year' => $year));
+            ?>
 
-        <?php
-            $year = '2021';
-            get_template_part('template-parts/blog', 'posts', array('past_year' => $past_year, 'all_years' => $all_years, 'year' => $year));
-        ?>
+            <?php
+                $year = '2021';
+                get_template_part('template-parts/blog', 'posts', array('past_year' => $past_year, 'all_years' => $all_years, 'year' => $year));
+            ?>
 
-        <?php } ?>
+            <?php } ?>
+        </div>
     </section>
 </main>
 

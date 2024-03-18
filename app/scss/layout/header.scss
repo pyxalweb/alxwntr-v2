@@ -11,6 +11,7 @@
 //  Header
 // ***********************************
 header.site-header {
+	border-bottom: 1px solid var(--wp--preset--color--grey-100);
 	margin-bottom: var(--wp--preset--spacing--x-large);
 }
 
@@ -21,7 +22,6 @@ header.site-header {
 //  Container
 // ***********************************
 .header__container {
-	border-bottom: 1px solid var(--wp--preset--color--grey-100);
     display: flex;
     justify-content: space-between;
 	padding-block: var(--wp--preset--spacing--large);

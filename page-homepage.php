@@ -1,8 +1,10 @@
 <?php get_header(); ?>
 
 <main id="site-main" class="site-main homepage">
-    <section class="intro | content width--x-large">
-        <?php the_content(); ?>
+    <section class="intro | wrap">
+        <div class="intro__container | content width--x-large">
+            <?php the_content(); ?>
+        </div>
     </section>
 </main>
 

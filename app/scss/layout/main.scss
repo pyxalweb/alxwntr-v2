@@ -10,6 +10,8 @@
 //  Main
 // ***********************************
 main.site-main {
+    flex-grow: 1;
+
     h1 {
 		@extend %text-400;
 		text-align: center;

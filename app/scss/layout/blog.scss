@@ -10,13 +10,7 @@
 // ***********************************
 //  Blog Posts Container
 // ***********************************
-.blog--home {
-	text-align: center;
-}
-
-.blog--archive {
-	margin-block: var(--wp--preset--spacing--x-large);
-
+.blog {
 	h1 {
 		@extend %text-400;
 		text-align: center;
@@ -81,7 +75,11 @@
 //  Blog Posts
 // ***********************************
 .blog__posts {
-	margin-bottom: var(--wp--preset--spacing--x-large);
+	margin-block: var(--wp--preset--spacing--x-large);
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
 
 	&.empty {
 		display: none;
@@ -104,6 +102,7 @@
 
 		span {
 			background-color: var(--wp--preset--color--main);
+			color: var(--wp--preset--color--secondary);
 			padding-inline: 1em;
 		}
 	}
@@ -114,7 +113,7 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 3em;
-	margin-block: var(--wp--preset--spacing--x-large);
+	margin-top: var(--wp--preset--spacing--x-large);
 
 	@media (max-width: viewports.$viewport--breakpoint--medium) {
 		grid-template-columns: 1fr;
