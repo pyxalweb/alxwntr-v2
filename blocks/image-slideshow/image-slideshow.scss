@@ -107,14 +107,14 @@
 .slideshow--circular {
     img {
 		border-radius: 100%;
-		border: clamp(0.25em, 2vw, 1em) solid var(--c--grey-100);
+		border: clamp(0.25em, 2vw, 1em) solid var(--wp--preset--color--grey-100);
 	}
 }
 
 .slideshow--rounded {
     img {
 		border-radius: 2rem;
-		border: clamp(0.25em, 2vw, 1em) solid var(--c--grey-100);
+		border: clamp(0.25em, 2vw, 1em) solid var(--wp--preset--color--grey-100);
 	}
 }
 
