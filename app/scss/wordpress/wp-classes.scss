@@ -1,4 +1,13 @@
 // ***********************************
+//  All classes contained 'wp-block-'
+// ***********************************
+[class^='wp-block-'] {
+    margin-bottom: 1rem;
+}
+
+
+
+// ***********************************
 //  Color - Font Color
 // ***********************************
 .has-primary-color   { color: var(--wp--preset--color--primary); }
