@@ -1,6 +1,10 @@
 // ***********************************
 //  Text Elements
 // ***********************************
+p {
+    margin-bottom: 1rem;
+}
+
 strong {
     font-weight: var(--wp--custom--font-weight--bold);
 }
