@@ -7,7 +7,20 @@
 
 
 // ***********************************
-//  Article
+//  Article Heading
+// ***********************************
+.article {
+	h1 {
+		@extend %text-400;
+		text-align: center;
+	}
+}
+
+
+
+
+// ***********************************
+//  Article Images
 // ***********************************
 .article__featured-image {
 	    margin-block: var(--wp--preset--spacing--x-large);
@@ -18,6 +31,12 @@
 	}
 }
 
+
+
+
+// ***********************************
+//  Article Footer
+// ***********************************
 .article {
 	footer {
 		margin-top: var(--wp--preset--spacing--x-large);

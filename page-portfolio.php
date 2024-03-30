@@ -1,10 +1,12 @@
 <?php get_header(); ?>
 
-<main id="site-main" class="site-main interior">
+<main id="site-main" class="site-main">
     <section class="portfolio | wrap" role="region" aria-label="Selected works from Alex Winter's portfolio">
         <div class="portfolio__container | content width--x-large">
-            <h1>Selected Works</h1>
-            <?php the_content(); ?>
+            <header>
+                <h1>Selected Works</h1>
+                <?php the_content(); ?>
+            </header>
 
             <!--
             <div class="portfolio__items">

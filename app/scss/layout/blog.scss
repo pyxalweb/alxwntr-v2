@@ -2,13 +2,14 @@
 //  Required Modules
 // ***********************************
 @use 'base/viewports';
+@use 'base/typography';
 @use 'components/buttons';
 
 
 
 
 // ***********************************
-//  Blog Posts Container
+//  Blog Heading
 // ***********************************
 .blog {
 	h1 {

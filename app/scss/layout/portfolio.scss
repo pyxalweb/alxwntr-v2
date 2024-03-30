@@ -1,14 +1,18 @@
 // ***********************************
 //  Required Modules
 // ***********************************
+@use 'base/viewports';
 @use 'base/typography';
 
 
 
-
 // ***********************************
-//  Main
+//  Blog Posts Container
 // ***********************************
-main.site-main {
-    flex-grow: 1;
+.portfolio {
+	h1 {
+		@extend %text-300;
+        background-color: green;
+		text-align: center;
+	}
 }

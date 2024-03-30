@@ -1,9 +1,11 @@
 <?php get_header(); ?>
 
-<main id="site-main" class="site-main interior">
-    <section class="blog | wrap" role="region" aria-label="Blog Posts">
+<main id="site-main" class="site-main">
+    <section class="blog | wrap" role="region" aria-label="A collection of blog posts sorted by year">
         <div class="blog__container | content width--x-large">
-            <h1>Blog</h1>
+            <header>
+                <h1>Blog</h1>
+            </header>
 
             <?php
             // Check if there are any blog posts from the past year

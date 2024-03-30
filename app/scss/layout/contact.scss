@@ -7,8 +7,11 @@
 
 
 // ***********************************
-//  Main
+//  Contact Heading
 // ***********************************
-main.site-main {
-    flex-grow: 1;
+.contact {
+	h1 {
+		@extend %text-400;
+		text-align: center;
+	}
 }
