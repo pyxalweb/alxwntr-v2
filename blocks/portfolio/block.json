@@ -1,0 +1,20 @@
+{
+    "$schema": "https://advancedcustomfields.com/schemas/json/main/block.json",
+    "name": "acf/portfolio",
+    "title": "Portfolio",
+    "description": "A collection of portfolio items.",
+    "style": [],
+    "editorStyle": [ "file:./portfolio.css" ],
+    "script": "",
+    "editorScript": "",
+    "category": "media",
+    "icon": "images-alt2",
+    "keywords": [ "portfolio", "project" ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "portfolio.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

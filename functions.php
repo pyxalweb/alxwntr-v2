@@ -49,6 +49,7 @@ add_action('enqueue_block_editor_assets', 'enqueue_block_editor_assets');
 add_action( 'init', 'register_acf_blocks' );
 function register_acf_blocks() {
 	register_block_type( __DIR__ . '/blocks/image-slideshow' );
+	register_block_type( __DIR__ . '/blocks/portfolio' );
 	register_block_type( __DIR__ . '/blocks/sounds' );
 }
 
@@ -64,6 +65,7 @@ function register_acf_blocks() {
 function inline_block_styles() {
 	$blocks = array(
 		'acf/image-slideshow'   => '/blocks/image-slideshow/image-slideshow.css',
+		'acf/portfolio'         => '/blocks/portfolio/portfolio.css',
 		'acf/sounds'            => '/blocks/sounds/sounds.css',
 		'core/code'             => '/patterns/code/code.css',
 	);
@@ -165,4 +167,54 @@ function remove_default_block_styles() {
 	// wp_deregister_style('wp-block-columns');
 }
 add_action('wp_enqueue_scripts', 'remove_default_block_styles', 100);
+
+
+
+
+
+// ***********************************
+//  Template for Custom Post Type
+// ***********************************
+/*
+function custom_theme_register_post_type() {
+    $labels = array(
+        'name'               => _x( 'Portfolio', 'post type general name', 'alxwntr' ),
+        'singular_name'      => _x( 'Portfolio', 'post type singular name', 'alxwntr' ),
+        'menu_name'          => _x( 'Portfolio', 'admin menu', 'alxwntr' ),
+        'name_admin_bar'     => _x( 'Portfolio', 'add new on admin bar', 'alxwntr' ),
+        'add_new'            => _x( 'Add New', 'portfolio', 'alxwntr' ),
+        'add_new_item'       => __( 'Add New Portfolio Item', 'alxwntr' ),
+        'new_item'           => __( 'New Portfolio Item', 'alxwntr' ),
+        'edit_item'          => __( 'Edit Portfolio Item', 'alxwntr' ),
+        'view_item'          => __( 'View Portfolio Item', 'alxwntr' ),
+        'all_items'          => __( 'All Portfolio Items', 'alxwntr' ),
+        'search_items'       => __( 'Search Portfolio', 'alxwntr' ),
+        'parent_item_colon'  => __( 'Parent Portfolio:', 'alxwntr' ),
+        'not_found'          => __( 'No portfolio items found.', 'alxwntr' ),
+        'not_found_in_trash' => __( 'No portfolio items found in Trash.', 'alxwntr' )
+    );
+
+    $args = array(
+        'labels'             => $labels,
+        'description'        => __( 'Portfolio page items.', 'alxwntr' ),
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+		'show_in_rest'       => true, // Enable Gutenberg editor
+		'rest_base'          => 'portfolios', // Customize the REST API base path
+		'rest_controller_class' => 'WP_REST_Posts_Controller',
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'portfolio' ),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => null,
+        'supports'           => array( 'title', 'custom-fields' ) // 'editor', 'author', 'thumbnail', 'excerpt', 'comments'
+    );
+
+    register_post_type( 'portfolio', $args );
+}
+add_action( 'init', 'custom_theme_register_post_type' );
+*/
 ?>

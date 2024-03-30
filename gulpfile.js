@@ -85,6 +85,7 @@ function blockTasks(blockName) {
 blockTasks('highlighted-image');
 blockTasks('image-slideshow');
 blockTasks('link-button');
+blockTasks('portfolio');
 blockTasks('sounds');
 blockTasks('zig-zag');
 
