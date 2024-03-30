@@ -7,12 +7,23 @@
 
 
 // ***********************************
+//  Footer
+// ***********************************
+footer.site-footer {
+	border-top: 1px solid var(--wp--preset--color--grey-100);
+	margin-top: var(--wp--preset--spacing--x-large);
+	padding-block: var(--wp--preset--spacing--large);
+}
+
+
+
+
+// ***********************************
 //  Container
 // ***********************************
 .footer__container {
 	display: flex;
 	justify-content: space-between;
-	padding-bottom: var(--wp--preset--spacing--large);
 
 	@media (max-width: viewports.$viewport--breakpoint--xxx-small) {
 		align-items: center;
@@ -29,6 +40,10 @@
 .footer__copyright {
 	align-items: center;
 	display: flex;
+
+	p {
+		margin-bottom: 0;
+	}
 }
 
 

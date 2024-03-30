@@ -2,7 +2,7 @@
 
 <main id="site-main" class="site-main">
     <?php while(have_posts()) { the_post(); ?>
-        <article class="article | wrap">
+        <article class="article">
             <div class="article__container | content width--small">
                 <header>
                     <h1><?php the_title(); ?></h1>
