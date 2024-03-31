@@ -51,6 +51,7 @@ function register_acf_blocks() {
 	register_block_type( __DIR__ . '/blocks/image-slideshow' );
 	register_block_type( __DIR__ . '/blocks/portfolio' );
 	register_block_type( __DIR__ . '/blocks/sounds' );
+    register_block_type( __DIR__ . '/blocks/status' );
 }
 
 
@@ -67,6 +68,7 @@ function inline_block_styles() {
 		'acf/image-slideshow'   => '/blocks/image-slideshow/image-slideshow.css',
 		'acf/portfolio'         => '/blocks/portfolio/portfolio.css',
 		'acf/sounds'            => '/blocks/sounds/sounds.css',
+        'acf/status'            => '/blocks/status/status.css',
 		'core/code'             => '/patterns/code/code.css',
 	);
 

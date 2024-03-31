@@ -12,23 +12,6 @@
 // ***********************************
 .page-default {
 	header {
-		margin-bottom: var(--wp--preset--spacing--x-large);
-	}
-
-	h1 {
-		@extend %text-400;
-		text-align: center;
-	}
-}
-
-
-
-
-// ***********************************
-//  Page Alternate - A
-// ***********************************
-.page-alternate-a {
-	header {
 		align-items: center;
 		display: flex;
 		justify-content: space-between;
@@ -47,5 +30,22 @@
 
 	p {
 		margin-bottom: 0;
+	}
+}
+
+
+
+
+// ***********************************
+//  Page Alternate - A
+// ***********************************
+.page-alternate-a {
+	header {
+		margin-bottom: var(--wp--preset--spacing--x-large);
+	}
+
+	h1 {
+		@extend %text-400;
+		text-align: center;
 	}
 }

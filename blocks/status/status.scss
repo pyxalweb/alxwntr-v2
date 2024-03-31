@@ -1,0 +1,66 @@
+%status-icon {
+  background-color: white;
+  border-radius: 1rem;
+  display: block;
+  height: 1rem;
+  margin-inline: auto;
+  width: 1rem;
+}
+
+.status {
+  border: 1px solid var(--wp--preset--color--grey-100);
+  display: flex;
+  flex-direction: column;
+  gap: var(--wp--preset--spacing--x-small);
+  margin-inline: auto;
+  padding: var(--wp--preset--spacing--small);
+  text-align: center;
+  width: min(350px, 100%);
+
+  span {
+    @extend %status-icon;
+
+    &:before {
+      @extend %status-icon;
+      animation: ping 1s cubic-bezier(0,0,.2,1) infinite;
+      content: '';
+    }
+  }
+
+  &.status--green {
+    span,
+    span:before {
+      background-color: #0ac900;
+    }
+  }
+
+  &.status--yellow {
+    span,
+    span:before {
+      background-color: #f0dc00;
+    }
+  }
+
+  &.status--red {
+    span,
+    span:before {
+      background-color: #dc2626;
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+@keyframes ping {
+    0% {
+        transform: scale(1);
+        opacity: 1
+    }
+
+    75%,to {
+        transform: scale(2);
+        opacity: 0
+    }
+}

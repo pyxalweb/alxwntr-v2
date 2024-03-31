@@ -87,6 +87,7 @@ blockTasks('image-slideshow');
 blockTasks('link-button');
 blockTasks('portfolio');
 blockTasks('sounds');
+blockTasks('status');
 blockTasks('zig-zag');
 
 

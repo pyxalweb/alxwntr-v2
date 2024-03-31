@@ -104,6 +104,7 @@
 	// ***********************************
 	//  Spacing
 	// ***********************************
+	--wp--preset--spacing--x-small: clamp(.25rem, 1.5vw, .5rem);
 	--wp--preset--spacing--small: clamp(.5rem, 2.5vw, 1rem);
 	--wp--preset--spacing--medium: clamp(1.5rem, 4vw, 2rem);
 	--wp--preset--spacing--large: clamp(2rem, 5vw, 3rem);

@@ -1,0 +1,20 @@
+{
+    "$schema": "https://advancedcustomfields.com/schemas/json/main/block.json",
+    "name": "acf/status",
+    "title": "Status",
+    "description": "Status indicator.",
+    "style": [],
+    "editorStyle": [ "file:./status.css" ],
+    "script": "",
+    "editorScript": "",
+    "category": "media",
+    "icon": "format-status",
+    "keywords": [ "status", "project" ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "status.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

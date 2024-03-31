@@ -11,10 +11,26 @@
 // ***********************************
 //  Blog Heading
 // ***********************************
-.blog {
+.page-blog {
+	header {
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: var(--wp--preset--spacing--x-large);
+
+		@media (max-width: viewports.$viewport--breakpoint--xx-small) {
+			align-items: center;
+			flex-direction: column;
+			gap: 1rem;
+		}
+	}
+
 	h1 {
 		@extend %text-400;
-		text-align: center;
+	}
+
+	p {
+		margin-bottom: 0;
 	}
 }
 

@@ -28,7 +28,14 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "page-alternate-a.php"
+                "value": "default"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-blog.php"
             }
         ]
     ],
@@ -41,5 +48,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1711846644
+    "modified": 1711860959
 }
