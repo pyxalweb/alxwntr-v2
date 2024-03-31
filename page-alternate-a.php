@@ -1,16 +1,16 @@
 <?php
 /*
-Template Name: Portfolio
+Template Name: Alternate - A
 */
 ?>
 
 <?php get_header(); ?>
 
 <main id="site-main" class="site-main">
-    <section class="portfolio | content width--x-large" role="region" aria-label="Selected works from Alex Winter's portfolio">
+    <section class="page-alternate-a | content width--x-large">
         <header>
             <h1><?php the_title(); ?></h1>
-            <p>A few websites I’ve been involved with over the years.</p>
+            <p><?php the_field('sub_heading'); ?></p>
         </header>
 
         <?php the_content(); ?>

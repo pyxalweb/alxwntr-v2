@@ -1,10 +1,18 @@
+<?php
+/*
+Template Name: Blog
+*/
+?>
+
 <?php get_header(); ?>
 
 <main id="site-main" class="site-main">
-    <section class="blog | content width--x-large" role="region" aria-label="A collection of blog posts sorted by year">
+    <section class="blog | content width--x-large">
         <header>
-            <h1>Blog</h1>
+            <h1><?php the_title(); ?></h1>
         </header>
+
+        <?php the_content(); ?>
 
         <?php
         // Check if there are any blog posts from the past year

@@ -1,2 +1,2 @@
-.portfolio__items{background-color:#639}
+.portfolio{display:grid;gap:var(--wp--preset--spacing--large);grid-template-columns:1fr 1fr}@media (max-width:50rem){.portfolio{grid-template-columns:1fr}}.portfolio__item{align-items:center;background-color:var(--wp--preset--color--grey-200);border:1px solid var(--wp--preset--color--grey-200);border-radius:0 1rem;color:var(--wp--preset--color--base);display:flex;flex-direction:column;gap:var(--wp--preset--spacing--medium);padding:var(--wp--preset--spacing--medium);text-align:center}.portfolio__item:focus,.portfolio__item:hover{border-color:var(--wp--preset--color--grey-100)}.portfolio__item img{border-radius:0 1rem}
 /*# sourceMappingURL=portfolio.css.map */

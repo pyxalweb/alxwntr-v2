@@ -7,9 +7,9 @@
 
 
 // ***********************************
-//  Page Heading
+//  Default Page
 // ***********************************
-.page {
+.page-default {
 	header {
 		margin-bottom: var(--wp--preset--spacing--x-large);
 	}
@@ -17,5 +17,27 @@
 	h1 {
 		@extend %text-400;
 		text-align: center;
+	}
+}
+
+
+
+
+// ***********************************
+//  Page Alternate - A
+// ***********************************
+.page-alternate-a {
+	header {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: var(--wp--preset--spacing--x-large);
+	}
+
+	h1 {
+		@extend %text-300;
+	}
+
+	p {
+		margin-bottom: 0;
 	}
 }

@@ -1,3 +1,33 @@
-.portfolio__items {
-  background-color: rebeccapurple;
+@use "../../app/scss/base/viewports";
+
+.portfolio {
+  display: grid;
+  gap: var(--wp--preset--spacing--large);
+  grid-template-columns: 1fr 1fr;
+
+  @media (max-width: viewports.$viewport--breakpoint--x-small) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.portfolio__item {
+  align-items: center;
+  color: var(--wp--preset--color--base);
+  background-color: var(--wp--preset--color--grey-200);
+  border: 1px solid var(--wp--preset--color--grey-200);
+  border-radius: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--wp--preset--spacing--medium);
+  padding: var(--wp--preset--spacing--medium);
+  text-align: center;
+
+  &:hover,
+  &:focus {
+    border-color: var(--wp--preset--color--grey-100);
+  }
+
+  img {
+    border-radius: 0 1rem;
+  }
 }
