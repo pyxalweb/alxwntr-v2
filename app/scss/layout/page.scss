@@ -2,6 +2,7 @@
 //  Required Modules
 // ***********************************
 @use 'base/typography';
+@use 'base/viewports';
 
 
 
@@ -28,13 +29,20 @@
 // ***********************************
 .page-alternate-a {
 	header {
+		align-items: center;
 		display: flex;
 		justify-content: space-between;
 		margin-bottom: var(--wp--preset--spacing--x-large);
+
+		@media (max-width: viewports.$viewport--breakpoint--xx-small) {
+			align-items: center;
+			flex-direction: column;
+			gap: 1rem;
+		}
 	}
 
 	h1 {
-		@extend %text-300;
+		@extend %text-400;
 	}
 
 	p {
