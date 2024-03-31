@@ -7,9 +7,9 @@
 
 
 // ***********************************
-//  Article Heading
+//  Single Heading
 // ***********************************
-.article {
+.single {
 	header {
 		margin-bottom: var(--wp--preset--spacing--x-large);
 	}
@@ -24,9 +24,9 @@
 
 
 // ***********************************
-//  Article Images
+//  Single Images
 // ***********************************
-.article__featured-image {
+.single__featured-image {
 	    margin-block: var(--wp--preset--spacing--x-large);
 
 	img {
@@ -39,9 +39,9 @@
 
 
 // ***********************************
-//  Article Footer
+//  Single Footer
 // ***********************************
-.article {
+.single {
 	footer {
 		margin-top: var(--wp--preset--spacing--x-large);
 	}

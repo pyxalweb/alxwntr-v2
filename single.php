@@ -2,18 +2,18 @@
 
 <main id="site-main" class="site-main">
     <?php while(have_posts()) { the_post(); ?>
-    <article class="article | content width--small">
+    <article class="single | content width--small">
         <header>
             <h1><?php the_title(); ?></h1>
         </header>
 
         <?php if (has_post_thumbnail()) { ?>
-        <div class="article__featured-image">
+        <div class="single__featured-image">
             <?php the_post_thumbnail(); ?>
         </div>
         <?php } ?>
 
-        <div class="article__content">
+        <div class="single__content">
             <?php the_content(); ?>
         </div>
 
