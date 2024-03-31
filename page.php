@@ -1,15 +1,13 @@
 <?php get_header(); ?>
 
-<main id="site-main" class="site-main interior">
-    <article class="article | content width-small">
+<main id="site-main" class="site-main">
+    <section class="page | content width--x-large">
         <header>
             <h1><?php the_title(); ?></h1>
         </header>
 
-        <div class="article__content">
-            <?php the_content(); ?>
-        </div>
-    </article>
+        <?php the_content(); ?>
+    </section>
 </main>
 
 <?php get_footer();
