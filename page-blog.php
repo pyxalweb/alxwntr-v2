@@ -7,9 +7,10 @@ Template Name: Blog
 <?php get_header(); ?>
 
 <main id="site-main" class="site-main">
-    <section class="blog | content width--x-large">
+    <section class="page-blog | content width--x-large">
         <header>
             <h1><?php the_title(); ?></h1>
+            <p><?php the_field('sub_heading'); ?></p>
         </header>
 
         <?php the_content(); ?>
