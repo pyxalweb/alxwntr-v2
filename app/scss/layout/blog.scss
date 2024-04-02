@@ -21,7 +21,8 @@
 		@media (max-width: viewports.$viewport--breakpoint--xx-small) {
 			align-items: center;
 			flex-direction: column;
-			gap: 1rem;
+			gap: var(--wp--preset--spacing--x-large);
+			text-align: center;
 		}
 	}
 
