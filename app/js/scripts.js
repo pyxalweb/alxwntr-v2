@@ -2,7 +2,7 @@
 //  alxwntr Layout Scripts
 // ***********************************
 // Created by Alex Winter on 2023-05-26
-// Last Modified: 2023-09-04
+// Last Modified: 2024-03-31
 
 (function () {
 
@@ -14,7 +14,7 @@ const body = document.querySelector('body')
 const header = document.querySelector('.site-header')
 const footer = document.querySelector('.site-footer')
 const mainHomepage = document.querySelector('.site-main.homepage')
-const blog = document.querySelector('.blog')
+const blog = document.querySelector('.page-blog')
 const categoryBtn = document.querySelectorAll('.category__btn')
 const categoriesSelect = document.querySelector('.categories__select')
 const blogPosts = document.querySelectorAll('.blog__posts')
