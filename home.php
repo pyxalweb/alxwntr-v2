@@ -15,6 +15,7 @@ Template Name: Blog
 
         <?php if ( have_posts() ) : ?>
 
+
             <div class="blog__filters">
                 <div class="filters__categories">
                     <button class="filters__categories__toggle">All Categories</button>
@@ -48,6 +49,8 @@ Template Name: Blog
 
             <br>
 
+
+
             <div class="blog__posts__container">
                 <ul class="blog__posts">
                     <?php
@@ -57,17 +60,19 @@ Template Name: Blog
                     $category_name = join(', ', wp_list_pluck($categories, 'name'));
                     $category_id = join(', ', wp_list_pluck($categories, 'cat_ID'));
                     ?>
-                    <li data-category="<?php echo esc_html($category_id); ?>" data-year="<?php echo get_the_date('Y'); ?>" class="is-visible">
+                    <li data-category="<?php echo esc_html($category_id); ?>" data-year="<?php echo get_the_date('Y'); ?>" class="blog__posts__item is-visible">
                         <div class="blog__link">
                             <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                         </div>
 
-                        <div class="blog__category">
-                            <span><?php echo esc_html($category_name); ?></span>
-                        </div>
+                        <div class="blog__meta">
+                            <div class="blog__category">
+                                <span><?php echo esc_html($category_name); ?></span>
+                            </div>
 
-                        <div class="blog__date">
-                            <time datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y-m-d'); ?></time>
+                            <div class="blog__date">
+                                <time datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y-m-d'); ?></time>
+                            </div>
                         </div>
                     </li>
                     <?php endwhile; ?>
@@ -151,11 +156,9 @@ Template Name: Blog
 
             if ((selectedCategory === 'all' || articleCategory.includes(selectedCategory)) &&
                 (selectedYear === 'all' || articleYear === selectedYear)) {
-                article.style.display = 'list-item';
                 article.classList.add('is-visible');
                 article.classList.remove('is-hidden');
             } else {
-                article.style.display = 'none';
                 article.classList.remove('is-visible');
                 article.classList.add('is-hidden');
             }
