@@ -1,15 +1,164 @@
+.page-blog {
+    --category-width: 0;
+    --date-width: 0;
+}
+
+// ***********************************
+//  Blog Filters
+// ***********************************
+// container
+.blog__filters__container {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 1.5rem;
+}
+
+// category container
+// year container
+.filters__category,
+.filters__year {
+    position: relative;
+}
+
+// category container
+.filters__category {
+
+}
+
+// year container
+.filters__year {
+
+}
+
+// category toggle
+// year toggle
+.filters__category__toggle,
+.filters__year__toggle {
+    background-color: var(--wp--preset--color--grey-200);
+    border: 1px solid var(--wp--preset--color--grey-100);
+    color: var(--wp--preset--color--primary);
+    cursor: pointer;
+    padding-block: 0.25rem;
+
+    &:hover,
+    &:focus {
+        color: var(--wp--preset--color--white);
+    }
+}
+
+// category toggle
+.filters__category__toggle {
+    border-radius: 0.5rem 0 0 0.5rem;
+    width: 164px; // this will be set dynamically via JS
+
+    &.is-open {
+        border-radius: 0.5rem 0 0 0;
+    }
+}
+
+// year toggle
+.filters__year__toggle {
+    border-left: 0;
+    border-radius: 0 0.5rem 0.5rem 0;
+    width: 185px; // this will be set dynamically via JS
+
+    &.is-open {
+        border-radius: 0 0.5rem 0 0;
+    }
+}
+
+// category list
+// year list
+.filters__category__list,
+.filters__year__list {
+    list-style-type: none;
+    margin: 0;
+    position: absolute;
+
+    &.is-closed {
+        display: none;
+    }
+
+    &.is-open {
+        display: block;
+    }
+}
+
+// category list
+.filters__category__list {
+    
+}
+
+// year list
+.filters__year__list {
+    left: -1px;
+}
+
+// category list item
+// year list item
+.filters__category__list-item,
+.filters__year__list-item {
+    border-left: 1px solid var(--wp--preset--color--grey-100);
+    border-right: 1px solid var(--wp--preset--color--grey-100);
+}
+
+// category list item
+.filters__category_list-item {
+    
+}
+
+// year list item
+.filters__year__list-item {
+
+}
+
+// category button
+// year button
+.filters__category__button,
+.filters__year__button {
+    background-color: var(--wp--preset--color--grey-200);
+    border: 0;
+    border-bottom: 1px solid var(--wp--preset--color--grey-100);
+    color: var(--wp--preset--color--primary);
+    cursor: pointer;
+    padding-block: 0.25rem;
+
+    &.is-active {
+        display: none;
+    }
+}
+
+// category button
+.filters__category__button {
+    width: 162px; // this will be set dynamically via JS
+}
+
+// year button
+.filters__year__button {
+    width: 184px; // this will be set dynamically via JS
+}
+
+
+
+
+// ***********************************
+//  Blog Posts
+// ***********************************
+// container
 .blog__posts__container {
     border: 1px solid var(--wp--preset--color--grey-100);
     border-bottom: 0;
     border-radius: 0.5rem;
 }
 
+// posts
 .blog__posts {
     color: var(--wp--preset--color--grey-300);
     list-style: none;
     margin: 0;
 }
 
+// post items
 .blog__posts__item {
     border-bottom: 1px solid var(--wp--preset--color--grey-100);
     display: flex;
@@ -24,31 +173,35 @@
     }
 }
 
+// post link
 .blog__link {
     padding-block: 0.75rem;
     padding-inline: 0.75rem;
 }
 
+// post meta
 .blog__meta {
     display: flex;
 }
 
+// post category
 .blog__category {
     border-left: 1px solid var(--wp--preset--color--grey-100);
     border-right: 1px solid var(--wp--preset--color--grey-100);
     padding-block: 0.75rem;
-    padding-inline: 0.75rem;
     text-align: center;
-    width: 144px; // this will be set dynamically via JS
+    width: 164px; // this will be set dynamically via JS
 }
 
+// post date
 .blog__date {
     padding-block: 0.75rem;
     padding-inline: 0.75rem;
     text-align: center;
-    width: 165px; // this will be set dynamically via JS
+    width: 184px; // this will be set dynamically via JS
 }
 
+// error message (No Posts Found)
 .blog__posts__message {
     border-bottom: 1px solid var(--wp--preset--color--grey-100);
 

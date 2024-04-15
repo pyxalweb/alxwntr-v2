@@ -14,42 +14,34 @@ Template Name: Blog
         </header>
 
         <?php if ( have_posts() ) : ?>
-
-
-            <div class="blog__filters">
-                <div class="filters__categories">
-                    <button class="filters__categories__toggle">All Categories</button>
-                    <ul class="filters__categories__list">
-                        <li><button class="is-active" data-category="All">All Categories</button></li>
+            <div class="blog__filters__container">
+                <div class="filters__category">
+                    <button class="filters__category__toggle is-closed">All Categories</button>
+                    <ul class="filters__category__list is-closed">
+                        <li class="filters__category__list-item"><button class="filters__category__button is-active" data-category="All">All Categories</button></li>
                         <?php $categories = get_categories(); 
                         if ($categories) {
                             foreach ($categories as $category) {
                                 if ($category->cat_ID !== 7) { ?>
-                                    <li><button data-category="<?php echo $category->cat_ID ?>"><?php echo $category->name ?></button></li>
+                                    <li class="filters__category__list-item"><button class="filters__category__button" data-category="<?php echo $category->cat_ID ?>"><?php echo $category->name ?></button></li>
                                 <?php }
                             }
                         } ?>
                     </ul>
                 </div>
 
-                <br>
-
-                <div class="filters__dates">
-                    <button class="filters__year__toggle">All Years</button>
-                    <ul class="filters__year__list">
-                        <li><button class="is-active" data-year="All">All Years</button></li>
+                <div class="filters__year">
+                    <button class="filters__year__toggle is-closed">All Years</button>
+                    <ul class="filters__year__list is-closed">
+                        <li class="filters__year__list-item"><button class="filters__year__button is-active" data-year="All">All Years</button></li>
                         <?php
                         $years = $wpdb->get_col("SELECT DISTINCT YEAR(post_date) FROM $wpdb->posts WHERE post_status = 'publish' ORDER BY post_date DESC");
                         foreach($years as $year) { ?>
-                            <li><button data-year="<?php echo $year ?>"><?php echo $year ?></button></li>
+                            <li class="filters__year__list-item"><button class="filters__year__button" data-year="<?php echo $year ?>"><?php echo $year ?></button></li>
                         <?php } ?>
                     </ul>
                 </div>
             </div>
-
-            <br>
-
-
 
             <div class="blog__posts__container">
                 <ul class="blog__posts">
@@ -92,17 +84,23 @@ Template Name: Blog
     let categoryName = '';
     let yearName = '';
 
-    const categoryToggle = document.querySelector('.filters__categories__toggle');
+    const page = document.querySelector('.page-blog');
+    const categoryToggle = document.querySelector('.filters__category__toggle');
     const yearToggle = document.querySelector('.filters__year__toggle');
-    const categoryList = document.querySelector('.filters__categories__list');
+    const categoryList = document.querySelector('.filters__category__list');
     const yearList = document.querySelector('.filters__year__list');
     const categoryButtons = categoryList.querySelectorAll('button');
     const yearButtons = yearList.querySelectorAll('button');
     const posts = document.querySelectorAll('.blog__posts li');
+    const categories = document.querySelectorAll('.blog__posts .blog__category');
+    const dates = document.querySelectorAll('.blog__posts .blog__date');
     const noPosts = document.querySelector('.blog__posts__message');
 
     function addToggleListener(toggleElement, listElement) {
         toggleElement.addEventListener('click', () => {
+            toggleElement.classList.toggle('is-closed');
+            toggleElement.classList.toggle('is-open');
+            listElement.classList.toggle('is-closed');
             listElement.classList.toggle('is-open');
         });
     }
@@ -117,6 +115,7 @@ Template Name: Blog
                 selectedCategory = button.getAttribute('data-category');
             }
             
+            categoryList.classList.add('is-closed');
             categoryList.classList.remove('is-open');
 
             categoryButtons.forEach(button => button.classList.remove('is-active'));
@@ -137,6 +136,7 @@ Template Name: Blog
                 selectedYear = button.getAttribute('data-year');
             }
 
+            yearList.classList.add('is-closed');
             yearList.classList.remove('is-open');
 
             yearButtons.forEach(button => button.classList.remove('is-active'));
