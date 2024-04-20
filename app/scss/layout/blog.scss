@@ -178,19 +178,25 @@
     display: flex;
 }
 
+.blog__category,
+.blog__date {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding-block: 0.75rem;
+    padding-inline: 0.75rem;
+    text-align: center;
+}
+
 // post category
 .blog__category {
     border-left: 1px solid var(--wp--preset--color--grey-100);
     border-right: 1px solid var(--wp--preset--color--grey-100);
-    padding-block: 0.75rem;
-    text-align: center;
 }
 
 // post date
 .blog__date {
-    padding-block: 0.75rem;
-    padding-inline: 0.75rem;
-    text-align: center;
+    
 }
 
 // error message (No Posts Found)
