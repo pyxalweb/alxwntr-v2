@@ -102,23 +102,32 @@ Template Name: Blog
     // **************************
     //  Set width for category/date lists and category/year buttons
     // **************************
-    function setMaxWidth(elements, additionalWidth, targets) {
+    function setMaxWidth(elements, additionalWidthLargeViewport, additionalWidthSmallViewport, targets) {
         let maxWidth = 0;
+        let additionalWidth;
+
         elements.forEach(element => {
             const elementWidth = element.offsetWidth;
             if (elementWidth > maxWidth) {
                 maxWidth = elementWidth;
             }
         });
+
+        if (window.innerWidth >= 800) {
+            additionalWidth = additionalWidthLargeViewport;
+        } else {
+            additionalWidth = additionalWidthSmallViewport;
+        }
+
         elements.forEach(element => element.style.width = maxWidth + additionalWidth + 'px');
         targets.forEach(target => target.style.width = maxWidth + additionalWidth + 'px');
     }
 
     // categories
-    setMaxWidth(categories, 40, [categoryToggle, ...categoryButtons]);
+    setMaxWidth(categories, 40, 20, [categoryToggle, ...categoryButtons]);
 
     // dates
-    setMaxWidth(dates, 25, [yearToggle, ...yearButtons]);
+    setMaxWidth(dates, 25, 10, [yearToggle, ...yearButtons]);
 
     // **************************
     //  Set initial values for filters
