@@ -1,3 +1,11 @@
+// ***********************************
+//  Required Modules
+// ***********************************
+@use 'base/viewports';
+
+
+
+
 .page-blog {
     --category-width: 0;
     --date-width: 0;
@@ -186,6 +194,10 @@
     padding-block: 0.75rem;
     padding-inline: 0.75rem;
     text-align: center;
+
+    @media (max-width: viewports.$viewport--breakpoint--xx-small) {
+        padding-inline: 0.25rem;
+    }
 }
 
 // post category
