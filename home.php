@@ -124,10 +124,10 @@ Template Name: Blog
     }
 
     // categories
-    setMaxWidth(categories, 40, 20, [categoryToggle, ...categoryButtons]);
+    setMaxWidth(categories, 60, 20, [categoryToggle, ...categoryButtons]);
 
     // dates
-    setMaxWidth(dates, 25, 10, [yearToggle, ...yearButtons]);
+    setMaxWidth(dates, 40, 10, [yearToggle, ...yearButtons]);
 
     // **************************
     //  Set initial values for filters
