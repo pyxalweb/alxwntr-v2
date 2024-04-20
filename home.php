@@ -16,8 +16,8 @@ Template Name: Blog
         <?php if ( have_posts() ) : ?>
             <div class="blog__filters__container">
                 <div class="filters__category">
-                    <button class="filters__category__toggle is-closed">All Categories</button>
-                    <ul class="filters__category__list is-closed">
+                    <button class="filters__category__toggle">All Categories</button>
+                    <ul class="filters__category__list">
                         <li class="filters__category__list-item"><button class="filters__category__button is-active" data-category="All">All Categories</button></li>
                         <?php $categories = get_categories(); 
                         if ($categories) {
@@ -31,8 +31,8 @@ Template Name: Blog
                 </div>
 
                 <div class="filters__year">
-                    <button class="filters__year__toggle is-closed">All Years</button>
-                    <ul class="filters__year__list is-closed">
+                    <button class="filters__year__toggle">All Years</button>
+                    <ul class="filters__year__list">
                         <li class="filters__year__list-item"><button class="filters__year__button is-active" data-year="All">All Years</button></li>
                         <?php
                         $years = $wpdb->get_col("SELECT DISTINCT YEAR(post_date) FROM $wpdb->posts WHERE post_status = 'publish' ORDER BY post_date DESC");
@@ -132,11 +132,17 @@ Template Name: Blog
     //  Toggle dropdown lists
     // **************************
     function addToggleListener(toggleElement, listElement) {
+        // if you click toggleElement then toggle 'is-open'
         toggleElement.addEventListener('click', () => {
-            toggleElement.classList.toggle('is-closed');
             toggleElement.classList.toggle('is-open');
-            listElement.classList.toggle('is-closed');
             listElement.classList.toggle('is-open');
+        });
+        // if you click outside of toggleElement then remove 'is-open'
+        document.addEventListener('click', (event) => {
+            if (!toggleElement.contains(event.target)) {
+                toggleElement.classList.remove('is-open');
+                listElement.classList.remove('is-open');
+            }
         });
     }
     addToggleListener(categoryToggle, categoryList);

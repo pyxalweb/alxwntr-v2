@@ -68,13 +68,10 @@
 // year list
 .filters__category__list,
 .filters__year__list {
+    display: none;
     list-style-type: none;
     margin: 0;
     position: absolute;
-
-    &.is-closed {
-        display: none;
-    }
 
     &.is-open {
         display: block;
