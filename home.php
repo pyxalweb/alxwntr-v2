@@ -79,11 +79,14 @@ Template Name: Blog
 </main>
 
 <script type="text/javascript">
-    let selectedCategory = 'all';
-    let selectedYear = 'all';
-    let categoryName = '';
-    let yearName = '';
+    // ***********************************
+    //  Filter posts
+    //  by Alex Winter - 2024-04-19 - v1.0
+    // ***********************************
 
+    // **************************
+    //  Get elements
+    // **************************
     const page = document.querySelector('.page-blog');
     const categoryToggle = document.querySelector('.filters__category__toggle');
     const yearToggle = document.querySelector('.filters__year__toggle');
@@ -96,7 +99,9 @@ Template Name: Blog
     const dates = document.querySelectorAll('.blog__posts .blog__date');
     const noPosts = document.querySelector('.blog__posts__message');
 
-    // Set width for category and date lists
+    // **************************
+    //  Set width for category/date lists and category/year buttons
+    // **************************
     function setMaxWidth(elements, additionalWidth, targets) {
         let maxWidth = 0;
         elements.forEach(element => {
@@ -109,12 +114,23 @@ Template Name: Blog
         targets.forEach(target => target.style.width = maxWidth + additionalWidth + 'px');
     }
 
-    // Usage for categories
+    // categories
     setMaxWidth(categories, 40, [categoryToggle, ...categoryButtons]);
 
-    // Usage for dates
+    // dates
     setMaxWidth(dates, 25, [yearToggle, ...yearButtons]);
 
+    // **************************
+    //  Set initial values for filters
+    // **************************
+    let selectedCategory = 'all';
+    let selectedYear = 'all';
+    let categoryName = '';
+    let yearName = '';
+
+    // **************************
+    //  Toggle dropdown lists
+    // **************************
     function addToggleListener(toggleElement, listElement) {
         toggleElement.addEventListener('click', () => {
             toggleElement.classList.toggle('is-closed');
@@ -126,6 +142,9 @@ Template Name: Blog
     addToggleListener(categoryToggle, categoryList);
     addToggleListener(yearToggle, yearList);
 
+    // **************************
+    //  Filter by category
+    // **************************
     categoryButtons.forEach(button => {
         button.addEventListener('click', () => {
             if (button.dataset.category === 'All') {
@@ -147,6 +166,9 @@ Template Name: Blog
         });
     });
 
+    // **************************
+    //  Filter by year
+    // **************************
     yearButtons.forEach(button => {
         button.addEventListener('click', () => {
             if (button.dataset.year === 'All') {
@@ -168,6 +190,9 @@ Template Name: Blog
         });
     });
 
+    // **************************
+    //  Filter posts
+    // **************************
     function filterPosts() {
         posts.forEach(article => {
             const articleCategory = article.getAttribute('data-category');
