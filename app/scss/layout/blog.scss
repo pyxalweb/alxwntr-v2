@@ -49,7 +49,6 @@
 // category toggle
 .filters__category__toggle {
     border-radius: 0.5rem 0 0 0.5rem;
-    width: 164px; // this will be set dynamically via JS
 
     &.is-open {
         border-radius: 0.5rem 0 0 0;
@@ -58,9 +57,7 @@
 
 // year toggle
 .filters__year__toggle {
-    border-left: 0;
     border-radius: 0 0.5rem 0.5rem 0;
-    width: 185px; // this will be set dynamically via JS
 
     &.is-open {
         border-radius: 0 0.5rem 0 0;
@@ -130,12 +127,12 @@
 
 // category button
 .filters__category__button {
-    width: 162px; // this will be set dynamically via JS
+
 }
 
 // year button
 .filters__year__button {
-    width: 184px; // this will be set dynamically via JS
+
 }
 
 
@@ -190,7 +187,6 @@
     border-right: 1px solid var(--wp--preset--color--grey-100);
     padding-block: 0.75rem;
     text-align: center;
-    width: 164px; // this will be set dynamically via JS
 }
 
 // post date
@@ -198,7 +194,6 @@
     padding-block: 0.75rem;
     padding-inline: 0.75rem;
     text-align: center;
-    width: 184px; // this will be set dynamically via JS
 }
 
 // error message (No Posts Found)

@@ -96,6 +96,25 @@ Template Name: Blog
     const dates = document.querySelectorAll('.blog__posts .blog__date');
     const noPosts = document.querySelector('.blog__posts__message');
 
+    // Set width for category and date lists
+    function setMaxWidth(elements, additionalWidth, targets) {
+        let maxWidth = 0;
+        elements.forEach(element => {
+            const elementWidth = element.offsetWidth;
+            if (elementWidth > maxWidth) {
+                maxWidth = elementWidth;
+            }
+        });
+        elements.forEach(element => element.style.width = maxWidth + additionalWidth + 'px');
+        targets.forEach(target => target.style.width = maxWidth + additionalWidth + 'px');
+    }
+
+    // Usage for categories
+    setMaxWidth(categories, 40, [categoryToggle, ...categoryButtons]);
+
+    // Usage for dates
+    setMaxWidth(dates, 25, [yearToggle, ...yearButtons]);
+
     function addToggleListener(toggleElement, listElement) {
         toggleElement.addEventListener('click', () => {
             toggleElement.classList.toggle('is-closed');
