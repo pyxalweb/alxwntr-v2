@@ -8,9 +8,10 @@
 
 
 .page-blog {
-    h1 {
-        @extend %text-400;
-    }
+    --blog--border: 1px solid var(--wp--preset--color--grey-100);
+    --blog--border-radius: 0.5rem;
+    --blog--padding-button: 0.5rem;
+    --blog--padding-post: 1.25rem;
 }
 
 
@@ -23,7 +24,7 @@
 .blog__filters__container {
     display: flex;
     justify-content: end;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 
     @media (max-width: viewports.$viewport--breakpoint--xx-small) {
         justify-content: center;
@@ -52,16 +53,13 @@
 .filters__category__toggle,
 .filters__year__toggle {
     background-color: var(--wp--preset--color--grey-200);
-    border: 1px solid var(--wp--preset--color--grey-100);
+    border: var(--blog--border);
     color: var(--wp--preset--color--primary);
     cursor: pointer;
-    padding-block: 0.25rem;
+    padding-block: var(--blog--padding-button);
+    padding-inline: 0.25rem;
     transition: all var(--transition--fast);
     width: 150px;
-
-    @media (max-width: viewports.$viewport--breakpoint--xx-small) {
-        padding-inline: 0.75rem;
-    }
 
     &:hover,
     &:focus {
@@ -74,19 +72,19 @@
 
 // category toggle
 .filters__category__toggle {
-    border-radius: 0.5rem 0 0 0.5rem;
+    border-radius: var(--blog--border-radius) 0 0 var(--blog--border-radius);
 
     &.is-open {
-        border-radius: 0.5rem 0 0 0;
+        border-radius: var(--blog--border-radius) 0 0 0;
     }
 }
 
 // year toggle
 .filters__year__toggle {
-    border-radius: 0 0.5rem 0.5rem 0;
+    border-radius: 0 var(--blog--border-radius) var(--blog--border-radius) 0;
 
     &.is-open {
-        border-radius: 0 0.5rem 0 0;
+        border-radius: 0 var(--blog--border-radius) 0 0;
     }
 }
 
@@ -120,8 +118,8 @@
 // year list item
 .filters__category__list-item,
 .filters__year__list-item {
-    border-left: 1px solid var(--wp--preset--color--grey-100);
-    border-right: 1px solid var(--wp--preset--color--grey-100);
+    border-left: var(--blog--border);
+    border-right: var(--blog--border);
 }
 
 // category list item
@@ -140,10 +138,10 @@
 .filters__year__button {
     background-color: var(--wp--preset--color--grey-200);
     border: 0;
-    border-bottom: 1px solid var(--wp--preset--color--grey-100);
+    border-bottom: var(--blog--border);
     color: var(--wp--preset--color--primary);
     cursor: pointer;
-    padding-block: 0.25rem;
+    padding-block: var(--blog--padding-button);
     width: 100%;
 
     &:hover,
@@ -182,9 +180,9 @@
 
 // container
 .blog__posts__container {
-    border: 1px solid var(--wp--preset--color--grey-100);
+    border: var(--blog--border);
     border-bottom: 0;
-    border-radius: 0.5rem;
+    border-radius: var(--blog--border-radius);
     opacity: 1;
     transition: opacity var(--transition--medium);
 
@@ -206,13 +204,13 @@
 
 // post items
 .blog__posts__item {
-    border-bottom: 1px solid var(--wp--preset--color--grey-100);
-    border-radius: 0.5rem;
+    border-bottom: var(--blog--border);
+    border-radius: var(--blog--border-radius);
     display: flex;
     justify-content: space-between;
 
     @media (max-width: viewports.$viewport--breakpoint--xx-small) {
-        border: 1px solid var(--wp--preset--color--grey-100);
+        border: var(--blog--border);
         flex-direction: column;
         margin-bottom: 1.25rem;
     }
@@ -228,8 +226,8 @@
 
 // post link
 .blog__link {
-    padding-block: 0.75rem;
-    padding-inline: 0.75rem;
+    padding-block: var(--blog--padding-post);
+    padding-inline: var(--blog--padding-post);
 
     @media (max-width: viewports.$viewport--breakpoint--xx-small) {
         padding-bottom: 0;
@@ -245,8 +243,8 @@
     @media (max-width: viewports.$viewport--breakpoint--xx-small) {
         font-size: var(--wp--preset--font-size--x-small);
         gap: 1rem;
-        padding-block: 0.75rem;
-        padding-inline: 0.75rem;
+        padding-block: var(--blog--padding-post);
+        padding-inline: var(--blog--padding-post);
     }
 }
 
@@ -255,8 +253,8 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    padding-block: 0.75rem;
-    padding-inline: 0.75rem;
+    padding-block: var(--blog--padding-post);
+    padding-inline: var(--blog--padding-post);
     text-align: center;
 
     &:before {
@@ -269,8 +267,8 @@
 
 // post category
 .blog__category {
-    border-left: 1px solid var(--wp--preset--color--grey-100);
-    border-right: 1px solid var(--wp--preset--color--grey-100);
+    border-left: var(--blog--border);
+    border-right: var(--blog--border);
 
     @media (max-width: viewports.$viewport--breakpoint--xx-small) {
         border-left: 0;
@@ -300,7 +298,7 @@
 
 // error message (No Posts Found)
 .blog__posts__message {
-    border-bottom: 1px solid var(--wp--preset--color--grey-100);
+    border-bottom: var(--blog--border);
     color: var(--wp--preset--color--grey-300);
     font-size: clamp(1rem, 5vw, 5rem);
     text-align: center;
@@ -308,8 +306,8 @@
     padding-inline: 1rem;
 
     @media (max-width: viewports.$viewport--breakpoint--xx-small) {
-        border: 1px solid var(--wp--preset--color--grey-100);
-        border-radius: 0.5rem;
+        border: var(--blog--border);
+        border-radius: var(--blog--border-radius);
     }
 
     &.is-hidden {

@@ -7,7 +7,7 @@ Template Name: Blog
 <?php get_header(); ?>
 
 <main id="site-main" class="site-main">
-    <section class="page-default | content width--x-large">
+    <section class="page-default page-blog | content width--x-large">
         <?php
         // Get the ID of the 'Posts Page'
         $posts_page_id = get_option('page_for_posts');
