@@ -39,10 +39,10 @@ a {
     &:hover,
     &:focus {
         color: var(--wp--preset--color--base);
-        text-shadow: 1px 1px 2px var(--wp--preset--color--main-alt), 0 0 1em var(--wp--preset--color--primary), 0 0 0.2em var(--wp--preset--color--primary);
+        text-shadow: var(--wp--custom--text-shadow--100);
     }
 }
 
 hr {
-    margin-block: 1em;
+    margin-block: 1rem;
 }
