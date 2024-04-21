@@ -7,11 +7,35 @@ Template Name: Blog
 <?php get_header(); ?>
 
 <main id="site-main" class="site-main">
-    <section class="page-blog | content width--x-large">
-        <header>
-            <h1><?php echo get_the_title(get_option('page_for_posts')); ?></h1>
-            <p><?php the_field('sub_heading'); ?></p>
-        </header>
+    <section class="page-default | content width--x-large">
+        <?php
+        // Get the ID of the 'Posts Page'
+        $posts_page_id = get_option('page_for_posts');
+
+        // Fetch the post object using the ID
+        $posts_page = get_post($posts_page_id);
+
+        // Check if the posts page exists and is not empty
+        if ($posts_page) {
+            // Setup the postdata to use template tags
+            setup_postdata($posts_page);
+        ?>
+            <header>
+                <h1><?php single_post_title(); ?></h1>
+                <?php if (function_exists('the_field')) { ?>
+                    <p><?php the_field('sub_heading', $posts_page_id); ?></p>
+                <?php } ?>
+            </header>
+
+            <?php if (!empty($posts_page->post_content)) {
+                echo $posts_page->post_content;
+            } ?>
+
+        <?php
+            // Reset postdata to ensure it doesn't interfere with other queries
+            wp_reset_postdata();
+        }
+        ?>
 
         <?php if ( have_posts() ) : ?>
             <div class="blog__filters__container">
@@ -48,7 +72,6 @@ Template Name: Blog
                     <?php
                     while ( have_posts() ) : the_post();
                     $categories = get_the_category();
-                    // var_dump($categories);
                     $category_name = join(', ', wp_list_pluck($categories, 'name'));
                     $category_id = join(', ', wp_list_pluck($categories, 'cat_ID'));
                     ?>
@@ -69,7 +92,7 @@ Template Name: Blog
                     </li>
                     <?php endwhile; ?>
                 </ul>
-                <p class="blog__posts__message is-hidden">Sorry, no posts were found.</p>
+                <p class="blog__posts__message is-hidden">Sorry, nothing here.</p>
             </div>
 
         <?php else : ?>
@@ -102,9 +125,8 @@ Template Name: Blog
     // **************************
     //  Set width for category/date lists and category/year buttons
     // **************************
-    function setMaxWidth(elements, additionalWidthLargeViewport, additionalWidthSmallViewport, targets) {
+    function setMaxWidth(elements, additionalWidth, targets) {
         let maxWidth = 0;
-        let additionalWidth;
 
         elements.forEach(element => {
             const elementWidth = element.offsetWidth;
@@ -113,21 +135,17 @@ Template Name: Blog
             }
         });
 
-        if (window.innerWidth >= 800) {
-            additionalWidth = additionalWidthLargeViewport;
-        } else {
-            additionalWidth = additionalWidthSmallViewport;
+        if (window.innerWidth > 640) {
+            elements.forEach(element => element.style.width = maxWidth + additionalWidth + 'px');
+            targets.forEach(target => target.style.width = maxWidth + additionalWidth + 'px');
         }
-
-        elements.forEach(element => element.style.width = maxWidth + additionalWidth + 'px');
-        targets.forEach(target => target.style.width = maxWidth + additionalWidth + 'px');
     }
 
     // categories
-    setMaxWidth(categories, 60, 20, [categoryToggle, ...categoryButtons]);
+    setMaxWidth(categories, 60, [categoryToggle, ...categoryButtons]);
 
     // dates
-    setMaxWidth(dates, 40, 10, [yearToggle, ...yearButtons]);
+    setMaxWidth(dates, 40, [yearToggle, ...yearButtons]);
 
     // **************************
     //  Set initial values for filters
