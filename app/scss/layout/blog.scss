@@ -99,6 +99,7 @@
     margin: 0;
     position: absolute;
     width: 100%;
+    z-index: 1;
 
     &.is-open {
         display: block;
@@ -144,6 +145,14 @@
     cursor: pointer;
     padding-block: 0.25rem;
     width: 100%;
+
+    &:hover,
+    &:focus {
+        background-color: var(--wp--preset--color--main-alt);
+        box-shadow: 1px 1px 50px var(--wp--preset--color--primary-rgb-10);
+        color: var(--wp--preset--color--base);
+        text-shadow: var(--wp--custom--text-shadow--100);
+    }
 
     &.is-active {
         display: none;
