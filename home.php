@@ -67,32 +67,34 @@ Template Name: Blog
                 </div>
             </div>
 
-            <div class="blog__posts__container">
-                <ul class="blog__posts">
-                    <?php
-                    while ( have_posts() ) : the_post();
-                    $categories = get_the_category();
-                    $category_name = join(', ', wp_list_pluck($categories, 'name'));
-                    $category_id = join(', ', wp_list_pluck($categories, 'cat_ID'));
-                    ?>
-                    <li data-category="<?php echo esc_html($category_id); ?>" data-year="<?php echo get_the_date('Y'); ?>" class="blog__posts__item is-visible">
-                        <div class="blog__link">
-                            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                        </div>
-
-                        <div class="blog__meta">
-                            <div class="blog__category">
-                                <span><?php echo esc_html($category_name); ?></span>
+            <div class="blog__posts__wrapper">
+                <div class="blog__posts__container">
+                    <ul class="blog__posts">
+                        <?php
+                        while ( have_posts() ) : the_post();
+                        $categories = get_the_category();
+                        $category_name = join(', ', wp_list_pluck($categories, 'name'));
+                        $category_id = join(', ', wp_list_pluck($categories, 'cat_ID'));
+                        ?>
+                        <li data-category="<?php echo esc_html($category_id); ?>" data-year="<?php echo get_the_date('Y'); ?>" class="blog__posts__item is-visible">
+                            <div class="blog__link">
+                                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                             </div>
 
-                            <div class="blog__date">
-                                <time datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y-m-d'); ?></time>
+                            <div class="blog__meta">
+                                <div class="blog__category">
+                                    <span><?php echo esc_html($category_name); ?></span>
+                                </div>
+
+                                <div class="blog__date">
+                                    <time datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y-m-d'); ?></time>
+                                </div>
                             </div>
-                        </div>
-                    </li>
-                    <?php endwhile; ?>
-                </ul>
-                <p class="blog__posts__message is-hidden">Sorry, nothing here.</p>
+                        </li>
+                        <?php endwhile; ?>
+                    </ul>
+                    <p class="blog__posts__message is-hidden">Sorry, nothing here.</p>
+                </div>
             </div>
 
         <?php else : ?>
@@ -110,13 +112,13 @@ Template Name: Blog
     // **************************
     //  Get elements
     // **************************
-    const page = document.querySelector('.page-blog');
     const categoryToggle = document.querySelector('.filters__category__toggle');
     const yearToggle = document.querySelector('.filters__year__toggle');
     const categoryList = document.querySelector('.filters__category__list');
     const yearList = document.querySelector('.filters__year__list');
     const categoryButtons = categoryList.querySelectorAll('button');
     const yearButtons = yearList.querySelectorAll('button');
+    const postsContainer = document.querySelector('.blog__posts__container')
     const posts = document.querySelectorAll('.blog__posts li');
     const categories = document.querySelectorAll('.blog__posts .blog__category');
     const dates = document.querySelectorAll('.blog__posts .blog__date');
@@ -126,6 +128,26 @@ Template Name: Blog
     //  Set width for category/date lists and category/year buttons
     // **************************
     function setMaxWidth(elements, additionalWidth, targets) {
+        // deal with long category names
+        function truncateTextContent(element) {
+            const textContent = element.textContent;
+            if (textContent.length > 20) {
+                element.setAttribute('title', textContent);
+                element.textContent = `${textContent.substring(0, 20)}...`;
+            }
+        }
+        // truncate category names in list
+        elements.forEach(element => {
+            if (element.classList.contains('blog__category')) {
+                const categoryText = element.querySelector('span');
+                if (categoryText) {
+                    truncateTextContent(categoryText);
+                }
+            }
+        });
+        // truncate category names in buttons
+        targets.forEach(truncateTextContent);
+
         let maxWidth = 0;
 
         elements.forEach(element => {
@@ -195,7 +217,7 @@ Template Name: Blog
             categoryName = button.textContent;
             categoryToggle.textContent = categoryName;
 
-            filterPosts();
+            filterPostsTransition();
         });
     });
 
@@ -219,7 +241,7 @@ Template Name: Blog
             yearName = button.textContent;
             yearToggle.textContent = yearName;
 
-            filterPosts();
+            filterPostsTransition();
         });
     });
 
@@ -250,6 +272,14 @@ Template Name: Blog
             noPosts.classList.remove('is-visible');
             noPosts.classList.add('is-hidden');
         }
+    }
+
+    function filterPostsTransition() {
+        postsContainer.classList.add('is-hiding');
+        setTimeout(() => {
+            postsContainer.classList.remove('is-hiding');
+            filterPosts();
+        }, 500);
     }
 </script>
 

@@ -57,6 +57,7 @@
     cursor: pointer;
     padding-block: 0.25rem;
     transition: all var(--transition--fast);
+    width: 150px;
 
     @media (max-width: viewports.$viewport--breakpoint--xx-small) {
         padding-inline: 0.75rem;
@@ -165,11 +166,22 @@
 // ***********************************
 //  Blog Posts
 // ***********************************
+// wrapper
+.blog__posts__wrapper {
+    min-height: 50vh; // this prevents the page from jumping when the posts load due to vertical height changes and the scrollbar appearing
+}
+
 // container
 .blog__posts__container {
     border: 1px solid var(--wp--preset--color--grey-100);
     border-bottom: 0;
     border-radius: 0.5rem;
+    opacity: 1;
+    transition: opacity var(--transition--medium);
+
+    &.is-hiding {
+        opacity: 0;
+    }
 
     @media (max-width: viewports.$viewport--breakpoint--xx-small) {
         border: 0;
