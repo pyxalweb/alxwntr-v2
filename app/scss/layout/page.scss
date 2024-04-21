@@ -14,13 +14,13 @@
 	header {
 		align-items: center;
 		display: flex;
+		gap: var(--wp--preset--spacing--x-large);
 		justify-content: space-between;
 		margin-bottom: var(--wp--preset--spacing--x-large);
 
 		@media (max-width: viewports.$viewport--breakpoint--xx-small) {
 			align-items: center;
 			flex-direction: column;
-			gap: var(--wp--preset--spacing--x-large);
 			text-align: center;
 		}
 	}
