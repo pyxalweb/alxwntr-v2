@@ -93,7 +93,7 @@ Template Name: Blog
                         </li>
                         <?php endwhile; ?>
                     </ul>
-                    <p class="blog__posts__message is-hidden">Sorry, nothing here.</p>
+                    <p class="blog__posts__message is-hidden">Nothing here :(</p>
                 </div>
             </div>
 
