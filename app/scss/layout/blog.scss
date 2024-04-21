@@ -244,7 +244,8 @@
 
     @media (max-width: viewports.$viewport--breakpoint--xx-small) {
         font-size: var(--wp--preset--font-size--x-small);
-        padding-bottom: 0.75rem;
+        gap: 1rem;
+        padding-block: 0.75rem;
         padding-inline: 0.75rem;
     }
 }
@@ -254,10 +255,16 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    line-height: 1;
     padding-block: 0.75rem;
     padding-inline: 0.75rem;
     text-align: center;
+
+    &:before {
+        @media (max-width: viewports.$viewport--breakpoint--xx-small) {
+            font-family: 'icons';
+            margin-right: 0.5rem;
+        }
+    }
 }
 
 // post category
@@ -270,12 +277,24 @@
         border-right: 0;
         padding: 0;
     }
+
+    &:before {
+        @media (max-width: viewports.$viewport--breakpoint--xx-small) {
+            content: '\E816';
+        }
+    }
 }
 
 // post date
 .blog__date {
     @media (max-width: viewports.$viewport--breakpoint--xx-small) {
-        padding0: 0;
+        padding: 0;
+    }
+
+    &:before {
+        @media (max-width: viewports.$viewport--breakpoint--xx-small) {
+            content: '\E801';
+        }
     }
 }
 

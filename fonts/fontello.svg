@@ -1,12 +1,14 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg xmlns="http://www.w3.org/2000/svg">
-<metadata>Copyright (C) 2023 by original authors @ fontello.com</metadata>
+<metadata>Copyright (C) 2024 by original authors @ fontello.com</metadata>
 <defs>
 <font id="fontello" horiz-adv-x="1000" >
 <font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
 <missing-glyph horiz-adv-x="1000" />
 <glyph glyph-name="icon-plus" unicode="&#xe800;" d="M577 773c0 41-36 77-77 77s-77-36-77-77v-346h-346c-41 0-77-36-77-77 0-41 36-77 77-77h346v-346c0-41 36-77 77-77s77 36 77 77v346h346c41 0 77 36 77 77s-36 77-77 77h-346v346z" horiz-adv-x="1000" />
+
+<glyph glyph-name="clock-regular" unicode="&#xe801;" d="M906 350a406 406 0 1 0-812 0 406 406 0 1 0 812 0z m-906 0a500 500 0 1 1 1000 0 500 500 0 1 1-1000 0z m453 266v-266c0-16 8-30 21-39l188-125c21-14 50-9 65 13s8 51-13 65l-167 111v241c0 26-21 47-47 47s-47-21-47-47z" horiz-adv-x="1000" />
 
 <glyph glyph-name="minus-solid" unicode="&#xe803;" d="M844 350c0-35-28-62-63-62l-687 0c-35 0-63 27-63 62s28 63 63 63l687 0c35 0 63-28 63-63z" horiz-adv-x="875" />
 
@@ -23,6 +25,8 @@
 <glyph glyph-name="location-dot-solid" unicode="&#xe814;" d="M375-150s375 406 375 625c0 207-168 375-375 375s-375-168-375-375c0-219 375-625 375-625z m0 500c-69 0-125 56-125 125s56 125 125 125 125-56 125-125-56-125-125-125z" horiz-adv-x="750" />
 
 <glyph glyph-name="phone" unicode="&#xe815;" d="M786 158q0-15-6-39t-12-38q-11-28-68-60-52-28-103-28-15 0-30 2t-32 7-26 8-31 11-28 10q-54 20-97 47-71 44-148 120t-120 148q-27 43-46 97-2 5-10 28t-12 31-8 26-7 32-2 29q0 52 29 104 31 57 59 68 14 6 38 12t39 6q8 0 12-2 10-3 30-42 6-11 16-31t20-35 17-30q2-2 10-14t12-20 4-16q0-11-16-27t-35-31-34-30-16-25q0-5 3-13t4-11 8-14 7-10q42-77 97-132t131-97q1 0 10-6t14-8 11-5 13-2q10 0 25 16t30 34 31 35 28 16q7 0 15-4t20-12 14-10q14-8 30-17t36-20 30-17q39-19 42-29 2-4 2-12z" horiz-adv-x="785.7" />
+
+<glyph glyph-name="file-lines-regular" unicode="&#xe816;" d="M125-56c-17 0-31 14-31 31v750c0 17 14 31 31 31h313v-156c0-35 27-62 62-62h156v-563c0-17-14-31-31-31h-500z m0 906c-69 0-125-56-125-125v-750c0-69 56-125 125-125h500c69 0 125 56 125 125v573c0 33-13 65-36 89l-177 177c-24 23-56 36-89 36h-323z m109-500c-26 0-46-21-46-47s20-47 46-47h282c26 0 47 21 47 47s-21 47-47 47h-282z m0-187c-26 0-46-21-46-47s20-47 46-47h282c26 0 47 21 47 47s-21 47-47 47h-282z" horiz-adv-x="750" />
 
 <glyph glyph-name="twitter" unicode="&#xf099;" d="M904 622q-37-54-90-93 0-8 0-23 0-73-21-145t-64-139-103-117-144-82-181-30q-151 0-276 81 19-2 43-2 126 0 224 77-59 1-105 36t-64 89q19-3 34-3 24 0 48 6-63 13-104 62t-41 115v2q38-21 82-23-37 25-59 64t-22 86q0 49 25 91 68-83 164-133t208-55q-5 21-5 41 0 75 53 127t127 53q79 0 132-57 61 12 115 44-21-64-80-100 52 6 104 28z" horiz-adv-x="928.6" />
 
