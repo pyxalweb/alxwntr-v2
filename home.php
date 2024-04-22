@@ -106,7 +106,7 @@ Template Name: Blog
 <script type="text/javascript">
     // ***********************************
     //  Filter posts
-    //  by Alex Winter - 2024-04-19 - v1.0
+    //  by Alex Winter - 2024-04-21 - v1.0
     // ***********************************
 
     // **************************
@@ -119,6 +119,7 @@ Template Name: Blog
     const categoryButtons = categoryList.querySelectorAll('button');
     const yearButtons = yearList.querySelectorAll('button');
     const postsContainer = document.querySelector('.blog__posts__container')
+    const postsList = document.querySelector('.blog__posts');
     const posts = document.querySelectorAll('.blog__posts li');
     const categories = document.querySelectorAll('.blog__posts .blog__category');
     const dates = document.querySelectorAll('.blog__posts .blog__date');
@@ -264,20 +265,26 @@ Template Name: Blog
         });
 
         // if no article has class 'is-visible', show message
-        const visiblePosts = document.querySelectorAll('.is-visible');
+        const visiblePosts = postsList.querySelectorAll('.is-visible');
         if (visiblePosts.length === 0) {
             noPosts.classList.remove('is-hidden');
             noPosts.classList.add('is-visible');
         } else {
             noPosts.classList.remove('is-visible');
             noPosts.classList.add('is-hidden');
+
+            categoryToggle.classList.remove('is-icon-hiding');
+            yearToggle.classList.remove('is-icon-hiding');
         }
     }
 
     function filterPostsTransition() {
+        categoryToggle.classList.add('is-icon-hiding');
+        yearToggle.classList.add('is-icon-hiding');
         postsContainer.classList.add('is-hiding');
         setTimeout(() => {
             postsContainer.classList.remove('is-hiding');
+
             filterPosts();
         }, 500);
     }

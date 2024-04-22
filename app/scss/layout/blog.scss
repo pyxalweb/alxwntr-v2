@@ -58,6 +58,7 @@
     cursor: pointer;
     padding-block: var(--blog--padding-button);
     padding-inline: 0.25rem;
+    position: relative;
     transition: all var(--transition--fast);
     width: 150px;
 
@@ -66,7 +67,31 @@
         background-color: var(--wp--preset--color--main-alt);
         box-shadow: 1px 1px 50px var(--wp--preset--color--primary-rgb-10);
         color: var(--wp--preset--color--base);
-        text-shadow: var(--wp--custom--text-shadow--100);
+
+        &:after {
+            box-shadow: none;
+        }
+    }
+
+    &:after {
+        color: (var(--wp--preset--color--grey-300));
+        font-family: 'icons';
+        inset: 4.25rem 50% auto 0;
+        opacity: 1;
+        pointer-events: none;
+        position: absolute;
+        transform: translateX(50%);
+        transition: opacity var(--transition--medium);
+
+        @media (max-width: viewports.$viewport--breakpoint--xx-small) {
+            display: none;
+        }
+    }
+
+    &.is-icon-hiding {
+        &:after {
+            opacity: 0;
+        }
     }
 }
 
@@ -77,6 +102,10 @@
     &.is-open {
         border-radius: var(--blog--border-radius) 0 0 0;
     }
+
+    &:after {
+        content: '\E816';
+    }
 }
 
 // year toggle
@@ -85,6 +114,10 @@
 
     &.is-open {
         border-radius: 0 var(--blog--border-radius) 0 0;
+    }
+
+    &:after {
+        content: '\E801';
     }
 }
 
@@ -142,6 +175,7 @@
     color: var(--wp--preset--color--primary);
     cursor: pointer;
     padding-block: var(--blog--padding-button);
+    transition: all var(--transition--fast);
     width: 100%;
 
     &:hover,
@@ -259,6 +293,7 @@
 
     &:before {
         @media (max-width: viewports.$viewport--breakpoint--xx-small) {
+            color: (var(--wp--preset--color--grey-300));
             font-family: 'icons';
             margin-right: 0.5rem;
         }
