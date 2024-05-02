@@ -8,68 +8,32 @@
     </section>
 </main>
 
-<button class="light-mode" style="width:130px">Light Mode</button>
-<button class="dark-mode" style="width:130px">Dark Mode</button>
+<button class="toggle-light-mode" style="width:130px">Light Mode</button>
+<button class="toggle-dark-mode" style="width:130px">Dark Mode</button>
 
 <script>
-    const rootBody = document.body;
-
-    // CSS Variables - 'Default' (Dark Mode)
-    const wpPresetColorDefaultPrimary = '--wp--preset--color--primary';
-    const wpPresetColorDefaultPrimaryRgb10 = '--wp--preset--color--primary-rgb-10';
-    const wpPresetColorDefaultSecondary = '--wp--preset--color--secondary';
-    const wpPresetColorDefaultTertiary = '--wp--preset--color--tertiary';
-    const wpPresetColorDefault100 = '--wp--preset--color--100';
-    const wpPresetColorDefault200 = '--wp--preset--color--200';
-    const wpPresetColorDefault300 = '--wp--preset--color--300';
-    const wpPresetColorDefaultMain = '--wp--preset--color--main';
-    const wpPresetColorDefaultMainAlt = '--wp--preset--color--main-alt';
-    const wpPresetColorDefaultBase = '--wp--preset--color--base';
-    const wpPresetColorDefaultGrey100 = '--wp--preset--color--grey-100';
-    const wpPresetColorDefaultGrey200 = '--wp--preset--color--grey-200';
-    const wpPresetColorDefaultGrey300 = '--wp--preset--color--grey-300';
-    const wpPresetGradientDefaultPrimary = '--wp--preset--gradient--primary';
-
-    // CSS Variables - 'Light Mode'
-    const wpPresetColorLightmodePrimary = '--wp--preset--color--lightmode--primary';
-    const wpPresetColorLightmodePrimaryRgb10 = '--wp--preset--color--lightmode--primary-rgb-10';
-    const wpPresetColorLightmodeSecondary = '--wp--preset--color--lightmode--secondary';
-    const wpPresetColorLightmodeTertiary = '--wp--preset--color--lightmode--tertiary';
-    const wpPresetColorLightmode100 = '--wp--preset--color--lightmode--100';
-    const wpPresetColorLightmode200 = '--wp--preset--color--lightmode--200';
-    const wpPresetColorLightmode300 = '--wp--preset--color--lightmode--300';
-    const wpPresetColorLightmodeMain = '--wp--preset--color--lightmode--main';
-    const wpPresetColorLightmodeMainAlt = '--wp--preset--color--lightmode--main-alt';
-    const wpPresetColorLightmodeBase = '--wp--preset--color--lightmode--base';
-    const wpPresetColorLightmodeGrey100 = '--wp--preset--color--lightmode--grey-100';
-    const wpPresetColorLightmodeGrey200 = '--wp--preset--color--lightmode--grey-200';
-    const wpPresetColorLightmodeGrey300 = '--wp--preset--color--lightmode--grey-300';
-    const wpPresetGradientLightmodePrimary = '--wp--preset--gradient--lightmode--primary';
-
-    // Create object for 'default' color values
-    // and assign 'default' color values to object
-    let defaultColors = {};
-    function setDefaultColorValues(cssVariable) {
-        defaultColors[cssVariable] = getComputedStyle(document.documentElement).getPropertyValue(cssVariable);
+    // Cookie functions for theme toggle
+    function setCookie(name, value, days) {
+        let expires = "";
+        if (days) {
+            let date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "") + expires + "; path=/";
     }
-    setDefaultColorValues(wpPresetColorDefaultMain);
-    setDefaultColorValues(wpPresetColorDefaultMainAlt);
-    setDefaultColorValues(wpPresetColorDefaultBase);
-    setDefaultColorValues(wpPresetColorDefaultGrey100);
-    console.log(defaultColors);
 
-    // Create object for 'light mode' color values
-    // and assign 'light mode' color values to object
-    let lightColors = {};
-    // Assign light mode color values to object
-    function setLightColorValues(cssVariable) {
-        lightColors[cssVariable] = getComputedStyle(document.documentElement).getPropertyValue(cssVariable);
+    // Get cookie value
+    function getCookie(name) {
+        let nameEQ = name + "=";
+        let ca = document.cookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
     }
-    setLightColorValues(wpPresetColorLightmodeMain);
-    setLightColorValues(wpPresetColorLightmodeMainAlt);
-    setLightColorValues(wpPresetColorLightmodeBase);
-    setLightColorValues(wpPresetColorLightmodeGrey100);
-    console.log(lightColors);
 
     // Additional styles for 'light mode'
     const style = document.createElement('style');
@@ -78,35 +42,40 @@
     const lightModeStyles = document.querySelector('.light-mode-styles');
 
     function enableLightMode() {
-        rootBody.style.setProperty('--wp--preset--color--main', lightColors['--wp--preset--color--lightmode--main']);
-        rootBody.style.setProperty('--wp--preset--color--main-alt', lightColors['--wp--preset--color--lightmode--main-alt']);
-        rootBody.style.setProperty('--wp--preset--color--base', lightColors['--wp--preset--color--lightmode--base']);
-        rootBody.style.setProperty('--wp--preset--color--grey-100', lightColors['--wp--preset--color--lightmode--grey-100']);
+        document.documentElement.className = 'light-mode';
 
         // Add 'light mode' styles
         lightModeStyles.innerHTML = `
             .header__navigation a:hover { color: #fff; }
         `;
+
+        setCookie('theme', 'light', 7);
+
+        console.log('Light mode enabled')
     }
 
     function enableDefaultMode() {
-        rootBody.style.setProperty('--wp--preset--color--main', defaultColors['--wp--preset--color--main']);
-        rootBody.style.setProperty('--wp--preset--color--main-alt', defaultColors['--wp--preset--color--main-alt']);
-        rootBody.style.setProperty('--wp--preset--color--base', defaultColors['--wp--preset--color--base']);
-        rootBody.style.setProperty('--wp--preset--color--grey-100', defaultColors['--wp--preset--color--grey-100']);
+        document.documentElement.className = 'dark-mode';
 
         // Remove 'light mode' styles
         lightModeStyles.remove();
+
+        setCookie('theme', 'dark', 7);
+
+        console.log('Default mode enabled')
     }
 
-    // Toggle 'light mode' CSS color values
-    document.querySelector('.light-mode').addEventListener('click', () => {
-        enableLightMode();
-    });
+    // Check cookie on page load and set theme accordingly
+    document.addEventListener('DOMContentLoaded', function() {
+        const savedTheme = getCookie('theme');
+        if (savedTheme === 'light') {
+            enableLightMode();
+        } else {
+            enableDefaultMode();
+        }
 
-    // Toggle 'default' (dark mode) CSS color values
-    document.querySelector('.dark-mode').addEventListener('click', () => {
-        enableDefaultMode();
+        document.querySelector('.toggle-light-mode').addEventListener('click', enableLightMode);
+        document.querySelector('.toggle-dark-mode').addEventListener('click', enableDefaultMode);
     });
 </script>
 

@@ -15,6 +15,18 @@ add_action('wp_enqueue_scripts', 'theme_files');
 
 
 
+function remove_global_styles() {
+    // Remove global styles added by Gutenberg
+    // These seem to break the front-end styles when using a "toggle light/dark mode" feature
+    remove_action('wp_enqueue_scripts', 'wp_enqueue_global_styles');
+    remove_action('wp_footer', 'wp_enqueue_global_styles', 1);
+}
+
+add_action('init', 'remove_global_styles');
+
+
+
+
 // ***********************************
 //  Enable Featured Images (Post Thumbnails)
 // ***********************************
