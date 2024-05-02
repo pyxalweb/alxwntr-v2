@@ -63,7 +63,7 @@
 
 
 	// ***********************************
-	//  Colors
+	//  Colors - Dark Mode (Default)
 	// ***********************************
 	--wp--preset--color--primary: #009ffe;
 	--wp--preset--color--primary-rgb-10: rgb(41 148 255 / 20%);
@@ -79,6 +79,27 @@
 	--wp--preset--color--grey-200: #1e1e23;
 	--wp--preset--color--grey-300: #878787;
 	--wp--preset--gradient--primary: #ff5733 0%, #ffc300 100%;
+
+
+
+
+	// ***********************************
+	//  Colors - Ligt Mode
+	// ***********************************
+	--wp--preset--color--lightmode--primary: #ff0000;
+	--wp--preset--color--lightmode--primary-rgb-10: rgba(255, 0, 0, 0.2);
+	--wp--preset--color--lightmode--secondary: #ff0000;
+	--wp--preset--color--lightmode--tertiary: #ff0000;
+	--wp--preset--color--lightmode--100: #ff0000;
+	--wp--preset--color--lightmode--200: #ff0000;
+	--wp--preset--color--lightmode--300: #ff0000;
+	--wp--preset--color--lightmode--main: #ededed;
+	--wp--preset--color--lightmode--main-alt: #e0e0e0;
+	--wp--preset--color--lightmode--base: #000;
+	--wp--preset--color--lightmode--grey-100: #b8b8b8;
+	--wp--preset--color--lightmode--grey-200: #ff0000;
+	--wp--preset--color--lightmode--grey-300: #ff0000;
+	--wp--preset--gradient--lightmode--primary: #ff0000 0%, #00ff1e 100%;
 
 
 
