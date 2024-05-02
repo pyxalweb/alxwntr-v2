@@ -8,11 +8,18 @@
     </section>
 </main>
 
-<button class="toggle-light-mode" style="width:130px">Light Mode</button>
-<button class="toggle-dark-mode" style="width:130px">Dark Mode</button>
+<button class="theme-toggle--light-mode" style="width:130px">Light Mode</button>
+<button class="theme-toggle--dark-mode" style="width:130px">Dark Mode</button>
 
 <script>
-    // Cookie functions for theme toggle
+    // ***********************************
+    //  Theme Toggle
+    //  by Alex Winter - 2024-05-01 - v1.0
+    // ***********************************
+
+    // **************************
+    //  Set and Get Cookie
+    // **************************
     function setCookie(name, value, days) {
         let expires = "";
         if (days) {
@@ -22,8 +29,6 @@
         }
         document.cookie = name + "=" + (value || "") + expires + "; path=/";
     }
-
-    // Get cookie value
     function getCookie(name) {
         let nameEQ = name + "=";
         let ca = document.cookie.split(';');
@@ -35,47 +40,36 @@
         return null;
     }
 
-    // Additional styles for 'light mode'
-    const style = document.createElement('style');
-    style.setAttribute('class', 'light-mode-styles');
-    document.head.appendChild(style);
-    const lightModeStyles = document.querySelector('.light-mode-styles');
-
+    // **************************
+    //  Light Mode
+    // **************************
     function enableLightMode() {
         document.documentElement.className = 'light-mode';
-
-        // Add 'light mode' styles
-        lightModeStyles.innerHTML = `
-            .header__navigation a:hover { color: #fff; }
-        `;
-
         setCookie('theme', 'light', 7);
-
-        console.log('Light mode enabled')
     }
 
-    function enableDefaultMode() {
+    // **************************
+    //  Dark Mode
+    // **************************
+    function enableDarkMode() {
         document.documentElement.className = 'dark-mode';
-
-        // Remove 'light mode' styles
-        lightModeStyles.remove();
-
         setCookie('theme', 'dark', 7);
-
-        console.log('Default mode enabled')
     }
 
-    // Check cookie on page load and set theme accordingly
+    // **************************
+    //  Check cookie on page load
+    //  & listen for button clicks
+    // **************************
     document.addEventListener('DOMContentLoaded', function() {
         const savedTheme = getCookie('theme');
         if (savedTheme === 'light') {
             enableLightMode();
         } else {
-            enableDefaultMode();
+            enableDarkMode();
         }
 
-        document.querySelector('.toggle-light-mode').addEventListener('click', enableLightMode);
-        document.querySelector('.toggle-dark-mode').addEventListener('click', enableDefaultMode);
+        document.querySelector('.theme-toggle--light-mode').addEventListener('click', enableLightMode);
+        document.querySelector('.theme-toggle--dark-mode').addEventListener('click', enableDarkMode);
     });
 </script>
 

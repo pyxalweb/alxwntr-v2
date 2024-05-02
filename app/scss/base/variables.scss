@@ -1,7 +1,7 @@
+// ***********************************
+//  Colors - Dark Mode (Default)
+// ***********************************
 :root.dark-mode {
-	// ***********************************
-	//  Colors - Dark Mode (Default)
-	// ***********************************
 	--wp--preset--color--primary: #009ffe;
 	--wp--preset--color--primary-rgb-10: rgb(41 148 255 / 20%);
 	--wp--preset--color--secondary: #ff5733;
@@ -18,10 +18,10 @@
 	--wp--preset--gradient--primary: #ff5733 0%, #ffc300 100%;
 }
 
+// ***********************************
+//  Colors - Light Mode
+// ***********************************
 :root.light-mode {
-	// ***********************************
-	//  Colors - Light Mode
-	// ***********************************
 	--wp--preset--color--primary: #ff0000;
 	--wp--preset--color--primary-rgb-10: rgba(255, 0, 0, 0.2);
 	--wp--preset--color--secondary: #ff0000;
@@ -37,6 +37,9 @@
 	--wp--preset--color--grey-300: #ff0000;
 	--wp--preset--gradient--primary: #0004ff 0%, #00ff1e 100%;
 }
+
+
+
 
 :root {
 	// ***********************************
