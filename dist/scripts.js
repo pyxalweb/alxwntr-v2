@@ -1,2 +1,2 @@
-!function(){document.documentElement,document.querySelector("body"),document.querySelector(".site-header"),document.querySelector(".site-footer"),document.querySelector(".site-main.homepage"),document.querySelector(".page-blog"),document.querySelectorAll(".category__btn"),document.querySelector(".categories__select"),document.querySelectorAll(".blog__posts"),document.querySelectorAll(".post__item");window.onload=e=>{document.querySelector("body").classList.remove("preload")}}();
+window.onload=o=>{document.querySelector("body").classList.remove("preload")};
 //# sourceMappingURL=scripts.js.map
