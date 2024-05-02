@@ -13,6 +13,11 @@
 			<p>© <?php echo date('Y'); ?> - Alex Winter</p>
 		</div>
 
+		<div class="footer__theme">
+			<button class="theme-toggle--light-mode" style="width:130px">Light Mode</button>
+			<button class="theme-toggle--dark-mode" style="width:130px">Dark Mode</button>
+		</div>
+
 		<div class="footer__social">
 			<?php get_template_part( 'template-parts/content', 'social' ); ?>
 		</div>
