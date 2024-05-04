@@ -23,7 +23,7 @@ window.onload = (event) => {
 
 // ***********************************
 //  Theme Toggle
-//  by Alex Winter - 2024-05-01 - v1.0
+//  by Alex Winter - 2024-05-03 - v1.0
 // ***********************************
 
 const themeToggle = () => {
@@ -50,7 +50,8 @@ const themeToggle = () => {
 		return null;
 	}
 
-	const themeTransition = document.querySelector('.theme-transition');
+	const root = document.documentElement;
+	const themeTransition = document.querySelector('.theme-transition'); 
 
 	// **************************
 	//  Transition
@@ -68,26 +69,20 @@ const themeToggle = () => {
 			}, 1000);
 		}, 1);
 	}
-
 	function transitionToLightMode() {
 		transitionToMode('isTransitioningToLight', enableLightMode);
 	}
-
 	function transitionToDarkMode() {
 		transitionToMode('isTransitioningToDark', enableDarkMode);
 	}
 
 	// **************************
-	//  Enable Light Mode
+	//  Enable Modes
 	// **************************
 	function enableLightMode() {
 		document.documentElement.className = 'light-mode';
 		setCookie('theme', 'light', 7);
 	}
-
-	// **************************
-	//  Enable Dark Mode
-	// **************************
 	function enableDarkMode() {
 		document.documentElement.className = 'dark-mode';
 		setCookie('theme', 'dark', 7);
