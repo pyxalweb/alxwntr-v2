@@ -16,26 +16,52 @@
 	--wp--preset--color--grey-200: #1e1e23;
 	--wp--preset--color--grey-300: #878787;
 	--wp--preset--gradient--primary: #ff5733 0%, #ffc300 100%;
+	
+	--wp--custom--text-shadow--100: 1px 1px 2px var(--wp--preset--color--main-alt), 0 0 1rem var(--wp--preset--color--primary), 0 0 0.2rem var(--wp--preset--color--primary);
 }
 
 // ***********************************
 //  Colors - Light Mode
 // ***********************************
 :root.light-mode {
-	--wp--preset--color--primary: #ff0000;
-	--wp--preset--color--primary-rgb-10: rgba(255, 0, 0, 0.2);
+	--wp--preset--color--primary: #0170b0;
+	--wp--preset--color--primary-rgb-10: rgb(0 112 176 / 20%);
 	--wp--preset--color--secondary: #ff0000;
 	--wp--preset--color--tertiary: #ff0000;
 	--wp--preset--color--100: #ff0000;
 	--wp--preset--color--200: #ff0000;
 	--wp--preset--color--300: #ff0000;
 	--wp--preset--color--main: #ededed;
-	--wp--preset--color--main-alt: #e0e0e0;
+	--wp--preset--color--main-alt: #f5f5f5;
 	--wp--preset--color--base: #000;
-	--wp--preset--color--grey-100: #b8b8b8;
-	--wp--preset--color--grey-200: #ff0000;
-	--wp--preset--color--grey-300: #ff0000;
-	--wp--preset--gradient--primary: #0004ff 0%, #00ff1e 100%;
+	--wp--preset--color--grey-100: #cecece;
+	--wp--preset--color--grey-200: #f2f2f2;
+	--wp--preset--color--grey-300: #696969;
+	--wp--preset--gradient--primary: #0004ff 0%, #00c517 100%;
+
+	--wp--custom--text-shadow--100: none;
+}
+
+.theme-transition {
+	background-color: transparent;
+	display: none;
+	height: 100%;
+	position: absolute;
+	transition: background-color 1s;
+	width: 100%;
+	z-index: 9000;
+
+	&.isActive {
+		display: block;		
+	}
+
+	&.isTransitioningToLight {
+		background-color: #ededed;
+	}
+
+	&.isTransitioningToDark {
+		background-color: #17171a;
+	}
 }
 
 
@@ -93,14 +119,6 @@
 	--wp--custom--line-height--relaxed: 1.625;
 	--wp--custom--line-height--loose: 2;
 	--wp--custom--line-height--body: "calc(1px + 2ex + 7px)";
-
-
-
-
-	// ***********************************
-	//  Text Shadows
-	// ***********************************
-	--wp--custom--text-shadow--100: 1px 1px 2px var(--wp--preset--color--main-alt), 0 0 1rem var(--wp--preset--color--primary), 0 0 0.2rem var(--wp--preset--color--primary);
 
 
 
