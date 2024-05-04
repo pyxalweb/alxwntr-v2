@@ -100,9 +100,11 @@ const themeToggle = () => {
 	const themeToggleDarkMode = document.querySelector('.theme-toggle--dark-mode');
 	if (!themeToggleLightMode || !themeToggleDarkMode) return;
 	themeToggleLightMode.addEventListener('click', () => {
+		if (document.documentElement.classList.contains('light-mode')) return;
 		transitionToLightMode();
 	})
 	themeToggleDarkMode.addEventListener('click', () => {
+		if (document.documentElement.classList.contains('dark-mode')) return;
 		transitionToDarkMode();
 	})
 }
