@@ -29,8 +29,6 @@ if (isset($_COOKIE['theme']) && $_COOKIE['theme'] === 'light') {
 
 <body <?php body_class('preload'); ?>>
 
-<div class="theme-transition"></div>
-
 <?php wp_body_open(); ?>
 
 <?php get_template_part( 'template-parts/site', 'skip-nav' ); ?>
