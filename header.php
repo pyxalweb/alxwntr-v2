@@ -6,7 +6,6 @@
  * @package alxwntr
  */
 ?>
-
 <!doctype html>
 <html <?php language_attributes(); ?> class="<?php
 if (isset($_COOKIE['theme']) && $_COOKIE['theme'] === 'light') {
@@ -29,6 +28,9 @@ if (isset($_COOKIE['theme']) && $_COOKIE['theme'] === 'light') {
 </head>
 
 <body <?php body_class('preload'); ?>>
+
+<div class="theme-transition"></div>
+
 <?php wp_body_open(); ?>
 
 <?php get_template_part( 'template-parts/site', 'skip-nav' ); ?>

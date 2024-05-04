@@ -50,8 +50,44 @@ const themeToggle = () => {
 		return null;
 	}
 
+	const themeTransition = document.querySelector('.theme-transition');
+
 	// **************************
-	//  Light Mode
+	//  Transition to Light Mode
+	// **************************
+	function transitionToLightMode() {
+		themeTransition.classList.add('isActive');
+		setTimeout(() => {
+			themeTransition.classList.add('isTransitioningToLight');
+			setTimeout(() => {
+				themeTransition.classList.remove('isTransitioningToLight');
+				enableLightMode();
+				setTimeout(() => {
+					themeTransition.classList.remove('isActive');
+				}, 1000);
+			}, 1000);
+		}, 1);
+	}
+
+	// **************************
+	//  Transition to Dark Mode
+	// **************************
+	function transitionToDarkMode() {
+		themeTransition.classList.add('isActive');
+		setTimeout(() => {
+			themeTransition.classList.add('isTransitioningToDark');
+			setTimeout(() => {
+				themeTransition.classList.remove('isTransitioningToDark');
+				enableDarkMode();
+				setTimeout(() => {
+					themeTransition.classList.remove('isActive');
+				}, 1000);
+			}, 1000);
+		}, 1);
+	}
+
+	// **************************
+	//  Enable Light Mode
 	// **************************
 	function enableLightMode() {
 		document.documentElement.className = 'light-mode';
@@ -59,22 +95,11 @@ const themeToggle = () => {
 	}
 
 	// **************************
-	//  Dark Mode
+	//  Enable Dark Mode
 	// **************************
 	function enableDarkMode() {
 		document.documentElement.className = 'dark-mode';
 		setCookie('theme', 'dark', 7);
-	}
-
-	// **************************
-	//  Check cookie on page load
-	//  & set theme accordingly
-	// **************************
-	const savedTheme = getCookie('theme');
-	if (savedTheme === 'light') {
-		enableLightMode();
-	} else {
-		enableDarkMode();
 	}
 
 	// **************************
@@ -83,8 +108,12 @@ const themeToggle = () => {
 	const themeToggleLightMode = document.querySelector('.theme-toggle--light-mode');
 	const themeToggleDarkMode = document.querySelector('.theme-toggle--dark-mode');
 	if (!themeToggleLightMode || !themeToggleDarkMode) return;
-	themeToggleLightMode.addEventListener('click', enableLightMode);
-	themeToggleDarkMode.addEventListener('click', enableDarkMode);
+	themeToggleLightMode.addEventListener('click', () => {
+		transitionToLightMode();
+	})
+	themeToggleDarkMode.addEventListener('click', () => {
+		transitionToDarkMode();
+	})
 }
 themeToggle();
 
