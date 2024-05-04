@@ -6,8 +6,18 @@
  * @package alxwntr
  */
 ?>
+
 <!doctype html>
-<html <?php language_attributes(); ?> class="dark-mode">
+<html <?php language_attributes(); ?> class="<?php
+if (isset($_COOKIE['theme']) && $_COOKIE['theme'] === 'light') {
+	echo 'light-mode';
+} elseif (isset($_COOKIE['theme']) && $_COOKIE['theme'] === 'dark') {
+	echo 'dark-mode';
+} else {
+	echo 'dark-mode';
+}
+?>">
+
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
