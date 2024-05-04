@@ -53,15 +53,15 @@ const themeToggle = () => {
 	const themeTransition = document.querySelector('.theme-transition');
 
 	// **************************
-	//  Transition to Light Mode
+	//  Transition
 	// **************************
-	function transitionToLightMode() {
+	function transitionToMode(transitionClass, modeFunction) {
 		themeTransition.classList.add('isActive');
 		setTimeout(() => {
-			themeTransition.classList.add('isTransitioningToLight');
+			themeTransition.classList.add(transitionClass);
 			setTimeout(() => {
-				themeTransition.classList.remove('isTransitioningToLight');
-				enableLightMode();
+				themeTransition.classList.remove(transitionClass);
+				modeFunction();
 				setTimeout(() => {
 					themeTransition.classList.remove('isActive');
 				}, 1000);
@@ -69,21 +69,12 @@ const themeToggle = () => {
 		}, 1);
 	}
 
-	// **************************
-	//  Transition to Dark Mode
-	// **************************
+	function transitionToLightMode() {
+		transitionToMode('isTransitioningToLight', enableLightMode);
+	}
+
 	function transitionToDarkMode() {
-		themeTransition.classList.add('isActive');
-		setTimeout(() => {
-			themeTransition.classList.add('isTransitioningToDark');
-			setTimeout(() => {
-				themeTransition.classList.remove('isTransitioningToDark');
-				enableDarkMode();
-				setTimeout(() => {
-					themeTransition.classList.remove('isActive');
-				}, 1000);
-			}, 1000);
-		}, 1);
+		transitionToMode('isTransitioningToDark', enableDarkMode);
 	}
 
 	// **************************
