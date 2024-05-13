@@ -1,12 +1,25 @@
+// ***********************************
+//  Required Modules
+// ***********************************
+@use 'base/viewports';
+
+
+
+
 // button
 .theme-toggle {
     background-color: var(--wp--preset--color--grey-200);
     border: 1px solid var(--wp--preset--color--grey-100);
     border-radius: 64px;
     cursor: pointer;
-    height: clamp(48px, 5vw, 64px);
+    height: 64px;
     transition: all var(--transition--medium);
-    width: clamp(48px, 5vw, 64px);
+    width: 64px;
+
+    @media (max-width: viewports.$viewport--breakpoint--medium) {
+        height: 48px;
+        width: 48px;
+    }
 
     &:hover,
     &:focus-visible {

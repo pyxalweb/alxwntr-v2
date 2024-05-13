@@ -25,9 +25,9 @@ footer.site-footer {
 	display: grid;
     grid-template-columns: repeat(3, 1fr);
 
-	@media (max-width: viewports.$viewport--breakpoint--xxx-small) {
-		align-items: center;
-		flex-direction: column;
+	@media (max-width: viewports.$viewport--breakpoint--small) {
+		gap: 1rem;
+		grid-template-columns: 1fr;
 	}
 }
 
@@ -41,6 +41,10 @@ footer.site-footer {
 	align-items: center;
 	display: flex;
 	justify-content: flex-start;
+
+	@media (max-width: viewports.$viewport--breakpoint--small) {
+		justify-content: center;
+	}
 
 	p {
 		margin-bottom: 0;
@@ -72,6 +76,10 @@ footer.site-footer {
 	align-items: center;
 	display: flex;
 	justify-content: flex-end;
+
+	@media (max-width: viewports.$viewport--breakpoint--small) {
+		justify-content: center;
+	}
 
 	ul {
 		display: flex;
