@@ -1,0 +1,67 @@
+// button
+.theme-toggle {
+    background-color: var(--wp--preset--color--grey-200);
+    border: 1px solid var(--wp--preset--color--grey-100);
+    border-radius: 64px;
+    cursor: pointer;
+    height: 64px;
+    transition: all var(--transition--medium);
+    width: 64px;
+
+    &:hover,
+    &:focus-visible {
+        background-color: var(--wp--preset--color--main-alt);
+        box-shadow: 1px 1px 50px var(--wp--preset--color--primary-rgb-10);
+    }
+}
+
+// svg
+.theme-toggle__bulb,
+.theme-toggle__lines {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    transition: all var(--transition--medium);
+}
+
+.theme-toggle__lines {
+    stroke-linecap: round;
+}
+
+// light mode
+.light-mode {
+    .theme-toggle__lines {
+        opacity: 1;
+    }
+
+    .theme-toggle {
+        &:hover,
+        &:focus-visible {
+            .theme-toggle__lines {
+                opacity: 0.4;
+            }
+        }
+    }
+
+    .theme-toggle__bulb,
+    .theme-toggle__lines {
+        stroke: #000;
+    }
+}
+
+// dark mode
+.dark-mode {
+    .theme-toggle__lines {
+        opacity: 0.4;
+    }
+
+    .theme-toggle {
+        &:hover,
+        &:focus-visible {
+            .theme-toggle__lines {
+                opacity: 1;
+            }
+        }
+    }
+}

@@ -91,16 +91,14 @@ const themeToggle = () => {
 	// **************************
 	//  Listen for button clicks
 	// **************************
-	const themeToggleLightMode = document.querySelector('.theme-toggle--light-mode');
-	const themeToggleDarkMode = document.querySelector('.theme-toggle--dark-mode');
-	if (!themeToggleLightMode || !themeToggleDarkMode) return;
-	themeToggleLightMode.addEventListener('click', () => {
-		if (document.documentElement.classList.contains('light-mode')) return;
-		transitionToLightMode();
-	})
-	themeToggleDarkMode.addEventListener('click', () => {
-		if (document.documentElement.classList.contains('dark-mode')) return;
-		transitionToDarkMode();
+	const themeToggleMode = document.querySelector('.theme-toggle');
+	if (!themeToggleMode) return;
+	themeToggleMode.addEventListener('click', () => {
+		if (document.documentElement.classList.contains('light-mode')) {
+			transitionToDarkMode();
+		} else {
+			transitionToLightMode();
+		}
 	})
 }
 themeToggle();
