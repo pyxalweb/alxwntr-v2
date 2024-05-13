@@ -22,8 +22,8 @@ footer.site-footer {
 //  Container
 // ***********************************
 .footer__container {
-	display: flex;
-	justify-content: space-between;
+	display: grid;
+    grid-template-columns: repeat(3, 1fr);
 
 	@media (max-width: viewports.$viewport--breakpoint--xxx-small) {
 		align-items: center;
@@ -40,6 +40,7 @@ footer.site-footer {
 .footer__copyright {
 	align-items: center;
 	display: flex;
+	justify-content: flex-start;
 
 	p {
 		margin-bottom: 0;
@@ -48,10 +49,30 @@ footer.site-footer {
 
 
 
+
+// ***********************************
+//  Theme
+// ***********************************
+.footer__theme {
+	align-items: center;
+	display: flex;
+
+	.theme-toggle {
+		margin-inline: auto;
+	}
+}
+
+
+
+
 // ***********************************
 //  Social
 // ***********************************
 .footer__social {
+	align-items: center;
+	display: flex;
+	justify-content: flex-end;
+
 	ul {
 		display: flex;
 		gap: 0.5rem;
