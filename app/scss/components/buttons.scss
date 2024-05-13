@@ -24,6 +24,7 @@
 	background-color: var(--wp--preset--color--grey-200);
 	border: 1px solid var(--wp--preset--color--grey-100);
 	border-radius: 0 1rem;
+	color: var(--wp--preset--color--base);
 	cursor: pointer;
 	padding: 0.7em 1.25rem;
 	text-align: center;
@@ -33,7 +34,7 @@
 	&:focus {
 		background-color: var(--wp--preset--color--main-alt);
 		box-shadow: 1px 1px 50px var(--wp--preset--color--primary-rgb-10);
-		color: var(--wp--preset--color--base);
+		color: var(--wp--preset--color--primary);
 		text-shadow: var(--wp--custom--text-shadow--100);
 	}
 }
@@ -51,10 +52,4 @@
 %button--outline {
 	@extend %button;
 	background-color: transparent;
-	color: var(--wp--preset--color--primary);
-
-	&:hover,
-	&:focus {
-		color: var(--wp--preset--color--base);
-	}
 }
