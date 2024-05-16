@@ -12,7 +12,7 @@ if (isset($_COOKIE['theme']) && $_COOKIE['theme'] === 'light') {
 	echo 'light-mode';
 } elseif (isset($_COOKIE['theme']) && $_COOKIE['theme'] === 'dark') {
 	echo 'dark-mode';
-} elseif (!isset($_COOKIE['theme'])) {
+} else {
 	echo 'dark-mode';
 }
 ?>">
