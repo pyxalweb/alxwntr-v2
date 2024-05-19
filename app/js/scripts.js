@@ -100,6 +100,16 @@ const themeToggle = () => {
 			transitionToLightMode();
 		}
 	})
+
+	// **************************
+	//  Set the initial theme based on the cookie
+	// **************************
+	const savedTheme = getCookie('theme');
+	if (savedTheme === 'light') {
+		enableLightMode();
+	} else {
+		enableDarkMode();
+	}
 }
 themeToggle();
 
