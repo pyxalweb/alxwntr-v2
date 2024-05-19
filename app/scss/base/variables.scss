@@ -1,7 +1,7 @@
 // ***********************************
 //  Colors - Dark Mode (Default)
 // ***********************************
-:root.dark-mode {
+:root {
 	--wp--preset--color--primary: #009ffe;
 	--wp--preset--color--primary-rgb-10: rgb(41 148 255 / 20%);
 	--wp--preset--color--secondary: #ff5733;
@@ -24,7 +24,7 @@
 // ***********************************
 //  Colors - Light Mode
 // ***********************************
-:root.light-mode {
+.light-mode {
 	--wp--preset--color--primary: #0170b0;
 	--wp--preset--color--primary-rgb-10: rgb(0 112 176 / 20%);
 	--wp--preset--color--secondary: #ff0000;

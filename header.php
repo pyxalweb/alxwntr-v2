@@ -7,6 +7,8 @@
  */
 ?>
 <!doctype html>
+<html <?php language_attributes(); ?> class="<?php echo 'loading'; ?>">
+<?php /*
 <html <?php language_attributes(); ?> class="<?php
 if (isset($_COOKIE['theme']) && $_COOKIE['theme'] === 'light') {
 	echo 'light-mode';
@@ -16,8 +18,16 @@ if (isset($_COOKIE['theme']) && $_COOKIE['theme'] === 'light') {
 	echo 'dark-mode';
 }
 ?>">
+*/ ?>
 
 <head>
+	<script>
+        // Apply the saved theme as early as possible
+        (function() {
+            const theme = localStorage.getItem('theme') || 'dark-mode';
+            document.documentElement.className = theme;
+        })();
+    </script>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
