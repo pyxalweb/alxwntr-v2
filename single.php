@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main id="site-main" class="site-main">
+<main id="site-main" class="site-main | text-300--h2 text-300--h3">
     <?php while(have_posts()) { the_post(); ?>
     <article class="single | content width--small">
         <header>
