@@ -185,6 +185,30 @@ add_action('wp_enqueue_scripts', 'remove_default_block_styles', 100);
 
 
 
+// ***********************************
+//  Remove Bloat
+// ***********************************
+function remove_bloat() {
+    // <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://yourdomain./xmlrpc.php?rsd" />
+	remove_action('wp_head', 'rsd_link');
+
+    // <link rel="alternate" type="application/json+oembed" href="https://yourdomain.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fyourdomain.com%2F" />
+    // <link rel="alternate" type="text/xml+oembed" href="https://yourdomain.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fyourdomain.com%2F&#038;format=xml" />
+	remove_action('wp_head', 'wp_oembed_add_discovery_links');
+
+	// Disable the REST API endpoint
+	add_filter('rest_authentication_errors', '__return_true');
+	// Remove the REST API 'link' elements
+	remove_action('wp_head', 'rest_output_link_wp_head');
+
+    // Remove emojis:
+	remove_action('wp_head', 'print_emoji_detection_script', 7);
+	remove_action('wp_print_styles', 'print_emoji_styles');
+}
+add_action('init', 'remove_bloat', 30);
+
+
+
 
 // ***********************************
 //  Template for Custom Post Type
