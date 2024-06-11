@@ -33,6 +33,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const applyTheme = (theme) => {
             root.className = theme;
             localStorage.setItem('theme', theme);
+
+			if (theme === 'light-mode') {
+				themeToggleButton.title = 'Switch to Dark Mode';
+				themeToggleButton.setAttribute('aria-label', 'Switch to Dark Mode');
+			} else if (theme === 'dark-mode') {
+				themeToggleButton.title = 'Switch to Light Mode';
+				themeToggleButton.setAttribute('aria-label', 'Switch to Light Mode');
+			}
         };
 
         const switchTheme = () => {
