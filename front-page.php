@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<!-- front-page.php -->
+
 <main id="site-main" class="site-main">
     <section class="intro | wrap">
         <div class="intro__container | content width--x-large">

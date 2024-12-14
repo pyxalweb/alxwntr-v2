@@ -3,8 +3,9 @@
 Template Name: Blog
 */
 ?>
-
 <?php get_header(); ?>
+
+<!-- home.php -->
 
 <main id="site-main" class="site-main">
     <section class="page-default page-blog | content width--x-large">

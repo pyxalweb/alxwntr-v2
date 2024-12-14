@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<!-- page.php -->
+
 <main id="site-main" class="site-main">
     <section class="page-default | content width--x-large">
         <header>
