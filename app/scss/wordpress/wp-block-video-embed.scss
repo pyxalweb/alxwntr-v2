@@ -1,0 +1,28 @@
+// ***********************************
+//  Required Modules
+// ***********************************
+// None
+
+
+
+
+// ***********************************
+//  Blocks > Embeds > YouTube Embed
+// ***********************************
+.wp-block-embed {
+    &.is-type-video {
+        .wp-block-embed__wrapper {
+            height: 0;
+            padding-bottom: 56.25%; /* 16:9 */
+            position: relative;
+
+            iframe {
+                height: 100%;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 100%;
+            }
+        }
+    }
+}
