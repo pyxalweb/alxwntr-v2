@@ -7,7 +7,7 @@ Template Name: Blog
 
 <!-- home.php -->
 
-<main id="site-main" class="site-main">
+<main id="site-main" class="site-main site-main--home">
     <section class="page-default page-blog">
         <?php
         // Get the ID of the 'Posts Page'

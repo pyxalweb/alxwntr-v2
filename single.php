@@ -2,7 +2,7 @@
 
 <!-- single.php -->
 
-<main id="site-main" class="site-main | text-300--h2 text-300--h3">
+<main id="site-main" class="site-main site-main--single | text-300--h2 text-300--h3">
     <?php while(have_posts()) { the_post(); ?>
     <article class="single">
         <header class="single__header">

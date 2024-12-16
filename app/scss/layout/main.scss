@@ -12,3 +12,7 @@
 main.site-main {
     flex-grow: 1;
 }
+
+main.site-main--front-page {
+    margin-top: var(--wp--preset--spacing--x-large);
+}

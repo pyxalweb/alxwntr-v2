@@ -2,7 +2,7 @@
 
 <!-- page.php -->
 
-<main id="site-main" class="site-main">
+<main id="site-main" class="site-main site-main--page">
     <section class="page-default">
         <header class="page-default__header">
             <div class="page-default__text | content width--x-large">
