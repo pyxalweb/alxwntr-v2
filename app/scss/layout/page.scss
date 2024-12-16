@@ -8,29 +8,34 @@
 
 
 // ***********************************
-//  Default Page
+//  Default Page Header
 // ***********************************
 .page-default {
-	header {
-		align-items: center;
-		display: flex;
-		gap: var(--wp--preset--spacing--x-large);
-		justify-content: space-between;
-		margin-bottom: var(--wp--preset--spacing--x-large);
-
-		@media (max-width: viewports.$viewport--breakpoint--xx-small) {
-			align-items: center;
-			flex-direction: column;
-			text-align: center;
-		}
-	}
-
 	h1 {
 		@extend %text-400;
 	}
 
 	p {
 		margin-bottom: 0;
+	}
+}
+
+.page-default__header {
+	background-color: var(--wp--preset--color--main-alt);
+	margin-bottom: var(--wp--preset--spacing--x-large);
+	padding-block: var(--wp--preset--spacing--x-large);
+}
+
+.page-default__text {
+	align-items: center;
+	display: flex;
+	gap: var(--wp--preset--spacing--x-large);
+	justify-content: space-between;
+
+	@media (max-width: viewports.$viewport--breakpoint--xx-small) {
+		align-items: center;
+		flex-direction: column;
+		text-align: center;
 	}
 }
 

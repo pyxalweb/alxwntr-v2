@@ -3,13 +3,17 @@
 <!-- page.php -->
 
 <main id="site-main" class="site-main">
-    <section class="page-default | content width--x-large">
-        <header>
-            <h1><?php the_title(); ?></h1>
-            <p><?php the_field('sub_heading'); ?></p>
+    <section class="page-default">
+        <header class="page-default__header">
+            <div class="page-default__text | content width--x-large">
+                <h1><?php the_title(); ?></h1>
+                <p><?php the_field('sub_heading'); ?></p>
+            </div>
         </header>
 
-        <?php the_content(); ?>
+        <div class="content width--x-large">
+            <?php the_content(); ?>
+        </div>
     </section>
 </main>
 

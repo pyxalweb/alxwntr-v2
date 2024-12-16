@@ -7,17 +7,19 @@
 
 
 // ***********************************
-//  Single Heading
+//  Single Header
 // ***********************************
 .single {
-	header {
-		margin-bottom: var(--wp--preset--spacing--x-large);
-	}
-
 	h1 {
 		@extend %text-400;
 		text-align: center;
 	}
+}
+
+.single__header {
+	background-color: var(--wp--preset--color--main-alt);
+	margin-bottom: var(--wp--preset--spacing--x-large);
+	padding-block: var(--wp--preset--spacing--x-large);
 }
 
 

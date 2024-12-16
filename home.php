@@ -8,7 +8,7 @@ Template Name: Blog
 <!-- home.php -->
 
 <main id="site-main" class="site-main">
-    <section class="page-default page-blog | content width--x-large">
+    <section class="page-default page-blog">
         <?php
         // Get the ID of the 'Posts Page'
         $posts_page_id = get_option('page_for_posts');
@@ -21,11 +21,13 @@ Template Name: Blog
             // Setup the postdata to use template tags
             setup_postdata($posts_page);
         ?>
-            <header>
-                <h1><?php single_post_title(); ?></h1>
-                <?php if (function_exists('the_field')) { ?>
-                    <p><?php the_field('sub_heading', $posts_page_id); ?></p>
-                <?php } ?>
+            <header class="page-default__header">
+                <div class="page-default__text | content width--x-large">
+                    <h1><?php single_post_title(); ?></h1>
+                    <?php if (function_exists('the_field')) { ?>
+                        <p><?php the_field('sub_heading', $posts_page_id); ?></p>
+                    <?php } ?>
+                </div>
             </header>
 
             <?php if (!empty($posts_page->post_content)) {
@@ -39,7 +41,7 @@ Template Name: Blog
         ?>
 
         <?php if ( have_posts() ) : ?>
-            <div class="blog__filters__container">
+            <div class="blog__filters__container | content width--x-large">
                 <div class="filters__category">
                     <button class="filters__category__toggle">All Categories</button>
                     <ul class="filters__category__list">
@@ -68,7 +70,7 @@ Template Name: Blog
                 </div>
             </div>
 
-            <div class="blog__posts__wrapper">
+            <div class="blog__posts__wrapper | content width--x-large">
                 <div class="blog__posts__container">
                     <ul class="blog__posts">
                         <?php
