@@ -1,0 +1,44 @@
+// ***********************************
+//  Required Modules
+// ***********************************
+@use 'base/typography';
+@use 'base/viewports';
+
+
+
+
+// ***********************************
+//  Post Feeds
+// ***********************************
+.post-feed-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-feed--blips {
+    flex-basis: 960px;
+}
+
+.post-feed--blog {
+    flex-basis: 350px;
+}
+
+.post-feed {
+
+}
+
+.post-feed__items {
+
+}
+
+.post-feed__item {
+
+}
+
+.post-feed__post {
+
+}
+
+.post-feed__date {
+    
+}

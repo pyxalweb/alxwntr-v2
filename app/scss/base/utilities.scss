@@ -14,7 +14,8 @@
 // .c-primary { color: var(--wp--preset--color--primary); }
 // .c-secondary { color: var(--wp--preset--color--secondary); }
 // .c-tertiary { color: var(--wp--preset--color--tertiary); }
-// .c-black { color: var(--wp--preset--color--main); }
+// .c-main { color: var(--wp--preset--color--main); }
+// .c-main-alt { color: var(--wp--preset--color--main-alt); }
 // .c-white { color: var(--wp--preset--color--base); }
 // .c-grey-100 { color: var(--wp--preset--color--grey-100); }
 // .c-grey-200 { color: var(--wp--preset--color--grey-200); }
@@ -31,7 +32,8 @@
 // .bg-primary { background-color: var(--wp--preset--color--primary); }
 // .bg-secondary { background-color: var(--wp--preset--color--secondary); }
 // .bg-tertiary { background-color: var(--wp--preset--color--tertiary); }
-// .bg-black { background-color: var(--wp--preset--color--main); }
+// .bg-main { background-color: var(--wp--preset--color--main); }
+.bg-main-alt { background-color: var(--wp--preset--color--main-alt); }
 // .bg-white { background-color: var(--wp--preset--color--base); }
 // .bg-grey-100 { background-color: var(--wp--preset--color--grey-100); }
 // .bg-grey-200 { background-color: var(--wp--preset--color--grey-200); }
@@ -114,6 +116,14 @@
 // ***********************************
 //  margin-block
 // ***********************************
+// .mbl-x-small { margin-block: var(--wp--preset--spacing--x-small); }
+// .mbl-small { margin-block: var(--wp--preset--spacing--small); }
+// .mbl-medium { margin-block: var(--wp--preset--spacing--medium); }
+// .mbl-large { margin-block: var(--wp--preset--spacing--large); }
+// .mbl-x-large { margin-block: var(--wp--preset--spacing--x-large); }
+// .mbl-xx-large { margin-block: var(--wp--preset--spacing--xx-large); }
+// .mbl-xxx-large { margin-block: clamp(5rem, 12vw, 9rem); }
+// .mbl-xxxx-large { margin-block: clamp(6rem, 14vw, 13rem); }
 // .mbl-7 { margin-block: 7rem; }
 // .mbl-6 { margin-block: 6rem; }
 // .mbl-5 { margin-block: 5rem; }
@@ -129,6 +139,14 @@
 // ***********************************
 //  margin-top
 // ***********************************
+// .mt-x-small { margin-top: var(--wp--preset--spacing--x-small); }
+// .mt-small { margin-top: var(--wp--preset--spacing--small); }
+// .mt-medium { margin-top: var(--wp--preset--spacing--medium); }
+// .mt-large { margin-top: var(--wp--preset--spacing--large); }
+// .mt-x-large { margin-top: var(--wp--preset--spacing--x-large); }
+.mt-xx-large { margin-top: var(--wp--preset--spacing--xx-large); }
+// .mt-xxx-large { margin-top: clamp(5rem, 12vw, 9rem); }
+// .mt-xxxx-large { margin-top: clamp(6rem, 14vw, 13rem); }
 // .mt-7 { margin-top: 7rem; }
 // .mt-6 { margin-top: 6rem; }
 // .mt-5 { margin-top: 5rem; }
@@ -144,6 +162,14 @@
 // ***********************************
 //  margin-bottom
 // ***********************************
+// .mb-x-small { margin-bottom: var(--wp--preset--spacing--x-small); }
+// .mb-small { margin-bottom: var(--wp--preset--spacing--small); }
+// .mb-medium { margin-bottom: var(--wp--preset--spacing--medium); }
+// .mb-large { margin-bottom: var(--wp--preset--spacing--large); }
+// .mb-x-large { margin-bottom: var(--wp--preset--spacing--x-large); }
+// .mb-xx-large { margin-bottom: var(--wp--preset--spacing--xx-large); }
+// .mb-xxx-large { margin-bottom: clamp(5rem, 12vw, 9rem); }
+// .mb-xxxx-large { margin-bottom: clamp(6rem, 14vw, 13rem); }
 // .mb-7 { margin-bottom: 7rem; }
 // .mb-6 { margin-bottom: 6rem; }
 // .mb-5 { margin-bottom: 5rem; }
@@ -177,23 +203,16 @@
 
 
 // ***********************************
-//  padding
-// ***********************************
-// .p-7 { padding: 7rem; }
-// .p-6 { padding: 6rem; }
-// .p-5 { padding: 5rem; }
-// .p-4 { padding: 4rem; }
-// .p-3 { padding: 3rem; }
-// .p-2 { padding: 2rem; }
-// .p-1 { padding: 1rem; }
-// .p-0 { padding: 0rem; }
-
-
-
-
-// ***********************************
 //  padding-block
 // ***********************************
+// .pbl-x-small { padding-block: var(--wp--preset--spacing--x-small); }
+// .pbl-small { padding-block: var(--wp--preset--spacing--small); }
+// .pbl-medium { padding-block: var(--wp--preset--spacing--medium); }
+// .pbl-large { padding-block: var(--wp--preset--spacing--large); }
+// .pbl-x-large { padding-block: var(--wp--preset--spacing--x-large); }
+// .pbl-xx-large { padding-block: var(--wp--preset--spacing--xx-large); }
+// .pbl-xxx-large { padding-block: clamp(5rem, 12vw, 9rem); }
+// .pbl-xxxx-large { padding-block: clamp(6rem, 14vw, 13rem); }
 // .pbl-7 { padding-block: 7rem; }
 // .pbl-6 { padding-block: 6rem; }
 // .pbl-5 { padding-block: 5rem; }
@@ -209,6 +228,14 @@
 // ***********************************
 //  padding-top
 // ***********************************
+// .pt-x-small { padding-top: var(--wp--preset--spacing--x-small); }
+// .pt-small { padding-top: var(--wp--preset--spacing--small); }
+// .pt-medium { padding-top: var(--wp--preset--spacing--medium); }
+// .pt-large { padding-top: var(--wp--preset--spacing--large); }
+// .pt-x-large { padding-top: var(--wp--preset--spacing--x-large); }
+// .pt-xx-large { padding-top: var(--wp--preset--spacing--xx-large); }
+// .pt-xxx-large { padding-top: clamp(5rem, 12vw, 9rem); }
+// .pt-xxxx-large { padding-top: clamp(6rem, 14vw, 13rem); }
 // .pt-7 { padding-top: 7rem; }
 // .pt-6 { padding-top: 6rem; }
 // .pt-5 { padding-top: 5rem; }
@@ -224,6 +251,14 @@
 // ***********************************
 //  padding-bottom
 // ***********************************
+// .pb-x-small { padding-bottom: var(--wp--preset--spacing--x-small); }
+// .pb-small { padding-bottom: var(--wp--preset--spacing--small); }
+// .pb-medium { padding-bottom: var(--wp--preset--spacing--medium); }
+// .pb-large { padding-bottom: var(--wp--preset--spacing--large); }
+// .pb-x-large { padding-bottom: var(--wp--preset--spacing--x-large); }
+// .pb-xx-large { padding-bottom: var(--wp--preset--spacing--xx-large); }
+// .pb-xxx-large { padding-bottom: clamp(5rem, 12vw, 9rem); }
+// .pb-xxxx-large { padding-bottom: clamp(6rem, 14vw, 13rem); }
 // .pb-7 { padding-bottom: 7rem; }
 // .pb-6 { padding-bottom: 6rem; }
 // .pb-5 { padding-bottom: 5rem; }
@@ -247,21 +282,6 @@
 // .pi-2 { padding-inline: 2rem; }
 // .pi-1 { padding-inline: 1rem; }
 // .pi-0 { padding-inline: 0rem; }
-
-
-
-
-// ***********************************
-//  padding-right
-// ***********************************
-// .pr-7 { padding-right: 7rem; }
-// .pr-6 { padding-right: 6rem; }
-// .pr-5 { padding-right: 5rem; }
-// .pr-4 { padding-right: 4rem; }
-// .pr-3 { padding-right: 3rem; }
-// .pr-2 { padding-right: 2rem; }
-// .pr-1 { padding-right: 1rem; }
-// .pr-0 { padding-right: 0rem; }
 
 
 
