@@ -12,6 +12,22 @@
 	font-style: $fontStyle;
 }
 
+// Typical Use: Smaller than default paragraph text
+// Description: Small font size and white color
+%text-90 {
+	@include text(
+		var(--wp--preset--font-family--primary),
+		var(--wp--preset--font-size--small),
+		var(--wp--custom--font-weight--regular),
+		var(--wp--custom--line-height--loose),
+		var(--wp--preset--color--base),
+		none,
+		none,
+		normal
+	);
+}
+.text-90 { @extend %text-90; }
+
 // Typical Use: Default paragraph text
 // Description: Small font size and white color
 %text-100 {

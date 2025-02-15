@@ -11,34 +11,62 @@
 //  Post Feeds
 // ***********************************
 .post-feed-wrap {
+    border-bottom: 1px solid var(--wp--preset--color--grey-200);
     display: flex;
+    gap: 5rem;
     justify-content: space-between;
+    padding-bottom: 2rem;
+
+    @media (max-width: viewports.$viewport--breakpoint--large) {
+        border-bottom: 0;
+        flex-direction: column;
+    }
 }
+
+/*
+.post-feed {
+    
+}
+*/
 
 .post-feed--blips {
     flex-basis: 960px;
+
+    @media (max-width: viewports.$viewport--breakpoint--large) {
+        flex-basis: 100%;
+    }
 }
 
 .post-feed--blog {
     flex-basis: 350px;
-}
 
-.post-feed {
-
+    @media (max-width: viewports.$viewport--breakpoint--large) {
+        flex-basis: 100%;
+    }
 }
 
 .post-feed__items {
-
+    margin-top: 1rem;
 }
 
 .post-feed__item {
+    border-bottom: 1px solid var(--wp--preset--color--grey-200);
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
 
+    p {
+        margin-bottom: 0;
+    }
 }
 
+/*
 .post-feed__post {
 
 }
+*/
 
 .post-feed__date {
-    
+    color: var(--wp--preset--color--grey-300);
+    font-style: italic;
+    margin-top: 0.5rem;
 }

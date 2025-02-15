@@ -15,6 +15,12 @@ footer.site-footer {
 	padding-block: var(--wp--preset--spacing--large);
 }
 
+body.home {
+	footer.site-footer {
+		margin-top: 0;
+	}
+}
+
 
 
 
