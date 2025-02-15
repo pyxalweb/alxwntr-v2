@@ -1,0 +1,38 @@
+// ***********************************
+//  Social Icons
+// ***********************************
+.social {
+	list-style: none;
+	margin: 0;
+
+	a {
+		&:before {
+			content: '\E800';
+			font-family: 'icons';
+		}
+	}
+}
+
+.social__instagram a:before { content: '\F16D'; }
+.social__linkedin a:before { content: '\E809'; }
+.social__lastfm a:before { content: '\F202'; }
+.social__github a:before { content: '\F09B'; }
+.social__codepen a:before { content: '\F32C'; }
+
+// ***********************************
+//  Accessibility - Screen Reader Only
+//  
+//  example:
+//  <a href="#" target="_blank" rel="noopener" aria-label="Instagram"><span class="screen-reader-only">Instagram</span></a>
+// ***********************************
+.screen-reader-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
