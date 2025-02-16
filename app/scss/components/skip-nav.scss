@@ -26,6 +26,7 @@
 		outline: 1px solid #000;
 		overflow: visible;
 		text-decoration: none;
+		text-shadow: none;
 		width: auto;
 		z-index: 20000;
 	}
@@ -33,5 +34,6 @@
 	a:hover {
 		background-color: #000;
 		color: #fff;
+		text-shadow: none;
 	}
 }
