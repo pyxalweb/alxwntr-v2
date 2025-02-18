@@ -8,7 +8,7 @@
 
 
 .page-blog {
-    --blog--border: 1px solid var(--wp--preset--color--grey-100);
+    --blog--border: 1px solid var(--wp--preset--color--grey-500);
     --blog--border-radius: 0.5rem;
     --blog--padding-button: 0.5rem;
     --blog--padding-post: 1.25rem;
@@ -39,20 +39,24 @@
 }
 
 // category container
+/*
 .filters__category {
 
 }
+*/
 
 // year container
+/*
 .filters__year {
 
 }
+*/
 
 // category toggle
 // year toggle
 .filters__category__toggle,
 .filters__year__toggle {
-    background-color: var(--wp--preset--color--grey-200);
+    background-color: var(--wp--preset--color--grey-700);
     border: var(--blog--border);
     color: var(--wp--preset--color--primary);
     cursor: pointer;
@@ -138,9 +142,11 @@
 }
 
 // category list
+/*
 .filters__category__list {
     
 }
+*/
 
 // year list
 .filters__year__list {
@@ -156,20 +162,24 @@
 }
 
 // category list item
+/*
 .filters__category_list-item {
     
 }
+*/
 
 // year list item
+/*
 .filters__year__list-item {
 
 }
+*/
 
 // category button
 // year button
 .filters__category__button,
 .filters__year__button {
-    background-color: var(--wp--preset--color--grey-200);
+    background-color: var(--wp--preset--color--grey-700);
     border: 0;
     border-bottom: var(--blog--border);
     color: var(--wp--preset--color--primary);
@@ -192,14 +202,18 @@
 }
 
 // category button
+/*
 .filters__category__button {
 
 }
+*/
 
 // year button
+/*
 .filters__year__button {
 
 }
+*/
 
 
 
