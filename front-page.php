@@ -10,8 +10,8 @@
     </section>
 
     <section class="text-300--h2 | bg-main-alt mt-xx-large pbl-xx-large">
-        <div class="content width--x-large | post-feed-wrap">
-            <div class="post-feed post-feed--blips">
+        <div class="content width--x-large | post-feed-home">
+            <div class="post-feed-home__blips">
                 <h2>Blips</h2>
                 <?php
                 $args = array(
@@ -24,14 +24,14 @@
                 $query = new WP_Query($args);
 
                 if ($query->have_posts()) :
-                    echo '<div class="post-feed__items">';
+                    echo '<div class="post-feed-home__items">';
                     while ($query->have_posts()) : $query->the_post();
                         ?>
-                        <div class="post-feed__item | text-90">
-                            <div <?php post_class('post-feed__post'); ?> id="post-<?php the_ID(); ?>">
+                        <div class="post-feed-home__item | text-90">
+                            <div <?php post_class('post-feed-home__post'); ?> id="post-<?php the_ID(); ?>">
                                 <?php the_content(); ?>
                             </div>
-                            <div class="post-feed__date">
+                            <div class="post-feed-home__date">
                                 <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('F j, Y'); ?></time>
                             </div>
                         </div>
@@ -49,7 +49,7 @@
                 <p><a href="blips">View All Blips</a></p>
             </div>
 
-            <div class="post-feed post-feed--blog">
+            <div class="post-feed-home__blog">
                 <h2>Blog</h2>
                 <?php
                 $args = array(
@@ -62,14 +62,14 @@
                 $query = new WP_Query($args);
 
                 if ($query->have_posts()) :
-                    echo '<div class="post-feed__items">';
+                    echo '<div class="post-feed-home__items">';
                     while ($query->have_posts()) : $query->the_post();
                         ?>
-                        <div class="post-feed__item | text-90">
-                            <div <?php post_class('post-feed__post'); ?>>
+                        <div class="post-feed-home__item | text-90">
+                            <div <?php post_class('post-feed-home__post'); ?>>
                                 <p><a href="<?php the_permalink(); ?>" id="post-<?php the_ID(); ?>"><?php the_title(); ?></a></p>
                             </div>
-                            <div class="post-feed__date">
+                            <div class="post-feed-home__date">
                                 <time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('F j, Y'); ?></time>
                             </div>
                         </div>
