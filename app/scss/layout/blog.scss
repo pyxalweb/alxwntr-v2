@@ -150,7 +150,10 @@
 // year list
 .filters__year__list {
     left: -2px;
-    width: auto;
+
+    @media (min-width: 641px) {
+        width: auto;
+    }
 }
 
 // category list item
