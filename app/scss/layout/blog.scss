@@ -102,6 +102,7 @@
 // category toggle
 .filters__category__toggle {
     border-radius: var(--blog--border-radius) 0 0 var(--blog--border-radius);
+    border-right: 0;
 
     &.is-open {
         border-radius: var(--blog--border-radius) 0 0 0;
@@ -142,15 +143,14 @@
 }
 
 // category list
-/*
 .filters__category__list {
-    
+    width: 101%;   
 }
-*/
 
 // year list
 .filters__year__list {
-    left: -1px;
+    left: -2px;
+    width: auto;
 }
 
 // category list item

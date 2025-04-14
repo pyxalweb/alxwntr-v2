@@ -13,6 +13,7 @@
 	--wp--preset--color--main-alt: #0a0a0a;
 	--wp--preset--color--base: #fefefe;
 	--wp--preset--color--white: #fefefe;
+	--wp--preset--color--grey-100: #2a2a2a;
 	--wp--preset--color--grey-300: #878787;
 	--wp--preset--color--grey-500: #343434;
 	--wp--preset--color--grey-700: #1e1e23;
@@ -36,12 +37,13 @@
 	--wp--preset--color--main-alt: #f5f5f5;
 	--wp--preset--color--base: #000;
 	--wp--preset--color--white: #fefefe;
-	--wp--preset--color--grey-100: #cecece;
-	--wp--preset--color--grey-200: #f2f2f2;
-	--wp--preset--color--grey-300: #696969;
+	--wp--preset--color--grey-100: #e1e1e1;
+	--wp--preset--color--grey-300: #717171;
+	--wp--preset--color--grey-500: #b6b6b6;
+	--wp--preset--color--grey-700: #ededed;
 	--wp--preset--gradient--primary: #0004ff 0%, #00c517 100%;
 
-	--wp--custom--text-shadow--100: none;
+	--wp--custom--text-shadow--100: 1px 1px 2px var(--wp--preset--color--main-alt), 0 0 1rem #7bc4ef, 0 0 0.2rem #7bc4ef;
 }
 
 .theme-transition {
